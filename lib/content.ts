@@ -38,3 +38,58 @@ export const faqs=[
  {q:'지금 바로 출장 예약이 가능한가요?',a:'현재 화면은 서비스 UI 시안입니다. 실제 운영 지역·시간과 연락 채널 연결 후 상담을 통해 방문 가능 여부와 일정을 확정할 수 있습니다.'},
 ];
 export const serviceSteps=[{title:'체크하고 문자 보내기',text:'차종·연식과 증상을 적고, 준비한 사진을 첨부해요.'},{title:'출장 전 작업자 확인',text:'차량 정보 확인 후 제품·총비용·방문 일정을 안내해요.'},{title:'방문 교체 · 상태 확인',text:'안내받은 내용으로 교체하고 시동 상태를 확인해요.'}];
+
+export interface RegionKeywordData {
+  regionSlug: string;
+  regionName: string;
+  areaName: string;
+  targetKeyword: string;
+  keywords: string[];
+  headline: string;
+  subheadline: string;
+  eta: string;
+  parkingTips: string;
+  environmentCheck: string[];
+  faqs: { q: string; a: string }[];
+}
+
+export function getRegionKeywordData(regionSlug: string, areaName?: string): RegionKeywordData {
+  const r = regions.find((x) => x.slug === regionSlug) || regions[0];
+  const area = areaName && r.areas.includes(areaName) ? areaName : r.areas[0];
+  return {
+    regionSlug: r.slug,
+    regionName: r.name,
+    areaName: area,
+    targetKeyword: `${area} 출장 배터리 교체`,
+    keywords: [
+      `${area} 출장 배터리 교체`,
+      `${area} 자동차 배터리 방전 긴급출동`,
+      `${area} 차량 밧데리 당일 교체`,
+      `${area} 지하주차장 배터리 교체`,
+    ],
+    headline: `${area} 출장 배터리 교체, 현장에서 바로 해결하세요`,
+    subheadline: `${r.name} ${area} 전 지역 신속 출장. 아파트·오피스텔 지하주차장부터 노상 주차까지 당일 방문 교체.`,
+    eta: '상담 완료 후 평균 30~50분 내 현장 도착 (교통 상황에 따라 변동 가능)',
+    parkingTips: `${area} 지역 아파트 및 빌라 지하주차장 진입 시 층수와 차단기 등록 여부를 전달해 주시면 더 신속한 작업이 가능합니다.`,
+    environmentCheck: [
+      `${area} 아파트 및 오피스텔 지하주차장 진입 가능 여부`,
+      '보닛 오픈 및 작업용 공구 확보를 위한 최소 측면 공간',
+      '경사로 또는 기계식 주차 시 안전한 평지 이동 후 작업 권장',
+    ],
+    faqs: [
+      {
+        q: `${area}에서도 당일 바로 출장 배터리 교체가 가능한가요?`,
+        a: `네, ${area} 및 인근 ${r.name} 권역은 당일 출장 교체를 기본으로 운영합니다. 차량 모델과 연식을 확인한 뒤 즉시 방문 일정을 안내해 드립니다.`,
+      },
+      {
+        q: `${area} 아파트 지하 2~3층 주차장에서도 작업할 수 있나요?`,
+        a: `지하주차장 작업이 가능합니다. 다만 진입 높이 제한이나 통신 음영 구역이 있을 수 있으니 예약 시 지하 층수를 미리 알려주시면 원활합니다.`,
+      },
+      {
+        q: `${area} 출장 시 별도 출장비나 추가 공임이 있나요?`,
+        a: `${area} 전 권역은 제품가·출장비·기본 장착비가 포함된 총비용 정찰제로 상담 시 먼저 안내해 드리며, 추가 비용 없이 투명하게 진행합니다.`,
+      },
+    ],
+  };
+}
+
