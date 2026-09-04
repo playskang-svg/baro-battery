@@ -174,19 +174,35 @@ dig +short @1.1.1.1 <custom-domain>
 
 ---
 
-## Step 8. Git 커밋 & 원격 저장소 푸시
+## Step 8. Git 커밋 & GitHub 원격 저장소 완전 자동 연동
 
-```bash
-# 1. 민감 파일 미포함 재확인
-git status -s
+1. **민감 파일 누출 최종 점검**:
+   ```bash
+   git status -s
+   ```
+   - `.env`, `.dev.vars` 등이 unstaged 상태에 없는지 철저히 점검합니다.
 
-# 2. 로컬 커밋
-git add -A
-git commit -m "feat: Deploy to Cloudflare Workers with Supabase integration & custom domain <domain>"
+2. **Git 로컬 커밋**:
+   ```bash
+   git add -A
+   git commit -m "feat: Deploy to Cloudflare Workers with Supabase integration & custom domain <domain>"
+   ```
 
-# 3. 원격 푸시 (원격이 있을 경우)
-git push origin main
-```
+3. **GitHub 원격 저장소 완전 자동 연동 (GitHub CLI 활용)**:
+   - 현재 프로젝트에 `git remote -v`가 등록되어 있는지 점검합니다:
+     ```bash
+     git remote -v
+     ```
+   - **Case A: GitHub 원격 저장소가 이미 연결된 경우**:
+     ```bash
+     git push origin main
+     ```
+   - **Case B: GitHub 원격 저장소가 아직 없는 새 프로젝트인 경우**:
+     - 시스템에 로그인된 GitHub CLI(`gh auth status`)를 활용하여 웹사이트에 들어갈 필요 없이 **GitHub 원격 저장소 자동 생성, `origin` 연결, 최초 push까지 완전 자동 수행**합니다:
+       ```bash
+       gh repo create <프로젝트명> --public --source=. --remote=origin --push
+       ```
+       *(비공개 저장을 원할 경우 `--private` 옵션 적용)*
 
 ---
 

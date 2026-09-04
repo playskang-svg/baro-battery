@@ -133,7 +133,7 @@ done
 
 ---
 
-## Step 6. Git 커밋 & GitHub 원격 저장소 푸시
+## Step 6. Git 커밋 & GitHub 원격 저장소 완전 자동 연동
 
 1. **민감 파일 누출 최종 점검**:
    ```bash
@@ -145,12 +145,17 @@ done
    git add -A
    git commit -m "feat: Deploy to Cloudflare Workers with custom domain <custom-domain>"
    ```
-3. **GitHub 원격 저장소 푸시**:
+3. **GitHub 원격 저장소 완전 자동 연동 (GitHub CLI 활용)**:
    - `git remote -v`에 `origin`이 등록되어 있는 경우:
      ```bash
      git push origin main
      ```
-   - 원격 저장소가 아직 연결되지 않은 경우, GitHub CLI(`gh repo create`) 명령어로 자동 리포지토리 생성 및 최초 푸시를 제안하거나 수행합니다.
+   - 원격 저장소가 아직 연결되지 않은 새 프로젝트인 경우:
+     - 시스템의 GitHub CLI(`gh auth status`)를 통해 웹사이트에 접속할 필요 없이 **GitHub 리포지토리 자동 생성, `origin` 연결, 최초 push까지 완전 자동 수행**합니다:
+       ```bash
+       gh repo create <프로젝트명> --public --source=. --remote=origin --push
+       ```
+       *(비공개 저장을 원할 경우 `--private` 옵션 적용)*
 
 ---
 
