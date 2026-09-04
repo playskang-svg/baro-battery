@@ -1,0 +1,4 @@
+import {Crumb,PageIntro} from '@/components/site/shared';
+import {pageMeta} from '@/lib/metadata';
+export const metadata=pageMeta('개인정보 안내','현재 UI 시안의 입력 정보 처리 안내.','/privacy');
+export default function Page(){return <main id="main" className="wrap"><Crumb items={[{label:'개인정보 안내'}]}/><PageIntro eyebrow="PRIVACY" title="현재 화면의 정보 처리 안내" description="상담 내용 준비 기능은 입력값을 서버에 전송하거나 저장하지 않습니다."/><article className="article privacy"><h2>현재 제공하는 기능</h2><p>차종·연식·지역·증상을 화면에서 정리하고 사용자가 직접 복사할 수 있습니다. 복사 버튼을 누르면 기기의 클립보드에 해당 내용이 들어갑니다. 문자 수신번호가 연결되면 기기의 문자 앱에 작성 내용을 전달합니다. 사진은 문자 앱에서 직접 첨부하며, 사용자가 전송을 눌러야 전달됩니다. 사진 체크만으로 파일이 첨부되거나 업로드되지 않습니다. 화면 입력값은 새로고침하면 초기화됩니다.</p><h2>실제 상담 기능 연결 전</h2><p>사업자 및 개인정보 처리자 정보, 수집 항목, 이용 목적, 보유 기간, 문의처를 확정한 뒤 개인정보 처리방침과 필요한 동의 절차를 추가해야 합니다. 현재 연락 채널은 연결 준비 상태입니다.</p></article></main>}

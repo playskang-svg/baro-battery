@@ -1,0 +1,6 @@
+import Link from '@/components/site/site-link';
+import {Crumb,PageIntro,Steps,Trust,FAQSection,BottomCTA} from '@/components/site/shared';
+import {ArrowUpRight,Check} from 'lucide-react';
+import {pageMeta} from '@/lib/metadata';
+export const metadata=pageMeta('출장 배터리 교체 비용 · 진행 안내','제품·출장·장착·추가 작업의 포함 범위와 배터리 출장교체 절차 안내.','/service');
+export default function Page(){return <main id="main"><div className="wrap"><Crumb items={[{label:'출장교체 · 비용'}]}/><PageIntro eyebrow="HOW IT WORKS" title="과정은 간단하게, 비용은 명확하게." description="교체 전 상담부터 작업 후 확인까지. 미리 알고 시작하면 더 안심할 수 있어요."/><Steps/><section className="section cost-layout"><div><span className="eyebrow">BEFORE YOU DECIDE</span><h2>가격 하나보다,<br/>포함 항목을 확인하세요.</h2><p>차종과 제품, 주차 환경에 따라 달라집니다.<br/>아래 항목을 확인한 총액으로 상담하세요.</p><Link href="/contact" className="btn dark">체크하고 문자 보내기 <ArrowUpRight size={17}/></Link></div><div className="cost-table">{[['01','배터리 제품','브랜드 · 종류 · 용량 · 차량 호환 규격'],['02','출장 및 장착','지역 · 이동 거리 · 주차 환경 · 작업 범위'],['03','차량별 추가 작업','등록 · 초기화 등 필요 여부와 비용'],['04','교체 후 안내','기존 배터리 처리 · 보증 조건 · 작업 증빙']].map(([n,t,d])=><div key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div><Check size={20}/></div>)}</div></section><div className="inline-note">현재는 비용 구조를 보여주는 UI 시안입니다. 확정되지 않은 가격이나 도착 시간을 표시하지 않습니다.</div><Trust/></div><FAQSection/><BottomCTA/></main>}

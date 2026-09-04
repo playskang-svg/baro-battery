@@ -1,0 +1,40 @@
+export const categories = [
+ {slug:'vehicles',name:'차종별',title:'내 차에 맞는 배터리부터',description:'제조사와 차종으로 교체 전 확인할 정보를 찾아보세요.',eyebrow:'FIND YOUR CAR'},
+ {slug:'regions',name:'지역별',title:'내가 있는 곳에서 시작하세요',description:'지역을 선택하고 주차 위치와 현장 조건을 미리 확인하세요.',eyebrow:'FIND YOUR AREA'},
+ {slug:'battery-info',name:'배터리 정보',title:'알고 바꾸면, 더 안심되니까',description:'방전 증상부터 배터리 종류까지. 내 차에 필요한 정보를 쉽게 정리했습니다.',eyebrow:'BATTERY JOURNAL'},
+ {slug:'service',name:'출장교체 · 비용',title:'교체 과정은 간단하게, 비용은 명확하게',description:'제품과 작업 조건을 확인한 뒤, 총비용과 일정을 상담하세요.',eyebrow:'HOW IT WORKS'},
+];
+export const vehicles = [
+ {slug:'grandeur',brand:'현대',name:'그랜저',type:'세단',note:'연식 · 엔진 · ISG 유무 확인',guide:'grandeur-battery-check'},
+ {slug:'avante',brand:'현대',name:'아반떼',type:'세단',note:'세대 · 장착 배터리 규격 확인',guide:'avante-starting-check'},
+ {slug:'sorento',brand:'기아',name:'쏘렌토',type:'SUV',note:'가솔린 · 디젤 · 하이브리드 구분',guide:'sorento-battery-guide'},
+ {slug:'sportage',brand:'기아',name:'스포티지',type:'SUV',note:'연식 · 엔진 · 배터리 타입 확인',guide:'sportage-battery-guide'},
+ {slug:'g80',brand:'제네시스',name:'G80',type:'세단',note:'장착 위치 · 등록 작업 여부 확인',guide:'g80-battery-check'},
+ {slug:'bmw-5',brand:'수입차',name:'BMW 5시리즈',type:'세단',note:'차대 정보 · 배터리 등록 여부 확인',guide:'bmw-5-battery-check'},
+];
+export const regions = [
+ {slug:'seoul',name:'서울',areas:['강남구','서초구','송파구','강동구','마포구','영등포구','강서구','노원구'],note:'아파트 지하주차장에서는 층수와 진입 높이를 함께 알려주세요.'},
+ {slug:'gyeonggi',name:'경기',areas:['수원시','성남시','용인시','화성시','고양시','부천시','안양시','김포시'],note:'시·구와 주차 위치를 알려주시면 이동 거리와 작업 조건을 확인하기 쉽습니다.'},
+ {slug:'incheon',name:'인천',areas:['연수구','남동구','부평구','서구','계양구','미추홀구','중구','동구'],note:'섬 지역이나 출입 제한 구역은 이동 경로와 출입 가능 여부를 먼저 확인하세요.'},
+];
+export type Guide={slug:string;category:string;title:string;excerpt:string;keyword:string;vehicle?:string;region?:string;tag:string;sections:{title:string;body:string}[];status:'sample'|'draft'|'published';image?:string;publishedAt?:string;updatedAt?:string;author?:string;reviewedBy?:string;sources?:{title:string;url:string}[]};
+export const guides:Guide[]=[
+ {slug:'grandeur-battery-check',category:'vehicles',vehicle:'grandeur',tag:'현대 · 그랜저',keyword:'그랜저 출장 배터리 교체',title:'그랜저 출장 배터리 교체, 연식만 알려주면 될까요?',excerpt:'같은 그랜저라도 확인할 정보가 다릅니다. 상담 전에 준비하면 좋은 세 가지.',status:'sample',sections:[{title:'연식과 엔진 종류를 함께 확인해요',body:'그랜저라는 차명만으로 교체 제품을 확정하지 않습니다. 연식, 엔진 종류, 하이브리드 여부를 함께 전달해 주세요.'},{title:'기존 배터리 정보를 준비해요',body:'안전하게 확인할 수 있다면 장착된 배터리 라벨 사진을 준비하세요. 제품명과 용량 정보는 상담 시 규격을 확인하는 데 도움이 됩니다. 정확한 호환성은 차량 매뉴얼과 제조사 기준으로 확인해야 합니다.'},{title:'견적에는 작업 조건도 포함해요',body:'주차 장소와 시동 가능 여부를 알려주고, 제품·출장·장착·추가 작업을 합한 총비용인지 확인하세요.'}]},
+ {slug:'avante-starting-check',category:'vehicles',vehicle:'avante',tag:'현대 · 아반떼',keyword:'아반떼 시동 불량 배터리 출장 교체',title:'아반떼 시동이 안 걸릴 때, 교체 문의 전 확인할 것',excerpt:'시동 반응과 주차 위치를 정리하면 상담이 더 정확해집니다.',status:'sample',sections:[{title:'시동을 걸 때 반응을 기록해요',body:'계기판 점등, 소리, 마지막 운행 시점을 상담 시 설명해 주세요. 시동 불량만으로 배터리 교체가 필요하다고 확정할 수는 없습니다.'},{title:'차량의 세대와 연식을 알려주세요',body:'아반떼의 세대와 엔진, 기존 배터리 정보로 적용 제품을 확인합니다. 실제 장착 전 규격을 다시 확인해야 합니다.'},{title:'주차 장소를 구체적으로 전달해요',body:'지상인지 지하인지, 차량 보닛을 열 수 있는 공간이 있는지 알려주세요. 안전하지 않은 도로 위에서는 우선 안전을 확보하고 긴급출동 등 적절한 지원을 요청하세요.'}]},
+ {slug:'sorento-battery-guide',category:'vehicles',vehicle:'sorento',tag:'기아 · 쏘렌토',keyword:'쏘렌토 출장 배터리 교체 확인',title:'쏘렌토 배터리 교체, 가솔린·디젤·하이브리드부터 구분하세요',excerpt:'차종명 다음으로 중요한 엔진과 배터리 정보. 문의 전에 한 번에 정리하세요.',status:'sample',sections:[{title:'엔진과 차량 사양을 구분해요',body:'동일한 차명이라도 차량 사양에 따라 확인 항목이 달라집니다. 연식과 가솔린·디젤·하이브리드 여부를 함께 알려주세요.'},{title:'기존 제품과 호환 규격을 확인해요',body:'현재 배터리 라벨과 차량 매뉴얼을 바탕으로 상담하세요. 용량만 보고 임의로 제품을 선택하지 말고 제조사 규격을 확인해야 합니다.'},{title:'교체 범위와 비용을 먼저 확인해요',body:'해당 차량의 배터리 종류와 작업 가능 범위, 교체 후 확인 항목을 안내받고 진행 여부를 결정하세요.'}]},
+ {slug:'sportage-battery-guide',category:'vehicles',vehicle:'sportage',tag:'기아 · 스포티지',keyword:'스포티지 출장 배터리 교체 준비',title:'스포티지 배터리 교체 상담, 라벨 사진이 도움이 되는 이유',excerpt:'연식과 사양을 전달하고 기존 배터리 정보를 함께 확인하세요.',status:'sample',sections:[{title:'차명에 세대와 연식을 더해요',body:'스포티지는 여러 세대와 엔진 사양이 있습니다. 차량등록증이나 매뉴얼에서 연식과 엔진 정보를 확인해 주세요.'},{title:'라벨에서 제품 정보를 확인해요',body:'안전하게 접근할 수 있을 때 기존 배터리 라벨을 촬영하세요. 직접 단자를 분리하거나 제품을 꺼낼 필요는 없습니다.'},{title:'주차 위치를 알려주세요',body:'실내·야외 주차 여부와 작업 공간을 알려주면 출장 가능 조건을 확인하는 데 도움이 됩니다.'}]},
+ {slug:'g80-battery-check',category:'vehicles',vehicle:'g80',tag:'제네시스 · G80',keyword:'G80 출장 배터리 교체 비용 확인',title:'G80 출장 배터리 교체, 제품 가격 외에 확인할 항목',excerpt:'장착과 교체 후 확인 작업까지 견적에 포함되어 있는지 살펴보세요.',status:'sample',sections:[{title:'세대와 차량 사양을 전달해요',body:'G80의 연식과 엔진, 현재 장착된 배터리 정보를 바탕으로 제품과 작업 범위를 확인합니다.'},{title:'작업 항목을 나눠 확인해요',body:'제품 가격 외에 출장비와 장착비, 차량별로 필요한 추가 작업이 있는지 문의하세요.'},{title:'교체 후 확인 항목을 물어보세요',body:'시동과 경고등 확인, 차량별 등록이나 초기화가 필요한지 상담 시 확인하세요. 모든 차량에 같은 작업이 적용되지는 않습니다.'}]},
+ {slug:'bmw-5-battery-check',category:'vehicles',vehicle:'bmw-5',tag:'수입차 · BMW',keyword:'BMW 5시리즈 출장 배터리 교체',title:'BMW 5시리즈 배터리 교체, 등록 작업도 확인하셨나요?',excerpt:'정확한 모델과 세대 정보로 제품 규격과 작업 범위를 상담하세요.',status:'sample',sections:[{title:'정확한 모델과 세대를 알려주세요',body:'5시리즈 안에서도 연식, 엔진, 세대에 따라 확인 항목이 달라집니다. 모델명과 차량 사양을 먼저 준비해 주세요.'},{title:'배터리 규격과 등록 여부를 확인해요',body:'제품 종류·용량 변경 가능 여부와 교체 후 등록 작업 필요성은 해당 차량의 제조사 정비 기준에 따라 확인해야 합니다.'},{title:'출장 가능 범위를 먼저 문의하세요',body:'차량에 필요한 장비와 작업이 출장으로 가능한지 확인하고, 전체 견적과 보증 조건을 안내받으세요.'}]},
+ {slug:'underground-parking',category:'regions',region:'seoul',tag:'지역 · 주차 환경',keyword:'서울 지하주차장 출장 배터리 교체',title:'서울 지하주차장 배터리 교체, 문의할 때 이 정보도 보내세요',excerpt:'지하 층수, 진입 높이, 주차 위치. 방문 전에 확인할 작은 차이.',status:'sample',sections:[{title:'주소와 주차 위치를 함께 준비해요',body:'상담 시 시·구와 지상·지하 여부를 먼저 알려주세요. 상세 주소는 실제 상담 채널에서 필요한 범위로 전달하세요.'},{title:'출입 조건을 확인해요',body:'주차장 진입 높이 제한, 방문 차량 등록 필요 여부, 작업 공간을 확인하세요. 현장 조건에 따라 출장 가능 여부가 달라질 수 있습니다.'},{title:'시간과 비용은 상담으로 확정해요',body:'지역만으로 도착 시간이나 출장비를 확정할 수 없습니다. 현재 위치와 작업 조건을 바탕으로 최종 안내를 받아주세요.'}]},
+ {slug:'agm-efb-guide',category:'battery-info',tag:'배터리 기초',keyword:'AGM EFB 배터리 차이 교체',title:'AGM·EFB·일반 배터리, 이름보다 먼저 볼 것은?',excerpt:'배터리 이름이 낯설어도 괜찮아요. 내 차량의 지정 규격부터 확인하면 됩니다.',status:'sample',sections:[{title:'차량 지정 규격이 우선이에요',body:'AGM·EFB 등 제품 종류만 보고 교체 제품을 선택하기보다 차량 매뉴얼과 기존 장착 규격을 먼저 확인하세요.'},{title:'용량 외의 조건도 확인해요',body:'크기, 단자 방향, 장착 방식 등도 적합해야 합니다. 제품의 숫자가 같다고 모든 차량에 호환되는 것은 아닙니다.'},{title:'상담할 때 사진을 활용해요',body:'차명, 연식, 엔진 정보와 함께 기존 배터리 라벨을 준비하면 확인에 도움이 됩니다. 실제 제품 선정은 제조사 자료와 현장 확인을 거쳐야 합니다.'}]},
+ {slug:'discharge-or-replace',category:'battery-info',tag:'증상 체크',keyword:'배터리 방전 교체 필요 확인',title:'한 번 방전됐는데, 바로 교체해야 할까요?',excerpt:'방전이라는 증상만으로 결정하기 전, 사용 이력과 점검 결과를 확인하세요.',status:'sample',sections:[{title:'최근 사용 상황을 정리해요',body:'마지막 운행 시점과 블랙박스 사용 여부, 방전이 반복되었는지 등 최근 상황을 정리해 주세요.'},{title:'교체 여부는 점검 후 결정해요',body:'시동이 걸리지 않는 원인은 여러 가지일 수 있습니다. 배터리와 충전 계통 등의 점검 결과를 바탕으로 필요한 조치를 안내받으세요.'},{title:'반복되는 증상은 함께 전달해요',body:'충전이나 긴급출동을 받은 이력이 있다면 상담 시 알려주세요. 단순 교체 외에 추가 점검이 필요한지 확인하는 데 도움이 됩니다.'}]},
+ {slug:'replacement-cost',category:'service',tag:'비용 체크',keyword:'출장 배터리 교체 비용 포함 항목',title:'출장 배터리 교체 비용, 총액에서 확인할 4가지',excerpt:'제품·출장·장착·추가 작업. 숫자 하나보다 포함 범위가 중요합니다.',status:'sample',sections:[{title:'제품과 장착비를 확인해요',body:'제품의 브랜드와 규격, 장착 작업이 견적에 포함되는지 확인하세요. 비용 예시만으로 최종 금액을 확정하지 않습니다.'},{title:'출장 조건을 확인해요',body:'지역, 시간대, 주차 환경에 따라 별도 조건이 있을 수 있습니다. 예약 전에 출장비 포함 여부를 확인하세요.'},{title:'추가 작업과 보증을 확인해요',body:'차량별 등록 작업, 기존 배터리 처리, 보증 범위와 증빙 제공 여부를 안내받으세요. 최종 총액에 동의한 뒤 작업을 진행하는 순서가 좋습니다.'}]},
+];
+export const faqs=[
+ {q:'문자 문의할 때 무엇이 필요한가요?',a:'차종과 연식만 필수로 입력해 주세요. 증상은 해당 항목을 체크하고, 배터리 사진과 차량 경고등 사진은 준비된 경우 문자 앱에서 첨부하면 됩니다. 작업자가 출장 전에 차량 정보와 사진을 확인합니다.'},
+ {q:'출장 배터리 교체 비용은 어떻게 정해지나요?',a:'제품 규격, 차량별 작업 항목, 이동 거리와 주차 환경 등의 조건을 확인해야 합니다. 상담에서 제품·출장·장착·추가 작업을 포함한 총비용을 확인하세요.'},
+ {q:'지하주차장에서도 교체할 수 있나요?',a:'진입 높이와 주차 공간, 현장 작업 조건을 먼저 확인해야 합니다. 지하 층수와 출입 제한 여부를 상담 시 알려주세요.'},
+ {q:'방전되면 무조건 배터리를 바꿔야 하나요?',a:'방전 증상만으로 교체를 확정할 수 없습니다. 사용 이력과 배터리 상태, 충전 계통 점검 등을 바탕으로 필요한 조치를 안내받으세요.'},
+ {q:'지금 바로 출장 예약이 가능한가요?',a:'현재 화면은 서비스 UI 시안입니다. 실제 운영 지역·시간과 연락 채널 연결 후 상담을 통해 방문 가능 여부와 일정을 확정할 수 있습니다.'},
+];
+export const serviceSteps=[{title:'체크하고 문자 보내기',text:'차종·연식과 증상을 적고, 준비한 사진을 첨부해요.'},{title:'출장 전 작업자 확인',text:'차량 정보 확인 후 제품·총비용·방문 일정을 안내해요.'},{title:'방문 교체 · 상태 확인',text:'안내받은 내용으로 교체하고 시동 상태를 확인해요.'}];
