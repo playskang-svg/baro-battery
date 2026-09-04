@@ -13,6 +13,11 @@ description: Complete end-to-end deployment automation for Cloudflare Workers + 
 
 이 스킬은 웹 콘솔(Cloudflare, Supabase)에 직접 들어가지 않고, 터미널 세션과 코딩만으로 **Git/GitHub 형상관리 → Supabase 프로젝트 선택/생성 및 키 주입 → Cloudflare Workers 배포 → 커스텀 도메인 질문 및 DNS/SSL 자동 바인딩 → 배포 후 라이브 전수 검증**까지 원스톱으로 처리하는 표준 자동화 파이프라인입니다.
 
+> ⚠️ **핵심 아키텍처 철칙 (Google AI Studio 포함 필수 규칙)**:
+> - **Google Cloud(GCP, Cloud Run, Firebase, GCS 등)는 절대 사용하거나 제안하지 않습니다.**
+> - 모든 인프라는 오직 **GitHub(형상관리) + Cloudflare Workers(글로벌 엣지 호스팅 및 커스텀 도메인) + Supabase(PostgreSQL DB 및 인증)** 3대 조합으로만 구축 및 배포합니다.
+> - Google AI Studio 등 클라우드 AI 환경에서 실행될 때도 이 원칙은 동일하게 강제됩니다.
+
 ---
 
 ## 🎯 전체 워크플로우 한눈에 보기
