@@ -35,3 +35,10 @@
 
 ## 🔒 보안 규칙
 - `.env*`, `.dev.vars*` 파일 및 API 키는 절대 Git 커밋에 포함하지 않습니다.
+
+---
+
+## 📖 프로젝트 관련 문서 (Docs)
+- [AI Studio 가이드 & GCP 금지 규칙](file:///Users/sgk/dev/battery/docs/ai-studio-guide.md)
+- [서비스 구조 및 CMS 설계 문서](file:///Users/sgk/dev/battery/docs/structure-and-cms.md)
+
