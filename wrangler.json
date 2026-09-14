@@ -6,6 +6,10 @@
     {
       "pattern": "battery.suriwiki.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "batterycall.kr",
+      "custom_domain": true
     }
   ],
   "workers_dev": true,
