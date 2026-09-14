@@ -1,108 +1,108 @@
 {
   "site": "batterycall",
   "domain": "batterycall.kr",
-  "checkedAt": "2026-09-14T03:40:10.290Z",
+  "checkedAt": "2026-09-14T04:25:41.498Z",
   "engine": "naver",
   "results": [
     {
       "keyword": "자동차배터리",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리방전",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리교체",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리출장",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "출장배터리",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리교체비용",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "점프스타트",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "점프선",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "점프스타터",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "시동안걸림",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "시동불량",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "방전증상",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "블랙박스방전",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "주차중방전",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "장기주차방전",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "겨울배터리",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "여름배터리",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "AGM배터리",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "EFB배터리",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "MF배터리",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리규격",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리용량",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리수명",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리교체주기",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "배터리경고등",
-      "error": "HTTP 403"
+      "hit": false
     }
   ]
 }

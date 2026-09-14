@@ -3,7 +3,7 @@
   "label": "배터리콜",
   "domain": "batterycall.kr",
   "repo": "playskang-svg/baro-battery",
-  "updatedAt": "2026-09-14T03:41:40.319Z",
+  "updatedAt": "2026-09-14T04:27:44.496Z",
   "updatedBy": "actions",
   "networks": [
     "쿠팡파트너스(배터리·점프스타터·충전기)"
@@ -18,6 +18,13 @@
   "history": [
     {
       "at": "2026-09-14T03:41:40.319Z",
+      "by": "actions",
+      "open": 0,
+      "new": 0,
+      "resolved": 0
+    },
+    {
+      "at": "2026-09-14T04:27:44.496Z",
       "by": "actions",
       "open": 0,
       "new": 0,
