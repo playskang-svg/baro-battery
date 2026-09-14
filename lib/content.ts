@@ -15,7 +15,7 @@ export const categories = [
   },
   {
     slug: 'battery-info',
-    name: '배터리 정보',
+    name: '배터리/차량 정보',
     title: '알고 바꾸면, 더 안심되니까',
     description:
       '방전 증상부터 배터리 종류까지. 내 차에 필요한 정보를 쉽게 정리했습니다.',
@@ -126,6 +126,28 @@ export const regions = [
     note: '섬 지역이나 출입 제한 구역은 이동 경로와 출입 가능 여부를 먼저 확인하세요.',
   },
 ];
+export type PostCategorySlug = 'emergency' | 'vehicles' | 'cost';
+export const postCategories: {
+  slug: PostCategorySlug;
+  name: string;
+  description: string;
+}[] = [
+  {
+    slug: 'emergency',
+    name: '방전·응급조치',
+    description: '시동이 안 걸릴 때 안전하게 확인할 순서',
+  },
+  {
+    slug: 'vehicles',
+    name: '차량별 배터리',
+    description: '차종과 연식에 맞춘 규격·교체 정보',
+  },
+  {
+    slug: 'cost',
+    name: '교체비용·관리',
+    description: '견적 항목과 배터리 수명 관리 기준',
+  },
+];
 export type Guide = {
   slug: string;
   category: string;
@@ -144,7 +166,26 @@ export type Guide = {
   reviewedBy?: string;
   sources?: { title: string; url: string }[];
   relatedLinks?: { title: string; url: string }[];
+  postCategories?: PostCategorySlug[];
 };
+
+export function guideMatchesPostCategory(
+  guide: Guide,
+  category: PostCategorySlug,
+) {
+  if (guide.postCategories?.length)
+    return guide.postCategories.includes(category);
+  if (category === 'vehicles')
+    return Boolean(guide.vehicle) || guide.category === 'vehicles';
+  if (category === 'cost')
+    return (
+      guide.category === 'service' ||
+      /비용|가격|수명|교체/.test(`${guide.keyword} ${guide.title}`)
+    );
+  return /방전|시동|점프|긴급/.test(
+    `${guide.keyword} ${guide.title} ${guide.tag}`,
+  );
+}
 export const guides: Guide[] = [
   {
     slug: 'grandeur-battery-check',
@@ -400,6 +441,7 @@ export const guides: Guide[] = [
     updatedAt: '2026-09-14',
     author: '배터리콜 편집팀',
     reviewedBy: '배터리콜 안전 검수',
+    postCategories: ['emergency'],
     sections: [
       {
         title: '우선 차가 서 있는 장소부터 안전한지 보세요',
@@ -462,6 +504,7 @@ export const guides: Guide[] = [
     updatedAt: '2026-09-14',
     author: '배터리콜 출장 정비팀',
     reviewedBy: '배터리콜 안전 검수',
+    postCategories: ['vehicles', 'cost'],
     sections: [
       {
         title: '지금 5분 안에 할 일 — 순서만 지키면 됩니다',
