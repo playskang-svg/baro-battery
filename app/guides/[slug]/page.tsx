@@ -76,7 +76,35 @@ export default async function Page({
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <h2>{s.title}</h2>
-                <p>{s.body}</p>
+                {s.highlights?.length ? (
+                  <div className="section-highlights" aria-label="세대 요약 정보">
+                    {s.highlights.map((h) => (
+                      <div key={h.label} className="highlight-item">
+                        <span className="highlight-label">{h.label}</span>
+                        <strong className="highlight-value">{h.value}</strong>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+                {s.image ? (
+                  <figure className="article-figure">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      className="article-img"
+                    />
+                    {s.imageCaption ? (
+                      <figcaption>{s.imageCaption}</figcaption>
+                    ) : null}
+                  </figure>
+                ) : null}
+                {s.paragraphs?.length ? (
+                  s.paragraphs.map((p, pIdx) => <p key={pIdx}>{p}</p>)
+                ) : (
+                  <p>{s.body}</p>
+                )}
               </section>
             ))}
             {g.sources?.length ? (
