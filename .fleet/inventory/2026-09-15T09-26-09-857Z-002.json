@@ -1,0 +1,14 @@
+{
+  "site": "batterycall",
+  "label": "배터리콜",
+  "domain": "batterycall.kr",
+  "title": "배터리터미널, 하얀 가루가 꼈는데 배터리를 갈아야 할까?",
+  "slug": "battery-terminal-corrosion-check",
+  "keyword": "배터리터미널",
+  "createdAt": "2026-09-15T09:26:09.862Z",
+  "createdOn": "24184529b66e4bb787e7019de9f0d6c31166c16a",
+  "files": [
+    "lib/content.ts"
+  ],
+  "patch": "2026-09-15T09-26-09-857Z-002.patch"
+}
