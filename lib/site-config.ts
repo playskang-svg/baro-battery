@@ -1,5 +1,12 @@
 // Operational values belong here. Empty channels stay in an honest preparation state.
-export const siteConfig={name:'바로배터리',headline:'출장 배터리 교체',origin:'https://batterycall.kr',phone:'',kakaoUrl:'',isPreview:false};
+export const siteConfig = {
+  name: '배터리콜',
+  headline: '출장 배터리 교체',
+  origin: 'https://batterycall.kr',
+  phone: '',
+  kakaoUrl: '',
+  isPreview: false,
+};
 export function contactHref(channel='inquiry',vehicle='',region=''){if(channel==='phone'&&siteConfig.phone)return `tel:${siteConfig.phone}`;if(channel==='kakao'&&siteConfig.kakaoUrl)return siteConfig.kakaoUrl;const q=new URLSearchParams({channel});if(vehicle)q.set('vehicle',vehicle);if(region)q.set('region',region);return `/contact?${q}`;}
 
 // SMS opens a composer only; photos must be attached in the device messaging app.

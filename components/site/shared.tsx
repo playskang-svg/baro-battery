@@ -11,6 +11,7 @@ import {
   MapPin,
   CarFront,
   ReceiptText,
+  BookOpen,
 } from 'lucide-react';
 import { MobileMenu, FAQ } from './interactive';
 import { categories, serviceSteps, type Guide } from '@/lib/content';
@@ -22,10 +23,10 @@ export function Header() {
         본문으로 바로가기
       </Link>
       <header className="header">
-        <Link className="brand" href="/" aria-label="바로배터리 홈">
+        <Link className="brand" href="/" aria-label="배터리콜 홈">
           <BatteryCharging />
           <span>
-            바로배터리<small>BATTERY CARE, ANYWHERE.</small>
+            배터리콜<small>BATTERY CARE, ANYWHERE.</small>
           </span>
         </Link>
         <nav aria-label="주 메뉴">
@@ -53,7 +54,7 @@ export function Footer() {
             <Link className="brand" href="/">
               <BatteryCharging />
               <span>
-                바로배터리<small>BATTERY CARE, ANYWHERE.</small>
+                배터리콜<small>BATTERY CARE, ANYWHERE.</small>
               </span>
             </Link>
             <p>내 차가 있는 곳에서, 다시 출발하는 일상.</p>
@@ -72,7 +73,7 @@ export function Footer() {
             차량 사진은 AI 제작 이미지이며, 콘텐츠와 후기 예시는 화면 구성
             확인용입니다.
           </p>
-          <span>© 2026 바로배터리</span>
+          <span>© 2026 배터리콜</span>
         </div>
       </footer>
       <div className="contact-dock" aria-label="빠른 문의">
@@ -216,6 +217,8 @@ export function GuideCard({
           <MapPin />
         ) : guide.category === 'service' ? (
           <ReceiptText />
+        ) : guide.category === 'blog' ? (
+          <BookOpen />
         ) : (
           <BatteryCharging />
         )}
@@ -226,7 +229,9 @@ export function GuideCard({
               ? 'CAR GUIDE'
               : guide.category === 'regions'
                 ? 'AREA GUIDE'
-                : 'SERVICE GUIDE'}
+                : guide.category === 'blog'
+                  ? 'BLOG'
+                  : 'SERVICE GUIDE'}
         </span>
       </div>
       <div className="guide-card-body">
@@ -239,7 +244,7 @@ export function GuideCard({
         <h3>{guide.title}</h3>
         <p>{guide.excerpt}</p>
         <span className="guide-more">
-          가이드 읽기 <ArrowUpRight size={17} />
+          {guide.category === 'blog' ? '글 읽기' : '가이드 읽기'} <ArrowUpRight size={17} />
         </span>
       </div>
     </Link>

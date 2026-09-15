@@ -2,7 +2,7 @@ import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
 import { regions, guides, getRegionKeywordData } from '@/lib/content';
 import { Crumb, PageIntro, BottomCTA, GuideCard, Steps } from '@/components/site/shared';
-import { MapPin, ArrowUpRight, Clock, ShieldAlert, HelpCircle, CheckCircle2, MessageSquare } from 'lucide-react';
+import { MapPin, Clock, ShieldAlert, HelpCircle, CheckCircle2, MessageSquare } from 'lucide-react';
 import { pageMeta } from '@/lib/metadata';
 
 interface PageProps {

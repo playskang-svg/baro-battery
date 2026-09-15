@@ -8,6 +8,7 @@ import {
   Check,
   CircleCheck,
   MapPin,
+  Newspaper,
   ReceiptText,
   ShieldCheck,
 } from 'lucide-react';
@@ -21,6 +22,7 @@ const shortcuts = [
   { href: '/regions', icon: MapPin, title: '지역별 찾기', text: '내 동네 출장 안내' },
   { href: '/battery-info', icon: BookOpen, title: '배터리/차량 정보', text: '방전·차종·교체비용 포스팅' },
   { href: '/service', icon: ReceiptText, title: '교체 안내 · 비용', text: '과정과 포함 항목 확인' },
+  { href: '/battery-info/blog', icon: Newspaper, title: '블로그', text: '관리 팁과 현장 이야기' },
 ];
 
 export default function Home() {

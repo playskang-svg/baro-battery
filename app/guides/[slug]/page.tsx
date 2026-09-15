@@ -24,7 +24,10 @@ export default async function Page({
   const { slug } = await params;
   const g = guides.find((g) => g.slug === slug);
   if (!g) notFound();
-  const c = categories.find((c) => c.slug === g.category)!;
+  const c = categories.find((c) => c.slug === g.category) || {
+    name: '배터리/차량 정보',
+    slug: 'battery-info',
+  };
   const published = g.status === 'published';
   return (
     <main id="main">
@@ -32,7 +35,7 @@ export default async function Page({
         <Crumb
           items={[
             { label: c.name, href: `/${c.slug}` },
-            { label: '교체 가이드' },
+            { label: g.category === 'blog' ? '블로그' : '교체 가이드' },
           ]}
         />
         <div className="article-layout">
@@ -44,7 +47,7 @@ export default async function Page({
             <h1>{g.title}</h1>
             <p className="article-lead">{g.excerpt}</p>
             <div className="article-byline">
-              <BookOpen size={17} /> {g.author || '바로배터리 가이드'}{' '}
+              <BookOpen size={17} /> {g.author || '배터리콜 가이드'}{' '}
               <span>
                 {published && g.publishedAt
                   ? `${g.publishedAt} 발행${g.reviewedBy ? ` · ${g.reviewedBy}` : ''}`

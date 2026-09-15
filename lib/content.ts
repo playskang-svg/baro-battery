@@ -28,6 +28,13 @@ export const categories = [
     description: '제품과 작업 조건을 확인한 뒤, 총비용과 일정을 상담하세요.',
     eyebrow: 'HOW IT WORKS',
   },
+  {
+    slug: 'blog',
+    name: '블로그',
+    title: '배터리콜 블로그',
+    description: '배터리 관리 팁부터 현장 이야기까지, 배터리콜의 유용한 이야기.',
+    eyebrow: 'BLOG',
+  },
 ];
 export const vehicles = [
   {
@@ -126,7 +133,7 @@ export const regions = [
     note: '섬 지역이나 출입 제한 구역은 이동 경로와 출입 가능 여부를 먼저 확인하세요.',
   },
 ];
-export type PostCategorySlug = 'emergency' | 'vehicles' | 'cost';
+export type PostCategorySlug = 'emergency' | 'vehicles' | 'cost' | 'blog';
 export const postCategories: {
   slug: PostCategorySlug;
   name: string;
@@ -146,6 +153,11 @@ export const postCategories: {
     slug: 'cost',
     name: '교체비용·관리',
     description: '견적 항목과 배터리 수명 관리 기준',
+  },
+  {
+    slug: 'blog',
+    name: '블로그',
+    description: '배터리 관리 팁부터 현장 이야기까지 유용한 정보',
   },
 ];
 export type Guide = {
@@ -175,6 +187,11 @@ export function guideMatchesPostCategory(
 ) {
   if (guide.postCategories?.length)
     return guide.postCategories.includes(category);
+  if (category === 'blog')
+    return (
+      guide.category === 'blog' ||
+      /블로그|상식|팁|관리/.test(`${guide.keyword} ${guide.title}`)
+    );
   if (category === 'vehicles')
     return Boolean(guide.vehicle) || guide.category === 'vehicles';
   if (category === 'cost')
@@ -565,6 +582,88 @@ export const guides: Guide[] = [
       {
         title: '한 번 방전됐는데, 바로 교체해야 할까요?',
         url: '/guides/discharge-or-replace',
+      },
+    ],
+  },
+  {
+    slug: 'winter-battery-care-tips',
+    category: 'blog',
+    tag: '블로그 · 배터리 관리',
+    keyword: '겨울철자동차배터리관리',
+    title: '겨울철 자동차 배터리 방전 예방과 관리 팁 5가지',
+    excerpt:
+      '기온이 영하로 떨어지면 배터리 성능은 급격히 감소합니다. 겨울철 방전 없이 안전하게 시동을 거는 핵심 관리법을 정리했습니다.',
+    status: 'published',
+    publishedAt: '2026-09-15',
+    updatedAt: '2026-09-15',
+    author: '배터리콜 에디터',
+    reviewedBy: '배터리콜 기술팀',
+    postCategories: ['blog'],
+    sections: [
+      {
+        title: '추운 날씨에 배터리가 쉽게 방전되는 이유',
+        body: '기온이 영하로 내려가면 배터리 내부 전해액의 유동성이 떨어지고 화학 반응 속도가 둔화됩니다. 0도에서는 상온 대비 약 70~80%, 영하 10도 이하에서는 50% 수준까지 출력이 저하될 수 있습니다. 반면 추운 날씨에 엔진 오일 점도가 높아져 시동 시 필요한 전류는 평소보다 2배 가까이 증가하기 때문에, 성능이 저하된 배터리는 첫 시동을 걸지 못하고 방전 증상을 일으킵니다.',
+      },
+      {
+        title: '실내 또는 지하주차장 이용하기',
+        body: '겨울철 야외 주차가 불가피한 경우 찬 바람을 직접 맞지 않는 벽 쪽이나 바람막이가 있는 곳에 주차하세요. 가급적 지하주차장이나 실내에 주차하면 외부 영하 기온과의 온도 차이로 배터리 전압 급강하를 효과적으로 방지할 수 있습니다.',
+      },
+      {
+        title: '블랙박스 저전압 차단 설정 및 주차 모드 점검',
+        body: '상시 녹화 블랙박스는 겨울철 배터리 방전의 대표적인 주원인입니다. 동절기에는 저전압 차단 기준을 평소보다 높은 12.2V~12.4V 수준으로 올려두거나, 주차 시간이 3일 이상 길어질 때는 주차 녹화를 꺼두는 것이 안전합니다.',
+      },
+      {
+        title: '주 1~2회, 30분 이상 충분한 주행',
+        body: '짧은 출퇴근 거리나 단거리 주행만 반복하면 시동 시 소모된 전력을 알터네이터(발전기)가 다 채우지 못해 점진적 방전이 발생합니다. 최소 주 1회 이상은 30분~1시간가량 정속 주행을 해 배터리가 완충될 수 있도록 시간을 확보해 주세요.',
+      },
+      {
+        title: '배터리 단자 주변 청결 유지와 점검',
+        body: '배터리 단자 주변에 백색 가루(황산납 산화물)나 먼지가 쌓여 있으면 접촉 불량이나 미세 누전이 발생할 수 있습니다. 마른 천이나 칫솔로 단자 주변을 깨끗이 닦아내고 결합 상태가 헐겁지 않은지 주기적으로 확인하세요.',
+      },
+    ],
+    sources: [
+      {
+        title: '한국소비자원 동절기 차량 배터리 관리 가이드',
+        url: 'https://www.kca.go.kr',
+      },
+    ],
+  },
+  {
+    slug: 'battery-replacement-lifespan-signs',
+    category: 'blog',
+    tag: '블로그 · 교체 상식',
+    keyword: '자동차배터리수명증상',
+    title: '자동차 배터리 수명 다했을 때 나타나는 전조증상 4가지',
+    excerpt:
+      '완전 방전으로 길에서 멈추기 전에 배터리가 보내는 경고 신호를 미리 알아채고 대처하는 방법.',
+    status: 'published',
+    publishedAt: '2026-09-15',
+    updatedAt: '2026-09-15',
+    author: '배터리콜 에디터',
+    reviewedBy: '배터리콜 현장 정비팀',
+    postCategories: ['blog'],
+    sections: [
+      {
+        title: '시동 걸 때 스타트 모터 소리가 둔탁해질 때',
+        body: '시동 버튼을 누르거나 키를 돌렸을 때, 평소 힘차게 "카랑카랑" 돌던 스타트 모터가 "드-르-륵" 하며 힘없이 돌아간다면 배터리의 순간 방전 능력(CCA)이 임계치에 도달했다는 명확한 신호입니다.',
+      },
+      {
+        title: '헤드라이트 및 실내 전장기기 밝기 저하',
+        body: '정차 상태에서 창문을 올리거나 에어컨, 열선 시트를 켤 때 실내등이나 전조등이 일시적으로 어두워진다면 배터리가 전압을 안정적으로 유지하지 못하고 있음을 뜻합니다.',
+      },
+      {
+        title: '오토스탑(ISG) 기능이 작동하지 않을 때',
+        body: '정차 시 자동으로 엔진이 꺼졌다가 다시 켜지는 ISG(Idle Stop & Go) 기능은 배터리 충전 상태(SOC)가 70~75% 이상일 때만 작동합니다. 날씨나 운행 조건에 관계없이 ISG가 계속 작동하지 않는다면 배터리 교체 시기가 임박했음을 시사합니다.',
+      },
+      {
+        title: '사용 기간 3년 또는 주행거리 5만km 초과',
+        body: '일반적인 무보수 납축전지(MF)나 고성능 AGM 배터리도 통상 3~4년(약 50,000~60,000km)이 지나면 내부 극판 부식과 활물질 탈락으로 성능 저하가 일어납니다. 제조일자 라벨을 확인하고 3년이 넘었다면 정기적인 전압 측정을 권장합니다.',
+      },
+    ],
+    sources: [
+      {
+        title: '교통안전공단 자동차 배터리 점검 요령',
+        url: 'https://www.kotsa.or.kr',
       },
     ],
   },

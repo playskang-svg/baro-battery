@@ -50,7 +50,7 @@ export function InquiryJourney() {
         </div>
       </div>
 
-      <div className="keyword-chip-bar" role="group" aria-label="증상 키워드 빠른 선택">
+      <div className="keyword-chip-bar" aria-label="증상 키워드 빠른 선택">
         {symptomKeywords.map(({ keyword, symptomValue, icon: Icon }) => {
           const isSelected = selectedSymptoms.includes(symptomValue);
           return (
