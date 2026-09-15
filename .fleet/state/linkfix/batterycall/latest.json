@@ -1,0 +1,323 @@
+{
+  "site": "batterycall",
+  "label": "배터리콜",
+  "domain": "batterycall.kr",
+  "repo": "playskang-svg/baro-battery",
+  "scannedAt": "2026-09-15T00:54:51.247Z",
+  "pagesCrawled": 92,
+  "sitemapUrls": 43,
+  "externalChecked": 2,
+  "summary": {
+    "medium": 1
+  },
+  "occurrences": 36,
+  "findings": [
+    {
+      "severity": "medium",
+      "kind": "canonical-mismatch",
+      "scope": "site-wide",
+      "page": "https://batterycall.kr (전역)",
+      "occurrences": 36,
+      "pages": 36,
+      "hrefs": [],
+      "examples": [
+        {
+          "page": "https://batterycall.kr/contact?channel=inquiry",
+          "href": null,
+          "text": null,
+          "nav": false
+        },
+        {
+          "page": "https://batterycall.kr/contact?vehicle=other",
+          "href": null,
+          "text": null,
+          "nav": false
+        },
+        {
+          "page": "https://batterycall.kr/contact?region=other",
+          "href": null,
+          "text": null,
+          "nav": false
+        },
+        {
+          "page": "https://batterycall.kr/contact?channel=inquiry&vehicle=grandeur",
+          "href": null,
+          "text": null,
+          "nav": false
+        }
+      ],
+      "note": "36쪽 36건에 같은 결함이 있다. 페이지마다 고칠 문제가 아니라 공통 컴포넌트·레이아웃 한 곳의 문제다."
+    }
+  ],
+  "detail": {
+    "canonical-mismatch": [
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?vehicle=other",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=other",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&vehicle=grandeur",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&vehicle=avante",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&vehicle=sorento",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&vehicle=sportage",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&vehicle=g80",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&vehicle=bmw-5",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EA%B0%95%EB%82%A8%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&region=seoul",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EC%88%98%EC%9B%90%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&region=gyeonggi",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EC%97%B0%EC%88%98%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?channel=inquiry&region=incheon",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EC%84%9C%EC%B4%88%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EC%86%A1%ED%8C%8C%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EA%B0%95%EB%8F%99%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EB%A7%88%ED%8F%AC%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EA%B0%95%EC%84%9C%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=seoul&area=%EB%85%B8%EC%9B%90%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EC%84%B1%EB%82%A8%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EC%9A%A9%EC%9D%B8%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%ED%99%94%EC%84%B1%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EA%B3%A0%EC%96%91%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EB%B6%80%EC%B2%9C%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EC%95%88%EC%96%91%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EA%B9%80%ED%8F%AC%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%82%A8%EB%8F%99%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%B6%80%ED%8F%89%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EC%84%9C%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EA%B3%84%EC%96%91%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%AF%B8%EC%B6%94%ED%99%80%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EC%A4%91%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%8F%99%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      }
+    ]
+  },
+  "autoFixable": [
+    "dead-anchor",
+    "empty-href",
+    "javascript-void",
+    "placeholder-url",
+    "http-to-https",
+    "double-slash"
+  ],
+  "reportOnly": [
+    "dead-external-link",
+    "external-unreachable",
+    "orphan-page",
+    "redirect-chain",
+    "noindex"
+  ]
+}
