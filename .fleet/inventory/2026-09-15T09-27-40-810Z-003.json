@@ -1,0 +1,14 @@
+{
+  "site": "batterycall",
+  "label": "배터리콜",
+  "domain": "batterycall.kr",
+  "title": "AGM배터리가격, 일반 배터리로 바꾸면 더 드는 경우가 있습니다",
+  "slug": "agm-battery-price-factors",
+  "keyword": "AGM배터리가격",
+  "createdAt": "2026-09-15T09:27:40.815Z",
+  "createdOn": "b55ac7010289654d07d92fbf016c0b66b84e9e0a",
+  "files": [
+    "lib/content.ts"
+  ],
+  "patch": "2026-09-15T09-27-40-810Z-003.patch"
+}
