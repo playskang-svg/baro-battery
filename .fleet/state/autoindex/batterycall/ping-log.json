@@ -1,20 +1,26 @@
 {
   "pings": [
     {
-      "at": "2026-09-14T04:43:04.946Z",
-      "count": 40,
+      "at": "2026-09-16T15:09:32.571Z",
+      "count": 53,
       "urls": [
         "https://batterycall.kr/",
         "https://batterycall.kr/vehicles",
         "https://batterycall.kr/regions",
         "https://batterycall.kr/battery-info",
         "https://batterycall.kr/service",
+        "https://batterycall.kr/blog",
+        "https://batterycall.kr/battery-info/emergency",
+        "https://batterycall.kr/battery-info/vehicles",
+        "https://batterycall.kr/battery-info/cost",
+        "https://batterycall.kr/battery-info/blog",
         "https://batterycall.kr/vehicles/grandeur",
         "https://batterycall.kr/vehicles/avante",
         "https://batterycall.kr/vehicles/sorento",
         "https://batterycall.kr/vehicles/sportage",
         "https://batterycall.kr/vehicles/g80",
         "https://batterycall.kr/vehicles/bmw-5",
+        "https://batterycall.kr/vehicles/k5",
         "https://batterycall.kr/regions/seoul",
         "https://batterycall.kr/regions/gyeonggi",
         "https://batterycall.kr/regions/incheon",
@@ -43,7 +49,11 @@
         "https://batterycall.kr/regions/incheon?area=%EC%A4%91%EA%B5%AC",
         "https://batterycall.kr/regions/incheon?area=%EB%8F%99%EA%B5%AC",
         "https://batterycall.kr/guides/car-battery-discharge-first-response",
-        "https://batterycall.kr/guides/avante-battery-replacement-cost"
+        "https://batterycall.kr/guides/battery-terminal-corrosion-check",
+        "https://batterycall.kr/guides/avante-battery-replacement-cost",
+        "https://batterycall.kr/guides/k5-battery-spec-check",
+        "https://batterycall.kr/guides/winter-battery-care-tips",
+        "https://batterycall.kr/guides/battery-replacement-lifespan-signs"
       ]
     }
   ]
