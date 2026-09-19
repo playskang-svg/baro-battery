@@ -1,0 +1,3615 @@
+{
+  "site": "batterycall",
+  "expandedAt": "2026-09-19T21:46:18.597Z",
+  "candidates": [
+    {
+      "keyword": "자동차배터리",
+      "from": "자동차배터리",
+      "volume": 15210,
+      "volumePc": 3010,
+      "volumeMobile": 12200,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리교체",
+      "from": "자동차배터리",
+      "volume": 11400,
+      "volumePc": 1100,
+      "volumeMobile": 10300,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "점프스타터",
+      "from": "자동차배터리",
+      "volume": 7830,
+      "volumePc": 1660,
+      "volumeMobile": 6170,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리수명",
+      "from": "자동차배터리",
+      "volume": 5960,
+      "volumePc": 720,
+      "volumeMobile": 5240,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "AGM배터리",
+      "from": "자동차배터리",
+      "volume": 4900,
+      "volumePc": 1040,
+      "volumeMobile": 3860,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리교체",
+      "from": "자동차배터리",
+      "volume": 4270,
+      "volumePc": 440,
+      "volumeMobile": 3830,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 3700,
+      "volumePc": 400,
+      "volumeMobile": 3300,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "출장배터리교체",
+      "from": "자동차배터리",
+      "volume": 3400,
+      "volumePc": 370,
+      "volumeMobile": 3030,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차점프스타터",
+      "from": "자동차배터리",
+      "volume": 2770,
+      "volumePc": 550,
+      "volumeMobile": 2220,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "출장배터리",
+      "from": "자동차배터리",
+      "volume": 2690,
+      "volumePc": 390,
+      "volumeMobile": 2300,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "견인",
+      "from": "보험긴급출동",
+      "volume": 2290,
+      "volumePc": 440,
+      "volumeMobile": 1850,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리충전기",
+      "from": "자동차배터리",
+      "volume": 2070,
+      "volumePc": 480,
+      "volumeMobile": 1590,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차점프선",
+      "from": "자동차배터리",
+      "volume": 1720,
+      "volumePc": 250,
+      "volumeMobile": 1470,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "차량용점프스타터",
+      "from": "자동차배터리",
+      "volume": 1650,
+      "volumePc": 370,
+      "volumeMobile": 1280,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "레이배터리",
+      "from": "자동차배터리",
+      "volume": 1630,
+      "volumePc": 290,
+      "volumeMobile": 1340,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "모닝배터리",
+      "from": "자동차배터리",
+      "volume": 1500,
+      "volumePc": 250,
+      "volumeMobile": 1250,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "점프선",
+      "from": "자동차배터리",
+      "volume": 1470,
+      "volumePc": 370,
+      "volumeMobile": 1100,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "견인비용",
+      "from": "보험긴급출동",
+      "volume": 1400,
+      "volumePc": 150,
+      "volumeMobile": 1250,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리방전",
+      "from": "자동차배터리",
+      "volume": 1380,
+      "volumePc": 130,
+      "volumeMobile": 1250,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리출장교체",
+      "from": "자동차배터리",
+      "volume": 1220,
+      "volumePc": 200,
+      "volumeMobile": 1020,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리수명",
+      "from": "배터리규격",
+      "volume": 1220,
+      "volumePc": 130,
+      "volumeMobile": 1090,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "스파크배터리",
+      "from": "보험긴급출동",
+      "volume": 1210,
+      "volumePc": 200,
+      "volumeMobile": 1010,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "차량배터리교체",
+      "from": "자동차배터리",
+      "volume": 1190,
+      "volumePc": 140,
+      "volumeMobile": 1050,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "올뉴카니발배터리",
+      "from": "자동차배터리",
+      "volume": 1030,
+      "volumePc": 150,
+      "volumeMobile": 880,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리가격",
+      "from": "자동차배터리",
+      "volume": 1020,
+      "volumePc": 100,
+      "volumeMobile": 920,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리출장교체",
+      "from": "자동차배터리",
+      "volume": 920,
+      "volumePc": 170,
+      "volumeMobile": 750,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "카니발배터리",
+      "from": "자동차배터리",
+      "volume": 860,
+      "volumePc": 110,
+      "volumeMobile": 750,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "차량배터리방전",
+      "from": "자동차배터리",
+      "volume": 830,
+      "volumePc": 70,
+      "volumeMobile": 760,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "휴대용점프스타터",
+      "from": "자동차배터리",
+      "volume": 820,
+      "volumePc": 140,
+      "volumeMobile": 680,
+      "adComp": "높음",
+      "adDepth": 9
+    },
+    {
+      "keyword": "자동차배터리점프",
+      "from": "자동차배터리",
+      "volume": 820,
+      "volumePc": 90,
+      "volumeMobile": 730,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리방전",
+      "from": "자동차배터리",
+      "volume": 790,
+      "volumePc": 100,
+      "volumeMobile": 690,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "차배터리교체",
+      "from": "자동차배터리",
+      "volume": 770,
+      "volumePc": 30,
+      "volumeMobile": 740,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "점프스타트",
+      "from": "자동차배터리",
+      "volume": 740,
+      "volumePc": 120,
+      "volumeMobile": 620,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리충전",
+      "from": "자동차배터리",
+      "volume": 740,
+      "volumePc": 110,
+      "volumeMobile": 630,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "차량견인비용",
+      "from": "보험긴급출동",
+      "volume": 740,
+      "volumePc": 70,
+      "volumeMobile": 670,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "배터리경고등",
+      "from": "배터리규격",
+      "volume": 670,
+      "volumePc": 60,
+      "volumeMobile": 610,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "올뉴쏘렌토배터리",
+      "from": "자동차배터리",
+      "volume": 650,
+      "volumePc": 100,
+      "volumeMobile": 550,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "긴급출동",
+      "from": "배터리전압",
+      "volume": 650,
+      "volumePc": 70,
+      "volumeMobile": 580,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "레이배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 630,
+      "volumePc": 60,
+      "volumeMobile": 570,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "배터리용량",
+      "from": "배터리규격",
+      "volume": 620,
+      "volumePc": 140,
+      "volumeMobile": 480,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리교체출장",
+      "from": "자동차배터리",
+      "volume": 610,
+      "volumePc": 70,
+      "volumeMobile": 540,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "올뉴모닝배터리",
+      "from": "보험긴급출동",
+      "volume": 610,
+      "volumePc": 80,
+      "volumeMobile": 530,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "아반떼배터리",
+      "from": "자동차배터리",
+      "volume": 590,
+      "volumePc": 130,
+      "volumeMobile": 460,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "K5배터리",
+      "from": "보험긴급출동",
+      "volume": 590,
+      "volumePc": 110,
+      "volumeMobile": 480,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "차량배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 580,
+      "volumePc": 60,
+      "volumeMobile": 520,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "24V점프스타터",
+      "from": "배터리교체비용",
+      "volume": 570,
+      "volumePc": 90,
+      "volumeMobile": 480,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리단자",
+      "from": "배터리전압",
+      "volume": 570,
+      "volumePc": 160,
+      "volumeMobile": 410,
+      "adComp": "높음",
+      "adDepth": 9
+    },
+    {
+      "keyword": "자동차배터리교체시기",
+      "from": "자동차배터리",
+      "volume": 550,
+      "volumePc": 90,
+      "volumeMobile": 460,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "공임나라배터리교체",
+      "from": "자동차배터리",
+      "volume": 550,
+      "volumePc": 80,
+      "volumeMobile": 470,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "배터리터미널",
+      "from": "배터리전압",
+      "volume": 550,
+      "volumePc": 170,
+      "volumeMobile": 380,
+      "adComp": "중간",
+      "adDepth": 7
+    },
+    {
+      "keyword": "배터리출장",
+      "from": "자동차배터리",
+      "volume": 510,
+      "volumePc": 100,
+      "volumeMobile": 410,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "아반떼배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 500,
+      "volumePc": 50,
+      "volumeMobile": 450,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "차량점프스타터",
+      "from": "자동차배터리",
+      "volume": 500,
+      "volumePc": 110,
+      "volumeMobile": 390,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 490,
+      "volumePc": 60,
+      "volumeMobile": 430,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "스파크배터리가격",
+      "from": "자동차배터리",
+      "volume": 490,
+      "volumePc": 30,
+      "volumeMobile": 460,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리점프스타터",
+      "from": "자동차배터리",
+      "volume": 480,
+      "volumePc": 100,
+      "volumeMobile": 380,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "벤츠배터리교체",
+      "from": "자동차배터리",
+      "volume": 470,
+      "volumePc": 60,
+      "volumeMobile": 410,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리종류",
+      "from": "자동차배터리",
+      "volume": 440,
+      "volumePc": 110,
+      "volumeMobile": 330,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "레이배터리교체",
+      "from": "자동차배터리",
+      "volume": 440,
+      "volumePc": 60,
+      "volumeMobile": 380,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "쏘렌토배터리",
+      "from": "보험긴급출동",
+      "volume": 440,
+      "volumePc": 80,
+      "volumeMobile": 360,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "오토바이점프스타터",
+      "from": "자동차배터리",
+      "volume": 420,
+      "volumePc": 60,
+      "volumeMobile": 360,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "전기자전거배터리교체",
+      "from": "배터리교체비용",
+      "volume": 420,
+      "volumePc": 60,
+      "volumeMobile": 360,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리80L",
+      "from": "겨울배터리",
+      "volume": 420,
+      "volumePc": 80,
+      "volumeMobile": 340,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "BMW배터리교체",
+      "from": "자동차배터리",
+      "volume": 400,
+      "volumePc": 70,
+      "volumeMobile": 330,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리출장",
+      "from": "자동차배터리",
+      "volume": 380,
+      "volumePc": 60,
+      "volumeMobile": 320,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "AGM배터리수명",
+      "from": "자동차배터리",
+      "volume": 380,
+      "volumePc": 80,
+      "volumeMobile": 300,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리할인점",
+      "from": "자동차배터리",
+      "volume": 370,
+      "volumePc": 30,
+      "volumeMobile": 340,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리전문점",
+      "from": "자동차배터리",
+      "volume": 360,
+      "volumePc": 30,
+      "volumeMobile": 330,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "더넥스트스파크배터리",
+      "from": "자동차배터리",
+      "volume": 350,
+      "volumePc": 40,
+      "volumeMobile": 310,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리점프스타터",
+      "from": "자동차배터리",
+      "volume": 350,
+      "volumePc": 80,
+      "volumeMobile": 270,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "수원출장배터리",
+      "from": "자동차배터리",
+      "volume": 340,
+      "volumePc": 170,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "차배터리교체비용",
+      "from": "배터리교체비용",
+      "volume": 340,
+      "volumePc": 20,
+      "volumeMobile": 320,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "니로하이브리드배터리교체",
+      "from": "보험긴급출동",
+      "volume": 340,
+      "volumePc": 80,
+      "volumeMobile": 260,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리교환",
+      "from": "자동차배터리",
+      "volume": 320,
+      "volumePc": 30,
+      "volumeMobile": 290,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "QM6배터리교체",
+      "from": "자동차배터리",
+      "volume": 320,
+      "volumePc": 50,
+      "volumeMobile": 270,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리점프선",
+      "from": "자동차배터리",
+      "volume": 320,
+      "volumePc": 60,
+      "volumeMobile": 260,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "견인차비용",
+      "from": "보험긴급출동",
+      "volume": 320,
+      "volumePc": 40,
+      "volumeMobile": 280,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "더뉴카니발배터리",
+      "from": "보험긴급출동",
+      "volume": 320,
+      "volumePc": 50,
+      "volumeMobile": 270,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "천안자동차배터리",
+      "from": "자동차배터리",
+      "volume": 300,
+      "volumePc": 40,
+      "volumeMobile": 260,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "오토바이배터리교체",
+      "from": "자동차배터리",
+      "volume": 290,
+      "volumePc": 10,
+      "volumeMobile": 280,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "차량견인",
+      "from": "보험긴급출동",
+      "volume": 290,
+      "volumePc": 40,
+      "volumeMobile": 250,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차견인비용",
+      "from": "보험긴급출동",
+      "volume": 290,
+      "volumePc": 40,
+      "volumeMobile": 250,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "자동차배터리셀프교체",
+      "from": "겨울배터리",
+      "volume": 270,
+      "volumePc": 60,
+      "volumeMobile": 210,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차견인",
+      "from": "보험긴급출동",
+      "volume": 270,
+      "volumePc": 30,
+      "volumeMobile": 240,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "현대자동차배터리",
+      "from": "보험긴급출동",
+      "volume": 270,
+      "volumePc": 130,
+      "volumeMobile": 140,
+      "adComp": "중간",
+      "adDepth": 2
+    },
+    {
+      "keyword": "K5배터리교체",
+      "from": "자동차배터리",
+      "volume": 260,
+      "volumePc": 60,
+      "volumeMobile": 200,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리교체가격",
+      "from": "자동차배터리",
+      "volume": 250,
+      "volumePc": 20,
+      "volumeMobile": 230,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "천안배터리교체",
+      "from": "자동차배터리",
+      "volume": 250,
+      "volumePc": 30,
+      "volumeMobile": 220,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "스파크배터리교체",
+      "from": "자동차배터리",
+      "volume": 240,
+      "volumePc": 30,
+      "volumeMobile": 210,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "천안출장배터리",
+      "from": "자동차배터리",
+      "volume": 240,
+      "volumePc": 20,
+      "volumeMobile": 220,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "배터리교체주기",
+      "from": "배터리규격",
+      "volume": 240,
+      "volumePc": 60,
+      "volumeMobile": 180,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차긴급출동",
+      "from": "보험긴급출동",
+      "volume": 240,
+      "volumePc": 20,
+      "volumeMobile": 220,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "대형견인",
+      "from": "보험긴급출동",
+      "volume": 240,
+      "volumePc": 60,
+      "volumeMobile": 180,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "차량점프선",
+      "from": "자동차배터리",
+      "volume": 230,
+      "volumePc": 40,
+      "volumeMobile": 190,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "그랜저배터리",
+      "from": "보험긴급출동",
+      "volume": 230,
+      "volumePc": 30,
+      "volumeMobile": 200,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "긴급출동서비스",
+      "from": "보험긴급출동",
+      "volume": 230,
+      "volumePc": 30,
+      "volumeMobile": 200,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "GV80배터리교체",
+      "from": "보험긴급출동",
+      "volume": 230,
+      "volumePc": 40,
+      "volumeMobile": 190,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "수원배터리교체",
+      "from": "자동차배터리",
+      "volume": 220,
+      "volumePc": 50,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "인천출장배터리",
+      "from": "자동차배터리",
+      "volume": 220,
+      "volumePc": 50,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "싼타페배터리",
+      "from": "자동차배터리",
+      "volume": 220,
+      "volumePc": 40,
+      "volumeMobile": 180,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "AGM배터리가격",
+      "from": "자동차배터리",
+      "volume": 220,
+      "volumePc": 30,
+      "volumeMobile": 190,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "투싼배터리",
+      "from": "자동차배터리",
+      "volume": 220,
+      "volumePc": 40,
+      "volumeMobile": 180,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "그랜드카니발배터리",
+      "from": "자동차배터리",
+      "volume": 220,
+      "volumePc": 20,
+      "volumeMobile": 200,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "모닝배터리교체",
+      "from": "자동차배터리",
+      "volume": 210,
+      "volumePc": 40,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "올뉴카니발배터리교체",
+      "from": "자동차배터리",
+      "volume": 210,
+      "volumePc": 30,
+      "volumeMobile": 180,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "블랙박스방전",
+      "from": "시동불량",
+      "volume": 210,
+      "volumePc": 20,
+      "volumeMobile": 190,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "G80배터리교체",
+      "from": "보험긴급출동",
+      "volume": 210,
+      "volumePc": 30,
+      "volumeMobile": 180,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리추천",
+      "from": "자동차배터리",
+      "volume": 200,
+      "volumePc": 50,
+      "volumeMobile": 150,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "모닝배터리가격",
+      "from": "자동차배터리",
+      "volume": 200,
+      "volumePc": 30,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "오토바이배터리방전",
+      "from": "자동차배터리",
+      "volume": 200,
+      "volumePc": 10,
+      "volumeMobile": 190,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "점프스타터공기주입기",
+      "from": "배터리교체비용",
+      "volume": 200,
+      "volumePc": 40,
+      "volumeMobile": 160,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "티볼리배터리교체",
+      "from": "보험긴급출동",
+      "volume": 200,
+      "volumePc": 20,
+      "volumeMobile": 180,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "아반떼배터리가격",
+      "from": "자동차배터리",
+      "volume": 190,
+      "volumePc": 20,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "밧데리점프선",
+      "from": "자동차배터리",
+      "volume": 190,
+      "volumePc": 20,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "아반떼배터리교체",
+      "from": "배터리교체비용",
+      "volume": 190,
+      "volumePc": 20,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "셀토스배터리교체",
+      "from": "보험긴급출동",
+      "volume": 190,
+      "volumePc": 20,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "올뉴투싼배터리",
+      "from": "자동차배터리",
+      "volume": 180,
+      "volumePc": 30,
+      "volumeMobile": 150,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "AGM배터리충전기",
+      "from": "배터리교체비용",
+      "volume": 180,
+      "volumePc": 40,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "GV70배터리교체",
+      "from": "보험긴급출동",
+      "volume": 180,
+      "volumePc": 40,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "더뉴스파크배터리",
+      "from": "보험긴급출동",
+      "volume": 180,
+      "volumePc": 30,
+      "volumeMobile": 150,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "쏘렌토하이브리드배터리교체",
+      "from": "보험긴급출동",
+      "volume": 180,
+      "volumePc": 20,
+      "volumeMobile": 160,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "차견인비용",
+      "from": "보험긴급출동",
+      "volume": 180,
+      "volumePc": 10,
+      "volumeMobile": 170,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "부천자동차배터리",
+      "from": "자동차배터리",
+      "volume": 170,
+      "volumePc": 30,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "인천배터리교체",
+      "from": "자동차배터리",
+      "volume": 170,
+      "volumePc": 40,
+      "volumeMobile": 130,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "차도리점프스타터",
+      "from": "자동차배터리",
+      "volume": 170,
+      "volumePc": 10,
+      "volumeMobile": 160,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "니로배터리교체",
+      "from": "배터리교체비용",
+      "volume": 170,
+      "volumePc": 30,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리90L",
+      "from": "겨울배터리",
+      "volume": 170,
+      "volumePc": 40,
+      "volumeMobile": 130,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "배터리전압",
+      "from": "배터리전압",
+      "volume": 170,
+      "volumePc": 20,
+      "volumeMobile": 150,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "K3배터리교체",
+      "from": "자동차배터리",
+      "volume": 160,
+      "volumePc": 20,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리용량",
+      "from": "자동차배터리",
+      "volume": 160,
+      "volumePc": 40,
+      "volumeMobile": 120,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "점프스타터추천",
+      "from": "자동차배터리",
+      "volume": 160,
+      "volumePc": 40,
+      "volumeMobile": 120,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "시동안걸림",
+      "from": "배터리교체비용",
+      "volume": 160,
+      "volumePc": 20,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "팰리세이드배터리교체",
+      "from": "배터리교체비용",
+      "volume": 160,
+      "volumePc": 20,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "대형견인차",
+      "from": "보험긴급출동",
+      "volume": 160,
+      "volumePc": 30,
+      "volumeMobile": 130,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "미니쿠퍼배터리교체",
+      "from": "자동차배터리",
+      "volume": 150,
+      "volumePc": 30,
+      "volumeMobile": 120,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "쏘렌토배터리가격",
+      "from": "자동차배터리",
+      "volume": 150,
+      "volumePc": 10,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "나리온점프스타터",
+      "from": "자동차배터리",
+      "volume": 150,
+      "volumePc": 40,
+      "volumeMobile": 110,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "천안자동차배터리교체",
+      "from": "자동차배터리",
+      "volume": 150,
+      "volumePc": 10,
+      "volumeMobile": 140,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "EFB배터리",
+      "from": "겨울배터리",
+      "volume": 150,
+      "volumePc": 40,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차점프스타트",
+      "from": "자동차배터리",
+      "volume": 140,
+      "volumePc": 10,
+      "volumeMobile": 130,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리판매점",
+      "from": "자동차배터리",
+      "volume": 140,
+      "volumePc": 10,
+      "volumeMobile": 130,
+      "adComp": "중간",
+      "adDepth": 8
+    },
+    {
+      "keyword": "수원자동차배터리교체",
+      "from": "자동차배터리",
+      "volume": 140,
+      "volumePc": 20,
+      "volumeMobile": 120,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "K7배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 140,
+      "volumePc": 30,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "그랜저배터리가격",
+      "from": "배터리교체비용",
+      "volume": 140,
+      "volumePc": 10,
+      "volumeMobile": 130,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "그랜저IG하이브리드배터리교체",
+      "from": "보험긴급출동",
+      "volume": 140,
+      "volumePc": 30,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "투싼배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 130,
+      "volumePc": 20,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "뉴모닝배터리",
+      "from": "자동차배터리",
+      "volume": 130,
+      "volumePc": 20,
+      "volumeMobile": 110,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "차량용배터리교체",
+      "from": "자동차배터리",
+      "volume": 120,
+      "volumePc": 10,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "K5배터리교체비용",
+      "from": "자동차배터리",
+      "volume": 120,
+      "volumePc": 10,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리가게",
+      "from": "자동차배터리",
+      "volume": 120,
+      "volumePc": 10,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "카니발배터리가격",
+      "from": "자동차배터리",
+      "volume": 120,
+      "volumePc": 10,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "점프스타터배터리",
+      "from": "자동차배터리",
+      "volume": 120,
+      "volumePc": 10,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "SM6배터리교체",
+      "from": "배터리교체비용",
+      "volume": 120,
+      "volumePc": 20,
+      "volumeMobile": 100,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "베뉴배터리교체",
+      "from": "보험긴급출동",
+      "volume": 120,
+      "volumePc": 10,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "카니발배터리교체",
+      "from": "보험긴급출동",
+      "volume": 120,
+      "volumePc": 30,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "지하주차장견인",
+      "from": "보험긴급출동",
+      "volume": 120,
+      "volumePc": 10,
+      "volumeMobile": 110,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "중고자동차배터리",
+      "from": "자동차배터리",
+      "volume": 110,
+      "volumePc": 20,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "아반떼AD배터리교체",
+      "from": "자동차배터리",
+      "volume": 110,
+      "volumePc": 20,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "올뉴쏘렌토배터리가격",
+      "from": "배터리교체비용",
+      "volume": 110,
+      "volumePc": 10,
+      "volumeMobile": 100,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "쏘렌토배터리교체",
+      "from": "배터리교체비용",
+      "volume": 110,
+      "volumePc": 10,
+      "volumeMobile": 100,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리100L",
+      "from": "겨울배터리",
+      "volume": 110,
+      "volumePc": 20,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리90R",
+      "from": "겨울배터리",
+      "volume": 110,
+      "volumePc": 20,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "배터리테스트",
+      "from": "배터리전압",
+      "volume": 110,
+      "volumePc": 10,
+      "volumeMobile": 100,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "더뉴쏘렌토배터리",
+      "from": "보험긴급출동",
+      "volume": 110,
+      "volumePc": 20,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "수입차배터리교체",
+      "from": "자동차배터리",
+      "volume": 100,
+      "volumePc": 10,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리브랜드",
+      "from": "자동차배터리",
+      "volume": 100,
+      "volumePc": 20,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "싼타페배터리교체",
+      "from": "자동차배터리",
+      "volume": 100,
+      "volumePc": 20,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "경산자동차배터리",
+      "from": "자동차배터리",
+      "volume": 100,
+      "volumePc": 10,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "올뉴쏘렌토배터리교체",
+      "from": "배터리교체비용",
+      "volume": 100,
+      "volumePc": 10,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "시동불량",
+      "from": "시동불량",
+      "volume": 100,
+      "volumePc": 10,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리자가교체",
+      "from": "겨울배터리",
+      "volume": 100,
+      "volumePc": 30,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "배터리규격",
+      "from": "배터리규격",
+      "volume": 100,
+      "volumePc": 30,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차견인서비스",
+      "from": "보험긴급출동",
+      "volume": 100,
+      "volumePc": 10,
+      "volumeMobile": 90,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "인천자동차배터리교체",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "차량배터리출장교체",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 20,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리매장",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "국산점프스타터",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 20,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차점프스타터추천",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 20,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "레이배터리가격",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "인천출장배터리교체",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 20,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "MF배터리",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 40,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "아산자동차배터리",
+      "from": "자동차배터리",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "점프스타터공기압",
+      "from": "배터리교체비용",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "중간",
+      "adDepth": 4
+    },
+    {
+      "keyword": "싼타페배터리가격",
+      "from": "배터리교체비용",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "아반떼MD배터리교체",
+      "from": "배터리교체비용",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "SM3배터리교체",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "모하비배터리교체",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 20,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "코나배터리교체",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "투싼배터리교체",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "스포티지배터리교체",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "견인서비스",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "돌리견인",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 40,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "제네시스G80배터리교체",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "포터2배터리교체",
+      "from": "보험긴급출동",
+      "volume": 90,
+      "volumePc": 10,
+      "volumeMobile": 80,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "부천배터리교체",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "오토바이출장배터리",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차출장배터리",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리판매",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "배터리교체출장",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "인천배터리출장",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "K9배터리교체",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 20,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "마산자동차배터리",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "서산자동차배터리",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "청라자동차배터리",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 20,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "K5자동차배터리",
+      "from": "자동차배터리",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "봉고3배터리교체",
+      "from": "배터리교체비용",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "배터리방전기",
+      "from": "배터리전압",
+      "volume": 80,
+      "volumePc": 40,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "싼타페TM배터리교체",
+      "from": "보험긴급출동",
+      "volume": 80,
+      "volumePc": 30,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "제네시스배터리교체",
+      "from": "보험긴급출동",
+      "volume": 80,
+      "volumePc": 10,
+      "volumeMobile": 70,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "견인업체",
+      "from": "보험긴급출동",
+      "volume": 80,
+      "volumePc": 20,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "올뉴말리부배터리교체",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리구매",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 20,
+      "volumeMobile": 50,
+      "adComp": "중간",
+      "adDepth": 7
+    },
+    {
+      "keyword": "오창자동차배터리",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "그랜저배터리교체",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "수원배터리출장교체",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 20,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "서산배터리교체",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "중간",
+      "adDepth": 3
+    },
+    {
+      "keyword": "차량용점프선",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "메이튼점프스타터",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 20,
+      "volumeMobile": 50,
+      "adComp": "중간",
+      "adDepth": 5
+    },
+    {
+      "keyword": "크라우드점프스타터",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 20,
+      "volumeMobile": 50,
+      "adComp": "중간",
+      "adDepth": 5
+    },
+    {
+      "keyword": "점프스타트추천",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "자동차배터리점프선",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "점프선파는곳",
+      "from": "자동차배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "블랙박스방전방지",
+      "from": "배터리교체비용",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "델코자동차배터리",
+      "from": "겨울배터리",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "렉카견인",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "그랜저하이브리드배터리교체",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "싼타페DM배터리교체",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 20,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "쏘렌토MQ4배터리교체",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "카니발4세대배터리교체",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "중간",
+      "adDepth": 5
+    },
+    {
+      "keyword": "대형차견인",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "카라반견인",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "GV80배터리교체비용",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "K7하이브리드배터리교체",
+      "from": "보험긴급출동",
+      "volume": 70,
+      "volumePc": 10,
+      "volumeMobile": 60,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "출장자동차배터리",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "수원배터리출장",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "SM5배터리교체",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "수원출장배터리교체",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리교환비용",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "오창배터리교체",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "레이자동차배터리",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "중간",
+      "adDepth": 4
+    },
+    {
+      "keyword": "필립스점프스타터",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 20,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "QM3배터리교체",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "천안배터리출장",
+      "from": "자동차배터리",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "배터리긴급출동",
+      "from": "배터리교체비용",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "중간",
+      "adDepth": 5
+    },
+    {
+      "keyword": "트랙스배터리교체",
+      "from": "배터리교체비용",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "증평자동차배터리",
+      "from": "배터리교체비용",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "올뉴모닝배터리교체",
+      "from": "배터리교체비용",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "그랜저HG배터리교체",
+      "from": "배터리교체비용",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "YF쏘나타배터리",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "캡티바배터리교체",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "쏘나타배터리",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "올뉴K7배터리교체",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "사설견인",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "어부바견인",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "더뉴그랜저배터리",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "인천견인",
+      "from": "보험긴급출동",
+      "volume": 60,
+      "volumePc": 10,
+      "volumeMobile": 50,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "해운대자동차배터리",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "출장자동차배터리교체",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "AGM배터리교체",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "오송자동차배터리",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "올뉴모닝배터리업그레이드",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "소나타배터리교체",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "판교자동차배터리",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 40,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "서산출장배터리",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "부평출장배터리",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "중간",
+      "adDepth": 7
+    },
+    {
+      "keyword": "휴대용점프선",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "베이스어스점프스타터",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 20,
+      "volumeMobile": 30,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "차점프스타터",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "스포티지R배터리교체",
+      "from": "자동차배터리",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "12V점프스타터",
+      "from": "배터리교체비용",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "더넥스트스파크배터리교체",
+      "from": "배터리교체비용",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "쉐보레배터리교체",
+      "from": "배터리교체비용",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "K7배터리교체",
+      "from": "배터리교체비용",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "부천자동차배터리교체",
+      "from": "배터리교체비용",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "보험긴급출동",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "중간",
+      "adDepth": 1
+    },
+    {
+      "keyword": "견인차량",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "더뉴싼타페배터리",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "스타렉스배터리교체",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 20,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차견인비",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "G90배터리교체",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "화물차견인",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "바이크견인",
+      "from": "보험긴급출동",
+      "volume": 50,
+      "volumePc": 10,
+      "volumeMobile": 40,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "정왕동자동차배터리",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리업체",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "투싼배터리가격",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "사하구자동차배터리",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "자동차배터리사이즈",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리도매",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "차량배터리출장",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "명지자동차배터리",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "소나타하이브리드배터리교체",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차AGM배터리",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "중간",
+      "adDepth": 5
+    },
+    {
+      "keyword": "경산출장배터리",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "경산배터리교체",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "차점프선",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "운정자동차배터리",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "출장배터리가격",
+      "from": "자동차배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "자동차배터리대리점",
+      "from": "배터리교체비용",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 9
+    },
+    {
+      "keyword": "벨로스터배터리교체",
+      "from": "배터리교체비용",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "혼다어코드배터리교체",
+      "from": "겨울배터리",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "I30배터리교체",
+      "from": "보험긴급출동",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "SM7배터리교체",
+      "from": "보험긴급출동",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "렉스턴스포츠배터리교체",
+      "from": "보험긴급출동",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "투싼IX배터리교체",
+      "from": "보험긴급출동",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "트레일블레이저배터리교체",
+      "from": "보험긴급출동",
+      "volume": 40,
+      "volumePc": 10,
+      "volumeMobile": 30,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "배터리출장교환",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "출장배터리교환",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "델코배터리교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "NF소나타배터리교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "화성자동차배터리",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "쏘나타배터리교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "중간",
+      "adDepth": 6
+    },
+    {
+      "keyword": "산타페DM배터리교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "인천배터리출장교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "마티즈배터리교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "K7자동차배터리",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "바이크배터리교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "계양구자동차배터리",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "카이엔배터리교체",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차밧데리점프선",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "국산점프스타트",
+      "from": "자동차배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "공기압점프스타터",
+      "from": "배터리교체비용",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리싼곳",
+      "from": "배터리교체비용",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "동두천자동차배터리",
+      "from": "배터리교체비용",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "장기주차방전",
+      "from": "시동불량",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "자동차배터리AGM95",
+      "from": "겨울배터리",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "수원견인",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "캠핑카견인",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "견인차가격",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "EQ900배터리교체",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "더뉴K5배터리",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "차량견인서비스",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "올뉴투싼배터리교체",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "특수견인차",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "버스견인",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "기아자동차배터리",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "티볼리에어배터리교체",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "트레일러견인",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "BMW견인",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "어부바견인차",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "그랜져IG배터리교체",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "지게차견인",
+      "from": "보험긴급출동",
+      "volume": 30,
+      "volumePc": 10,
+      "volumeMobile": 20,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "배터리출장장착",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리구입",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리출장교환",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "인천자동차배터리출장",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "자동차배터리교환가격",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "오창출장배터리",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "쌍용자동차배터리",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "NF쏘나타배터리",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "긴급출동배터리",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "AGM배터리출장",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "그랜드카니발배터리교체",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "모닝배터리교환",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "산타페배터리교체",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "스파크배터리교환",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "싼타페DMAGM배터리",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "중간",
+      "adDepth": 5
+    },
+    {
+      "keyword": "향남배터리교체",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 10
+    },
+    {
+      "keyword": "배터리점프스타터추천",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "국산점프선",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "멀티점프스타터",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "차량용점프스타트",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "자동차밧데리점프스타터",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "카점프스타터",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "운정출장배터리",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "차량용점프스타터추천",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "밧데리점프스타트",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 8
+    },
+    {
+      "keyword": "레이배터리업그레이드",
+      "from": "자동차배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "점프스타터공기주입",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "배터리점프스타트",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "트위지배터리교체",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "뉴SM3배터리교체",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "아반떼배터리교체가격",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "중간",
+      "adDepth": 5
+    },
+    {
+      "keyword": "알페온배터리교체",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "해운대출장배터리",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "화성출장배터리",
+      "from": "배터리교체비용",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "방전증상",
+      "from": "시동불량",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "주차중방전",
+      "from": "시동불량",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "겨울배터리",
+      "from": "겨울배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "여름배터리",
+      "from": "겨울배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "VARTAAGM배터리",
+      "from": "겨울배터리",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "무상출동",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "보험사출동",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "견인탁송",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "탑차견인",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "낮음",
+      "adDepth": 0
+    },
+    {
+      "keyword": "사설견인업체",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "올뉴K5배터리",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "중간",
+      "adDepth": 4
+    },
+    {
+      "keyword": "차량견인비",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "장거리견인",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "더뉴쏘렌토배터리교체",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "베라크루즈배터리교체",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "셀프견인차",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "이쿼녹스배터리교체",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "마이티견인",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "트럭견인",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "외제차견인",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "셀프로더견인",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "소나타뉴라이즈배터리교체",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "수성견인차",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "재규어XF배터리교체",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    },
+    {
+      "keyword": "트랙터견인",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 7
+    },
+    {
+      "keyword": "BMW3시리즈배터리교체",
+      "from": "보험긴급출동",
+      "volume": 20,
+      "volumePc": 10,
+      "volumeMobile": 10,
+      "adComp": "높음",
+      "adDepth": 3
+    }
+  ]
+}
