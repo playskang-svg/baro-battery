@@ -133,7 +133,7 @@ function HeroCarousel() {
       </div>
 
       <p className="photo-note">
-        서비스 이해를 돕는 AI 제작 이미지 · {active + 1}/{slides.length}
+        실제 배터리 현장 장면 · {active + 1}/{slides.length}
       </p>
     </div>
   );
