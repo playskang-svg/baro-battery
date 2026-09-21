@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Header, Footer } from '@/components/site/shared';
+import { FooterContact } from '@/components/site/footer-contact';
 import { siteConfig } from '@/lib/site-config';
 import './globals.css';
 import './visual-refresh.css';
@@ -24,5 +25,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="ko"><body><Header />{children}<Footer /></body></html>;
+  return (
+    <html lang="ko">
+      <body>
+        <Header />
+        {children}
+        <Footer />
+        <FooterContact />
+      </body>
+    </html>
+  );
 }
