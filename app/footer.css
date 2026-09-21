@@ -1,0 +1,134 @@
+.footer {
+  border-top: 1px solid #dfe5d8;
+  background: #f6f8f3;
+  padding: 0 0 132px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 64px;
+  padding-block: 40px 34px;
+}
+
+.footer-identity > strong {
+  display: block;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 760;
+  letter-spacing: -.035em;
+}
+
+.footer-identity > strong span {
+  color: #66705f;
+  font-weight: 560;
+}
+
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  margin-top: 22px;
+}
+
+.footer-contact a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #3f493c;
+  font-size: 13px;
+  font-weight: 620;
+}
+
+.footer-contact a:hover {
+  color: #4f6b2c;
+}
+
+.footer-contact svg {
+  width: 18px;
+  height: 18px;
+  color: #6c8055;
+}
+
+.footer-contact small {
+  display: block;
+  margin-bottom: 1px;
+  color: #7b8476;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+.footer-service {
+  display: grid;
+  gap: 12px;
+  color: #5f685b;
+  font-size: 12px;
+}
+
+.footer-service p {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-service svg {
+  width: 17px;
+  height: 17px;
+  color: #6c8055;
+}
+
+.footer-bottom {
+  display: block;
+  margin-top: 0;
+  padding-block: 20px;
+  border-top: 1px solid #dfe5d8;
+  color: #788174;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.footer-bottom > span {
+  white-space: normal;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 102px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 32px 28px;
+  }
+
+  .footer-contact {
+    display: grid;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .footer-contact a {
+    width: fit-content;
+  }
+
+  .footer-service {
+    gap: 10px;
+  }
+
+  .footer-service p {
+    align-items: flex-start;
+    line-height: 1.7;
+  }
+
+  .footer-service svg {
+    margin-top: 2px;
+  }
+
+  .footer-bottom {
+    padding-block: 18px;
+    font-size: 10px;
+  }
+}

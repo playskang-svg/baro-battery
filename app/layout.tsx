@@ -3,7 +3,7 @@ import { Header, Footer } from '@/components/site/shared';
 import { siteConfig } from '@/lib/site-config';
 import './globals.css';
 import './visual-refresh.css';
-import './footer-contact.css';
+import './footer.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.origin),

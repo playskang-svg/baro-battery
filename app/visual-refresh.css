@@ -10,5 +10,5 @@
 .hero-carousel-dots button{width:7px;height:7px;border:0;background:rgba(255,255,255,.55);box-shadow:none}
 .hero-carousel-dots button.is-active{width:22px;border-radius:99px;background:#d7f27f}
 @keyframes hero-image-in{from{opacity:.6;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
-@media(max-width:639px){.hero-carousel-controls{right:12px;top:12px}.hero-carousel-controls button{width:30px;height:30px}.hero-carousel-dots{gap:4px}.hero-carousel-dots button{width:6px;height:6px}.hero-carousel-dots button.is-active{width:18px}.hero-carousel .photo-note{font-size:10px}}
+@media(max-width:639px){.hero-carousel-controls{right:12px;top:12px}.hero-carousel-controls button{width:30px;height:30px}.hero-carousel-dots{gap:4px}.hero-carousel-dots button{width:6px;height:6px}.hero-carousel-dots button.is-active{width:18px}}
 @media(prefers-reduced-motion:reduce){.hero-carousel-image{animation:none}}

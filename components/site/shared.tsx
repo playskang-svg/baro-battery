@@ -12,6 +12,8 @@ import {
   CarFront,
   ReceiptText,
   BookOpen,
+  Mail,
+  Clock3,
 } from 'lucide-react';
 import { MobileMenu, FAQ } from './interactive';
 import { categories, serviceSteps, type Guide } from '@/lib/content';
@@ -49,22 +51,26 @@ export function Footer() {
   return (
     <>
       <footer className="footer">
-        <div className="wrap footer-top">
-          <div>
-            <strong>컨시어지블루 (배터리콜)</strong>
-            <p>
-              대표 전화 <Link href="tel:010-4684-8838">010-4684-8838</Link>
-              <span aria-hidden="true"> | </span>
-              이메일 <Link href="mailto:qoorocket@gmail.com">qoorocket@gmail.com</Link>
-            </p>
+        <div className="wrap footer-main">
+          <div className="footer-identity">
+            <strong>컨시어지블루 <span>(배터리콜)</span></strong>
+            <div className="footer-contact">
+              <Link href="tel:010-4684-8838">
+                <Phone aria-hidden="true" />
+                <span><small>대표 전화</small>010-4684-8838</span>
+              </Link>
+              <Link href="mailto:qoorocket@gmail.com">
+                <Mail aria-hidden="true" />
+                <span><small>이메일</small>qoorocket@gmail.com</span>
+              </Link>
+            </div>
+          </div>
+          <div className="footer-service">
+            <p><Clock3 aria-hidden="true" />24시간 상담·접수 운영</p>
+            <p><MapPin aria-hidden="true" />서비스 지역: 대구 · 구미 · 칠곡 · 영천 · 경산</p>
           </div>
         </div>
         <div className="wrap footer-bottom">
-          <p>
-            24시간 상담·접수 운영
-            <br />
-            서비스 지역: 대구 · 구미 · 칠곡 · 영천 · 경산
-          </p>
           <span>© 2026 컨시어지블루. All rights reserved.</span>
         </div>
       </footer>

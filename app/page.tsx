@@ -65,9 +65,6 @@ function HeroCarousel() {
         <span>{current.title}<small>{current.text}</small></span>
         <ArrowUpRight size={19} aria-hidden="true" />
       </div>
-      <p className="photo-note" style={{ left: '50%', right: 'auto', width: '100%', transform: 'translateX(-50%)', textAlign: 'center' }}>
-        실제 배터리 현장 장면 · {active + 1}/{slides.length}
-      </p>
     </div>
   );
 }
