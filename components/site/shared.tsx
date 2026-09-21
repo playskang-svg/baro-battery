@@ -51,29 +51,21 @@ export function Footer() {
       <footer className="footer">
         <div className="wrap footer-top">
           <div>
-            <Link className="brand" href="/">
-              <BatteryCharging />
-              <span>
-                배터리콜<small>BATTERY CARE, ANYWHERE.</small>
-              </span>
-            </Link>
-            <p>내 차가 있는 곳에서, 다시 출발하는 일상.</p>
-          </div>
-          <div className="footer-links">
-            <Link href="/service">출장교체 안내</Link>
-            <Link href="/contact">문의 내용 작성하기</Link>
-            <Link href="/privacy">개인정보 안내</Link>
+            <strong>컨시어지블루 (배터리콜)</strong>
+            <p>
+              대표 전화 <Link href="tel:010-4684-8838">010-4684-8838</Link>
+              <span aria-hidden="true"> | </span>
+              이메일 <Link href="mailto:qoorocket@gmail.com">qoorocket@gmail.com</Link>
+            </p>
           </div>
         </div>
         <div className="wrap footer-bottom">
           <p>
-            서비스 UI 시안 · 운영 지역·시간·요금·사업자 정보 및 연락 채널은 확정
-            전입니다.
+            24시간 상담·접수 운영
             <br />
-            차량 사진은 AI 제작 이미지이며, 콘텐츠와 후기 예시는 화면 구성
-            확인용입니다.
+            서비스 지역: 대구 · 구미 · 칠곡 · 영천 · 경산
           </p>
-          <span>© 2026 배터리콜</span>
+          <span>© 2026 컨시어지블루. All rights reserved.</span>
         </div>
       </footer>
       <div className="contact-dock" aria-label="빠른 문의">
