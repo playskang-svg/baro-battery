@@ -5,8 +5,8 @@
   "repo": "playskang-svg/baro-battery",
   "type": "publish",
   "createdAt": "2026-09-21T22:52:40.817Z",
-  "updatedAt": "2026-09-26T22:15:07.609Z",
-  "createdBy": "actions/36275475596",
+  "updatedAt": "2026-09-27T22:35:54.975Z",
+  "createdBy": "actions/36355650334",
   "titles": [
     {
       "keyword": "아반떼배터리교체비용",
@@ -1241,6 +1241,198 @@
           "priceFormatted": "10,600원",
           "imageUrl": "https://ads-partners.coupang.com/image1/J0qVcW0nQCxoG0dOJzJ1zy_18q_noRk-JW3cWROxAIsdNdYBjO0wF3CnMMpA159fNE9Icbd3GKd2g2S4MrzVo2R9idOcDUAX2XNFV9wbXRP0byviksS043ScESJD7MnNsh72ikRTEmfM3uOiak80PguuYFTOKJreQzG7WWgGjZzqPpiQ5K7Lftsh0fku7oKhPgtUKVETlwNYNx4p_I5pBK6jY9k0Uy3f4g6TnMQVA8HAC2gAW91PRUCHGSJ9bxjRUbHGUP63DmyjsSKpoS2R2DpX8B_IBlZy5g-UeIi0whMJmYCMqHz11W86iQuOAwpVquKi2dSQM60P4OV5Dvj6nw0n259_yi0pjGp_C1CyCYLHZKjn3uh-F88Yte3SBgC_TJL94uu6Z7d6rYCpO3vaPFVY9f7tcRXL4UjYUBw213X6VXmOJG8IuWaJd1YYguB44yrt7hKnFJeLOGx_iLynbbOasi-M9D8r3k7-HmUawD9IHqEOgq8RcGiSr6_2VqUD_wnw0V8JwFRAKu50Vs3pu3v3-Wsy4XcskTakOU8q8kIK_moqFlHJH2A=",
           "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9042262824&itemId=26531434047&vendorItemId=91676543888&traceid=V0-153-640569be74151469&requestid=20260927071507326064571121&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": true
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-27T22:35:51.891Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "아반떼배터리교체비용",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "5347017678",
+          "name": "로케트 GB 56219 아반떼 MD AD 트랙스 K3 배터리, 1개, 56219",
+          "price": 58500,
+          "priceFormatted": "58,500원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/r0mNp26UagxArHYNr5yBLnA2R_MzHVwCaN4jPTYWhIjjyLnNp_P3pYsPiKoC8rYoVYum2kBkfFTqXx_ikuEJyiB9lo5AVQ5XqfvT2uR_3n4kO-U_9LyEJnTFrV_idJIu55lPwAM62ulnkRVL9Jw2MwTorB5a8ck6YOcQHDTqVAre0nUEqounCsWS4PvwI1ucYKL2fxrUZ2QQDyeuh52d9GRrPxB38V4Vz50b-lOt2f4hpJN8ijbu9v_aWuJ58VRLqU1r1bSNL4Sz5uSbxbBNdfRfDfKFk72ACnklg6nSZEP5oYROWOopUwOlgnAPWjzpC2XqoDGiQQXUlNsrWNFbfNMFfCBRRfzwMLOVTHoMWiTSEP_Yfm_lZzbL2qpSbcDkjRzoQqmyETtRxbz6akVS7mVtWG1QfStwdZWcMwn3Flwo3BNCQAAYsmV03DpvppTYTjakQi0wHJhxMMA41lNO6gQ4KSNeiEVSLSkF9XSaZUBOdsJC2999_dY5yEc0zPqDZCvP1FAkCjygB9nrmy3WcntW7TEXoh-2bniGGj8oJw==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=5347017678&itemId=7854084242&vendorItemId=75143755523&traceid=V0-153-ee41975708e22c5f&clickBeacon=cb1f4810-bac3-11f1-938c-19f92195e740%7E3&requestid=20260928073551288325581011&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "8832580999",
+          "name": "빠떼리아 한국아트라스 AGM60L(AGM60L-DIN 호환) 아반떼CN7(가솔린) 셀토스(가솔린) 스토닉(가솔린) XM3 적용",
+          "price": 89000,
+          "priceFormatted": "89,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/i7OsWC80dL492Zz1i8xqZljtXetzshqgqzfe0uV5PsNfcN5L1YgA6wXcRvJlwourJajq5YUkfU7i512d1s8OICEBULp58f3RZQUJ-XuGCp-6VaUf04Y7Wp0RN3YpB2zeYTzEXdHYoFgRicoJ01IHuAajyC2iC1GL8rbVn48sq9eKwsJ8-WEW9DjNr2UX4hWy90Le91cBMGZk5KLK3-2Px2hT-e1ALUAfPT0IzWu1ixWY4G8qfOVIpNdlB1_iAlW2VkOzKLGkpxfcrK3AjEdGWhMUhg2oDY2qZBfDAAl_v9mNrEW-dGxAt5vV_mViePpknn5-OU-0KoKl7y0abqWqGZ3AS83RsebPdQ6lFQQZVQYOy3CWMVG4h4kZWlDmVl3wMGoxFomegEHuGH34qgbzveKpQx8_veFPg4EjhzamVvlNw6cQXCr2BYhgpgevZIBb2YLEHIBwnhEmpt6lxoJ37kS6HqXLcFHbeG6JrL4ngg6rV4KaADn0xduMAdl6FxEEGltydkvug7gSSwAt0yls-4CsILO2gvdbIOoxFlwWh8RVqRMZQiRkHrdw",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8832580999&itemId=25736894819&vendorItemId=92725386839&traceid=V0-153-322bb6dd8dc7b095&requestid=20260928073551288325581011&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-27T22:35:52.536Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "차량견인비용",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8898914456",
+          "name": "핸셀 자동차 견인 고리 토우 스트랩 튜닝 악세서리 용품, 기타",
+          "price": 8760,
+          "priceFormatted": "8,760원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/wB6ZKoVnGYcdZY_1wD6M5PMMsFiHiyzJOvw7d1dkb4RmuZmQ_P7X83LD02mUXojcC0Dtj7W3YZBjU8sVuFN7U6jxEFTLrSpQ1IZArB9aY9kMaU9anRPICZDm0Bi0KqPHMD9nWPhnRN8gvx2hHVCRiBYzcVWqEpm-iigFkA39xefe1DKmDYRjspTID_jTWuhikXcvZtzls6EkgioQJQ8isDbC8Jq8v4e2fgN_F4GVIu3NL0znDYDp670CKhmj55GfnjdWdptxIdzap_ns9TYJT1q5ikPmFrWCKOMBkK-xMNQXtgYRQC61kNHao2rg-R397NbJd3E_i0W6cDyNY0miMaTCt5SW7asgOkQH6cxGpdB2pJb7GWRgrUgJPBflhpW1WfXK9s3wz1j-df0F3RR3nNphvHWnpxBTXK653oja6dezxP3B4UP5XK-HOxchwoFUrwmfRvou1A0ayxMKOUfbhuw0v746_nLRsxJrUR_DO5ihGVlqnbanKPKaAgh0b_kELRdgmcMFQo_0y9RsLzp8iOTnf5RjZxKwfiJhknkRRVC0UemDpJP_w71TRlMZ4KUFNP2tkR3L07NXt9CBQntJXnA=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8898914456&itemId=25984123369&vendorItemId=92966585857&traceid=V0-153-864434265d57e6cc&clickBeacon=cb90ce90-bac3-11f1-a477-8e775447344a%7E3&requestid=20260928073552119111964466&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "9633830660",
+          "name": "외부차량 주차금지 무단주차시 강력스티커 부착 견인조치 차량 파손 및 견인비 모든 비용 차주부담 파란색바탕 8566019742 13510 스티커",
+          "price": 6000,
+          "priceFormatted": "6,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/hy0SSmhm9rWhi4Jvh08AUqwXmMuNDW2gH6cs_ieCkCjdyffO2PuzIq4DiQ0DU0LpSvYXH09PYFNLKK8pXJ3nv_wPD6TkJWoLLzM6i3OnqbjMNuHe9VEnM_25ttMmHG8FNDm1fIjQ4GM-xRH-IaCAEF5qHW9CqwzOMo9J9v8bti6lNLMmfd1gJpH_yE7BvyZN2JkaNc6unZKYCMO82K2mAAf7nEwAHYhN45B_j-bcwbPSeiz8LnDa6W2W-s9C5mI4H6Mh5uWCieCanizPbsMPApgCccQiIRsVuhY_7OwOhARRevOqrlf7AWJWKxnKvRedBbbyCRvKETxu3owfg7mDTeSZcxhKs2-KDuJ5VUCHs2rJlL3CtI7Cea8qp3CeuulE_dprBQ5jmAMg8aDN8_IgsNP7EM92I2hNyLEnHV13qWowwKiYd4BDnAHxRT9--qizIeQ0vZ61j35sBMcuVRkWz5-vYjRjX9DNnVDCF_xuFAY6fVJVla7Ge06BXGxsg-DPQVaB3RNE2LzieghimSY4UobKIohaHFPwx-kZ-mAdU0BF85SrXFzC6Fw=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9633830660&itemId=28779037760&vendorItemId=95716066353&traceid=V0-153-affb160b21eac419&requestid=20260928073552119111964466&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-27T22:35:53.055Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "차량배터리교체비용",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "7344879332",
+          "name": "[자동차 배터리] 서울 경기 인천 수도권전지역 무료출장교체 로케트 델코 바르타 AGM 밧데리 국산수입 전차종 전용코딩 진단기보유",
+          "price": 85000,
+          "priceFormatted": "85,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/EbCyZtZLyRSws4yxEaueRmXO25sHq_cqj1Awkjpwg0tfF33LI8BRWDMpeCBZYES3tRRvvy7KHmHItI6ekutn2B55Ad2tQswJO56zfUdKesD_o81C4_9AZ5fsJiUoXzf_qAUmVb_xHxB3Z6MY5-KIPkGaxMAUUvvmvdq0qnY9Yt62vNL8H08GE8eXy53f0avil9j0I1goY2QJDZo9tSKU8iJFYMVdNcHvUhsZ1S6WnWrDPqyHBLRihZUu6ZaizTcsb1avzgMw1_oavxu9s6mbAmmsi8XAJ39mvdHnx4bFg4l_mT21Gj8-Saub1fVi8GETLPm-JuksxVraiKbIq2SWACZAxXig1xcN_LabTJ2_8jERUcUE9Y2028pih1vm2lIBeTodtgLwuveG26RJPdttiT85H5exUWDfXsPqlyem4Ar9D_k0y-OTnYm1ZQQbF7p2A6kzKyhgw_Zl3NPwinq9kU3TbC_fv6sQjXaAIOX4qfRTH7MCUZTweNBc51urQXHl0_URqQVGTV9Yd7Twderk4lVAbMQjVERCrk5I9aarELj_MHwz1vw=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7344879332&itemId=18887091433&vendorItemId=85957868844&traceid=V0-153-066ba2dc8f2e70ff&requestid=20260928073552776183330608&token=31850C%7CGM&pt=0&slot=1",
+          "isRocket": false,
+          "isFreeShipping": true
+        },
+        {
+          "id": "9187534088",
+          "name": "대구자동차배터리 당일 출장교체 국산차 대구.경산지역",
+          "price": 114000,
+          "priceFormatted": "114,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/i3C68mz30VJWB_yji_A0A5fWiCmeR7Iegvq-o1yJWVje0h4RXJ9bZwnazwmvNxF1f19KMry2blzOPQue8_CLiRyYF0aONWRe6WZW5x4Fi6V-Vk2FmOrWu3nXy4XZd2OOD0BNb_zcaBnm8kiJW3p3rT8DGpYks9Ff7wo4G7sEdJxSOYu5QiYKpgUCg-vgq_UULQIGbifFInvjZN6gQ3W-OG9bJvg73oFtaky8yTDKpRMFsZazlHCBVvvxDLxWagYIcDg-jD8SM0RbpXgEHtwc5i8mHEqKD8PGJwxGgzVYvy9TG5nwGwNBQLnURusBHlN6q4nvz1uFwV2n7IDdqsMp1seMmJTKZyFdBcB_HL17NrvrHaNSlcXTSXtXeqFyNwGdRKcP6kFYxEeEOp75c86O4_KSJqekmNJnil2-DDNyZn9EFNCwRAJjsGXdY9EW9aOr3scJOmLtaJi-EzegXSVtaef2nZBeiY3_I_N4JMLUhSS7s2UoYPBTvbtirJqX9BZdboLQRV12KCq5jVXCoCPyYoflCMGm7oVj19MeYnd7kIQ6lLz1V93Sag==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9187534088&itemId=27105262936&vendorItemId=94073394975&traceid=V0-153-c0b4c836cdf75c0b&requestid=20260928073552776183330608&token=31850C%7CGM&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": true
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-27T22:35:53.834Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "자동차배터리교체출장",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "93560124",
+          "name": "로케트 80L 자동차 배터리 밧데리 공구대여 쏘나타(뉴EF/NF/YF)/그랜저/i40/k5/k7, GB 80L, 1개",
+          "price": 60000,
+          "priceFormatted": "60,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/yyA032eMKn5eys7YyyUJtAPgEob-hdECC40yMhA3qv7ZNL1BphIffZe-Cqevv9nSCOhnZKrVSJhdCmFMa9XYyBQHdIezW0PE8wPj310IX0xbkgwniMUYX1hvTZV2-sDfCy2P6PmGGQKlfSrQtQqNgmjRu0mSM7bhQcp4i6K-fp-58VcvpFtYCZ1gb6H9Uzk6JI_o11NkGFTOe6_N4_MeZ-9p3uyF0RyJ1X6fR9rzZw5az4pmY7TtGgs3YdlBWatxcpUKffOMLo4fMezeZwnlXdZNmp0I0AnivV-Sf_xpep-QC1gElrdGXhvEcxIOxDELIHN2D4erZ0122UzHUoUsbcj4eWQ76mS7F6beVu1xgj0yhJmg351nsPWKKwpMv9BDf6zmMaGZDU3MEcQr3Cz3NaWiDv2E9Oa2xSUQKjnxwfYKrVdIn-RYUYxLn6kekU_Snkx0HsKmnfcO-vVjiSeCT9R2fvNvGaqaOLUu-ivg00gCcaYDaUgikh9MViXUZajxGR6UY0W2LXdqczaRgl8aCGGFn8_QudsOos8FBO1iPSZLp5j4",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=93560124&itemId=7136280318&vendorItemId=74428042461&traceid=V0-153-3e07914f953c53dd&clickBeacon=cc4c2f50-bac3-11f1-b22f-2c7b9272fcc8%7E3&requestid=20260928073553308159651351&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "7323080529",
+          "name": "천안 아산 출장 밧데리 무료교체 [배터리 싼곳] 92% 할인",
+          "price": 10,
+          "priceFormatted": "10원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/az_xQJgQg904eImLa1H7YQxJFmCQ5gCeG6hXk8zoAvYIShMekWEtBk-dRAzfVyQkWn0ogpq3oaM3E6ldxjLv55fljMAHq5Oyph0wefC2UKIXTS5OPFAgOPhwegAvAGpdPmsKWOpsnX_ex3I0RYPkXuoyOnPTqJ6V2J29FfdH9ztlfZPLqsQr7GjOCBLbma7jkAFgcGoFgE72K_te5RIgArTATmNGbsla7zxr-t4ra7ujt7XNoVsxSKW_FLi0FpgmGRzby20ZG4S2fgfAz-aRhBNNc-hZpjIpjDPc7yqTgcXJW2UiQH2t-jDt4Hsi_qCQQukXa9psF7SWcbNs294_wsPknPk17WYSPnVAWUlzmyDruUL1oXxveK3flJO70jdf2PIGuXh8e78rblD8I75VuD400-b1-m6uxT9dDGKN2xAQSzpTuhHvoG8EYz6b2zU4USCtm-d-zNOSMLvypHcTsYouFUCEf8dvOsw9I9bHXAF-8739VSdrl_LqZK_bQsd4_dY2JWEnOJcoKWIJ_3p8F8H38kWoLp2HXugCOCRyZrDGiwxe7XFwAneu",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7323080529&itemId=18786079151&vendorItemId=85917331973&traceid=V0-153-d21617b1cd446475&requestid=20260928073553308159651351&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": true
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-27T22:35:54.351Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "스파크배터리가격",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "9591876512",
+          "name": "델코 DIN50L 자동차 배터리 차량용 스파크 티볼리 코나 니로, 1개, 공구대여 O + 폐배터리 반납 O",
+          "price": 48000,
+          "priceFormatted": "48,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/zanoaX_z9JstTd21zavDzfwubo1CR1w1UK5mXLaMMG650cNWxdZk3Rm9w_LUgaku8laISt3qBMXCvTBQtJOtPpWJ2GhYbEqrVYVGdFzUO-_mT3bB_oKGQHb4NOBC_rtv50PcQ6vE8AaTZfmTR2I3kA0Pazi92iRReyA6xPe7GitCegRXAoDafVmeah-1vUTCDKXC6UYBVsR041M7WPs-VqsVYEHDmA5-mmx40qvwoAJZRgH-rgqufWioBYMz4N1oeiHH9x1GUlkBNpFfGxz1aykmpPU0bpWB5hadpBCMT_CDJGeNRaze3epKSH8Gk0S8-4Fg6FMa6nleFQoZZwV6M1V0aetN4xcUDRyqWfAoDr288lytL5fkbWvjbcgQdbyuF_22nVPgAc81kw2DuVPeuvl0o25Mj8enp6_fUC4Ttw0WY5woTxVW-7YdPbrhlJ2dNoSjrwyzzzCsTjMaSk_LXLy-OxL0XfbyfZUrm9tM59Ekh2fw3vpRgHZ0HTOVzLNYLdIZE8z6d-TDxAFxDNxSeMzwYNxaxukmLlyJgC0k",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9591876512&itemId=28633363809&vendorItemId=95576348126&traceid=V0-153-dea4e9811a2b3854&clickBeacon=ccc508d0-bac3-11f1-9856-35859ec2cc1f%7E3&requestid=20260928073554068128576770&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "5295505234",
+          "name": "델코 DIN 50L 스파크 더넥스트스파크 마티즈크리에이티브 배터리",
+          "price": 53400,
+          "priceFormatted": "53,400원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/iCDi7S6MymRLJRfpiLgX1ALWm0CjyRVVWwYQUC89H1M2_6mXO2UmIKdzTgsBBh9s_72U_QwfRQ3VQ6HAZjpIliv99UBRBMgMdE8b3TxZ0zRfjZXmnfmdHf8qAWIMt7MbmpvQfMpcf4LxeNPyPjpckPKA4V7HDgrpIs23t7wcumkzHke-mPVopF6VGhJW5udkRN25q4jYYKSJ9EGclobVYMT-ij_9Mm0ygkNGQ42xgMCHIKNONZ6zhc93oGjPniOvDpP3h8pRVnKbwPX89cUCgC95A0nx8kT7NUB_kvwlwXqxcL0VDe2uGUdbwmIAcRqI4b2ntoWaDrNcbU8MXxE5n9y2RiWcXjYAwiu8lLWL1Sx2CiZYG3Jp8MbKAOkHUYs6AygkhRu_TTiBJQ1xhe4gZE34IYpB8UQD7lapEyZqfk3iY1YD6GgFZkFof1PVPUY3DkWBwhukp2hba6dHanFsxnfybTOKWVdCTOtpl7iunxw3f6-yPLEc0iKfr_3wEpMgPu5_Pw9N07ztj_Yva0HSB4MvovOaWOtx0DQFiR1AoLLvNNW8N1wpjdL9LQ==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=5295505234&itemId=7629660334&vendorItemId=74920420686&traceid=V0-153-d18df69a0e79da88&requestid=20260928073554068128576770&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-27T22:35:54.935Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "차량배터리방전",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8512988775",
+          "name": "25900mAh 파워대가 자동차 긴급시동 점프스타터 오토바이 보조배터리 자동차 배터리 점프스타터+스마트 점프선, 25900mAh, 1개",
+          "price": 98000,
+          "priceFormatted": "98,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/49qAlF-w3-5NFo8V49KVH0fy6GPxm6TkvWmlzFKqKQCoSTEZr5Nos3oTxkq8PQ_9u3P6n_BUxK_RDr1lXTF4EZtet3JkhALL9394Ed6uUW6sMb_apQfe6Ldr7MCsCdPZjTc9jMYWKsPMO47uS6g2ywIS1YnoJDJI2cdb8cEv56a3bXLsDVPLRjf3E_cveQHa5-qE44CO7k0oC6IyPmUGq0Sk7YQ1y5PzYqZ9b6Q16Wpr2RNH_UGXdJOZp-T9jSJvLJMef3ZxGinx0JK3sP_J55pivZJuiOdPJEDZGikWgPxgY-uFjhbEWhzEczY0KRdSdnwD3Td0GQFXV_NaUD_Q8uOC3hqZhhwb2xFWMlxw7Lq883TUwTTq2YTq2D0dHuHtei1_rJEi_wJR6vDv0R4qIZAC-yqORlQLP2GpxNAs6tadqV3ws6ydVwtOTt9v-YKfb4doRNcvk5Z0kmYFJ22AqKDWMQlI5hPP1egK0V-8OOsiOfWy-zKSdiaIvhvCBqmdIiWLAocZpakNDlcRiWpgZt1IyjSDyp4TYK58RjK_aJw=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8512988775&itemId=24643228948&vendorItemId=94525251766&traceid=V0-153-5af8a4122cd0ec93&clickBeacon=cd163610-bac3-11f1-90d1-8d360cc340cd%7E3&requestid=20260928073554652172560120&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "9042262824",
+          "name": "자동차 점프케이블 차랑용 점프선 배터리 방전 케이블 2000A 12V 24V",
+          "price": 10600,
+          "priceFormatted": "10,600원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/Be9ury0rMSyXIPgzBVX4DSXcJJNrMKz35RRw5lupt9w8PdMT72jFPbwZjIDwSPjhSIp-52Ob30z7Jx3zU01s4LCHQm3DeDlCJcevOIg98xd_ATHvZWcm6ZuzXzVVecV8tRW95BtJ6maf4meEJY1TbAUSEyD-xh9Mspsw64m3ipbYcdEFkRSYOYKZ4OuQHMEeMv7lNFdgbqZ50dYcY1szjrD5byU5s0B6xcvCMUlBV8Fb_bgcKt5BVWiBVJsnQxSPBafUS_DKvkla4WNHGJEneEzXPZ4AhfLW6-JavFNFlTRvCeoJbfUA7dUI_vZbXQraygXggIN5EBbQdTWwwFNvAI5X84YFYQbP0jvKaz5mzEvT3YPA86sURi9p6hdnKmRo4fjZyrg3IF-A0-2JbX1iXjV_UW-kZw4XSbcU1HhUM8KmUUuwOhroEazdDEgSSW_tkngj89JhnR7oxkiN8H0A2UTwI_A6Dr8Z2FF1WiLHolra9TAZXL9iBaxoPn5CQO6RpeBEjUhAN7Ey5JgQbkE1tKgUFBHZXn2InviC5ygYsMVpli1ZsVFtY_o=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9042262824&itemId=26531434047&vendorItemId=91676543888&traceid=V0-153-640569be74151469&requestid=20260928073554652172560120&token=31850C%7CMIXED&pt=0&slot=2",
           "isRocket": false,
           "isFreeShipping": true
         }
