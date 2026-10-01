@@ -3,23 +3,32 @@
   "label": "배터리콜",
   "domain": "batterycall.kr",
   "repo": "playskang-svg/baro-battery",
-  "scannedAt": "2026-09-30T01:35:03.466Z",
-  "pagesCrawled": 102,
+  "scannedAt": "2026-10-01T01:35:06.986Z",
+  "pagesCrawled": 101,
   "sitemapUrls": 53,
   "externalChecked": 8,
   "summary": {
+    "high": 1,
     "medium": 1,
     "low": 2
   },
   "occurrences": 39,
   "findings": [
     {
+      "severity": "high",
+      "kind": "page-dead",
+      "page": "https://batterycall.kr/regions/gyeonggi?area=%EA%B3%A0%EC%96%91%EC%8B%9C",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
+    },
+    {
       "severity": "medium",
       "kind": "canonical-mismatch",
       "scope": "site-wide",
       "page": "https://batterycall.kr (전역)",
-      "occurrences": 37,
-      "pages": 37,
+      "occurrences": 36,
+      "pages": 36,
       "hrefs": [],
       "examples": [
         {
@@ -47,7 +56,7 @@
           "nav": false
         }
       ],
-      "note": "37쪽 37건에 같은 결함이 있다. 페이지마다 고칠 문제가 아니라 공통 컴포넌트·레이아웃 한 곳의 문제다."
+      "note": "36쪽 36건에 같은 결함이 있다. 페이지마다 고칠 문제가 아니라 공통 컴포넌트·레이아웃 한 곳의 문제다."
     },
     {
       "severity": "low",
@@ -249,13 +258,6 @@
         "severity": "medium",
         "kind": "canonical-mismatch",
         "page": "https://batterycall.kr/contact?region=gyeonggi&area=%ED%99%94%EC%84%B1%EC%8B%9C",
-        "canonical": "https://batterycall.kr/contact",
-        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
-      },
-      {
-        "severity": "medium",
-        "kind": "canonical-mismatch",
-        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EA%B3%A0%EC%96%91%EC%8B%9C",
         "canonical": "https://batterycall.kr/contact",
         "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
       },
