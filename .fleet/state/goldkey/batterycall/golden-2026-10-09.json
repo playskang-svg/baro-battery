@@ -1,100 +1,18 @@
 {
   "site": "batterycall",
-  "scoredAt": "2026-10-09T00:00:26.771Z",
+  "scoredAt": "2026-10-09T23:31:56.120Z",
   "rows": [
     {
-      "keyword": "자동차배터리80L",
-      "from": "겨울배터리",
-      "volume": 480,
-      "volumePc": 90,
-      "volumeMobile": 390,
+      "keyword": "자동차배터리출장교체",
+      "from": "자동차배터리",
+      "volume": 1290,
+      "volumePc": 190,
+      "volumeMobile": 1100,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "samwonmotors.co.kr",
-          1
-        ],
-        [
-          "allnewbattery.co.kr",
-          2
-        ],
-        [
-          "itempage3.auction.co.kr",
-          2
-        ],
-        [
-          "www.batteryclub.co.kr",
-          3
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 0,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "1위가능",
-      "why": "질의어를 정면으로 겨냥한 글이 없다 · 1위 전문사이트(samwonmotors.co.kr)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "차량견인비용",
-      "from": "보험긴급출동",
-      "volume": 660,
-      "volumePc": 70,
-      "volumeMobile": 590,
-      "adComp": "높음",
-      "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.gyeongju.go.kr",
-          1
-        ],
-        [
-          "www.suwon.go.kr",
-          1
-        ],
-        [
-          "www.youtube.com",
-          1
-        ],
-        [
-          "www.gncity.or.kr",
-          2
-        ],
-        [
-          "www.yp21.go.kr",
-          2
-        ],
-        [
-          "www.ysfsmc.or.kr",
-          2
-        ],
-        [
-          "ai.bznav.com",
-          3
-        ],
-        [
-          "www.moleg.go.kr",
-          4
-        ],
-        [
-          "law.go.kr",
-          5
-        ],
-        [
-          "www.law.go.kr",
-          7
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 1,
-      "ourRank": null,
-      "domainCount": 10,
-      "grade": "1위가능",
-      "why": "1위 관공서(www.gyeongju.go.kr) — 신청 절차만 있고 비용·준비물·소요시간을 정리해주지 않는다. 실용 콘텐츠로 비집을 수 있다.",
-      "incumbent": "관공서"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "자동차배터리교체출장",
@@ -104,28 +22,9 @@
       "volumeMobile": 520,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "batterydr.co.kr",
-          1
-        ],
-        [
-          "battery1.co.kr",
-          1
-        ],
-        [
-          "topb.kr",
-          8
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 2,
-      "ourRank": null,
-      "domainCount": 3,
-      "grade": "상위가능",
-      "why": "겨냥한 글 2건 · 1위 전문사이트(batterydr.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "아반떼배터리교체비용",
@@ -135,340 +34,45 @@
       "volumeMobile": 460,
       "adComp": "높음",
       "adDepth": 7,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "rocketbattery.kr",
-          1
-        ],
-        [
-          "ko.accio.com",
-          3
-        ],
-        [
-          "battery1.co.kr",
-          4
-        ],
-        [
-          "carnote.hisoyul.com",
-          4
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 1,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "상위가능",
-      "why": "겨냥한 글 1건 · 1위 전문사이트(rocketbattery.kr)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "자동차배터리점프",
-      "from": "자동차배터리",
-      "volume": 1010,
-      "volumePc": 110,
-      "volumeMobile": 900,
-      "adComp": "높음",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "ko.accio.com",
-          1
-        ],
-        [
-          "www.daara.co.kr",
-          2
-        ],
-        [
-          "ko.ifixit.com",
-          3
-        ],
-        [
-          "kr.made-in-china.com",
-          3
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 1,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "상위가능",
-      "why": "겨냥한 글 1건 · 1위 전문사이트(ko.accio.com)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "24V점프스타터",
-      "from": "배터리교체비용",
-      "volume": 740,
-      "volumePc": 120,
-      "volumeMobile": 620,
-      "adComp": "중간",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "ko.jackpowergroup.com",
-          1
-        ],
-        [
-          "www.youtube.com",
-          3
-        ],
-        [
-          "www.lotteon.com",
-          4
-        ],
-        [
-          "www.coupang.com",
-          5
-        ],
-        [
-          "salelink.co.kr",
-          5
-        ],
-        [
-          "coushop.shop",
-          6
-        ],
-        [
-          "ko.accio.com",
-          7
-        ],
-        [
-          "dcseoul.com",
-          9
-        ]
-      ],
-      "bigCount": 2,
-      "targeted": 2,
-      "ourRank": null,
-      "domainCount": 8,
-      "grade": "상위가능",
-      "why": "겨냥한 글 2건 · 1위 전문사이트(ko.jackpowergroup.com)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "차량점프스타터",
-      "from": "자동차배터리",
-      "volume": 680,
-      "volumePc": 140,
-      "volumeMobile": 540,
-      "adComp": "높음",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "ko.manuals.plus",
-          3
-        ],
-        [
-          "ko.accio.com",
-          10
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 1,
-      "ourRank": null,
-      "domainCount": 2,
-      "grade": "상위가능",
-      "why": "겨냥한 글 1건 · 1위 전문사이트(ko.manuals.plus)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "아반떼배터리",
-      "from": "자동차배터리",
-      "volume": 640,
-      "volumePc": 120,
-      "volumeMobile": 520,
-      "adComp": "중간",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "battery1.co.kr",
-          1
-        ],
-        [
-          "ko.accio.com",
-          2
-        ],
-        [
-          "repair.eeye.co.kr",
-          3
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 2,
-      "ourRank": null,
-      "domainCount": 3,
-      "grade": "상위가능",
-      "why": "겨냥한 글 2건 · 1위 전문사이트(battery1.co.kr)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "자동차배터리출장교체",
-      "from": "자동차배터리",
-      "volume": 1310,
-      "volumePc": 200,
-      "volumeMobile": 1110,
-      "adComp": "높음",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "topb.kr",
-          4
-        ],
-        [
-          "battery1.co.kr",
-          5
-        ],
-        [
-          "batterydr.co.kr",
-          5
-        ],
-        [
-          "www.114.co.kr",
-          6
-        ],
-        [
-          "www.daangn.com",
-          8
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 4,
-      "ourRank": null,
-      "domainCount": 5,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 4건 · 1위 전문사이트(topb.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "자동차배터리교체시기",
       "from": "자동차배터리",
       "volume": 500,
-      "volumePc": 70,
-      "volumeMobile": 430,
+      "volumePc": 60,
+      "volumeMobile": 440,
       "adComp": "높음",
       "adDepth": 3,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.tyremore.co.kr",
-          1
-        ],
-        [
-          "www.kixxman.com",
-          2
-        ],
-        [
-          "simplewoody.com",
-          2
-        ],
-        [
-          "batterystory.co.kr",
-          3
-        ],
-        [
-          "rest.mustarddata.com",
-          4
-        ],
-        [
-          "www.youtube.com",
-          4
-        ],
-        [
-          "ko.phongnhaexplorer.com",
-          4
-        ],
-        [
-          "openestimate.co.kr",
-          5
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 4,
-      "ourRank": null,
-      "domainCount": 8,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 4건 · 1위 전문사이트(www.tyremore.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "레이배터리교체비용",
       "from": "자동차배터리",
-      "volume": 770,
+      "volume": 790,
       "volumePc": 90,
-      "volumeMobile": 680,
+      "volumeMobile": 700,
       "adComp": "높음",
       "adDepth": 7,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.blogchart.co.kr",
-          1
-        ],
-        [
-          "c57.atcenter.co.kr",
-          2
-        ],
-        [
-          "carnote.hisoyul.com",
-          2
-        ],
-        [
-          "ko.phongnhaexplorer.com",
-          2
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 7,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 7건 · 1위 전문사이트(www.blogchart.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "차량배터리교체비용",
       "from": "자동차배터리",
-      "volume": 630,
+      "volume": 650,
       "volumePc": 50,
-      "volumeMobile": 580,
+      "volumeMobile": 600,
       "adComp": "높음",
       "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "opengov.seoul.go.kr",
-          1
-        ],
-        [
-          "www.ezday.co.kr",
-          2
-        ],
-        [
-          "ko.accio.com",
-          2
-        ],
-        [
-          "battery1.co.kr",
-          3
-        ],
-        [
-          "rocketbattery.kr",
-          4
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 5,
-      "ourRank": null,
-      "domainCount": 5,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 5건 · 1위 관공서(opengov.seoul.go.kr)",
-      "incumbent": "관공서"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "공임나라배터리교체",
@@ -478,558 +82,225 @@
       "volumeMobile": 450,
       "adComp": "높음",
       "adDepth": 3,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.gongim.com",
-          1
-        ],
-        [
-          "quasarzone.com",
-          3
-        ],
-        [
-          "www.blogchart.co.kr",
-          4
-        ],
-        [
-          "batteryproblem.inblog.io",
-          6
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 3,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 3건 · 1위 전문사이트(www.gongim.com)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "오토바이점프스타터",
       "from": "자동차배터리",
-      "volume": 520,
+      "volume": 540,
       "volumePc": 50,
-      "volumeMobile": 470,
+      "volumeMobile": 490,
       "adComp": "중간",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "ko.jackpowergroup.com",
-          1
-        ],
-        [
-          "ko.accio.com",
-          8
-        ],
-        [
-          "www.daangn.com",
-          11
-        ],
-        [
-          "m.bunjang.co.kr",
-          17
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 4,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 4건 · 1위 전문사이트(ko.jackpowergroup.com)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "자동차배터리80L",
+      "from": "겨울배터리",
+      "volume": 480,
+      "volumePc": 90,
+      "volumeMobile": 390,
+      "adComp": "높음",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "올뉴카니발배터리",
       "from": "자동차배터리",
-      "volume": 1170,
+      "volume": 1150,
       "volumePc": 160,
-      "volumeMobile": 1010,
+      "volumeMobile": 990,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.daangn.com",
-          3
-        ],
-        [
-          "oh-car.kr",
-          6
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 11,
-      "ourRank": null,
-      "domainCount": 2,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 11건 · 1위 대형플랫폼(www.daangn.com)",
-      "incumbent": "대형플랫폼"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "자동차배터리가격",
       "from": "자동차배터리",
-      "volume": 1040,
+      "volume": 1050,
       "volumePc": 120,
-      "volumeMobile": 920,
+      "volumeMobile": 930,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.kixxman.com",
-          2
-        ],
-        [
-          "battery1.co.kr",
-          3
-        ],
-        [
-          "chakancar.co.kr",
-          5
-        ],
-        [
-          "ko.accio.com",
-          5
-        ],
-        [
-          "sites.google.com",
-          7
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 3,
-      "ourRank": null,
-      "domainCount": 5,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 3건 · 1위 전문사이트(www.kixxman.com)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "자동차배터리점프",
+      "from": "자동차배터리",
+      "volume": 1000,
+      "volumePc": 110,
+      "volumeMobile": 890,
+      "adComp": "높음",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "올뉴쏘렌토배터리",
       "from": "자동차배터리",
       "volume": 900,
-      "volumePc": 130,
-      "volumeMobile": 770,
+      "volumePc": 120,
+      "volumeMobile": 780,
       "adComp": "중간",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "battery1.co.kr",
-          1
-        ],
-        [
-          "bestreview.oopy.io",
-          2
-        ],
-        [
-          "oh-car.kr",
-          3
-        ],
-        [
-          "cboard.net",
-          3
-        ],
-        [
-          "allnewbattery.co.kr",
-          4
-        ],
-        [
-          "itempage3.auction.co.kr",
-          5
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 6,
-      "ourRank": null,
-      "domainCount": 6,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 6건 · 1위 전문사이트(battery1.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "휴대용점프스타터",
       "from": "자동차배터리",
-      "volume": 840,
-      "volumePc": 140,
+      "volume": 830,
+      "volumePc": 130,
       "volumeMobile": 700,
       "adComp": "높음",
       "adDepth": 9,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "kr.made-in-china.com",
-          3
-        ],
-        [
-          "eg3.oopy.io",
-          4
-        ],
-        [
-          "ko.manuals.plus",
-          6
-        ],
-        [
-          "ko.accio.com",
-          8
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 6,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 6건 · 1위 전문사이트(kr.made-in-china.com)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "자동차배터리충전",
       "from": "자동차배터리",
-      "volume": 820,
-      "volumePc": 110,
+      "volume": 810,
+      "volumePc": 100,
       "volumeMobile": 710,
       "adComp": "중간",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.a-ha.io",
-          1
-        ],
-        [
-          "www.daara.co.kr",
-          1
-        ],
-        [
-          "www.youtube.com",
-          1
-        ],
-        [
-          "ko.wikipedia.org",
-          1
-        ],
-        [
-          "kr.made-in-china.com",
-          2
-        ],
-        [
-          "www.step.or.kr",
-          3
-        ]
-      ],
-      "bigCount": 2,
-      "targeted": 4,
-      "ourRank": null,
-      "domainCount": 6,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 4건 · 1위 대형플랫폼(www.a-ha.io)",
-      "incumbent": "대형플랫폼"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "24V점프스타터",
+      "from": "배터리교체비용",
+      "volume": 770,
+      "volumePc": 120,
+      "volumeMobile": 650,
+      "adComp": "중간",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "BMW배터리교체",
+      "from": "자동차배터리",
+      "volume": 450,
+      "volumePc": 80,
+      "volumeMobile": 370,
+      "adComp": "높음",
+      "adDepth": 10,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "차량배터리교체",
       "from": "자동차배터리",
-      "volume": 1310,
-      "volumePc": 140,
-      "volumeMobile": 1170,
+      "volume": 1290,
+      "volumePc": 130,
+      "volumeMobile": 1160,
       "adComp": "중간",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.chadorri.com",
-          1
-        ],
-        [
-          "www.kixxman.com",
-          3
-        ],
-        [
-          "www.tyremore.co.kr",
-          3
-        ],
-        [
-          "batterystory.co.kr",
-          4
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 9,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 9건 · 1위 전문사이트(www.chadorri.com)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "배터리출장교체",
       "from": "자동차배터리",
-      "volume": 970,
+      "volume": 980,
       "volumePc": 190,
-      "volumeMobile": 780,
+      "volumeMobile": 790,
       "adComp": "높음",
       "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "batterygeist.com",
-          1
-        ],
-        [
-          "www.youtube.com",
-          4
-        ],
-        [
-          "topb.kr",
-          5
-        ],
-        [
-          "battery1.co.kr",
-          6
-        ],
-        [
-          "batterystory.co.kr",
-          6
-        ],
-        [
-          "gyeonggi-gwangju-batterygeist.berry8745.chatgpt.site",
-          7
-        ],
-        [
-          "xn--mk1b50kg6bdw5awrc.com",
-          8
-        ],
-        [
-          "www.daangn.com",
-          9
-        ]
-      ],
-      "bigCount": 2,
-      "targeted": 5,
-      "ourRank": null,
-      "domainCount": 8,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 5건 · 1위 전문사이트(batterygeist.com)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "차량배터리방전",
       "from": "자동차배터리",
       "volume": 840,
-      "volumePc": 50,
-      "volumeMobile": 790,
+      "volumePc": 40,
+      "volumeMobile": 800,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "battery1.co.kr",
-          1
-        ],
-        [
-          "www.kixxman.com",
-          2
-        ],
-        [
-          "www.kia.com",
-          2
-        ],
-        [
-          "www.hyundai.com",
-          2
-        ],
-        [
-          "ownersmanual.kia.com",
-          3
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 3,
-      "ourRank": null,
-      "domainCount": 5,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 3건 · 1위 전문사이트(battery1.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "차량점프스타터",
+      "from": "자동차배터리",
+      "volume": 690,
+      "volumePc": 140,
+      "volumeMobile": 550,
+      "adComp": "높음",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "올뉴모닝배터리",
       "from": "보험긴급출동",
-      "volume": 670,
-      "volumePc": 90,
+      "volume": 660,
+      "volumePc": 80,
       "volumeMobile": 580,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "m.auction.co.kr",
-          2
-        ],
-        [
-          "allnewbattery.co.kr",
-          3
-        ],
-        [
-          "oh-car.kr",
-          3
-        ],
-        [
-          "www.andongbt.com",
-          4
-        ],
-        [
-          "namu.wiki",
-          5
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 10,
-      "ourRank": null,
-      "domainCount": 5,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 10건 · 1위 전문사이트(m.auction.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "벤츠배터리교체",
       "from": "자동차배터리",
-      "volume": 530,
+      "volume": 520,
       "volumePc": 60,
-      "volumeMobile": 470,
+      "volumeMobile": 460,
       "adComp": "높음",
       "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.mercedes-benz.co.kr",
-          1
-        ],
-        [
-          "www.youtube.com",
-          1
-        ],
-        [
-          "batterygeist-marketing.berry8745.chatgpt.site",
-          1
-        ],
-        [
-          "battery1.co.kr",
-          2
-        ],
-        [
-          "batterygeist.com",
-          2
-        ],
-        [
-          "autovance.co.kr",
-          2
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 6,
-      "ourRank": null,
-      "domainCount": 6,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 6건 · 1위 전문사이트(www.mercedes-benz.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "레이배터리교체",
       "from": "자동차배터리",
-      "volume": 490,
-      "volumePc": 70,
-      "volumeMobile": 420,
+      "volume": 470,
+      "volumePc": 60,
+      "volumeMobile": 410,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "ko.phongnhaexplorer.com",
-          1
-        ],
-        [
-          "c93.castlexjeju.com",
-          2
-        ],
-        [
-          "carnote.hisoyul.com",
-          2
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 17,
-      "ourRank": null,
-      "domainCount": 3,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 17건 · 1위 전문사이트(ko.phongnhaexplorer.com)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "배터리교체비용",
-      "from": "자동차배터리",
-      "volume": 460,
-      "volumePc": 70,
-      "volumeMobile": 390,
-      "adComp": "높음",
-      "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.youtube.com",
-          4
-        ],
-        [
-          "support.apple.com",
-          5
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 30,
-      "ourRank": null,
-      "domainCount": 2,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 30건 · 1위 영상(www.youtube.com)",
-      "incumbent": "영상"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "스파크배터리",
       "from": "보험긴급출동",
       "volume": 1210,
-      "volumePc": 190,
-      "volumeMobile": 1020,
+      "volumePc": 180,
+      "volumeMobile": 1030,
       "adComp": "높음",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "battery1.co.kr",
-          2
-        ],
-        [
-          "namu.wiki",
-          3
-        ],
-        [
-          "repair.eeye.co.kr",
-          5
-        ],
-        [
-          "jlbattery.co.kr",
-          6
-        ],
-        [
-          "www.daangn.com",
-          7
-        ]
-      ],
-      "bigCount": 2,
-      "targeted": 10,
-      "ourRank": null,
-      "domainCount": 5,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 10건 · 1위 전문사이트(battery1.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "카니발배터리",
@@ -1039,513 +310,9 @@
       "volumeMobile": 970,
       "adComp": "중간",
       "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "allthatcarnival.com",
-          1
-        ],
-        [
-          "repair.eeye.co.kr",
-          1
-        ],
-        [
-          "battery1.co.kr",
-          3
-        ],
-        [
-          "reviewgarden.oopy.io",
-          3
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 6,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 6건 · 1위 전문사이트(allthatcarnival.com)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "배터리경고등",
-      "from": "배터리규격",
-      "volume": 600,
-      "volumePc": 60,
-      "volumeMobile": 540,
-      "adComp": "높음",
-      "adDepth": 3,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "ko.accio.com",
-          1
-        ],
-        [
-          "repair.eeye.co.kr",
-          2
-        ],
-        [
-          "autocost.blog",
-          3
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 15,
-      "ourRank": null,
-      "domainCount": 3,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 15건 · 1위 전문사이트(ko.accio.com)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "쏘렌토배터리",
-      "from": "보험긴급출동",
-      "volume": 500,
-      "volumePc": 80,
-      "volumeMobile": 420,
-      "adComp": "높음",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "battery1.co.kr",
-          1
-        ],
-        [
-          "carnote.hisoyul.com",
-          4
-        ],
-        [
-          "repair.eeye.co.kr",
-          5
-        ],
-        [
-          "reviewplaza.oopy.io",
-          5
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 5,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 5건 · 1위 전문사이트(battery1.co.kr)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "배터리터미널",
-      "from": "배터리전압",
-      "volume": 490,
-      "volumePc": 160,
-      "volumeMobile": 330,
-      "adComp": "중간",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "ko.ifixit.com",
-          1
-        ],
-        [
-          "pdpt.or.kr",
-          3
-        ],
-        [
-          "ownersmanual.hyundai.com",
-          6
-        ],
-        [
-          "www.hjcc.co.kr",
-          6
-        ],
-        [
-          "ko.accio.com",
-          8
-        ],
-        [
-          "ko.kbs-connector.com",
-          9
-        ],
-        [
-          "www.gdchuanghe.com",
-          10
-        ],
-        [
-          "ko.wikipedia.org",
-          11
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 16,
-      "ourRank": null,
-      "domainCount": 8,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 16건 · 1위 전문사이트(ko.ifixit.com)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "배터리방전",
-      "from": "자동차배터리",
-      "volume": 800,
-      "volumePc": 100,
-      "volumeMobile": 700,
-      "adComp": "높음",
-      "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.youtube.com",
-          1
-        ],
-        [
-          "www.hyundaimotorgroup.com",
-          1
-        ],
-        [
-          "www.infoday.kr",
-          2
-        ],
-        [
-          "www.hyundai.com",
-          2
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 29,
-      "ourRank": null,
-      "domainCount": 4,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 29건 · 1위 영상(www.youtube.com)",
-      "incumbent": "영상"
-    },
-    {
-      "keyword": "배터리수명",
-      "from": "배터리규격",
-      "volume": 740,
-      "volumePc": 90,
-      "volumeMobile": 650,
-      "adComp": "높음",
-      "adDepth": 3,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "namu.wiki",
-          1
-        ],
-        [
-          "www.samsung.com",
-          1
-        ],
-        [
-          "www.apple.com",
-          1
-        ],
-        [
-          "battery1.co.kr",
-          2
-        ],
-        [
-          "www.digitaltoday.co.kr",
-          3
-        ],
-        [
-          "batterystory.co.kr",
-          4
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 19,
-      "ourRank": null,
-      "domainCount": 6,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 19건 · 1위 백과(namu.wiki)",
-      "incumbent": "백과"
-    },
-    {
-      "keyword": "점프스타트",
-      "from": "자동차배터리",
-      "volume": 660,
-      "volumePc": 110,
-      "volumeMobile": 550,
-      "adComp": "높음",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "programs.sbs.co.kr",
-          2
-        ],
-        [
-          "ownersmanual.hyundai.com",
-          3
-        ],
-        [
-          "ownersmanual.kia.com",
-          4
-        ],
-        [
-          "ko.ifixit.com",
-          6
-        ],
-        [
-          "ts09.co.kr",
-          7
-        ],
-        [
-          "carmantool.com",
-          8
-        ],
-        [
-          "www.autismpartnershipkr.com",
-          9
-        ],
-        [
-          "kcrm.kr",
-          10
-        ],
-        [
-          "namu.wiki",
-          11
-        ],
-        [
-          "diykorean.com",
-          12
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 17,
-      "ourRank": null,
-      "domainCount": 11,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 17건 · 1위 전문사이트(programs.sbs.co.kr)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "K5배터리",
-      "from": "보험긴급출동",
-      "volume": 640,
-      "volumePc": 100,
-      "volumeMobile": 540,
-      "adComp": "중간",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "battery1.co.kr",
-          1
-        ],
-        [
-          "repair.eeye.co.kr",
-          5
-        ],
-        [
-          "ko.phongnhaexplorer.com",
-          5
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 6,
-      "ourRank": null,
-      "domainCount": 3,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 6건 · 1위 전문사이트(battery1.co.kr)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "배터리출장",
-      "from": "자동차배터리",
-      "volume": 530,
-      "volumePc": 120,
-      "volumeMobile": 410,
-      "adComp": "높음",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "topb.kr",
-          1
-        ],
-        [
-          "xn--mk1b50kg6bdw5awrc.com",
-          2
-        ],
-        [
-          "www.youtube.com",
-          6
-        ],
-        [
-          "battery1.co.kr",
-          7
-        ],
-        [
-          "batterystory.co.kr",
-          14
-        ],
-        [
-          "batterygeist.com",
-          15
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 6,
-      "ourRank": null,
-      "domainCount": 6,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 6건 · 1위 전문사이트(topb.kr)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "배터리단자",
-      "from": "배터리전압",
-      "volume": 480,
-      "volumePc": 140,
-      "volumeMobile": 340,
-      "adComp": "중간",
-      "adDepth": 8,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "jejucarcare.com",
-          4
-        ],
-        [
-          "ko.ifixit.com",
-          6
-        ],
-        [
-          "m.battery1shop.com",
-          7
-        ],
-        [
-          "ko.accio.com",
-          8
-        ],
-        [
-          "dansuim.com",
-          9
-        ],
-        [
-          "namu.wiki",
-          10
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 9,
-      "ourRank": null,
-      "domainCount": 6,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 9건 · 1위 전문사이트(jejucarcare.com)",
-      "incumbent": "전문사이트"
-    },
-    {
-      "keyword": "견인비용",
-      "from": "보험긴급출동",
-      "volume": 1250,
-      "volumePc": 120,
-      "volumeMobile": 1130,
-      "adComp": "높음",
-      "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.yeongjong.go.kr",
-          1
-        ],
-        [
-          "www.youtube.com",
-          1
-        ],
-        [
-          "doc.reconlab.kr",
-          1
-        ],
-        [
-          "rparking.sscmc.or.kr",
-          2
-        ],
-        [
-          "portal.scourt.go.kr",
-          2
-        ],
-        [
-          "www.easylaw.go.kr",
-          3
-        ],
-        [
-          "www.gyeongju.go.kr",
-          4
-        ],
-        [
-          "www.yp21.go.kr",
-          5
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 14,
-      "ourRank": null,
-      "domainCount": 8,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 14건 · 1위 관공서(www.yeongjong.go.kr)",
-      "incumbent": "관공서"
-    },
-    {
-      "keyword": "긴급출동",
-      "from": "배터리전압",
-      "volume": 620,
-      "volumePc": 50,
-      "volumeMobile": 570,
-      "adComp": "낮음",
-      "adDepth": 0,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.hanainsure.co.kr",
-          1
-        ],
-        [
-          "www.idbins.com",
-          1
-        ],
-        [
-          "xn----us6emew4ve69a.com",
-          1
-        ],
-        [
-          "namu.wiki",
-          2
-        ],
-        [
-          "www.hi.co.kr",
-          2
-        ],
-        [
-          "program.kbs.co.kr",
-          3
-        ],
-        [
-          "www.directdb.co.kr",
-          3
-        ],
-        [
-          "www.tata-daewoo.com",
-          4
-        ],
-        [
-          "www.samsungfire.com",
-          4
-        ],
-        [
-          "www.chevrolet.co.kr",
-          5
-        ]
-      ],
-      "bigCount": 1,
-      "targeted": 22,
-      "ourRank": null,
-      "domainCount": 15,
-      "grade": "경쟁있음",
-      "why": "겨냥한 글 22건 · 1위 전문사이트(www.hanainsure.co.kr)",
-      "incumbent": "전문사이트"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     },
     {
       "keyword": "차배터리교체",
@@ -1555,44 +322,165 @@
       "volumeMobile": 830,
       "adComp": "높음",
       "adDepth": 10,
-      "hasWebBlock": true,
-      "top": [
-        [
-          "www.costco.co.kr",
-          1
-        ],
-        [
-          "batterystory.co.kr",
-          1
-        ],
-        [
-          "www.kixxman.com",
-          2
-        ],
-        [
-          "topb.kr",
-          2
-        ],
-        [
-          "www.tyremore.co.kr",
-          2
-        ],
-        [
-          "ko.accio.com",
-          3
-        ],
-        [
-          "batterycall24.com",
-          4
-        ]
-      ],
-      "bigCount": 0,
-      "targeted": 16,
-      "ourRank": null,
-      "domainCount": 7,
-      "grade": "의도불일치",
-      "why": "1위 쇼핑(www.costco.co.kr) — 상품을 사려는 질의다. 정보 글로 1위를 해도 전환되지 않는다.",
-      "incumbent": "쇼핑"
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "차량견인비용",
+      "from": "보험긴급출동",
+      "volume": 670,
+      "volumePc": 70,
+      "volumeMobile": 600,
+      "adComp": "높음",
+      "adDepth": 10,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "아반떼배터리",
+      "from": "자동차배터리",
+      "volume": 630,
+      "volumePc": 110,
+      "volumeMobile": 520,
+      "adComp": "중간",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "배터리경고등",
+      "from": "배터리규격",
+      "volume": 610,
+      "volumePc": 60,
+      "volumeMobile": 550,
+      "adComp": "높음",
+      "adDepth": 3,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "쏘렌토배터리",
+      "from": "보험긴급출동",
+      "volume": 510,
+      "volumePc": 80,
+      "volumeMobile": 430,
+      "adComp": "높음",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "배터리터미널",
+      "from": "배터리전압",
+      "volume": 480,
+      "volumePc": 150,
+      "volumeMobile": 330,
+      "adComp": "중간",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "배터리방전",
+      "from": "자동차배터리",
+      "volume": 790,
+      "volumePc": 100,
+      "volumeMobile": 690,
+      "adComp": "높음",
+      "adDepth": 10,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "배터리수명",
+      "from": "배터리규격",
+      "volume": 700,
+      "volumePc": 90,
+      "volumeMobile": 610,
+      "adComp": "높음",
+      "adDepth": 3,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "점프스타트",
+      "from": "자동차배터리",
+      "volume": 640,
+      "volumePc": 100,
+      "volumeMobile": 540,
+      "adComp": "높음",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "K5배터리",
+      "from": "보험긴급출동",
+      "volume": 640,
+      "volumePc": 90,
+      "volumeMobile": 550,
+      "adComp": "중간",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "배터리출장",
+      "from": "자동차배터리",
+      "volume": 530,
+      "volumePc": 120,
+      "volumeMobile": 410,
+      "adComp": "높음",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "배터리단자",
+      "from": "배터리전압",
+      "volume": 480,
+      "volumePc": 140,
+      "volumeMobile": 340,
+      "adComp": "중간",
+      "adDepth": 8,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "견인비용",
+      "from": "보험긴급출동",
+      "volume": 1240,
+      "volumePc": 110,
+      "volumeMobile": 1130,
+      "adComp": "높음",
+      "adDepth": 10,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
+    },
+    {
+      "keyword": "긴급출동",
+      "from": "배터리전압",
+      "volume": 620,
+      "volumePc": 50,
+      "volumeMobile": 570,
+      "adComp": "낮음",
+      "adDepth": 0,
+      "error": "HTTP 403",
+      "grade": "?",
+      "why": "HTTP 403"
     }
   ]
 }
