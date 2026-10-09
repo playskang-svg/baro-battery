@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Header, Footer } from '@/components/site/shared';
 import { siteConfig } from '@/lib/site-config';
+import Script from 'next/script';
 import './globals.css';
 import './visual-refresh.css';
 import './footer.css';
@@ -27,6 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-CH3SKP6WPH" strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">{"window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CH3SKP6WPH');"}</Script>
         <Header />
         {children}
         <Footer />
