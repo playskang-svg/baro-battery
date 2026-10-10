@@ -1,0 +1,152 @@
+{
+  "site": "batterycall",
+  "label": "배터리콜",
+  "domain": "batterycall.kr",
+  "repo": "playskang-svg/baro-battery",
+  "type": "publish",
+  "createdAt": "2026-10-10T22:59:10.404Z",
+  "updatedAt": "2026-10-10T22:59:10.404Z",
+  "createdBy": "actions/38093232805",
+  "titles": [
+    {
+      "keyword": "자동차배터리80L",
+      "volume": 480,
+      "grade": "1위가능",
+      "title": "자동차배터리80L, 지금 시동 안 걸릴 때 5분 안에 할 조치",
+      "hook": "즉시 조치 순서",
+      "intent": "주차장에서 발이 묶인 운전자",
+      "alternatives": [
+        "자동차배터리80L, 출장 교체비 범위와 보험 무상출동 조건",
+        "자동차배터리80L, 방전인지 고장인지 소리로 구분하는 법"
+      ]
+    },
+    {
+      "keyword": "차량견인비용",
+      "volume": 670,
+      "grade": "1위가능",
+      "title": "차량견인비용, 지금 시동 안 걸릴 때 5분 안에 할 조치",
+      "hook": "즉시 조치 순서",
+      "intent": "주차장에서 발이 묶인 운전자",
+      "alternatives": [
+        "차량견인비용, 방전인지 고장인지 소리로 구분하는 법",
+        "차량견인비용, 출장 교체비 범위와 보험 무상출동 조건"
+      ]
+    },
+    {
+      "keyword": "자동차배터리교체출장",
+      "volume": 590,
+      "grade": "상위가능",
+      "title": "자동차배터리교체출장, 지금 시동 안 걸릴 때 5분 안에 할 조치",
+      "hook": "즉시 조치 순서",
+      "intent": "주차장에서 발이 묶인 운전자",
+      "alternatives": [
+        "자동차배터리교체출장, 방전인지 고장인지 소리로 구분하는 법",
+        "자동차배터리교체출장, 출장 교체비 범위와 보험 무상출동 조건"
+      ]
+    },
+    {
+      "keyword": "24V점프스타터",
+      "volume": 770,
+      "grade": "상위가능",
+      "title": "24V점프스타터, 지금 시동 안 걸릴 때 5분 안에 할 조치",
+      "hook": "즉시 조치 순서",
+      "intent": "주차장에서 발이 묶인 운전자",
+      "alternatives": [
+        "24V점프스타터, 방전인지 고장인지 소리로 구분하는 법",
+        "24V점프스타터, 출장 교체비 범위와 보험 무상출동 조건"
+      ]
+    },
+    {
+      "keyword": "아반떼배터리교체비용",
+      "volume": 510,
+      "grade": "상위가능",
+      "title": "아반떼배터리교체비용, 지금 시동 안 걸릴 때 5분 안에 할 조치",
+      "hook": "즉시 조치 순서",
+      "intent": "주차장에서 발이 묶인 운전자",
+      "alternatives": [
+        "아반떼배터리교체비용, 방전인지 고장인지 소리로 구분하는 법",
+        "아반떼배터리교체비용, 출장 교체비 범위와 보험 무상출동 조건"
+      ]
+    },
+    {
+      "keyword": "자동차배터리점프",
+      "volume": 1010,
+      "grade": "상위가능",
+      "title": "자동차배터리점프, 지금 시동 안 걸릴 때 5분 안에 할 조치",
+      "hook": "즉시 조치 순서",
+      "intent": "주차장에서 발이 묶인 운전자",
+      "alternatives": [
+        "자동차배터리점프, 방전인지 고장인지 소리로 구분하는 법",
+        "자동차배터리점프, 출장 교체비 범위와 보험 무상출동 조건"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-10-10T22:59:08.466Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "자동차배터리80L",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-10-10T22:59:08.856Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "차량견인비용",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-10-10T22:59:09.193Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "자동차배터리교체출장",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-10-10T22:59:09.678Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "24V점프스타터",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-10-10T22:59:10.029Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "아반떼배터리교체비용",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-10-10T22:59:10.372Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "자동차배터리점프",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": []
+    }
+  ]
+}
