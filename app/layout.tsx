@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <body>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-CH3SKP6WPH" strategy="afterInteractive" />
-        <Script id="ga4-init" strategy="afterInteractive">{"window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CH3SKP6WPH');"}</Script>
+        <Script id="ga4-init" strategy="afterInteractive">{"window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CH3SKP6WPH');gtag('config','G-P73SDFB1F3');"}</Script>
         <Header />
         {children}
         <Footer />
