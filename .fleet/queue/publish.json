@@ -5,8 +5,8 @@
   "repo": "playskang-svg/baro-battery",
   "type": "publish",
   "createdAt": "2026-10-13T23:28:55.253Z",
-  "updatedAt": "2026-10-16T22:14:46.557Z",
-  "createdBy": "actions/38974234793",
+  "updatedAt": "2026-10-17T21:47:29.287Z",
+  "createdBy": "actions/39072184265",
   "titles": [
     {
       "keyword": "자동차배터리80L",
@@ -90,6 +90,18 @@
       "alternatives": [
         "자동차배터리가격, 방전인지 고장인지 소리로 구분하는 법",
         "자동차배터리가격, 출장 교체비 범위와 보험 무상출동 조건"
+      ]
+    },
+    {
+      "keyword": "자동차배터리점프",
+      "volume": 1060,
+      "grade": "상위가능",
+      "title": "자동차배터리점프, 지금 시동 안 걸릴 때 5분 안에 할 조치",
+      "hook": "즉시 조치 순서",
+      "intent": "주차장에서 발이 묶인 운전자",
+      "alternatives": [
+        "자동차배터리점프, 방전인지 고장인지 소리로 구분하는 법",
+        "자동차배터리점프, 출장 교체비 범위와 보험 무상출동 조건"
       ]
     }
   ],
@@ -858,6 +870,198 @@
           "imageUrl": "https://ads-partners.coupang.com/image1/su1IYzIC7erMHvT1sqBUupplBDwqSMh-oGIqvr2uuzNGgEN-hEGa6QG5uJOouPUpIjYKOAAi-Y4RLkjimhHj_AzkRPz3nO9J19VvMPdwsJcxoxIK3B4HeTaIbqhVekk_-u_2j3-jAmMFv0g9jfXda2u_rw2ND1hazmtpyHPZPhFkvN3Z2YDQSxqPkUuucsYe7aFQh29FtHoPPc7bfDM0SOKGQzmrlTspjysQWpEij-5DOlG6rq87ThGU4zUEIq6pIF3lC-xWKCQW8PN2R8O6Los0ZUVgF78qewMnm6BRsIa5S6z7nVH7NfgPVIlF68VSw5SUDZq4uIAw7Vff0SPoYjrXCd3WFmKMToP7eOcIoMnQ-N54fasWm3XoyR2bApbdzmCQn1QNz7czdiOwk9C3E_dsVy9tIgtvlcwcUbRDgqJcRmzxHXTRHy7IclXHqkF5hH8T_iDyueYLMcYXxJiVUsPGnRNwrG-RR-_AIf8wHShhimGCg7SAJHiO19RFTe5pqzB7L6sHaJBjFtb5n708Z1i8MoDT7ogTTX7XkKGYaYT4PgNfK-2a_mGk",
           "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8392982865&itemId=24262262155&vendorItemId=91968195596&traceid=V0-153-15b5c724c4c97c8f&requestid=20261017071446268288157522&token=31850C%7CMIXED&pt=0&slot=2",
           "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-17T21:47:24.392Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "차량점프스타터",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "9280053176",
+          "name": "다걸다 국산 12V 전용 전문가형 점프스타터 JUMP-40000S 대용량 자동충전 배터리 방전 트럭 농기계 선외기, 40000mAh, 1개",
+          "price": 295000,
+          "priceFormatted": "295,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/NxVIJYJ3MennWSl6N5iaD8d-3ewP504mRnhbMhEEZTi-G-nSBbKRLoNd5uSxN3_b-Pb1CjETmVpvMwGksEf7Pp3EJJzESMZlEQkhTDDSZrEar5OXxDYwrUliFx1uYOzkuF36IUSpp1hpce6gDTfmF9MHeH7s2NaB-cmmP7VEBLZ9ZuJ_1QATrF9nSdTLwZX2lxVvnrWiTyer7ramxgfRx3OiAiXfev-3z8fy1c7VAdC_jGTqGMbWjBQrVaRfp62Y0-BFcpujgNCHgDGkPudzQjj3GiKcj5DDnH37PhWemL-lXHjwA6NagIGPw9sQj1Q0pmBbZ6SgANv4EWJuwrSyk6zVnvtViJMW6WedLhCv_aM9_aY5qVmAU6pvvM57NVlukAKW7Me4YW9g1w4OvlR2Tt8ouilJY66eUQu4pD79AxV6P8svu3aSsRlSFv5A5BKaGune2RNrC0PqDm2MvhGypcjf-kW3g4-zqu7SvuwOeFtUG_jD94uzupVQo0rSrdafopj5t4i-Jbt-QvOLT4eUtr6D9HSq4lAGDEGthUQbaaY=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9280053176&itemId=27474236772&vendorItemId=94837372215&traceid=V0-153-4f143d640d793bf5&clickBeacon=5672d7a0-ca74-11f1-891a-87309e25e41d%7E3&requestid=20261018064723990017696314&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "8512988775",
+          "name": "25900mAh 파워대가 자동차 긴급시동 점프스타터 오토바이 보조배터리 자동차 배터리 점프스타터+스마트 점프선",
+          "price": 69500,
+          "priceFormatted": "69,500원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/JbYWigt1sKHep3QPJYZv4xcevESQqvgITZ0AeeBFoEMK_Bh9r-mrlABhYHvMnDDisXWpoULnFDJkSTROcNJVfewU5lD2bxLkl31ywejTwY3jZMH8ATnRMVRxPGUTCMH5_-XoHfT9216E4CAdfAG9LHpRmTuyuEIufpteX1os-CpvLU9TjZVsHKLxR3YxF7XXptnRWRlqKmymF5Urur4a7HpC-B3RdRWwCuO_Gtgb8oLpfaOZIZVgRXCd3A2IKaHH6nbDPCOs5cweWFhuR6VU29TndU4h5bEm14fhjuE22ccwRmH_eqYj3ERIMb-3YNmLOzn2IWGlYd3hwvZaqEpT2wJt_DvNkkJURL6YHtBCUF6HNdWIc596QAkz-zDlMCizYXxfd1T3kCJPau10F44ZXlXtmWiZoKnM9hFUhfYa7TmL3I9n6iQtSyr0h3t6hj-lvemXOj97DJhqxL93uvqinb5MtWumA0-wzYk3W9d7Je-reWKd5EbLL3mnzpGnkflRDJWoW0IxgEN8kEYD1WSVi7C_NjxNcsApX1clGVddia6VUzvgBnLkMZ4=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8512988775&itemId=24643228948&vendorItemId=96181936603&traceid=V0-153-5af8a4122cd0ec93&requestid=20261018064723990017696314&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-17T21:47:25.470Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "차량견인비용",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8723870452",
+          "name": "넥픽스 목견인치료기 원하는만큼 시원하고 강력하게 특허의료기 집에서하는수직견인치료, 1개",
+          "price": 66070,
+          "priceFormatted": "66,070원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/GEbP-nm_V4rL_sy0GJ_Q8aRBV6SaGoJWsEaZQLzuJMUKUkpEG4vV_DSZ2BPixic2m0q7m_UEPzdguTPrcrAwUliLxWRqmMByFSgTdddtVRsDlPHoaxiqeRZgEdGvEiPdJ92FIs-khjOw7ncoRjt2d1dEp1ZZ5DW19d9gnEUliwFs5LCAqBZt95Cf1XfwLuq5ZFl0nbi7DkkhNkYZ39QGw8Rb1b_pem22r6x80-IN3nHDyHbyT0J5o2ktMFS1YNdBMWYakDcGcYWzMC79x2cU2Fs7gjMkci1ruIwdL_3l8hvyEIHpJG9WVcCehCiv8ygLjGeitRHPSOoNx-hN5a7_6YOXrBSpSU3IySCoWqX5LBcNNTl8ymY9tSgJgxbB89YRKW754cF-_BKaf3KU1-I3iFfWKd2qHB8PEVpD99F0jlg6CN-utAeKui1W8xL3gKGgEZMIhRVFa3E8q_aI44A4KfNrbVqTL10sbhDtVfdQFRrEkUbMP34tTF872wjLnZeiuLYfVBJFBtRU6LDhfPvVDXk1HBPi-Lfrkk3DjnR4ng==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8723870452&itemId=25342667172&vendorItemId=90435811522&traceid=V0-153-f3efe6ef701419f1&clickBeacon=571ecf10-ca74-11f1-a7e2-c340557fd887%7E3&requestid=20261018064725118244152489&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "9611428275",
+          "name": "상가 이용 고객외 주차금지 무단주차시 강력스티커 부착 견인조치 차량 파손 및 견인비 모든 비용 차주부담 노란색바탕 8566020856 13510 스티커",
+          "price": 3000,
+          "priceFormatted": "3,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/fTXOmwCE4Lhtl7q1fSMxcLqXPuO-g0Md8MHKRl1CgJn_g07tZ2DM6QiRVBWqrVKSuh9GK97vU_XIKzT4KDmCyIPNgYiA9gmIQyHAqDbffUB_k7xujcX0ov6BwpWdlywK27pO77H3WElHS7_3FsUkYJ1LJHjXj9Tcutd8LrrHaycGVz1qI27yzs4xeNQry7JzcQc3mZTippInVV5zqjxNy3Cty7jVhGHpdsKuMjuge5cbhcrxDmAAAMQFItInsOuuQHV1HytoZc7AlB_-stIJfMqdCvdZXcsRM-zsIK5FTj62VFVZuXQnz1S9IxF1kuLCy55nsabaBeGLTuhEE2tR0O__zTPQbQVo157kU6KuJ2mtS4Li2noBq3DXdxUf8uQtlzW2pThVqnOGr-w70qtYcZwQlMAjrt3fH7LaKGlhyaWupkZKrjnmaenJU5qW360MbakAAzjZIlH20Xc7xFY1xfDrut387TNWKKbBb5muhPZpdIPT9pbS23ijs87jzAEJVZae1G2XZd9Dt4ZOwNB4l1qx0TErdH7ZWRMa7oRzonwyo_p0qCsGzFu8",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9611428275&itemId=28695575212&vendorItemId=95636762968&traceid=V0-153-4f5aca0a0de21dd5&requestid=20261018064725118244152489&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-17T21:47:26.353Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "24V점프스타터",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8442625361",
+          "name": "다걸다 12V,24V겸용 리튬인산철 국산 점프스타터 화물차 자동차 차량용 배터리 트럭 대용량, 40000mAh, 1개",
+          "price": 356000,
+          "priceFormatted": "356,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/7VV7b_-ksZG1I-rV7WPxtbYa5G69H9rsM-90asXCEOv_C8YDsOQ8eSDV7ks6JIp0Oh-EV4hQIVdTBaeATeAesgo-ECyUlRZHV_LpZeIoL06jGm3WYFygC_pkRyHBDpaBxugBQ_O5Q5fxMldAfbdjHe53Vh_5pP3KPz1I3IDytxFKAXfhPp5V_rIHYfsAQjvtLeRN05FGzDMVbLQG-x07la3eHbPlf9_x6zStFtapNVhO5DEF5r3TleU2z-XZm83IJ1x5mlLzjsoR3VbW3RomffX4u9xIaQdUI5aU4g2tVi_0AIj1Van56C6yWpYKeriiQ8AC9dIEh7nQVItqNBBsnyi8fcMR3wO56FpMIYP1lMt6c_vLOiol3BmSUFNmh4YQYZDW6l4ltsA_Wvb2b8NwZTXs_BvxXgxoowjyNswMQNTlKteskLilll7TWNiQ4eZNsUiawIyf3MDM0ue7q1kEiKzNloXUGdw4HAKkv4aPau6FAqMhDITzZ411p7AOqXfvMhtNAkw5C1TnQZYfZyQ07XLQ_ZDl8V5vGslS0pAJqHM=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8442625361&itemId=24421293634&vendorItemId=94837364942&traceid=V0-153-9564e74669882b32&clickBeacon=57ba4bc0-ca74-11f1-9797-e2830b49b93b%7E3&requestid=20261018064726140035577935&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": true
+        },
+        {
+          "id": "9772769887",
+          "name": "12V/24V 차량용 점프스타터 디젤 트럭 승용차 겸용 대용량",
+          "price": 196000,
+          "priceFormatted": "196,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/B_r9QwJAKq7-fLlNB5soNpIIxYZr1TBXDSNTl66icRquAeZTTnGZiSmGTE9VDrZgiaCQmPx3JNmYraoM6_qxejira0mLSiFrDPPzxvDndy7-F1ueyE0c2vrpwrfiRBKhTbPRgcj0QMeiTnPXYC40z-QRY73fR-qb75DNrxUAdv1uJ3whrfPnkwwJrHfz90O1yXJfEBxKPgpxNyPCH5L77TtPTe6sgwdhgrI62MEnSSmqYf4GOQy-Jus5-E3SF1acYMxCJzsnFiAekrtYicFsmRMOjxN8u1cSHba1DJRzVZPTnVy76HxizxDVUFu7gaLgqnQVdpGza1p1dkFh5Rt1mK9t-4X02ONtaVZC3AhBrI4GmX6_VDWQ3V3WnEkmshQYzkSbN7Pdo6NgM46AXL-BWEUF8mhEIdz89urZoKyhBw00DYyiwi5Kq0V35cfGS-C_qTnyh_ySbitn6vFZmYLx8LkpMNIylp_Kd4VycygBylmFRCT9VL0mkKHEHO5zA8g5rP2Hx3Mo-dIkpcOuRKg1GO9claUWQCdiZ-rDmkslKVaaXY69TUgt7oMw",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9772769887&itemId=29253437926&vendorItemId=96169039435&traceid=V0-153-50932abaf4009924&requestid=20261018064726140035577935&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": true
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-17T21:47:26.874Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "아반떼배터리교체비용",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "5280260934",
+          "name": "델코 DF 40AL 모닝 올뉴모닝 배터리, 1개, 델코 40AL",
+          "price": 36040,
+          "priceFormatted": "36,040원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/JZurp8w7wJ4stpHHJfkalXMVC841RlvjCKvpKK505D1Y5zl4NobV28QE8EUOw6xRPc0uzxg1lzm-I6n4TuX6c8m9MX0jkefXE39XCHBoWs-7gNtl3Po8biLCSuryfi3yhXx1ZWR1jQ-OPEVMg_7CW44FbXeFV6aY6rwjEgURutuwpPnU6ymDiWJAahD7NsX_hj-w16bK3qUGOWtzxoSE1I5a0uHr450Bo0ymDVgZG-LA-J5FX1IPolFjsrR9Q3hLTj-EB3K_nqaT6U0n8ZYGlmLak5Ax_g4alfAMwxFda15aK6BKxhh-OSo-q4X7Cow7-bGZgmiICRwuDjteLRdYmMcRXtgqL_JdeiStd_ir6TTtEEItPY8rtpNuqe_EN1L4v5LYe75lTta1T3R0MkVpLE5pvhHrFWgKSxcB5-9_79xazrYZLdtEZlQ0FTJ0BM_N7cftiP5VLAHU_xl7rNMDpIIgk6W_rZgSlxPLu_LY_aqW4AVI-i9Pkxuesj8jqOUNiRzzsYyOg8ZsKwIKztZvdKvjhk-1V6ODtMQ0tgfRPZQ=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=5280260934&itemId=7553446118&vendorItemId=77393834153&traceid=V0-153-f2bb0407d366e58b&clickBeacon=58013fd0-ca74-11f1-9ab3-f44c61aadf2d%7E3&requestid=20261018064726594244152994&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "5347017678",
+          "name": "로케트 GB 56219 아반떼 MD AD 트랙스 K3 배터리",
+          "price": 68300,
+          "priceFormatted": "68,300원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/to48q9wrftEAQiydthQU2j9BiyhrqQpaDovnR8GcJgbqsn-BlW3w-nMOH5T-azt9D74z15IDTUe_0uIU1QT0RVa7sSBe--sZo-m2GOg1PdOuBLP3djOcKh2kmiuTdVtdAfOZ-1KDM-ZaqEgyJh7jXDiPC1mbNFm-Cf2lzrNQEcVp1IkqwOAZ-ZIcPJgWBht8w7O2juYMAaU2nIaCU5Z6FX3af7UsdzoNNzjLtD_vzmMUqBEB0-3YodiyNIMec1mE0zFp9rHAUaJqKS2dXnP2QYmPVNtGN6NT_GCGCW9K8m2NdQBPIILPYbrnuPcEhG2brEqWs5nUnUHdYeRyMi2RXbQNyrtM8W6XMQW9gfkpvwUUoLs9Fr60mPLW1qyCRlKn7M5GcMhpY4O3c0X9AXXw4tzFYCw6I3sYwDsVQjOaw6ERcmtdc_XNWm2wU2M_9BHWhSxSLH3Pak37SYY1F6_hXSr4qx7un2s5Y5xY_KoAX4Dw7V26Nq01PQ5yUsbyYbjd32ncbYQhR6fJl9MBnKQnhhPvndVMblBx_4GAlUQCVrKC9SbrfsUanLku",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=5347017678&itemId=7854084242&vendorItemId=75143755508&traceid=V0-153-ee41975708e22c5f&requestid=20261018064726594244152994&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-17T21:47:28.247Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "자동차배터리가격",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8472452678",
+          "name": "렉스턴(-21) 액티언 코란도(-18) 스포티지R 투싼IX 스타렉스 포터2(-21) 배터리 델코DF90R 로케트 GB90R 한국아트라스 HK90R 보쉬MP90R 엑스프로 XP90R, 1개, 로케트 GB90R 면장갑+폐전지반납 공구대여",
+          "price": 80300,
+          "priceFormatted": "80,300원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/x39jomDg1fvNAHJZx2OLHu1XHm5gwy9JIWumaixtITQ01JufIWz0Ci8LJG87cN7L1oru7UF22zcmHx2kOdA9BWG6fpqH2LRZcc65CC-ljRCrQLXvMtj2ZqMLkXyxPxKdmMqtq2kcTunVgsufxy1DkKXtMmGbUGF7rrL3nh1B2rqgrXbw4YdrC9ZRk9hORZvHpgscf9tSr3DmbzXs3LML5N6EljkXltRfjdGRXCqY_DqGaVgY9KakeF3IsC8_E85BDCjhLPfNtTXD6CNBjoL3Omy8n6E9lQENDEdi6pym_CYj_sfi9PzfioCpqZu5YY1grwQKd_YeBzMgAwNKgEh6EC-Ys6uhou_1uAM5CkQbzXjHALewaBclPAuZw-hAKjCX3CvmWX8LYJd00ghcPIM_2mMYtsoIccbIffxoeJaAgka6Ri0faES2WS1NxqdPNP_LC4iZHcJ41qFbA_zbfy04HiVG5NkyDLCvjT2XeBGaeZ_ytf2q-g8OD0k1GiNIG9d7Ibf-jUhT9qICLWeb2QSs3YGWxnerhwfsijCj4oEO",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8472452678&itemId=24514545958&vendorItemId=91527407924&traceid=V0-153-a8a140dabaeb37a0&clickBeacon=58daafe0-ca74-11f1-bfcf-70cd9181ee15%7E3&requestid=20261018064728013099771954&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "8392982865",
+          "name": "델코 배터리 밧데리 DF 80L 최신 정품 자동차 공구 무료 대여,기존 배터리 반납 O/ 아반떼 쏘나타 그랜저 싼타페 크레도스 카니발 카렌스 K5 K7 SM5 SM7 QM5 티볼리",
+          "price": 59190,
+          "priceFormatted": "59,190원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/4MCNVzkz42TT7lPW4Cn8OpX5Xr6xnXzAwVvLVwyK7mvCrMbEjN5t8HLcTdcvDg2aesKNgPQiKtqLNCJcPgpE2Yv-_yBwkXZrzv8Ti9mX2a16ABmpW-cLycTeny-ZXuZTnLiJoJrencxxB70vllJPwfoCqdireDRTHyn4UWQXCEsAL7RTIaQ1eHZRHA1i9thZEbhTEVK-z9q0XV00thhtiON1xuCLGHD5fewaimO0sXcI8fsytP0aUTXj2K6ncOGHoBq_CB3qBGqogJiwlDPeqxiJI1JmAhrzgrvzAHWZ4vgbZpVhcymxGBsxfvfa7LFZd_Gl3yRJN3AQuFAxmGUHsi8Iv4SAAa82s5mUxW0qM9w6unszJbsWwLFcfVCnRkPuul5WBa9t3zQpQl-B_2gqlVzFf9iaRU7tijvO7LUOmyNpaFpRQnHy4M3aBTaEFyvuBWke0fRQUBVPGIXKKu6X3SvSWKH3v-GB6HrM4DmPoNLOFUJVEkelNFjDXZZWCHGhNO5ifobr3oYRRlV7UG6nj5ILTG09bvmibE0TQX_6OO0ezCJW0ZQq39d5",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8392982865&itemId=24262262155&vendorItemId=91968195596&traceid=V0-153-15b5c724c4c97c8f&requestid=20261018064728013099771954&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-17T21:47:29.259Z",
+      "site": "batterycall",
+      "domain": "batterycall.kr",
+      "keyword": "자동차배터리점프",
+      "slug": null,
+      "internal": [],
+      "external": [],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "9638282549",
+          "name": "다걸다 JUMP-20000 국산 점프스타터 배터리 방전 점프스타트 + LCD스마트 점프케이블 + 하드케이스 가방, 20000mAh, 1개",
+          "price": 170050,
+          "priceFormatted": "170,050원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/dwgZ07jVTisPsg17d_aVlqmmt_74hmLg64cBxnjvkX46ZABTdgX1hyG0UrgWYJSrpjD3mKlcPhY65hD_h43nH5Zdv97Fkw7u9FlteWLMLvslgYBrx0a_zDAqzZBW6pjRA0PvRDmm0SDFlRe2mxI4zWFJsnfpLJxXsqYM3m3Op6xG8qlbWWME7EuAEe2KBjVDCjCK4Ht_lv51YI1Nkx_c-Q_B4jnTFs5UXuHdOYR2UUF8gHyriMLhQxrHhMF0oqaj03aA5wn6sBxOh5iPKUg02Fo080nr6y9Hm0Miqn8n7CekJQo_u401pWTCG5vYs4-adGKIF82U80lg9iu71ZpjGseA_42sP5PZhZOxPkqLkuB3nVgSxm5919nCwRn-LUpuP0gJE380Lah3RqKOWAZdIw3OiwA42hMGp6LB9sAEWTLEPrjF1zdcKhcfKFKUev3oeJ8oBAmtGyivH10K35D26OE8D0DD9M9ia9k363tFqSDdH9zDDsI0a9g63meCJl9typoGpVqVggcH8VVHRO_9GjqSErkMXN1_7mz9uQ==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9638282549&itemId=28796529922&vendorItemId=95732050150&traceid=V0-153-a52d4532815e4af7&clickBeacon=597b5cb0-ca74-11f1-bcc0-5ecc56f50080%7E3&requestid=20261018064729092207531181&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "8633792680",
+          "name": "카템 자동차 배터리 점프 케이블 2000AMP",
+          "price": 9500,
+          "priceFormatted": "9,500원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/bHLsn61QcRZmgI4vbGGf825n3fQsUHiOmeCYuq9fFuipDPOrCxJqfEyjb8GLvnoKL1vw20qnPur2aid5-lAa1iqZdzAXyxcKlj9q4qGvzaUzc3lT2msPygcaPhDC2ynarBMP-1P53cUh1PCJxki3T1iMOxBWLoLgWD_mjf5hVJPPjnoeXJLcsY9T3_Ov31lIdyOzPK5QxzsDry9gWNFxzIJ5XuaG8L1QQ2TMWOlmV2dPjNVG2Pu-ut_XrBUgXg9UhZHo0otY0R-bHm4AI9_En2sQ_KNzyakD8Ls5v4dUcyW2nZbMhWxWYugaONaYgoVwrkBMSFBoXvOZQNy6uWFx8agITJmTZUP8qlhEGn4Mrs1ABgFBjbDmxe1KLvkgD1VjnzZw-g_MzzSzy9GZAOc3pNBaWy5W6NhftBad85LNKx5T5sCJKBU5VrQ8e8rjnNbWPoHQOVkTmoggNxdmy2Nr3Up5NDFRtcgBFbyBEO8EBtYCzBPMleGGAvMsFZjlNNfW1JWZ75ICdGYbgHxkWxujnijkUCOPJDS-5w==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8633792680&itemId=16855056571&vendorItemId=84033960853&traceid=V0-153-084c0fdd4f8d5748&requestid=20261018064729092207531181&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
           "isFreeShipping": false
         }
       ]
