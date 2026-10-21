@@ -3,104 +3,23 @@
   "label": "배터리콜",
   "domain": "batterycall.kr",
   "repo": "playskang-svg/baro-battery",
-  "scannedAt": "2026-10-15T00:52:47.028Z",
+  "scannedAt": "2026-10-21T00:57:00.638Z",
   "pagesCrawled": 102,
   "sitemapUrls": 53,
   "externalChecked": 8,
   "summary": {
-    "high": 10,
     "medium": 1,
-    "low": 2
+    "low": 1
   },
-  "occurrences": 39,
+  "occurrences": 38,
   "findings": [
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EB%B6%80%EC%B2%9C%EC%8B%9C",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EC%95%88%EC%96%91%EC%8B%9C",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EA%B9%80%ED%8F%AC%EC%8B%9C",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=incheon&area=%EB%82%A8%EB%8F%99%EA%B5%AC",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=incheon&area=%EB%B6%80%ED%8F%89%EA%B5%AC",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=incheon&area=%EC%84%9C%EA%B5%AC",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=incheon&area=%EA%B3%84%EC%96%91%EA%B5%AC",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=incheon&area=%EB%AF%B8%EC%B6%94%ED%99%80%EA%B5%AC",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=incheon&area=%EC%A4%91%EA%B5%AC",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://batterycall.kr/contact?region=incheon&area=%EB%8F%99%EA%B5%AC",
-      "status": 503,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
     {
       "severity": "medium",
       "kind": "canonical-mismatch",
       "scope": "site-wide",
       "page": "https://batterycall.kr (전역)",
-      "occurrences": 27,
-      "pages": 27,
+      "occurrences": 37,
+      "pages": 37,
       "hrefs": [],
       "examples": [
         {
@@ -128,16 +47,7 @@
           "nav": false
         }
       ],
-      "note": "27쪽 27건에 같은 결함이 있다. 페이지마다 고칠 문제가 아니라 공통 컴포넌트·레이아웃 한 곳의 문제다."
-    },
-    {
-      "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://batterycall.kr/guides/winter-battery-care-tips",
-      "href": "https://www.kca.go.kr",
-      "status": 0,
-      "error": "fetch failed",
-      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+      "note": "37쪽 37건에 같은 결함이 있다. 페이지마다 고칠 문제가 아니라 공통 컴포넌트·레이아웃 한 곳의 문제다."
     },
     {
       "severity": "low",
@@ -337,6 +247,76 @@
         "severity": "medium",
         "kind": "canonical-mismatch",
         "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EA%B3%A0%EC%96%91%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EB%B6%80%EC%B2%9C%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EC%95%88%EC%96%91%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=gyeonggi&area=%EA%B9%80%ED%8F%AC%EC%8B%9C",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%82%A8%EB%8F%99%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%B6%80%ED%8F%89%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EC%84%9C%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EA%B3%84%EC%96%91%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%AF%B8%EC%B6%94%ED%99%80%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EC%A4%91%EA%B5%AC",
+        "canonical": "https://batterycall.kr/contact",
+        "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
+      },
+      {
+        "severity": "medium",
+        "kind": "canonical-mismatch",
+        "page": "https://batterycall.kr/contact?region=incheon&area=%EB%8F%99%EA%B5%AC",
         "canonical": "https://batterycall.kr/contact",
         "note": "canonical이 자기 자신도 사이트맵 URL도 아니다"
       }
