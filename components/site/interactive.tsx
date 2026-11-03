@@ -27,18 +27,6 @@ export function ContactForm({initialVehicle='',initialRegion='',area='',channel=
 
 출장 전 차량 확인과 제품·총비용 안내를 부탁드립니다.${photos.length?'\n※ 문자 앱에서 첨부할 사진: '+photos.join(', '):''}`;
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const qv = params.get('vehicle');
-    const qr = params.get('region');
-    if (qv && (qv === 'other' || vehicles.some((v) => v.slug === qv))) setVehicle(qv);
-    if (qr) {
-      const found = regions.find((r) => r.slug === qr);
-      if (found) setLocation(found.name);
-    }
-    if (window.location.hash === '#form-card' || qv || qr) {
-      const el = document.getElementById('form-card');
-      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
-    }
     const onPrefill = (e: Event) => {
       const detail = (e as CustomEvent<{ vehicle?: string; region?: string }>).detail;
       if (!detail) return;
@@ -55,6 +43,16 @@ export function ContactForm({initialVehicle='',initialRegion='',area='',channel=
       }
     };
     window.addEventListener('batterycall:prefill', onPrefill);
+    const params = new URLSearchParams(window.location.search);
+    const qv = params.get('vehicle');
+    const qr = params.get('region');
+    if (qv || qr) {
+      window.dispatchEvent(new CustomEvent('batterycall:prefill', { detail: { vehicle: qv || undefined, region: qr || undefined } }));
+    }
+    if (window.location.hash === '#form-card' || qv || qr) {
+      const el = document.getElementById('form-card');
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+    }
     return () => window.removeEventListener('batterycall:prefill', onPrefill);
   }, []);
   useEffect(()=>{const doc=document as Document & {modelContext?:{registerTool:(tool:unknown,options:unknown)=>void|Promise<void>}};if(!doc.modelContext)return;const lifecycle=new AbortController();try{void Promise.resolve(doc.modelContext.registerTool({name:'stage_battery_inquiry',title:'배터리 문자 문의 준비',description:'차종과 지역을 문의 화면에 채웁니다. 문자를 보내거나 예약하지 않습니다.',inputSchema:{type:'object',properties:{vehicle:{type:'string',enum:vehicles.map(v=>v.slug)},region:{type:'string',enum:regions.map(r=>r.slug)}},required:['vehicle','region'],additionalProperties:false},annotations:{readOnlyHint:false},execute:(input:unknown)=>{const data=input as {vehicle?:string;region?:string};if(!data||!vehicles.some(v=>v.slug===data.vehicle)||!regions.some(r=>r.slug===data.region))throw new Error('지원하는 차종과 지역을 선택하세요.');setVehicle(data.vehicle!);setLocation(regions.find(r=>r.slug===data.region)!.name);setStatus('');return new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve({status:'staged',vehicle:data.vehicle,region:data.region,sent:false}))));}},{signal:lifecycle.signal})).catch(()=>{});}catch{}return ()=>lifecycle.abort();},[]);
