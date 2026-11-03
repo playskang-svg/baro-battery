@@ -3,6 +3,7 @@ import Link from '@/components/site/site-link';
 import { ContactForm } from '@/components/site/interactive';
 import { CallBand } from '@/components/site/shared';
 import { FaqCards, Showcase } from '@/components/site/home';
+import { Battery3D } from '@/components/site/battery-3d';
 import { guides, operatingRegionLine, operatingRegions, holdRegions, serviceSteps, vehicles } from '@/lib/content';
 import { phoneHref, smsLinkHref } from '@/lib/site-config';
 import './home.css';
@@ -60,6 +61,9 @@ export default function Home() {
             <p className="h-hero-facts rise" style={{ '--i': 2 } as React.CSSProperties}>
               {operatingRegionLine} 출장 · 24시간 접수
             </p>
+          </div>
+          <div className="h-hero-3d">
+            <Battery3D />
           </div>
         </div>
 

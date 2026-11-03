@@ -1,9 +1,10 @@
 /* 홈 — 거대한 배터리 블록(모티프) 하나로 이어지는 구성. 접두어 h- */
 
 /* 1. 첫 화면: 검정 바탕 + 오른쪽에서 들어오는 거대한 라임 블록, 그 안에 영상 */
-.h-hero { position: relative; background: var(--soot); color: #fff; overflow: hidden; min-height: 70svh; display: grid; align-items: center; padding-block: clamp(80px, 14vh, 160px); }
-.h-hero .wrap { position: relative; z-index: 2; display: block; max-width: var(--max-w); }
+.h-hero { position: relative; background: var(--soot); color: #fff; overflow: hidden; min-height: 85svh; display: grid; align-items: center; padding-block: clamp(80px, 12vh, 140px); }
+.h-hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
 .h-hero-copy { max-width: 48ch; }
+.h-hero-3d { display: flex; justify-content: center; align-items: center; width: 100%; }
 .h-hero h1 { font-size: var(--step-display); line-height: 1.03; letter-spacing: -0.045em; font-weight: 600; margin-left: -0.04em; max-width: 10ch; }
 .h-hero-lead { font-size: var(--step-lead); line-height: 1.4; max-width: 30ch; margin-top: 32px; color: #fff; }
 .h-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
@@ -202,4 +203,373 @@ a.h-menu-item:hover h3 { text-decoration: underline; text-underline-offset: 0.2e
   .h-show-actions { grid-template-columns: 1fr; }
   .h-proof-tile { padding: 18px; font-size: var(--step-body); }
   .h-faq-q { font-size: var(--step-body); }
+}
+
+
+/* ---------- 3D 인터랙티브 배터리 쇼케이스 (Apple-style 3D Rotation) ---------- */
+.battery-3d-scene {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.b3d-badge-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.b3d-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(218, 250, 156, 0.15);
+  color: #dafa9c;
+  border: 1px solid rgba(218, 250, 156, 0.3);
+}
+
+.b3d-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #dafa9c;
+  box-shadow: 0 0 8px #dafa9c;
+  animation: b3dPulse 2s infinite ease-in-out;
+}
+
+@keyframes b3dPulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.b3d-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: -0.01em;
+}
+
+.b3d-viewport {
+  position: relative;
+  width: 320px;
+  height: 270px;
+  perspective: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+}
+
+.b3d-object {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.06s ease-out;
+}
+
+/* 바닥 앰비언트 그림자 */
+.b3d-shadow {
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  left: -150px;
+  top: 90px;
+  transform: rotateX(90deg) translateZ(-95px);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(218, 250, 156, 0.1) 40%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+/* 3D Face 공통 */
+.b3d-face {
+  position: absolute;
+  background: #181b1e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  backface-visibility: visible;
+  overflow: hidden;
+}
+
+/* FRONT: 고성능 AGM 프리미엄 라벨 */
+.b3d-front {
+  background: linear-gradient(135deg, #1c2024 0%, #121417 100%);
+  border: 1px solid rgba(218, 250, 156, 0.3);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.85), 0 0 15px rgba(218, 250, 156, 0.06);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.b3d-label-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.b3d-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 8px;
+}
+
+.b3d-logo {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.b3d-agm {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #dafa9c;
+  color: #0f1113;
+  letter-spacing: 0.05em;
+}
+
+.b3d-specs {
+  display: flex;
+  justify-content: space-around;
+  margin-block: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.b3d-spec-col {
+  text-align: center;
+}
+
+.b3d-spec-col strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.b3d-spec-col small {
+  display: block;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+}
+
+.b3d-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #dafa9c;
+  font-weight: 600;
+}
+
+.b3d-eye {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  border: 1.5px solid #ffffff;
+}
+
+.b3d-ribs-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, #101214, #101214 12px, #1f2327 12px, #1f2327 24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* BACK */
+.b3d-back {
+  background: linear-gradient(135deg, #16181b 0%, #0e1012 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.b3d-back-spec {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.b3d-cert {
+  font-size: 11px;
+  font-weight: 700;
+  color: #dafa9c;
+  border: 1px solid rgba(218, 250, 156, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.b3d-back-spec p {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.b3d-barcode {
+  width: 120px;
+  height: 22px;
+  margin: 14px auto 0;
+  background: repeating-linear-gradient(90deg, #fff 0, #fff 2px, transparent 2px, transparent 4px, #fff 4px, #fff 7px, transparent 7px, transparent 9px);
+  opacity: 0.6;
+}
+
+/* SIDES */
+.b3d-left, .b3d-right {
+  background: #141618;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.85);
+}
+
+.b3d-side-ribs {
+  position: absolute;
+  inset: 16px;
+  background: repeating-linear-gradient(180deg, transparent, transparent 16px, rgba(0, 0, 0, 0.5) 16px, rgba(0, 0, 0, 0.5) 24px);
+  border-left: 2px solid rgba(255, 255, 255, 0.05);
+  border-right: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+/* TOP: 단자 및 핸들 */
+.b3d-top {
+  background: #1f2328;
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.b3d-handle {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 45%;
+  height: 18px;
+  border-radius: 9px;
+  background: #2a2f35;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.b3d-post {
+  position: absolute;
+  top: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.b3d-post-pos { left: 22px; }
+.b3d-post-neg { right: 22px; }
+
+.b3d-terminal-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+.b3d-terminal-ring.neg {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+.b3d-cylinder {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #e2e8f0, #64748b 70%, #1e293b);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.b3d-sign {
+  position: absolute;
+  bottom: -18px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #ef4444;
+}
+.b3d-post-neg .b3d-sign {
+  color: #3b82f6;
+}
+
+.b3d-cell-caps {
+  position: absolute;
+  bottom: 18px;
+  left: 20%;
+  right: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.b3d-cap {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #141619;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* BOTTOM */
+.b3d-bottom {
+  background: #0f1012;
+}
+
+/* 3D 뷰 앵글 컨트롤 칩 */
+.b3d-chips {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.b3d-chip {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.b3d-chip:hover {
+  background: #dafa9c;
+  color: #0f1113;
+  border-color: #dafa9c;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .h-hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .h-hero-3d { order: 2; margin-top: 10px; }
 }
