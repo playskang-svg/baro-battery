@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Header, Footer } from '@/components/site/shared';
 import { siteConfig } from '@/lib/site-config';
 import Script from 'next/script';
+import { CtaTracker } from '@/components/site/cta';
 import './globals.css';
 import './visual-refresh.css';
 import './footer.css';
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <CtaTracker />
       </body>
     </html>
   );

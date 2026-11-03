@@ -205,7 +205,7 @@ export default async function Page({
           </div>
         </section>
       </div>
-      <BottomCTA vehicle={g.vehicle} region={g.region} />
+      <BottomCTA vehicle={g.vehicle} region={g.region} position="guide_bottom" />
     </main>
   );
 }

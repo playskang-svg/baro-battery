@@ -43,3 +43,10 @@
 .article-figure{margin:24px 0 28px;border-radius:14px;overflow:hidden;background:#edf2e7;border:1px solid #dbe4d3}
 .article-img{width:100%;height:auto;max-height:480px;object-fit:cover;display:block}
 .article-figure figcaption{padding:10px 16px;background:#f3f6ee;font-size:12px;color:#637158;line-height:1.5;border-top:1px solid #e2e9dc;text-align:center}
+.cta-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+.cta-pair>a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:49px;padding:12px 10px;border-radius:8px;font-size:14px;font-weight:700;background:#fff;color:#242e28;border:1px solid #dfe4d9;white-space:nowrap}
+.cta-pair>a:hover{background:#f3f5ee}
+.region-cta-card .cta-pair{margin-top:12px}
+.bottom-cta-actions{display:flex;flex-direction:column;gap:10px;flex-shrink:0;min-width:300px}
+.bottom-cta-actions .btn{justify-content:center}
+@media (max-width:760px){.bottom-cta-actions{min-width:0;width:100%}}
