@@ -71,7 +71,7 @@ export function Footer() {
           </div>
           <div className="footer-service">
             <p><Clock3 aria-hidden="true" />24시간 상담·접수 운영</p>
-            <p><MapPin aria-hidden="true" />서비스 지역: 대구 · 구미 · 칠곡 · 영천 · 경산</p>
+            <p><MapPin aria-hidden="true" />서비스 지역: 대구 · 구미 · 칠곡 · 경산</p>
           </div>
         </div>
         <div className="wrap footer-bottom">
