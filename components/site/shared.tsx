@@ -1,11 +1,11 @@
 import Link from '@/components/site/site-link';
 import Image from 'next/image';
-import { ArrowUpRight, Phone, MessageCircle, ClipboardList } from 'lucide-react';
+import { ArrowUpRight, MessageCircle, ClipboardList } from 'lucide-react';
 import { MobileMenu } from './interactive';
 import { FaqCards, HideOnHome } from './home';
 import { categories, serviceSteps, operatingRegionLine, isHoldRegion, type Guide } from '@/lib/content';
-import { contactHref, phoneHref, smsLinkHref, siteConfig } from '@/lib/site-config';
-import { HideOnHold } from './cta';
+import { contactHref, siteConfig } from '@/lib/site-config';
+import { DockContacts, HideOnHold } from './cta';
 
 export function Header() {
   return (
@@ -40,8 +40,6 @@ export function Header() {
 
 // 페이지의 끝: 이름을 블록으로 세운다 (글자마다 제 색 사각형에서 파낸 모양).
 export function Footer() {
-  const tel = phoneHref();
-  const sms = smsLinkHref();
   return (
     <>
       <footer className="foot">
@@ -102,17 +100,12 @@ export function Footer() {
               출장 배터리 교체<small>차종·연식만 알려 주세요</small>
             </span>
           </div>
-          {tel ? (
-            <a href={tel} data-track="dock" data-channel="phone">
-              <Phone size={18} aria-hidden="true" />
-              <span>전화</span>
-            </a>
-          ) : null}
-          {sms ? (
-            <a href={sms} data-track="dock" data-channel="sms">
-              <MessageCircle size={18} aria-hidden="true" />
-              <span>문자</span>
-            </a>
+          <DockContacts />
+          {siteConfig.kakaoUrl ? (
+            <Link href={contactHref('kakao')}>
+              <MessageCircle size={18} />
+              <span>카카오 상담</span>
+            </Link>
           ) : null}
           <Link className="dock-primary" href="/contact">
             <ClipboardList size={18} aria-hidden="true" />
