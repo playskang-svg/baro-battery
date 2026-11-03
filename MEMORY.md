@@ -19,3 +19,11 @@
     - 배포 도메인: `https://batterycall.kr`, `https://battery.suriwiki.com`, `https://baro-battery.playskang.workers.dev`
     - 실서버 curl 응답 전수 검증 완료
   - **Git 동기화**: `origin/main` 커밋 및 푸시 완료 (`dcf92e8`)
+
+## 운영 상태
+
+- **2026-11-03 함대 자동 발행 정지**: 사용자 지시. 파트너 `coorocket`(Write 권한)이 직접 발행하도록 길을 터 줌.
+  - `.github/workflows/agents-release.yml` 예약 실행(09:35·19:35 KST) 제거, 수동 실행만 남김.
+  - 중앙 `adbles-agents` `fleet/fleet.json` batterycall `pipeline.publish=false` (sync 시 되살아나지 않게).
+  - agents-daily(수집·상태 갱신)·agents-linkfix(링크 점검·수정)는 계속 돎.
+  - 재개: fleet.json `publish=true` → `node scripts/deploy-fleet.mjs sync --site batterycall`.

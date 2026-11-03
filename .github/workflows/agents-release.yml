@@ -7,9 +7,8 @@
 name: agents-release (배터리콜)
 
 on:
-  schedule:
-    - cron: "35 0 * * *"  # 9:35 KST
-    - cron: "35 10 * * *"  # 19:35 KST
+  # 2026-11-03 자동 발행 정지 — 파트너(coorocket)가 직접 발행. 예약 실행(schedule) 제거, 수동 실행만 남김.
+  # 다시 켜려면 adbles-agents fleet/fleet.json 에서 batterycall pipeline.publish=true 로 두고 sync.
   workflow_dispatch:
     inputs:
       dry_run:
