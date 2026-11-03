@@ -507,20 +507,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 @media (prefers-reduced-motion: no-preference) {
   .js .lines [data-line] { transform: translateY(105%); animation: line-up 900ms var(--ease-expo) forwards; animation-delay: calc(var(--i) * 110ms + 120ms); }
   .js .rise { opacity: 0; animation: rise 900ms var(--ease-out) forwards; animation-delay: calc(var(--i, 0) * 90ms + 380ms); }
-  .js [data-reveal] > * { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out); transition-delay: calc(var(--i, 0) * 80ms); }
-  .js [data-reveal] > :nth-child(2) { --i: 1; }
-  .js [data-reveal] > :nth-child(3) { --i: 2; }
-  .js [data-reveal] > :nth-child(4) { --i: 3; }
-  .js [data-reveal] > :nth-child(5) { --i: 4; }
-  .js [data-reveal] > :nth-child(6) { --i: 5; }
-  .js [data-reveal] > :nth-child(7) { --i: 6; }
-  .js [data-reveal] > :nth-child(8) { --i: 7; }
-  .js [data-reveal] > :nth-child(n + 9) { --i: 8; }
-  .js [data-reveal].is-in > * { opacity: 1; transform: none; }
-  .js .shutter { clip-path: inset(0 0 100% 0); transition: clip-path 1100ms var(--ease-in-out); }
-  .js .shutter > img, .js .shutter > video { transform: scale(1.12); transition: transform 1500ms var(--ease-soft); }
-  .js .shutter.is-in { clip-path: inset(0); }
-  .js .shutter.is-in > img, .js .shutter.is-in > video { transform: none; }
+   [data-reveal] > * { opacity: 1; transform: none; }
+  .shutter { clip-path: none; }
+  .shutter > img, .shutter > video { transform: none; }
   @supports (animation-timeline: view()) {
     .drift > img { animation: drift linear both; animation-timeline: view(); animation-range: entry 0% exit 100%; }
     @keyframes drift { from { transform: translateY(-3%) scale(1.06); } to { transform: translateY(3%) scale(1.06); } }

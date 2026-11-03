@@ -2,259 +2,370 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
+// Apple-style Finish Themes
+const FINISHES = [
+  {
+    id: 'space-black',
+    name: 'Space Black',
+    sub: 'AGM 90Ah Pro',
+    bodyColor: '#121316',
+    topColor: '#1a1c22',
+    accentColor: '#dafa9c',
+    glowColor: 'rgba(218, 250, 156, 0.45)',
+    labelBg: '#1f222a',
+    labelBorder: '#2e3340',
+  },
+  {
+    id: 'sport-lime',
+    name: 'Cyber Lime',
+    sub: 'High Output Edition',
+    bodyColor: '#141a13',
+    topColor: '#1d271a',
+    accentColor: '#c4ef78',
+    glowColor: 'rgba(196, 239, 120, 0.55)',
+    labelBg: '#1e2d1a',
+    labelBorder: '#344e2b',
+  },
+  {
+    id: 'stealth-titanium',
+    name: 'Matte Titanium',
+    sub: 'Extreme Durability',
+    bodyColor: '#1e2126',
+    topColor: '#2b3038',
+    accentColor: '#7dd3fc',
+    glowColor: 'rgba(125, 211, 252, 0.45)',
+    labelBg: '#252b35',
+    labelBorder: '#3b4657',
+  },
+];
+
 export function Battery3D() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [rotY, setRotY] = useState(-25);
-  const [rotX, setRotX] = useState(15);
+  const [selectedFinish, setSelectedFinish] = useState(0);
+  const [rotY, setRotY] = useState(-28);
+  const [rotX, setRotX] = useState(14);
   const [isDragging, setIsDragging] = useState(false);
   const [autoRotate, setAutoRotate] = useState(true);
-  const [statusText, setStatusText] = useState('12.8V 정상 전압');
 
-  const dragStart = useRef({ x: 0, y: 0, rotY: -25, rotX: 15 });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const dragStart = useRef({ x: 0, y: 0, rotY: -28, rotX: 14 });
+  const velocity = useRef({ x: 0, y: 0 });
+  const lastMousePos = useRef({ x: 0, y: 0, time: 0 });
   const animFrame = useRef<number | null>(null);
 
-  // 자동 유휴 회전 (Auto-idle spin like Apple product page)
-  useEffect(() => {
-    if (!autoRotate || isDragging) return;
+  const finish = FINISHES[selectedFinish];
 
+  // Auto-spin with inertia physics
+  useEffect(() => {
     let lastTime = performance.now();
-    const spin = (time: number) => {
-      const delta = (time - lastTime) / 1000;
+
+    const loop = (time: number) => {
+      const dt = Math.min((time - lastTime) / 1000, 0.1);
       lastTime = time;
-      setRotY((prev) => (prev + delta * 20) % 360);
-      animFrame.current = requestAnimationFrame(spin);
+
+      if (!isDragging) {
+        if (autoRotate) {
+          setRotY((prev) => (prev + dt * 18) % 360);
+        } else if (Math.abs(velocity.current.x) > 0.05) {
+          // Inertia deceleration
+          setRotY((prev) => (prev + velocity.current.x) % 360);
+          velocity.current.x *= 0.94;
+          if (Math.abs(velocity.current.x) < 0.05) {
+            velocity.current.x = 0;
+            // Resume gentle auto-rotate after delay
+            setTimeout(() => setAutoRotate(true), 1500);
+          }
+        }
+      }
+
+      animFrame.current = requestAnimationFrame(loop);
     };
 
-    animFrame.current = requestAnimationFrame(spin);
+    animFrame.current = requestAnimationFrame(loop);
     return () => {
       if (animFrame.current) cancelAnimationFrame(animFrame.current);
     };
   }, [autoRotate, isDragging]);
 
-  // 마우스 및 터치 드래그 인터랙션
+  // Pointer interactions (Mouse / Touch)
   const onPointerDown = (e: React.PointerEvent) => {
     setIsDragging(true);
     setAutoRotate(false);
-    dragStart.current = {
-      x: e.clientX,
-      y: e.clientY,
-      rotY,
-      rotX,
-    };
+    velocity.current = { x: 0, y: 0 };
+    dragStart.current = { x: e.clientX, y: e.clientY, rotY, rotX };
+    lastMousePos.current = { x: e.clientX, y: e.clientY, time: performance.now() };
     (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
   };
 
   const onPointerMove = (e: React.PointerEvent) => {
     if (!isDragging) return;
+    const now = performance.now();
+    const dt = Math.max((now - lastMousePos.current.time) / 1000, 0.016);
     const dx = e.clientX - dragStart.current.x;
     const dy = e.clientY - dragStart.current.y;
 
+    const instantVx = (e.clientX - lastMousePos.current.x) / dt * 0.012;
+    velocity.current.x = instantVx;
+    lastMousePos.current = { x: e.clientX, y: e.clientY, time: now };
+
     setRotY((dragStart.current.rotY + dx * 0.45) % 360);
-    // 상하 틸트는 -35도 ~ 45도 사이로 절제하여 뒤집히지 않도록
-    const newX = Math.max(-35, Math.min(45, dragStart.current.rotX - dy * 0.35));
+    const newX = Math.max(-30, Math.min(38, dragStart.current.rotX - dy * 0.3));
     setRotX(newX);
   };
 
   const onPointerUp = (e: React.PointerEvent) => {
     setIsDragging(false);
     (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
-    // 드래그 종료 후 4초 뒤 다시 부드러운 자동 회전 시작
-    setTimeout(() => {
-      setAutoRotate(true);
-    }, 4000);
   };
 
-  // 배터리 3D 모델 치수 (가로 260px, 세로 170px, 깊이 180px)
-  const W = 260;
-  const H = 170;
-  const D = 170;
+  // Dimensions of battery
+  const W = 280; // Width (mm proportional)
+  const H = 175; // Height
+  const D = 160; // Depth
+
+  // Dynamic specular lighting angle based on rotation
+  const radY = (rotY * Math.PI) / 180;
+  const lightIntensity = Math.max(0.2, (Math.cos(radY) + 1) / 2);
 
   return (
-    <div className="battery-3d-scene" ref={containerRef}>
-      {/* 3D 상단 인터랙티브 안내 태그 */}
-      <div className="b3d-badge-bar">
-        <span className="b3d-live-tag">
-          <span className="b3d-dot" /> 3D 인터랙티브
+    <div className="apple-showcase-wrap">
+      {/* Top Floating Badge */}
+      <div className="apple-badge-row">
+        <span className="apple-pill-tag">
+          <span className="apple-pulse-dot" style={{ background: finish.accentColor }} />
+          360° INTERACTIVE 3D
         </span>
-        <span className="b3d-hint">드래그하여 360° 회전</span>
+        <span className="apple-hint-text">드래그하여 3D 배터리 회전</span>
       </div>
 
-      {/* 3D 뷰포트 영역 */}
+      {/* 3D Stage Viewport */}
       <div
-        className="b3d-viewport"
+        ref={containerRef}
+        className="apple-stage"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
-        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+        aria-label="자동차 배터리 3D 인터랙티브 모델"
       >
+        {/* Soft Drop Shadow under Battery */}
         <div
-          className="b3d-object"
+          className="apple-ambient-shadow"
+          style={{
+            transform: `rotateX(90deg) rotateZ(${rotY}deg) scale(${1 + Math.sin(radY) * 0.08})`,
+            boxShadow: `0 40px 60px rgba(0, 0, 0, 0.75), 0 10px 30px ${finish.glowColor}`,
+          }}
+        />
+
+        {/* 3D Object Group */}
+        <div
+          className="apple-cube"
           style={{
             transform: `rotateX(${rotX}deg) rotateY(${rotY}deg)`,
           }}
         >
-          {/* 바닥 부드러운 3D 앰비언트 그림자 */}
-          <div className="b3d-shadow" />
-
-          {/* 1. FRONT (전면부: 프리미엄 AGM 라벨 및 상태창) */}
+          {/* 1. FRONT FACE */}
           <div
-            className="b3d-face b3d-front"
+            className="bface bfront"
             style={{
               width: `${W}px`,
               height: `${H}px`,
+              backgroundColor: finish.bodyColor,
+              borderColor: finish.labelBorder,
               transform: `translate3d(-${W / 2}px, -${H / 2}px, ${D / 2}px)`,
             }}
           >
-            <div className="b3d-label-card">
-              <div className="b3d-brand">
-                <span className="b3d-logo">BATTERYCALL</span>
-                <span className="b3d-agm">AGM PREMIUM</span>
+            {/* Glossy specular light sheen */}
+            <div
+              className="bspecular-sheen"
+              style={{ opacity: lightIntensity * 0.4 }}
+            />
+
+            {/* Front Label Plate */}
+            <div
+              className="blabel-plate"
+              style={{
+                backgroundColor: finish.labelBg,
+                borderColor: finish.labelBorder,
+              }}
+            >
+              <div className="blabel-top">
+                <span className="bbrand-logo">BATTERYCALL</span>
+                <span
+                  className="bmodel-badge"
+                  style={{
+                    color: finish.accentColor,
+                    borderColor: finish.accentColor,
+                  }}
+                >
+                  {finish.sub}
+                </span>
               </div>
-              <div className="b3d-specs">
-                <div className="b3d-spec-col">
-                  <strong>12V 90Ah</strong>
-                  <small>정격 전압·용량</small>
+
+              <div className="bspec-numbers">
+                <div className="bspec-item">
+                  <span className="bspec-val">12V 90Ah</span>
+                  <span className="bspec-sub">AGM 정격 용량</span>
                 </div>
-                <div className="b3d-spec-col">
-                  <strong>900 CCA</strong>
-                  <small>저온 시동능력</small>
+                <div className="bspec-item">
+                  <span className="bspec-val">900 CCA</span>
+                  <span className="bspec-sub">저온 시동 출력</span>
                 </div>
               </div>
-              <div className="b3d-indicator">
-                <span className="b3d-eye" />
-                <span>{statusText}</span>
+
+              {/* Status Glow Bar */}
+              <div className="bstatus-pill">
+                <span
+                  className="bstatus-led"
+                  style={{ backgroundColor: finish.accentColor }}
+                />
+                <span className="bstatus-txt">12.8V 정상 전압 보증</span>
               </div>
             </div>
-            <div className="b3d-ribs-bottom" />
-          </div>
 
-          {/* 2. BACK (후면부) */}
-          <div
-            className="b3d-face b3d-back"
-            style={{
-              width: `${W}px`,
-              height: `${H}px`,
-              transform: `translate3d(-${W / 2}px, -${H / 2}px, -${D / 2}px) rotateY(180deg)`,
-            }}
-          >
-            <div className="b3d-back-spec">
-              <span className="b3d-cert">KS / ISO9001 정품 인증</span>
-              <p>출장 교체 시 차량 연식 규격 1:1 맞춤 세팅</p>
-              <div className="b3d-barcode" />
-            </div>
-            <div className="b3d-ribs-bottom" />
-          </div>
-
-          {/* 3. LEFT (좌측면) */}
-          <div
-            className="b3d-face b3d-left"
-            style={{
-              width: `${D}px`,
-              height: `${H}px`,
-              transform: `translate3d(-${D / 2}px, -${H / 2}px, 0px) rotateY(-90deg) translateZ(${W / 2}px)`,
-            }}
-          >
-            <div className="b3d-side-ribs" />
-            <div className="b3d-side-handle-recess" />
-          </div>
-
-          {/* 4. RIGHT (우측면) */}
-          <div
-            className="b3d-face b3d-right"
-            style={{
-              width: `${D}px`,
-              height: `${H}px`,
-              transform: `translate3d(-${D / 2}px, -${H / 2}px, 0px) rotateY(90deg) translateZ(${W / 2}px)`,
-            }}
-          >
-            <div className="b3d-side-ribs" />
-            <div className="b3d-side-handle-recess" />
-          </div>
-
-          {/* 5. TOP (상단 덮개 & 터미널 단자) */}
-          <div
-            className="b3d-face b3d-top"
-            style={{
-              width: `${W}px`,
-              height: `${D}px`,
-              transform: `translate3d(-${W / 2}px, -${D / 2}px, 0px) rotateX(90deg) translateZ(${H / 2}px)`,
-            }}
-          >
-            {/* 상단 손잡이 (Handle) */}
-            <div className="b3d-handle" />
-
-            {/* 양극 (+) 단자 터미널 */}
-            <div className="b3d-post b3d-post-pos">
-              <span className="b3d-terminal-ring pos" />
-              <div className="b3d-cylinder pos" />
-              <span className="b3d-sign">+</span>
-            </div>
-
-            {/* 음극 (-) 단자 터미널 */}
-            <div className="b3d-post b3d-post-neg">
-              <span className="b3d-terminal-ring neg" />
-              <div className="b3d-cylinder neg" />
-              <span className="b3d-sign">-</span>
-            </div>
-
-            {/* 6개 셀 통기 캡 */}
-            <div className="b3d-cell-caps">
-              {[...Array(6)].map((_, i) => (
-                <span key={i} className="b3d-cap" />
+            {/* Bottom reinforcement ribs */}
+            <div className="bribs-bottom">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="brib" />
               ))}
             </div>
           </div>
 
-          {/* 6. BOTTOM (바닥면) */}
+          {/* 2. BACK FACE */}
           <div
-            className="b3d-face b3d-bottom"
+            className="bface bback"
+            style={{
+              width: `${W}px`,
+              height: `${H}px`,
+              backgroundColor: finish.bodyColor,
+              borderColor: finish.labelBorder,
+              transform: `translate3d(-${W / 2}px, -${H / 2}px, -${D / 2}px) rotateY(180deg)`,
+            }}
+          >
+            <div className="bback-plate">
+              <span className="bback-cert">KS · ISO 9001 정품 인증</span>
+              <p className="bback-desc">출장 교체 시 차량 연식 규격 1:1 세팅</p>
+              <div className="bbarcode" />
+            </div>
+            <div className="bribs-bottom">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="brib" />
+              ))}
+            </div>
+          </div>
+
+          {/* 3. LEFT FACE */}
+          <div
+            className="bface bside"
+            style={{
+              width: `${D}px`,
+              height: `${H}px`,
+              backgroundColor: finish.bodyColor,
+              borderColor: finish.labelBorder,
+              transform: `translate3d(-${D / 2}px, -${H / 2}px, 0px) rotateY(-90deg) translateZ(${W / 2}px)`,
+            }}
+          >
+            <div className="bhandle-recess" />
+            <div className="bside-ribs">
+              {[...Array(4)].map((_, i) => (
+                <span key={i} className="bsrib" />
+              ))}
+            </div>
+          </div>
+
+          {/* 4. RIGHT FACE */}
+          <div
+            className="bface bside"
+            style={{
+              width: `${D}px`,
+              height: `${H}px`,
+              backgroundColor: finish.bodyColor,
+              borderColor: finish.labelBorder,
+              transform: `translate3d(-${D / 2}px, -${H / 2}px, 0px) rotateY(90deg) translateZ(${W / 2}px)`,
+            }}
+          >
+            <div className="bhandle-recess" />
+            <div className="bside-ribs">
+              {[...Array(4)].map((_, i) => (
+                <span key={i} className="bsrib" />
+              ))}
+            </div>
+          </div>
+
+          {/* 5. TOP COVER & TERMINALS */}
+          <div
+            className="bface btop"
             style={{
               width: `${W}px`,
               height: `${D}px`,
+              backgroundColor: finish.topColor,
+              borderColor: finish.labelBorder,
+              transform: `translate3d(-${W / 2}px, -${D / 2}px, 0px) rotateX(90deg) translateZ(${H / 2}px)`,
+            }}
+          >
+            {/* Top Grip Handle */}
+            <div className="btop-handle" />
+
+            {/* Positive (+) Terminal Post with Red Ring */}
+            <div className="bterminal bpos">
+              <span className="bring-pos" />
+              <div className="bpost-metal" />
+              <span className="bsign">+</span>
+            </div>
+
+            {/* Negative (-) Terminal Post with Blue/Black Ring */}
+            <div className="bterminal bneg">
+              <span className="bring-neg" />
+              <div className="bpost-metal" />
+              <span className="bsign">-</span>
+            </div>
+
+            {/* 6 Cell Pressure Relief Valves */}
+            <div className="bcell-vents">
+              {[...Array(6)].map((_, i) => (
+                <span key={i} className="bvent" />
+              ))}
+            </div>
+          </div>
+
+          {/* 6. BOTTOM FACE */}
+          <div
+            className="bface bbottom"
+            style={{
+              width: `${W}px`,
+              height: `${D}px`,
+              backgroundColor: '#0a0b0d',
               transform: `translate3d(-${W / 2}px, -${D / 2}px, 0px) rotateX(-90deg) translateZ(${H / 2}px)`,
             }}
           />
         </div>
       </div>
 
-      {/* 하단 3D 컨트롤 피처 칩 */}
-      <div className="b3d-chips">
-        <button
-          type="button"
-          className="b3d-chip"
-          onClick={() => {
-            setRotX(15);
-            setRotY(-25);
-            setStatusText('12.8V 정상 전압');
-          }}
-        >
-          기본 뷰
-        </button>
-        <button
-          type="button"
-          className="b3d-chip"
-          onClick={() => {
-            setRotX(35);
-            setRotY(0);
-            setStatusText('터미널 단자 점검 모드');
-          }}
-        >
-          단자 보기 (+) (-)
-        </button>
-        <button
-          type="button"
-          className="b3d-chip"
-          onClick={() => {
-            setRotX(10);
-            setRotY(180);
-            setStatusText('정품 인증 마크');
-          }}
-        >
-          스펙 보기
-        </button>
+      {/* Apple-Style Finish Selector */}
+      <div className="apple-finish-panel">
+        <span className="apple-finish-label">
+          <strong>{finish.name}</strong> · {finish.sub}
+        </span>
+        <div className="apple-finish-chips">
+          {FINISHES.map((f, idx) => (
+            <button
+              key={f.id}
+              type="button"
+              className={`apple-color-dot ${idx === selectedFinish ? 'is-active' : ''}`}
+              style={{
+                backgroundColor: f.accentColor,
+                boxShadow: idx === selectedFinish ? `0 0 14px ${f.glowColor}` : 'none',
+              }}
+              onClick={() => {
+                setSelectedFinish(idx);
+                setAutoRotate(false);
+                setTimeout(() => setAutoRotate(true), 2500);
+              }}
+              aria-label={f.name}
+              title={f.name}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
