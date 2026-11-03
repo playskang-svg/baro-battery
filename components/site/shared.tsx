@@ -266,20 +266,6 @@ export function FAQSection() {
 }
 
 // 서브페이지용 현장 사진 한 장: 배터리 블록 액자, 셔터로 열림. 연출 사진은 캡션에 밝힌다.
-const PHOTOS = {
-  tech: { src: '/media/tech.webp', alt: '새 배터리를 들고 작업 차량 옆에 선 기사', caption: '차가 선 자리로 기사가 갑니다. (연출 사진)' },
-  terminal: { src: '/media/terminal.webp', alt: '새 배터리의 단자를 조이는 장갑 낀 손', caption: '규격에 맞는 새 배터리를 달고 단자를 조입니다. (연출 사진)' },
-  caller: { src: '/media/caller.webp', alt: '지하주차장에서 차 옆에 서서 문자를 보내는 운전자', caption: '차종과 연식만 문자로 보내면 됩니다. (연출 사진)' },
-  warning: { src: '/media/warning.webp', alt: '계기판에 켜진 붉은 배터리 경고등', caption: '경고등이 켜졌다면 사진을 함께 보내 주세요. (연출 사진)' },
-};
-export function SitePhoto({ name, caption }: { name: keyof typeof PHOTOS; caption?: string }) {
-  const p = PHOTOS[name];
-  return (
-    <figure className="cell photo page-figure">
-      <div className="page-figure-frame shutter">
-        <Image src={p.src} alt={p.alt} width={2000} height={1500} unoptimized loading="lazy" />
-      </div>
-      <figcaption>▲ {caption || p.caption}</figcaption>
-    </figure>
-  );
+export function SitePhoto(_props: { name?: string; caption?: string }) {
+  return null;
 }

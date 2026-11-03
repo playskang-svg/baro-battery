@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from '@/components/site/site-link';
 import { ContactForm } from '@/components/site/interactive';
 import { CallBand } from '@/components/site/shared';
-import { FaqCards, HeroClip, Showcase } from '@/components/site/home';
+import { FaqCards, Showcase } from '@/components/site/home';
 import { guides, operatingRegionLine, operatingRegions, holdRegions, serviceSteps, vehicles } from '@/lib/content';
 import { phoneHref, smsLinkHref } from '@/lib/site-config';
 import './home.css';
@@ -108,14 +108,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="h-cell" aria-hidden="true">
-          <span className="h-cell-post" />
-          <span className="h-cell-post" />
-          <div className="h-cell-body">
-            <HeroClip src="/media/hero.mp4" poster="/media/hero-poster.webp" />
-            <span className="h-cell-note">연출 영상</span>
-          </div>
-        </div>
+
       </section>
 
       <section id="sms" className="h-sms" aria-labelledby="sms-title">
@@ -128,10 +121,7 @@ export default function Home() {
               <li><span className="bullet" aria-hidden="true" />작업자가 출장 전에 차량 정보와 사진을 확인합니다.</li>
               <li><span className="bullet" aria-hidden="true" />제품·총비용·방문 일정은 확인 뒤 안내합니다.</li>
             </ul>
-            <figure className="cell photo h-sms-photo">
-              <Image src="/media/caller.webp" alt="지하주차장에서 차 옆에 서서 문자를 보내는 운전자" width={1600} height={1200} unoptimized loading="lazy" />
-              <figcaption>▲ 차가 선 자리에서 차종과 연식을 문자로 보냅니다. (연출 사진)</figcaption>
-            </figure>
+
           </div>
           <div className="h-sms-form">
             <ContactForm />

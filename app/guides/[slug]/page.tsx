@@ -1,7 +1,7 @@
 import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
 import { guides, categories } from '@/lib/content';
-import { Crumb, BottomCTA, GuideCard, SitePhoto } from '@/components/site/shared';
+import { Crumb, BottomCTA, GuideCard } from '@/components/site/shared';
 import { ArrowUpRight, Check, BookOpen } from 'lucide-react';
 import { contactHref } from '@/lib/site-config';
 import { pageMeta } from '@/lib/metadata';
@@ -55,7 +55,7 @@ export default async function Page({
               <span>먼저 알아두세요</span>
               <p>{g.sections[0].body}</p>
             </div>
-            {g.sections.some((s) => s.image) ? null : <SitePhoto name="terminal" caption="배터리 교체 작업 장면 (연출 사진)" />}
+            
             <div className="article-mobile-toc">
               <h2>이 글의 순서</h2>
               {g.sections.map((s, i) => (

@@ -133,7 +133,7 @@ export function Showcase({ scenes, title, text }: { scenes: Scene[]; title: stri
               <Image key={s.key} src={s.src} alt={s.alt} width={1600} height={1600} unoptimized loading={i === 0 ? 'eager' : 'lazy'} style={{ opacity: i === active ? 1 : 0, transition: 'opacity 500ms cubic-bezier(.22,1,.36,1)' }} />
             ))}
           </div>
-          <figcaption>{scene.caption}</figcaption>
+          
         </figure>
       </div>
       <div className="h-show-text" data-reveal>

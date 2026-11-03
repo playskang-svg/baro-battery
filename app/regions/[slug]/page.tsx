@@ -2,7 +2,7 @@ import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
 import { regions, guides, getRegionKeywordData, operatingRegionLine, operatingRegions } from '@/lib/content';
 import { CtaPair } from '@/components/site/cta';
-import { Crumb, PageIntro, BottomCTA, GuideCard, Steps, SitePhoto } from '@/components/site/shared';
+import { Crumb, PageIntro, BottomCTA, GuideCard, Steps } from '@/components/site/shared';
 import { MapPin, Clock, ShieldAlert, HelpCircle, CheckCircle2 } from 'lucide-react';
 import { pageMeta } from '@/lib/metadata';
 
@@ -194,7 +194,6 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
       <div className="wrap">
         <Crumb items={[{ label: '지역별', href: '/regions' }, { label: r.name }]} />
         <PageIntro title={`${r.name} 출장 배터리 교체`} description={p.summary} />
-        <SitePhoto name="tech" />
 
         <section className="region-pseo" aria-label={`${r.name} 안내`} data-reveal>
           <div className="region-pseo-main">

@@ -1,9 +1,9 @@
 /* 홈 — 거대한 배터리 블록(모티프) 하나로 이어지는 구성. 접두어 h- */
 
 /* 1. 첫 화면: 검정 바탕 + 오른쪽에서 들어오는 거대한 라임 블록, 그 안에 영상 */
-.h-hero { position: relative; background: var(--soot); color: #fff; overflow: hidden; min-height: 100svh; display: grid; align-items: center; }
-.h-hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); padding-block: clamp(80px, 11vh, 150px); }
-.h-hero-copy { grid-column: 1 / 7; }
+.h-hero { position: relative; background: var(--soot); color: #fff; overflow: hidden; min-height: 70svh; display: grid; align-items: center; padding-block: clamp(80px, 14vh, 160px); }
+.h-hero .wrap { position: relative; z-index: 2; display: block; max-width: var(--max-w); }
+.h-hero-copy { max-width: 48ch; }
 .h-hero h1 { font-size: var(--step-display); line-height: 1.03; letter-spacing: -0.045em; font-weight: 600; margin-left: -0.04em; max-width: 10ch; }
 .h-hero-lead { font-size: var(--step-lead); line-height: 1.4; max-width: 30ch; margin-top: 32px; color: #fff; }
 .h-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
@@ -14,7 +14,7 @@
 .h-hero-facts a { color: #fff; text-decoration: underline; text-underline-offset: 0.2em; text-decoration-color: var(--muted-on-soot); }
 .h-hero-facts a:hover { text-decoration-color: currentColor; }
 
-.h-cell { position: absolute; z-index: 1; left: 58%; top: 20vh; width: 74vw; height: 100svh; }
+.h-cell { display: none !important; position: absolute; z-index: 1; left: 58%; top: 20vh; width: 74vw; height: 100svh; }
 .h-cell-post { position: absolute; top: -7vh; height: 8vh; width: 9%; border-radius: 2.2vh 2.2vh 0 0; background: var(--accent); }
 .h-cell-post:first-child { left: 13%; }
 .h-cell-post:nth-child(2) { left: 46%; }
