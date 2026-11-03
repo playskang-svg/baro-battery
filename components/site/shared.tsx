@@ -17,7 +17,9 @@ import {
 } from 'lucide-react';
 import { MobileMenu, FAQ } from './interactive';
 import { categories, serviceSteps, type Guide } from '@/lib/content';
-import { contactHref, siteConfig } from '@/lib/site-config';
+import { contactHref, phoneHref, smsLinkHref, siteConfig } from '@/lib/site-config';
+import { CtaPair, HideOnHold } from './cta';
+import { isHoldRegion } from '@/lib/content';
 export function Header() {
   return (
     <>
@@ -39,9 +41,11 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link className="btn dark header-cta" href="/contact">
-          문의 내용 작성하기 <ArrowUpRight size={17} />
-        </Link>
+        <HideOnHold>
+          <Link className="btn dark header-cta" href="/contact">
+            문의 내용 작성하기 <ArrowUpRight size={17} />
+          </Link>
+        </HideOnHold>
         <MobileMenu />
       </header>
     </>
@@ -55,9 +59,9 @@ export function Footer() {
           <div className="footer-identity">
             <strong>컨시어지블루 <span>(배터리콜)</span></strong>
             <div className="footer-contact">
-              <Link href="tel:010-4684-8838">
+              <Link href={`tel:${siteConfig.phone}`} data-track="footer" data-channel="phone">
                 <Phone aria-hidden="true" />
-                <span><small>대표 전화</small>010-4684-8838</span>
+                <span><small>대표 전화</small>{siteConfig.phone}</span>
               </Link>
               <Link href="mailto:qoorocket@gmail.com">
                 <Mail aria-hidden="true" />
@@ -74,41 +78,53 @@ export function Footer() {
           <span>© 2026 컨시어지블루. All rights reserved.</span>
         </div>
       </footer>
-      <div className="contact-dock" aria-label="빠른 문의">
-        <div className="dock-label">
-          <BatteryCharging />
-          <span>
-            출장 배터리 교체<small>차종·연식 입력 후 문의 내용 작성</small>
-          </span>
+      <HideOnHold>
+        <div className="contact-dock" aria-label="빠른 문의">
+          <div className="dock-label">
+            <BatteryCharging />
+            <span>
+              출장 배터리 교체<small>차종·연식 입력 후 문의 내용 작성</small>
+            </span>
+          </div>
+          {siteConfig.phone ? (
+            <>
+              <a href={phoneHref()} data-track="dock" data-channel="phone">
+                <Phone size={18} />
+                <span>전화 상담</span>
+              </a>
+              <a href={smsLinkHref()} data-track="dock" data-channel="sms">
+                <MessageCircle size={18} />
+                <span>문자 상담</span>
+              </a>
+            </>
+          ) : null}
+          {siteConfig.kakaoUrl ? (
+            <Link href={contactHref('kakao')}>
+              <MessageCircle size={18} />
+              <span>카카오 상담</span>
+            </Link>
+          ) : null}
+          <Link className="dock-primary" href="/contact">
+            <ClipboardList size={18} />
+            <span>문의 내용 작성하기</span>
+            <ArrowUpRight size={16} />
+          </Link>
         </div>
-        {siteConfig.phone ? (
-          <Link href={contactHref('phone')}>
-            <Phone size={18} />
-            <span>전화 상담</span>
-          </Link>
-        ) : null}
-        {siteConfig.kakaoUrl ? (
-          <Link href={contactHref('kakao')}>
-            <MessageCircle size={18} />
-            <span>카카오 상담</span>
-          </Link>
-        ) : null}
-        <Link className="dock-primary" href="/contact">
-          <ClipboardList size={18} />
-          <span>문의 내용 작성하기</span>
-          <ArrowUpRight size={16} />
-        </Link>
-      </div>
+      </HideOnHold>
     </>
   );
 }
 export function BottomCTA({
   vehicle = '',
   region = '',
+  position = '',
 }: {
   vehicle?: string;
   region?: string;
+  position?: string;
 }) {
+  const hold = isHoldRegion(region);
+  const track = position || (region ? `region_${region}` : vehicle ? 'vehicle_detail' : 'bottom_cta');
   return (
     <section className="bottom-cta wrap">
       <div>
@@ -123,9 +139,12 @@ export function BottomCTA({
           확인합니다.
         </p>
       </div>
-      <Link className="btn lime" href={contactHref('inquiry', vehicle, region)}>
-        문의 내용 작성하기 <ArrowUpRight size={20} />
-      </Link>
+      <div className="bottom-cta-actions">
+        {hold ? null : <CtaPair position={track} />}
+        <Link className="btn lime" href={contactHref('inquiry', vehicle, region)}>
+          문의 내용 작성하기 <ArrowUpRight size={20} />
+        </Link>
+      </div>
     </section>
   );
 }

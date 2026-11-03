@@ -1,8 +1,9 @@
 import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
-import { regions, guides, getRegionKeywordData } from '@/lib/content';
+import { regions, guides, getRegionKeywordData, operatingRegionLine, operatingRegions } from '@/lib/content';
+import { CtaPair } from '@/components/site/cta';
 import { Crumb, PageIntro, BottomCTA, GuideCard, Steps } from '@/components/site/shared';
-import { MapPin, Clock, ShieldAlert, HelpCircle, CheckCircle2, MessageSquare } from 'lucide-react';
+import { MapPin, Clock, ShieldAlert, HelpCircle, CheckCircle2 } from 'lucide-react';
 import { pageMeta } from '@/lib/metadata';
 
 interface PageProps {
@@ -16,22 +17,32 @@ export async function generateMetadata({ params, searchParams }: PageProps) {
   const r = regions.find((x) => x.slug === slug);
   if (!r) return {};
 
+  if (!r.hold) {
+    return pageMeta(
+      `${r.name} 출장 배터리 교체 | 현장 방문 교체 안내`,
+      `${r.name} 지역 자동차 배터리 출장 교체. 주차 환경과 차종을 확인하고 현장에서 교체하는 과정을 안내합니다.`,
+      `/regions/${slug}`,
+    );
+  }
+
   const area = typeof q.area === 'string' && r.areas.includes(q.area) ? q.area : '';
   const title = area
-    ? `${area} 출장 배터리 교체 — 당일 긴급 방문 & 지하주차장 안내`
-    : `${r.name} 출장 배터리 교체 | 지역별 신속 방문`;
+    ? `${area} 출장 배터리 교체 안내 | 수도권 파트너 준비 중`
+    : `${r.name} 출장 배터리 교체 | 파트너 준비 중`;
   const desc = area
-    ? `${area} 전 지역 자동차 배터리 출장교체. 아파트 지하주차장·노상 주차 당일 방문, 최신 정품 배터리 교체 및 시동 점검.`
-    : `${r.name} 지역 배터리 출장교체 문의 전 위치와 주차 환경 확인 안내.`;
+    ? `${area} 출장 배터리 교체는 현재 파트너 준비 중입니다. 운영 지역은 ${operatingRegionLine}입니다.`
+    : `${r.name} 지역은 파트너 준비 중입니다. 현재 운영 지역은 ${operatingRegionLine}입니다.`;
 
-  const canonical = area ? `/regions/${slug}?area=${encodeURIComponent(area)}` : `/regions/${slug}`;
-  return pageMeta(title, desc, canonical);
+  // ?area= 변형은 각 시도 기본 페이지로 canonical 통합 (URL은 200 유지)
+  return pageMeta(title, desc, `/regions/${slug}`);
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
   const { slug } = await params;
   const r = regions.find((x) => x.slug === slug);
   if (!r) notFound();
+
+  if (!r.hold) return <OperatingRegion r={r} />;
 
   const q = await searchParams;
   const area = typeof q.area === 'string' && r.areas.includes(q.area) ? q.area : r.areas[0];
@@ -76,11 +87,10 @@ export default async function Page({ params, searchParams }: PageProps) {
         {/* pSEO 지역 키워드 전용 상세 섹션 */}
         <section className="region-pseo" aria-label={`${keyData.areaName} 키워드 특화 안내`}>
           <div className="region-pseo-main">
-            <span className="lead-tag">당일 긴급 방문 권역</span>
+            <span className="lead-tag">파트너 준비 중</span>
             <h2>{keyData.headline}</h2>
             <p className="text-muted leading-relaxed">
-              {keyData.areaName} 지역은 도심형 아파트 및 오피스텔 지하주차장 출장이 많은 지역입니다.
-              기동성이 뛰어난 서비스 차량으로 신속하게 방문하여 현장에서 최신 배터리 상태 진단부터 완벽한 교체 및 전압 확인까지 한 번에 완료합니다.
+              현재 운영 지역은 {operatingRegionLine}입니다. 수도권은 파트너 준비 중입니다.
             </p>
 
             <div className="region-feature-grid">
@@ -132,20 +142,18 @@ export default async function Page({ params, searchParams }: PageProps) {
 
           <aside className="region-pseo-sidebar">
             <div className="region-cta-card">
-              <span className="eyebrow text-lime-300">QUICK DISPATCH</span>
+              <span className="eyebrow text-lime-300">NOTICE</span>
               <h3>
-                {keyData.areaName}에서<br />
-                지금 시동이 안 걸리시나요?
+                현재 운영 지역은<br />
+                {operatingRegionLine}입니다.
               </h3>
-              <p>
-                {keyData.areaName} 출장비와 공임이 모두 포함된 정찰가로 바로 안내받으세요.
-              </p>
+              <p>수도권은 파트너 준비 중입니다. 운영 지역 안내를 확인해 주세요.</p>
               <Link
                 className="btn lime full text-center flex items-center justify-center gap-2 font-bold"
-                href={`/contact?region=${r.slug}&area=${encodeURIComponent(keyData.areaName)}`}
+                href="/regions/daegu"
               >
-                <MessageSquare size={18} />
-                {keyData.areaName} 문의 작성하기
+                <MapPin size={18} />
+                대구권 보기
               </Link>
             </div>
 
@@ -176,7 +184,121 @@ export default async function Page({ params, searchParams }: PageProps) {
         </div>
       </div>
 
-      <BottomCTA region={r.slug} />
+    </main>
+  );
+}
+
+function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
+  const p = r.profile!;
+  const others = operatingRegions.filter((x) => x.slug !== r.slug);
+  return (
+    <main id="main">
+      <div className="wrap">
+        <Crumb items={[{ label: '지역별', href: '/regions' }, { label: r.name }]} />
+        <PageIntro eyebrow="REGION GUIDE" title={`${r.name} 출장 배터리 교체`} description={p.summary} />
+
+        <section className="region-pseo" aria-label={`${r.name} 안내`}>
+          <div className="region-pseo-main">
+            <span className="lead-tag">운영 지역</span>
+            <h2>{r.name} 주요 생활권</h2>
+            <ul className="space-y-1.5 text-sm text-sub mt-2">
+              {p.living.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <MapPin size={14} className="text-green-700 shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="region-feature-grid mt-4">
+              <div className="region-feature-box">
+                <div className="flex items-center gap-2 mb-1 text-ink">
+                  <ShieldAlert size={16} className="text-green-700" />
+                  <strong>주차 환경 특성</strong>
+                </div>
+                <p>{p.parking}</p>
+              </div>
+              <div className="region-feature-box">
+                <div className="flex items-center gap-2 mb-1 text-ink">
+                  <Clock size={16} className="text-green-700" />
+                  <strong>출장 동선</strong>
+                </div>
+                <p>{p.route}</p>
+              </div>
+            </div>
+
+            <div className="environment-checklist mt-4">
+              <h4 className="font-bold text-sm text-ink mb-2">출장 전 {r.name} 현장 체크포인트</h4>
+              <ul className="space-y-1.5 text-xs text-sub">
+                {p.checks.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2 size={14} className="text-green-700 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="region-faq-section mt-8 pt-6 border-t border-gray-200">
+              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <HelpCircle size={18} className="text-green-700" />
+                {r.name} 자주 묻는 질문
+              </h3>
+              <div className="space-y-4">
+                {p.faqs.map((faq) => (
+                  <div key={faq.q} className="p-4 bg-gray-50 rounded-xl border border-gray-200/80">
+                    <strong className="block text-sm text-ink mb-1.5">Q. {faq.q}</strong>
+                    <p className="text-xs text-sub leading-relaxed m-0">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <aside className="region-pseo-sidebar">
+            <div className="region-cta-card">
+              <span className="eyebrow text-lime-300">CONTACT</span>
+              <h3>
+                {r.name}에서<br />
+                시동이 안 걸리시나요?
+              </h3>
+              <p>차량 위치와 주차 환경을 알려주시면 방문 가능 여부를 안내합니다.</p>
+              <CtaPair position={`region_${r.slug}`} />
+              <Link
+                className="btn lime full text-center flex items-center justify-center gap-2 font-bold mt-2"
+                href={`/contact?region=${r.slug}`}
+              >
+                문의 내용 작성하기
+              </Link>
+            </div>
+            <div className="p-4 bg-white border border-gray-200 rounded-2xl text-xs text-sub leading-relaxed">
+              <strong className="block text-ink mb-1">다른 운영 지역</strong>
+              <div className="flex flex-wrap gap-1.5 mt-2">
+                {others.map((o) => (
+                  <Link key={o.slug} href={`/regions/${o.slug}`} className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-[11px]">
+                    {o.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section className="section mt-12">
+          <h2 className="subsection-title">교체 과정은 간단하게, 작업은 정확하게</h2>
+          <Steps />
+        </section>
+
+        <div className="guide-grid two mt-8">
+          {guides
+            .filter((g) => g.category === 'regions' || g.slug === 'replacement-cost')
+            .map((g) => (
+              <GuideCard key={g.slug} guide={g} />
+            ))}
+        </div>
+      </div>
+
+      <BottomCTA region={r.slug} position={`region_${r.slug}`} />
     </main>
   );
 }

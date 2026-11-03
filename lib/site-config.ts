@@ -3,7 +3,7 @@ export const siteConfig = {
   name: '배터리콜',
   headline: '출장 배터리 교체',
   origin: 'https://batterycall.kr',
-  phone: '',
+  phone: '010-4684-8838',
   kakaoUrl: '',
   isPreview: false,
 };
@@ -11,3 +11,7 @@ export function contactHref(channel='inquiry',vehicle='',region=''){if(channel==
 
 // SMS opens a composer only; photos must be attached in the device messaging app.
 export function smsHref(body:string,userAgent='') { if(!siteConfig.phone)return ''; const separator=/iPhone|iPad|iPod/i.test(userAgent)?'&':'?'; return `sms:${siteConfig.phone}${separator}body=${encodeURIComponent(body)}`; }
+
+// 전화·문자 CTA 링크의 단일 출처. 번호는 siteConfig.phone만 쓴다 (파트너 연동 시 이 값만 교체).
+export function phoneHref() { return siteConfig.phone ? `tel:${siteConfig.phone}` : ''; }
+export function smsLinkHref() { return siteConfig.phone ? `sms:${siteConfig.phone}` : ''; }
