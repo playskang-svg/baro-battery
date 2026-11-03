@@ -119,7 +119,7 @@ export function Footer() {
         <section className="mbar" id="mbar" aria-label="빠른 상담 연결">
           <p>
             <b>출장 배터리 교체 · 24시간 접수</b>
-            <span>{operatingRegionLine} · 차종·연식만 알려 주세요</span>
+            <span>차종/연식 기본만 체크하고 문자로 빠른 신청하세요.</span>
           </p>
           <div className="mbar-actions">
             {tel ? (
