@@ -8,8 +8,8 @@ import {Input} from '@/components/ui/input';
 import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {vehicles,regions} from '@/lib/content';
 import {siteConfig,smsHref} from '@/lib/site-config';
-export function MobileMenu(){const [open,setOpen]=useState(false);return <><Button aria-label={open?'메뉴 닫기':'메뉴 열기'} aria-expanded={open} aria-controls="mobile-nav" variant="ghost" className="mobile-menu-button" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</Button>{open?<nav id="mobile-nav" className="mobile-nav">{[['/vehicles','차종별 찾기'],['/regions','지역별 찾기'],['/battery-info','배터리/차량 정보'],['/service','출장교체 · 비용'],['/blog','블로그'],['/contact','문의 내용 작성하기']].map(([href,label])=><Link key={href} href={href} onClick={()=>setOpen(false)}>{label}<ArrowUpRight size={17}/></Link>)}</nav>:null}</>}
-export function VehicleExplorer({full=false}:{full?:boolean}){const [query,setQuery]=useState('');return <div className="vehicle-explorer">{full?<label htmlFor="vehicle-search" className="search-field"><Search/><Input id="vehicle-search" aria-label="제조사 또는 차종 검색" placeholder="제조사 또는 차종 검색" value={query} onChange={e=>setQuery(e.target.value)}/></label>:null}<Tabs defaultValue="전체"><TabsList variant="line" className="brand-tabs">{['전체','현대','기아','제네시스','수입차'].map(x=><TabsTrigger key={x} value={x}>{x}</TabsTrigger>)}</TabsList>{['전체','현대','기아','제네시스','수입차'].map(brand=>{const found=vehicles.filter(v=>(brand==='전체'||v.brand===brand)&&`${v.brand} ${v.name}`.includes(query.trim()));return <TabsContent key={brand} value={brand}><div className="vehicle-grid">{found.map(v=><Link className="vehicle-card" href={`/vehicles/${v.slug}`} key={v.slug}><div className="car-card-top"><span>{v.brand}</span><ArrowUpRight size={18}/></div><CarFront className="car-icon" aria-hidden="true"/><h3>{v.name}</h3><p>{v.type}<span>{v.note}</span></p></Link>)}</div>{!found.length?<div className="empty-state"><Search/><h3>검색한 차종이 아직 없어요</h3><p>다른 검색어를 입력하거나 차종을 직접 적어 문의를 준비하세요.</p><Link href="/contact" className="text-link">체크하고 문자 보내기 <ArrowUpRight size={16}/></Link></div>:null}</TabsContent>})}</Tabs></div>}
+export function MobileMenu(){const [open,setOpen]=useState(false);return <><Button aria-label={open?'메뉴 닫기':'메뉴 열기'} aria-expanded={open} aria-controls="mobile-nav" variant="ghost" className="mobile-menu-button" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</Button>{open?<nav id="mobile-nav" className="mobile-nav">{[['/vehicles','차종별 찾기'],['/regions','지역별 찾기'],['/battery-info','배터리/차량 정보'],['/service','출장교체 · 비용'],['/blog','블로그'],['/#form-card','문의 내용 작성하기']].map(([href,label])=><Link key={href} href={href} onClick={()=>setOpen(false)}>{label}<ArrowUpRight size={17}/></Link>)}</nav>:null}</>}
+export function VehicleExplorer({full=false}:{full?:boolean}){const [query,setQuery]=useState('');return <div className="vehicle-explorer">{full?<label htmlFor="vehicle-search" className="search-field"><Search/><Input id="vehicle-search" aria-label="제조사 또는 차종 검색" placeholder="제조사 또는 차종 검색" value={query} onChange={e=>setQuery(e.target.value)}/></label>:null}<Tabs defaultValue="전체"><TabsList variant="line" className="brand-tabs">{['전체','현대','기아','제네시스','수입차'].map(x=><TabsTrigger key={x} value={x}>{x}</TabsTrigger>)}</TabsList>{['전체','현대','기아','제네시스','수입차'].map(brand=>{const found=vehicles.filter(v=>(brand==='전체'||v.brand===brand)&&`${v.brand} ${v.name}`.includes(query.trim()));return <TabsContent key={brand} value={brand}><div className="vehicle-grid">{found.map(v=><Link className="vehicle-card" href={`/vehicles/${v.slug}`} key={v.slug}><div className="car-card-top"><span>{v.brand}</span><ArrowUpRight size={18}/></div><CarFront className="car-icon" aria-hidden="true"/><h3>{v.name}</h3><p>{v.type}<span>{v.note}</span></p></Link>)}</div>{!found.length?<div className="empty-state"><Search/><h3>검색한 차종이 아직 없어요</h3><p>다른 검색어를 입력하거나 차종을 직접 적어 문의를 준비하세요.</p><Link href="/#form-card" className="text-link">체크하고 문자 보내기 <ArrowUpRight size={16}/></Link></div>:null}</TabsContent>})}</Tabs></div>}
 export function RegionExplorer(){return <Tabs defaultValue="daegu" className="region-explorer"><TabsList className="region-tabs">{regions.map(r=><TabsTrigger value={r.slug} key={r.slug}>{r.name}{r.hold?' (준비 중)':''}</TabsTrigger>)}</TabsList>{regions.map(r=><TabsContent key={r.slug} value={r.slug}>{r.hold?<><p className="muted-note">수도권은 파트너 준비 중입니다. 현재 운영 지역은 대구·구미·칠곡·경산입니다.</p><Link className="text-link" href={`/regions/${r.slug}`}>{r.name} 안내 보기 <ArrowUpRight size={16}/></Link></>:<><p className="muted-note">{r.note}</p><Link className="text-link" href={`/regions/${r.slug}`}>{r.name} 출장 안내 보기 <ArrowUpRight size={16}/></Link></>}</TabsContent>)}</Tabs>}
 export function ContactForm({initialVehicle='',initialRegion='',area='',channel='inquiry',initialSymptoms=[]}:{initialVehicle?:string;initialRegion?:string;area?:string;channel?:string;initialSymptoms?:string[]}) {
   const [vehicle,setVehicle]=useState(vehicles.some(v=>v.slug===initialVehicle)?initialVehicle:initialVehicle==='other'?'other':'');
@@ -26,7 +26,37 @@ export function ContactForm({initialVehicle='',initialRegion='',area='',channel=
 증상: ${symptoms.join(', ')||'상담 시 확인'}${location?'\n출장 지역: '+location:''}
 
 출장 전 차량 확인과 제품·총비용 안내를 부탁드립니다.${photos.length?'\n※ 문자 앱에서 첨부할 사진: '+photos.join(', '):''}`;
-  useEffect(()=>{const onPrefill=(e:Event)=>{const detail=(e as CustomEvent<{vehicle?:string;region?:string}>).detail;if(!detail)return;if(detail.vehicle&&(detail.vehicle==='other'||vehicles.some(v=>v.slug===detail.vehicle))){setVehicle(detail.vehicle);setStatus('');}if(detail.region){const found=regions.find(r=>r.slug===detail.region);if(found){setLocation(found.name);setStatus('');}}};window.addEventListener('batterycall:prefill',onPrefill);return ()=>window.removeEventListener('batterycall:prefill',onPrefill);},[]);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const qv = params.get('vehicle');
+    const qr = params.get('region');
+    if (qv && (qv === 'other' || vehicles.some((v) => v.slug === qv))) setVehicle(qv);
+    if (qr) {
+      const found = regions.find((r) => r.slug === qr);
+      if (found) setLocation(found.name);
+    }
+    if (window.location.hash === '#form-card' || qv || qr) {
+      const el = document.getElementById('form-card');
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+    }
+    const onPrefill = (e: Event) => {
+      const detail = (e as CustomEvent<{ vehicle?: string; region?: string }>).detail;
+      if (!detail) return;
+      if (detail.vehicle && (detail.vehicle === 'other' || vehicles.some((v) => v.slug === detail.vehicle))) {
+        setVehicle(detail.vehicle);
+        setStatus('');
+      }
+      if (detail.region) {
+        const found = regions.find((r) => r.slug === detail.region);
+        if (found) {
+          setLocation(found.name);
+          setStatus('');
+        }
+      }
+    };
+    window.addEventListener('batterycall:prefill', onPrefill);
+    return () => window.removeEventListener('batterycall:prefill', onPrefill);
+  }, []);
   useEffect(()=>{const doc=document as Document & {modelContext?:{registerTool:(tool:unknown,options:unknown)=>void|Promise<void>}};if(!doc.modelContext)return;const lifecycle=new AbortController();try{void Promise.resolve(doc.modelContext.registerTool({name:'stage_battery_inquiry',title:'배터리 문자 문의 준비',description:'차종과 지역을 문의 화면에 채웁니다. 문자를 보내거나 예약하지 않습니다.',inputSchema:{type:'object',properties:{vehicle:{type:'string',enum:vehicles.map(v=>v.slug)},region:{type:'string',enum:regions.map(r=>r.slug)}},required:['vehicle','region'],additionalProperties:false},annotations:{readOnlyHint:false},execute:(input:unknown)=>{const data=input as {vehicle?:string;region?:string};if(!data||!vehicles.some(v=>v.slug===data.vehicle)||!regions.some(r=>r.slug===data.region))throw new Error('지원하는 차종과 지역을 선택하세요.');setVehicle(data.vehicle!);setLocation(regions.find(r=>r.slug===data.region)!.name);setStatus('');return new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve({status:'staged',vehicle:data.vehicle,region:data.region,sent:false}))));}},{signal:lifecycle.signal})).catch(()=>{});}catch{}return ()=>lifecycle.abort();},[]);
   function toggleSymptom(value:string){setSymptoms(current=>current.includes(value)?current.filter(x=>x!==value):value==='잘 모르겠어요'?[value]:[...current.filter(x=>x!=='잘 모르겠어요'),value]);}
   async function copy(){try{await navigator.clipboard.writeText(summary);setStatus('문의 내용을 복사했어요. 문자 앱에 붙여 넣어 사진을 첨부해 주세요.');}catch{setStatus('자동 복사를 사용할 수 없어요. 미리보기 내용을 직접 선택해 복사해 주세요.');}}

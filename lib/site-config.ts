@@ -10,7 +10,7 @@ export const siteConfig = {
   kakaoUrl: '',
   isPreview: false,
 };
-export function contactHref(channel='inquiry',vehicle='',region=''){if(channel==='phone'&&siteConfig.phone)return `tel:${siteConfig.phone}`;if(channel==='kakao'&&siteConfig.kakaoUrl)return siteConfig.kakaoUrl;const q=new URLSearchParams({channel});if(vehicle)q.set('vehicle',vehicle);if(region)q.set('region',region);return `/contact?${q}`;}
+export function contactHref(channel='inquiry',vehicle='',region=''){if(channel==='phone'&&siteConfig.phone)return `tel:${siteConfig.phone}`;if(channel==='kakao'&&siteConfig.kakaoUrl)return siteConfig.kakaoUrl;const q=new URLSearchParams();if(vehicle)q.set('vehicle',vehicle);if(region)q.set('region',region);const qs=q.toString();return qs?`/?${qs}#form-card`:'/#form-card';}
 
 // SMS opens a composer only; photos must be attached in the device messaging app.
 export function smsHref(body:string,userAgent='') { if(!siteConfig.phone)return ''; const separator=/iPhone|iPad|iPod/i.test(userAgent)?'&':'?'; return `sms:${siteConfig.phone}${separator}body=${encodeURIComponent(body)}`; }

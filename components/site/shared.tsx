@@ -29,7 +29,9 @@ export function Header() {
                 {c.name}
               </Link>
             ))}
-            <Link href="/contact">문의하기</Link>
+            <Link href="/#form-card" data-goto-form="true">
+              문의하기
+            </Link>
           </nav>
           <div className="nav-actions">
             <HideOnHold>
@@ -41,7 +43,7 @@ export function Header() {
                   <span>전화 상담</span>
                 </a>
               ) : (
-                <Link className="nav-cta" href="/contact">
+                <Link className="nav-cta" href="/#form-card" data-goto-form="true">
                   문의하기
                 </Link>
               )}
@@ -92,7 +94,9 @@ export function Footer() {
                 </Link>
               ))}
               <Link href="/reviews">교체 후기</Link>
-              <Link href="/contact">문의 내용 작성</Link>
+              <Link href="/#form-card" data-goto-form="true">
+                문의 내용 작성
+              </Link>
               <Link href="/privacy">개인정보 안내</Link>
             </nav>
           </div>
