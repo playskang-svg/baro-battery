@@ -1,0 +1,172 @@
+/* 홈 — 거대한 배터리 블록(모티프) 하나로 이어지는 구성. 접두어 h- */
+
+/* 1. 첫 화면: 검정 바탕 + 오른쪽에서 들어오는 거대한 라임 블록, 그 안에 영상 */
+.h-hero { position: relative; background: var(--soot); color: #fff; overflow: hidden; min-height: 100svh; display: grid; align-items: center; }
+.h-hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); padding-block: clamp(80px, 11vh, 150px); }
+.h-hero-copy { grid-column: 1 / 7; }
+.h-hero h1 { font-size: var(--step-display); line-height: 1.03; letter-spacing: -0.045em; font-weight: 600; margin-left: -0.04em; max-width: 10ch; }
+.h-hero-lead { font-size: var(--step-lead); line-height: 1.4; max-width: 30ch; margin-top: 32px; color: #fff; }
+.h-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.h-hero-actions .cta { min-width: 190px; }
+.h-hero-actions .cta.dark { background: #fff; color: var(--soot); }
+.h-hero-actions .cta.dark:hover { background: var(--paper-2); }
+.h-hero-facts { margin-top: 40px; font-size: var(--step-body); color: var(--muted-on-soot); max-width: 36ch; }
+.h-hero-facts a { color: #fff; text-decoration: underline; text-underline-offset: 0.2em; text-decoration-color: var(--muted-on-soot); }
+.h-hero-facts a:hover { text-decoration-color: currentColor; }
+
+.h-cell { position: absolute; z-index: 1; left: 58%; top: 20vh; width: 74vw; height: 100svh; }
+.h-cell-post { position: absolute; top: -7vh; height: 8vh; width: 9%; border-radius: 2.2vh 2.2vh 0 0; background: var(--accent); }
+.h-cell-post:first-child { left: 13%; }
+.h-cell-post:nth-child(2) { left: 46%; }
+.h-cell-body { position: absolute; inset: 0; background: var(--accent); border-radius: 40px; padding: clamp(14px, 1.5vw, 24px); }
+.h-cell-media { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 26px; background: var(--soot-2); }
+.h-cell-media video, .h-cell-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.h-cell-media video { opacity: 0; transition: opacity 600ms var(--ease-out); }
+.h-cell-media video.is-playing { opacity: 1; }
+.h-cell-note { position: absolute; z-index: 2; left: calc(clamp(14px, 1.5vw, 24px) + 14px); top: calc(clamp(14px, 1.5vw, 24px) + 14px); padding: 4px 10px; border-radius: 8px; background: var(--soot); color: #fff; font-size: var(--step-small); }
+
+/* 2. 문자 한 통: 왼쪽 설명+사진, 오른쪽 문구 만들기 */
+.h-sms { padding-block: var(--section-pad); background: var(--paper); scroll-margin-top: 16px; }
+.h-sms .wrap { display: grid; grid-template-columns: 5fr 7fr; column-gap: clamp(32px, 5vw, 80px); align-items: start; }
+.h-sms-copy h2 { font-size: var(--step-head); font-weight: 600; line-height: 1.08; letter-spacing: -0.035em; text-wrap: balance; }
+.h-sms-copy > p { font-size: var(--step-lead); line-height: 1.4; margin-top: 20px; max-width: 30ch; }
+.h-sms-facts { list-style: none; padding: 0; margin: 36px 0 0; display: grid; gap: 14px; }
+.h-sms-facts li { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: start; font-size: var(--step-body); }
+.h-sms-facts .bullet { margin-top: 0.4em; }
+.h-sms-photo { margin: 48px 0 0; --post-h: 18px; --post-bg: var(--soot); }
+.h-sms-photo img { aspect-ratio: 4 / 3; width: 100%; height: auto; }
+.h-sms-photo figcaption { font-size: var(--step-small); color: var(--muted-ink); margin-top: 12px; }
+.h-sms-form .sms-form { margin-top: 0; }
+.h-sms-copy { position: sticky; top: 24px; }
+
+/* 3. 메뉴형 목록: 차종 · 지역 · 읽을거리 */
+.h-menu { padding-block: var(--section-pad); background: var(--paper); }
+.h-menu-cat { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin: 96px 0 40px; }
+.h-menu-cat:first-child { margin-top: 0; }
+.h-menu-cat h2 { font-size: var(--step-head); font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; }
+.h-menu-cat span { font-size: var(--step-body); color: var(--ink); white-space: nowrap; }
+.h-menu-items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; row-gap: 36px; list-style: none; padding: 0; margin: 0; }
+.h-menu-item { display: grid; grid-template-columns: auto 1fr; column-gap: 20px; align-items: start; color: inherit; }
+.h-menu-item .bullet { margin-top: 0.45em; }
+.h-menu-item h3 { display: flex; justify-content: space-between; gap: 16px; font-size: var(--step-body); font-weight: 600; line-height: 1.35; }
+.h-menu-item h3 span { font-weight: 400; color: var(--muted-ink); white-space: nowrap; }
+.h-menu-item p { font-size: var(--step-body); color: var(--muted-ink); margin-top: 6px; max-width: 38ch; }
+.h-menu-item em { display: block; font-style: normal; font-size: var(--step-small); margin-top: 8px; color: var(--ink); }
+a.h-menu-item:hover h3 { text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 0.08em; }
+.h-menu-note { margin: 28px 0 0; font-size: var(--step-body); color: var(--muted-ink); }
+.h-menu-note a { color: var(--ink); text-decoration: underline; text-underline-offset: 0.2em; }
+
+/* 4. 흐름 띠: 흩어진 조각이 한 줄 문자로 모여 정돈된 교체로 */
+.h-flow { background: var(--soot); color: #fff; padding-block: var(--section-pad); }
+.h-flow-head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+.h-flow-head h2 { grid-column: 1 / 6; font-size: var(--step-head); font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; }
+.h-flow-head p { grid-column: 1 / 6; font-size: var(--step-body); margin-top: 24px; max-width: 36ch; color: #fff; }
+.h-flow-svg { width: 100%; height: auto; margin-top: 56px; display: block; }
+.h-flow-svg.phone { display: none; }
+.h-flow-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 40px; list-style: none; padding: 0; }
+.h-flow-cols h3 { font-size: var(--step-lead); font-weight: 600; }
+.h-flow-cols p { font-size: var(--step-body); color: #fff; margin-top: 10px; max-width: 30ch; }
+
+/* 5. 현장: 사진 한 장 + 탭 */
+.h-show { background: var(--paper-2); min-height: 88svh; display: grid; grid-template-columns: 1fr 1fr; }
+.h-show-pic { padding: 40px; display: grid; place-items: center; }
+.h-show-pic figure { width: 100%; max-width: min(100%, calc(88svh - 120px)); margin: 0; --post-h: 22px; --post-bg: var(--soot); --cell-r: 32px; }
+.h-show-pic .h-show-frame { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: inherit; background: var(--soot-2); }
+.h-show-pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.h-show-pic figcaption { font-size: var(--step-small); color: var(--muted-ink); margin-top: 12px; }
+.h-show-text { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; padding: 40px 40px 40px 0; }
+.h-show-tabs { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+.h-show-tabs button { background: none; border: 0; padding: 4px 0; font-size: var(--step-body); font-weight: 500; color: var(--muted-ink); cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.25em; text-decoration-thickness: 0.09em; transition: color var(--t-hover) ease, text-decoration-color var(--t-hover) ease; }
+.h-show-tabs button[aria-selected='true'] { color: var(--ink); font-weight: 600; text-decoration-color: currentColor; }
+.h-show-tabs button:hover { color: var(--ink); }
+.h-show-title h2 { font-size: var(--step-head); font-weight: 600; line-height: 1.08; letter-spacing: -0.035em; }
+.h-show-title p { font-size: var(--step-body); max-width: 34ch; margin-top: 28px; }
+.h-show-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.h-show-actions a { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 72px; font-size: var(--step-body); font-weight: 600; border-radius: var(--radius-s); background: var(--paper); color: var(--ink); transition: background-color var(--t-hover) ease, color var(--t-hover) ease; }
+.h-show-actions a.ink { background: var(--soot); color: #fff; }
+.h-show-actions a:hover { background: var(--accent); color: var(--accent-ink); }
+
+/* 6. 기준: 타일 보드 */
+.h-proof { padding-block: var(--section-pad); background: var(--paper); }
+.h-proof-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; list-style: none; padding: 0; margin: 0; }
+.h-proof-tile { aspect-ratio: 3 / 2; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; background: var(--paper-2); border-radius: var(--radius); font-size: var(--step-lead); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
+.h-proof-tile small { display: block; font-size: var(--step-small); font-weight: 400; color: var(--muted-ink); margin-top: 12px; }
+.h-proof-tile.lead { grid-column: span 2; aspect-ratio: auto; background: var(--accent); color: var(--accent-ink); }
+.h-proof-tile.lead h2 { font-size: var(--step-head); font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; }
+.h-proof-tile.lead p { font-size: var(--step-body); font-weight: 400; max-width: 30ch; }
+.h-proof-tile.pic { padding: 0; overflow: hidden; position: relative; }
+.h-proof-tile.pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* 7. 질문: 서랍 속 카드 */
+.h-faq { padding-block: var(--section-pad); background: var(--paper); }
+.h-faq-inner { width: min(100%, 860px); margin-inline: auto; }
+.h-faq h2 { font-size: var(--step-head); font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; }
+.h-faq-stack { margin-top: 48px; }
+.h-faq-card { position: relative; --tab-x: calc(var(--n) * 150px); --tab-w: 200px; --tab-h: 40px; margin-top: calc(-1 * var(--tab-h)); padding-top: var(--tab-h); border-radius: 0 0 var(--radius) var(--radius); background: var(--card-bg, var(--paper-2)); color: var(--card-ink, var(--ink)); clip-path: polygon(var(--tab-x) 0, calc(var(--tab-x) + var(--tab-w)) 0, calc(var(--tab-x) + var(--tab-w)) var(--tab-h), 100% var(--tab-h), 100% 100%, 0 100%, 0 var(--tab-h), var(--tab-x) var(--tab-h)); }
+.h-faq-card:first-child { margin-top: 0; }
+.h-faq-card:not(:last-child) { padding-bottom: var(--tab-h); }
+.h-faq-card.c0 { --card-bg: var(--paper-2); --card-ink: var(--ink); }
+.h-faq-card.c1 { --card-bg: var(--accent); --card-ink: var(--accent-ink); }
+.h-faq-card.c2 { --card-bg: var(--soot); --card-ink: #fff; }
+.h-faq-tab { position: absolute; top: 0; left: var(--tab-x); width: var(--tab-w); height: var(--tab-h); display: flex; align-items: center; padding: 0 20px; font-size: var(--step-small); font-weight: 600; pointer-events: none; }
+.h-faq-q { width: 100%; min-height: 136px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; background: none; border: 0; color: inherit; font: inherit; font-size: var(--step-lead); font-weight: 500; text-align: left; cursor: pointer; line-height: 1.3; }
+.h-faq-plus { position: relative; flex: none; width: 28px; height: 28px; transition: transform var(--t-ui) var(--ease-out); }
+.h-faq-plus::before, .h-faq-plus::after { content: ''; position: absolute; left: 50%; top: 50%; width: 22px; height: 3px; border-radius: 2px; background: currentColor; transform: translate(-50%, -50%); }
+.h-faq-plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+.h-faq-q[aria-expanded='true'] .h-faq-plus { transform: rotate(45deg); }
+.h-faq-a { padding: 0 32px 36px; font-size: var(--step-body); line-height: 1.6; max-width: 50ch; }
+.h-faq-a p { margin: 0; }
+.h-faq-more { width: min(100%, 860px); margin: 48px auto 0; display: flex; gap: 28px; flex-wrap: wrap; }
+
+/* 8. 호출 띠는 theme.css .call-band */
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 1023px) {
+  .h-hero-copy { grid-column: 1 / 8; }
+  .h-cell { left: 64%; top: 28vh; width: 80vw; }
+  .h-sms .wrap { grid-template-columns: 1fr; row-gap: 48px; }
+  .h-sms-copy { position: static; }
+  .h-cell-post:nth-child(2) { left: 34%; }
+  .h-cell-media video, .h-cell-media img { object-position: 40% 40%; }
+  .h-menu-items { column-gap: 32px; }
+  .h-flow-head h2, .h-flow-head p { grid-column: 1 / 9; }
+  .h-show { grid-template-columns: 1fr; min-height: 0; }
+  .h-show-pic { padding: 24px var(--margin) 0; }
+  .h-show-text { padding: 24px var(--margin) 40px; gap: 32px; }
+  .h-show-actions a { min-height: 60px; }
+  .h-proof-board { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .h-proof-tile.lead { grid-column: 1 / -1; aspect-ratio: auto; min-height: 120px; gap: 16px; }
+  .h-faq-card { --tab-x: calc(var(--n) * 48px); --tab-w: 120px; }
+  .h-faq-q { min-height: 88px; padding: 20px 20px; }
+  .h-faq-a { padding: 0 20px 24px; }
+}
+@media (max-width: 767px) {
+  .h-hero { min-height: 0; display: block; }
+  .h-hero .wrap { display: block; padding: 56px 0 0; }
+  .h-hero h1 { font-size: 11.5vw; max-width: none; }
+  .h-hero-lead { margin-top: 20px; font-size: var(--step-body); max-width: none; }
+  .h-hero-actions { margin-top: 28px; }
+  .h-hero-actions .cta { flex: 1 1 45%; min-width: 0; }
+  .h-hero-facts { margin-top: 24px; font-size: var(--step-small); }
+  .h-cell { position: relative; z-index: 1; left: -15vw; top: auto; width: 130vw; height: 52svh; margin-top: 44px; }
+  .h-cell-post { top: -5vh; height: 6vh; }
+  .h-cell-post:nth-child(2) { left: 46%; }
+  .h-cell-body { border-radius: 28px; padding: 10px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .h-cell-media { border-radius: 18px; }
+  .h-cell-media video, .h-cell-media img { object-position: 60% 40%; }
+  .h-sms-copy > p { max-width: none; }
+  .h-menu-cat { margin: 64px 0 28px; }
+  .h-menu-items { grid-template-columns: 1fr; row-gap: 28px; }
+  .h-flow-head h2, .h-flow-head p { grid-column: 1 / -1; }
+  .h-flow-body { display: grid; grid-template-columns: 52vw 1fr; column-gap: 16px; margin-top: 40px; align-items: stretch; }
+  .h-flow-svg { display: none; }
+  .h-flow-svg.phone { display: block; margin: 0; }
+  .h-flow-cols { grid-template-columns: 1fr; margin-top: 0; gap: 0; display: grid; grid-template-rows: 1fr 1fr 1fr; }
+  .h-flow-cols li { display: flex; flex-direction: column; justify-content: center; }
+  .h-flow-cols h3 { font-size: var(--step-body); }
+  .h-flow-cols p { font-size: var(--step-small); color: #fff; }
+  .h-show-tabs { gap: 6px 18px; }
+  .h-show-actions { grid-template-columns: 1fr; }
+  .h-proof-tile { padding: 18px; font-size: var(--step-body); }
+  .h-faq-q { font-size: var(--step-body); }
+}

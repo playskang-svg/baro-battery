@@ -1,283 +1,222 @@
 import Link from '@/components/site/site-link';
-import {
-  ArrowUpRight,
-  ArrowRight,
-  BatteryCharging,
-  Phone,
-  MessageCircle,
-  ClipboardList,
-  Check,
-  ShieldCheck,
-  MapPin,
-  CarFront,
-  ReceiptText,
-  BookOpen,
-  Mail,
-  Clock3,
-} from 'lucide-react';
-import { MobileMenu, FAQ } from './interactive';
-import { categories, serviceSteps, type Guide } from '@/lib/content';
+import Image from 'next/image';
+import { ArrowUpRight, Phone, MessageCircle, ClipboardList } from 'lucide-react';
+import { MobileMenu } from './interactive';
+import { FaqCards, HideOnHome } from './home';
+import { categories, serviceSteps, operatingRegionLine, isHoldRegion, type Guide } from '@/lib/content';
 import { contactHref, phoneHref, smsLinkHref, siteConfig } from '@/lib/site-config';
-import { CtaPair, HideOnHold } from './cta';
-import { isHoldRegion } from '@/lib/content';
+import { HideOnHold } from './cta';
+
 export function Header() {
   return (
     <>
       <Link className="skip-link" href="#main">
         본문으로 바로가기
       </Link>
-      <header className="header">
-        <Link className="brand" href="/" aria-label="배터리콜 홈">
-          <BatteryCharging />
-          <span>
-            배터리콜<small>BATTERY CARE, ANYWHERE.</small>
-          </span>
-        </Link>
-        <nav aria-label="주 메뉴">
-          {categories.map((c) => (
-            <Link key={c.slug} href={`/${c.slug}`}>
-              {c.name}
-              {['vehicles', 'regions'].includes(c.slug) ? ' 찾기' : ''}
-            </Link>
-          ))}
-        </nav>
-        <HideOnHold>
-          <Link className="btn dark header-cta" href="/contact">
-            문의 내용 작성하기 <ArrowUpRight size={17} />
+      <div className="topbar">
+        <header className="header">
+          <Link className="brand" href="/" aria-label="배터리콜 홈">
+            <span className="bullet" aria-hidden="true" />
+            <span>배터리콜</span>
           </Link>
-        </HideOnHold>
-        <MobileMenu />
-      </header>
+          <nav aria-label="주 메뉴">
+            {categories.map((c) => (
+              <Link key={c.slug} href={`/${c.slug}`}>
+                {c.name}
+              </Link>
+            ))}
+          </nav>
+          <HideOnHold>
+            <Link className="btn lime header-cta" href="/contact">
+              문의하기
+            </Link>
+          </HideOnHold>
+          <MobileMenu />
+        </header>
+      </div>
     </>
   );
 }
+
+// 페이지의 끝: 이름을 블록으로 세운다 (글자마다 제 색 사각형에서 파낸 모양).
 export function Footer() {
+  const tel = phoneHref();
+  const sms = smsLinkHref();
   return (
     <>
-      <footer className="footer">
-        <div className="wrap footer-main">
-          <div className="footer-identity">
-            <strong>컨시어지블루 <span>(배터리콜)</span></strong>
-            <div className="footer-contact">
-              <Link href={`tel:${siteConfig.officePhone}`} data-track="footer" data-channel="phone">
-                <Phone aria-hidden="true" />
-                <span><small>대표 전화</small>{siteConfig.officePhone}</span>
-              </Link>
-              <Link href="mailto:qoorocket@gmail.com">
-                <Mail aria-hidden="true" />
-                <span><small>이메일</small>qoorocket@gmail.com</span>
-              </Link>
+      <footer className="foot">
+        <div className="wrap">
+          <div className="foot-mark" role="img" aria-label="배터리콜">
+            {['배', '터', '리', '콜'].map((ch) => (
+              <span className="foot-block" key={ch}>
+                {ch}
+              </span>
+            ))}
+          </div>
+          <div className="foot-grid">
+            <nav className="foot-links" aria-label="바닥 메뉴">
+              <div>
+                {categories.slice(0, 2).map((c) => (
+                  <Link key={c.slug} href={`/${c.slug}`}>{c.name}</Link>
+                ))}
+              </div>
+              <div>
+                {categories.slice(2, 4).map((c) => (
+                  <Link key={c.slug} href={`/${c.slug}`}>{c.name}</Link>
+                ))}
+              </div>
+              <div>
+                <Link href="/blog">블로그</Link>
+                <Link href="/reviews">교체 후기</Link>
+              </div>
+              <div>
+                <Link href="/contact">문의 내용 작성</Link>
+                <Link href="/privacy">개인정보 안내</Link>
+              </div>
+            </nav>
+            <div className="foot-contact">
+              <p>
+                <span>대표 전화 </span>
+                <a href={`tel:${siteConfig.officePhone}`} data-track="footer" data-channel="phone">{siteConfig.officePhone}</a>
+              </p>
+              <p>
+                <span>이메일 </span>
+                <a href="mailto:qoorocket@gmail.com">qoorocket@gmail.com</a>
+              </p>
+              <p>24시간 상담·접수 운영</p>
+              <p>서비스 지역 {operatingRegionLine}</p>
             </div>
           </div>
-          <div className="footer-service">
-            <p><Clock3 aria-hidden="true" />24시간 상담·접수 운영</p>
-            <p><MapPin aria-hidden="true" />서비스 지역: 대구 · 구미 · 칠곡 · 경산</p>
+          <div className="foot-bottom">
+            <span>© 2026 컨시어지블루 (배터리콜). All rights reserved.</span>
+            <Link className="btn lime" href="/contact">문의 내용 작성하기</Link>
           </div>
         </div>
-        <div className="wrap footer-bottom">
-          <span>© 2026 컨시어지블루. All rights reserved.</span>
-        </div>
       </footer>
+      <HideOnHome>
       <HideOnHold>
         <div className="contact-dock" aria-label="빠른 문의">
           <div className="dock-label">
-            <BatteryCharging />
+            <span className="bullet" aria-hidden="true" />
             <span>
-              출장 배터리 교체<small>차종·연식 입력 후 문의 내용 작성</small>
+              출장 배터리 교체<small>차종·연식만 알려 주세요</small>
             </span>
           </div>
-          {siteConfig.phone ? (
-            <>
-              <a href={phoneHref()} data-track="dock" data-channel="phone">
-                <Phone size={18} />
-                <span>전화 상담</span>
-              </a>
-              <a href={smsLinkHref()} data-track="dock" data-channel="sms">
-                <MessageCircle size={18} />
-                <span>문자 상담</span>
-              </a>
-            </>
+          {tel ? (
+            <a href={tel} data-track="dock" data-channel="phone">
+              <Phone size={18} aria-hidden="true" />
+              <span>전화</span>
+            </a>
           ) : null}
-          {siteConfig.kakaoUrl ? (
-            <Link href={contactHref('kakao')}>
-              <MessageCircle size={18} />
-              <span>카카오 상담</span>
-            </Link>
+          {sms ? (
+            <a href={sms} data-track="dock" data-channel="sms">
+              <MessageCircle size={18} aria-hidden="true" />
+              <span>문자</span>
+            </a>
           ) : null}
           <Link className="dock-primary" href="/contact">
-            <ClipboardList size={18} />
-            <span>문의 내용 작성하기</span>
-            <ArrowUpRight size={16} />
+            <ClipboardList size={18} aria-hidden="true" />
+            <span>문의 작성</span>
           </Link>
         </div>
       </HideOnHold>
+      </HideOnHome>
     </>
   );
 }
-export function BottomCTA({
-  vehicle = '',
-  region = '',
-  position = '',
-}: {
-  vehicle?: string;
-  region?: string;
-  position?: string;
-}) {
+
+// 호출 띠: 띠 전체가 하나의 링크, 한 단어가 버튼.
+export function CallBand({ position = 'bottom_cta', vehicle = '', region = '' }: { position?: string; vehicle?: string; region?: string }) {
   const hold = isHoldRegion(region);
-  const track = position || (region ? `region_${region}` : vehicle ? 'vehicle_detail' : 'bottom_cta');
+  const tel = phoneHref();
+  const sms = smsLinkHref();
+  const toForm = hold || !tel;
+  const href = toForm ? contactHref('inquiry', vehicle, region) : tel;
   return (
-    <section className="bottom-cta wrap">
-      <div>
-        <span className="eyebrow">LET’S GET YOU MOVING</span>
-        <h2>
-          멈춘 일상에,
-          <br />
-          다시 시동을 걸어볼까요?
-        </h2>
-        <p>
-          차종과 연식을 입력하고 증상을 체크해 주세요. 출장 전에 작업자가
-          확인합니다.
-        </p>
-      </div>
-      <div className="bottom-cta-actions">
-        {hold ? null : <CtaPair position={track} />}
-        <Link className="btn lime" href={contactHref('inquiry', vehicle, region)}>
-          문의 내용 작성하기 <ArrowUpRight size={20} />
+    <div className="call-wrap">
+      {toForm ? (
+        <Link className="call-band" href={href}>
+          <p className="call-note">차종과 연식을 적으면 보낼 문자가 완성됩니다. 작업자가 출장 전에 확인합니다.</p>
+          <svg className="call-arrow" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 36 36 12M16 12h20v20" />
+          </svg>
+          <p className="call-word">문의하기</p>
         </Link>
-      </div>
-    </section>
+      ) : (
+        <a className="call-band" href={href} data-track={position} data-channel="phone">
+          <p className="call-note">24시간 접수. 차종과 연식을 말씀해 주시면 제품과 총비용, 방문 일정을 안내합니다.{sms ? ' 문자도 같은 번호로 보내 주세요.' : ''}</p>
+          <svg className="call-arrow" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 36 36 12M16 12h20v20" />
+          </svg>
+          <p className="call-word">전화하기</p>
+        </a>
+      )}
+    </div>
   );
 }
-export function SectionHeading({
-  eyebrow,
-  title,
-  description,
-  href,
-  linkText,
-}: {
-  eyebrow: string;
-  title: string;
-  description?: string;
-  href?: string;
-  linkText?: string;
-}) {
+export function BottomCTA({ vehicle = '', region = '', position = '' }: { vehicle?: string; region?: string; position?: string }) {
+  const track = position || (region ? `region_${region}` : vehicle ? 'vehicle_detail' : 'bottom_cta');
+  return <CallBand position={track} vehicle={vehicle} region={region} />;
+}
+export function SectionHeading({ title, description, href, linkText }: { title: string; description?: string; href?: string; linkText?: string }) {
   return (
     <div className="section-heading">
       <div>
-        <span className="eyebrow">{eyebrow}</span>
         <h2>{title}</h2>
         {description ? <p>{description}</p> : null}
       </div>
       {href ? (
         <Link className="text-link" href={href}>
           {linkText || '전체 보기'}
-          <ArrowUpRight size={17} />
+          <ArrowUpRight size={17} aria-hidden="true" />
         </Link>
       ) : null}
     </div>
   );
 }
-export function Crumb({
-  items,
-}: {
-  items: { label: string; href?: string }[];
-}) {
+export function Crumb({ items }: { items: { label: string; href?: string }[] }) {
   return (
     <nav className="crumb" aria-label="현재 위치">
       <Link href="/">홈</Link>
       {items.map((x, i) => (
         <span key={i}>
           <span aria-hidden="true">/</span>
-          {x.href ? (
-            <Link href={x.href}>{x.label}</Link>
-          ) : (
-            <span aria-current="page">{x.label}</span>
-          )}
+          {x.href ? <Link href={x.href}>{x.label}</Link> : <span aria-current="page">{x.label}</span>}
         </span>
       ))}
     </nav>
   );
 }
-export function PageIntro({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow: string;
-  title: string;
-  description: string;
-}) {
+export function PageIntro({ title, description }: { title: string; description: string }) {
   return (
-    <div className="page-intro">
-      <span className="eyebrow">{eyebrow}</span>
+    <div className="page-intro" data-reveal>
       <h1>{title}</h1>
       <p>{description}</p>
     </div>
   );
 }
-export function GuideCard({
-  guide,
-  featured = false,
-}: {
-  guide: Guide;
-  featured?: boolean;
-}) {
+export function GuideCard({ guide, featured = false }: { guide: Guide; featured?: boolean }) {
   return (
-    <Link
-      className={`guide-card ${featured ? 'featured' : ''}`}
-      href={`/guides/${guide.slug}`}
-    >
-      <div className="guide-art">
-        {guide.category === 'vehicles' ? (
-          <CarFront />
-        ) : guide.category === 'regions' ? (
-          <MapPin />
-        ) : guide.category === 'service' ? (
-          <ReceiptText />
-        ) : guide.category === 'blog' ? (
-          <BookOpen />
-        ) : (
-          <BatteryCharging />
-        )}
+    <Link className={`guide-card ${featured ? 'featured' : ''}`} href={`/guides/${guide.slug}`}>
+      <h3>{guide.title}</h3>
+      <p>{guide.excerpt}</p>
+      <span className="guide-more">
         <span>
-          {guide.category === 'battery-info'
-            ? 'BATTERY NOTES'
-            : guide.category === 'vehicles'
-              ? 'CAR GUIDE'
-              : guide.category === 'regions'
-                ? 'AREA GUIDE'
-                : guide.category === 'blog'
-                  ? 'BLOG'
-                  : 'SERVICE GUIDE'}
+          {guide.category === 'blog' ? '글 읽기' : '가이드 읽기'} · {guide.tag}
         </span>
-      </div>
-      <div className="guide-card-body">
-        <span className="tag">
-          {guide.tag}
-          <span>
-            {guide.status === 'published' ? '발행 콘텐츠' : '콘텐츠 예시'}
-          </span>
-        </span>
-        <h3>{guide.title}</h3>
-        <p>{guide.excerpt}</p>
-        <span className="guide-more">
-          {guide.category === 'blog' ? '글 읽기' : '가이드 읽기'} <ArrowUpRight size={17} />
-        </span>
-      </div>
+        <ArrowUpRight size={17} aria-hidden="true" />
+      </span>
     </Link>
   );
 }
 export function Steps() {
   return (
-    <ol className="steps">
-      {serviceSteps.map((s, i) => (
+    <ol className="steps" data-reveal>
+      {serviceSteps.map((s) => (
         <li key={s.title}>
-          <span className="step-number">0{i + 1}</span>
+          <span className="bullet" aria-hidden="true" />
           <h3>{s.title}</h3>
           <p>{s.text}</p>
-          {i < serviceSteps.length - 1 ? (
-            <ArrowRight className="step-arrow" />
-          ) : null}
         </li>
       ))}
     </ol>
@@ -285,26 +224,14 @@ export function Steps() {
 }
 export function Trust() {
   return (
-    <div className="trust-grid">
+    <div className="trust-grid" data-reveal>
       {[
-        {
-          icon: ShieldCheck,
-          title: '차량 확인은 작업자가',
-          text: '보내주신 차종·연식·사진으로 먼저 확인해요.',
-        },
-        {
-          icon: ReceiptText,
-          title: '총비용을 미리',
-          text: '제품과 출장·장착을 포함한 비용을 안내해요.',
-        },
-        {
-          icon: Check,
-          title: '교체 후 확인까지',
-          text: '작업 후 시동 상태와 교체 내역을 확인해요.',
-        },
-      ].map(({ icon: Icon, title, text }) => (
+        { title: '차량 확인은 작업자가', text: '보내주신 차종·연식·사진으로 먼저 확인해요.' },
+        { title: '총비용을 미리', text: '제품과 출장·장착을 포함한 비용을 안내해요.' },
+        { title: '교체 후 확인까지', text: '작업 후 시동 상태와 교체 내역을 확인해요.' },
+      ].map(({ title, text }) => (
         <div className="trust-item" key={title}>
-          <Icon />
+          <span className="bullet" aria-hidden="true" />
           <div>
             <h3>{title}</h3>
             <p>{text}</p>
@@ -317,36 +244,20 @@ export function Trust() {
 export function ReviewSection() {
   return (
     <section className="section wrap" id="reviews">
-      <SectionHeading
-        eyebrow="AFTER THE SERVICE"
-        title="교체 경험이, 다음 선택의 기준이 되도록."
-        description="후기 영역 미리보기 · 아래 내용은 실제 고객 후기가 아닌 구성 예시입니다."
-        href="/reviews"
-        linkText="후기 영역 보기"
-      />
+      <SectionHeading title="교체 경험이, 다음 선택의 기준이 되도록." description="후기 영역 미리보기입니다. 아래 내용은 실제 고객 후기가 아닌 구성 예시입니다." href="/reviews" linkText="후기 영역 보기" />
       <div className="review-grid">
         {[
-          {
-            car: '그랜저 · 지하주차장',
-            title: '약속한 위치에서 시작하는 교체',
-            text: '방문 시간과 주차장 진입 조건, 현장 안내 경험을 담을 후기 영역입니다.',
-            icon: MapPin,
-          },
-          {
-            car: '쏘렌토 · 교체 비용',
-            title: '설명받은 내용과 실제 작업',
-            text: '제품과 총비용 안내가 실제 작업과 일치했는지 담을 후기 영역입니다.',
-            icon: ReceiptText,
-          },
-        ].map(({ car, title, text, icon: Icon }) => (
+          { car: '그랜저 · 지하주차장', title: '약속한 위치에서 시작하는 교체', text: '방문 시간과 주차장 진입 조건, 현장 안내 경험을 담을 후기 영역입니다.' },
+          { car: '쏘렌토 · 교체 비용', title: '설명받은 내용과 실제 작업', text: '제품과 총비용 안내가 실제 작업과 일치했는지 담을 후기 영역입니다.' },
+        ].map(({ car, title, text }) => (
           <article className="review-card" key={car}>
-            <span className="sample-label">후기 예시</span>
             <h3>{title}</h3>
             <p>{text}</p>
             <div>
-              <Icon size={19} />
+              <span className="bullet" aria-hidden="true" />
               <span>{car}</span>
             </div>
+            <span className="sample-label">후기 예시</span>
           </article>
         ))}
       </div>
@@ -355,20 +266,27 @@ export function ReviewSection() {
 }
 export function FAQSection() {
   return (
-    <section className="section wrap faq-section">
-      <div>
-        <span className="eyebrow">GOOD TO KNOW</span>
-        <h2>
-          궁금한 점,
-          <br />
-          먼저 확인하세요.
-        </h2>
-        <p>교체하기 전 알고 싶은 것들을 모았어요.</p>
-        <Link className="text-link" href="/contact">
-          문의 내용 작성하기 <ArrowUpRight size={17} />
-        </Link>
-      </div>
-      <FAQ />
+    <section className="section wrap">
+      <FaqCards title="궁금한 점, 먼저 확인하세요" />
     </section>
+  );
+}
+
+// 서브페이지용 현장 사진 한 장: 배터리 블록 액자, 셔터로 열림. 연출 사진은 캡션에 밝힌다.
+const PHOTOS = {
+  tech: { src: '/media/tech.webp', alt: '새 배터리를 들고 작업 차량 옆에 선 기사', caption: '차가 선 자리로 기사가 갑니다. (연출 사진)' },
+  terminal: { src: '/media/terminal.webp', alt: '새 배터리의 단자를 조이는 장갑 낀 손', caption: '규격에 맞는 새 배터리를 달고 단자를 조입니다. (연출 사진)' },
+  caller: { src: '/media/caller.webp', alt: '지하주차장에서 차 옆에 서서 문자를 보내는 운전자', caption: '차종과 연식만 문자로 보내면 됩니다. (연출 사진)' },
+  warning: { src: '/media/warning.webp', alt: '계기판에 켜진 붉은 배터리 경고등', caption: '경고등이 켜졌다면 사진을 함께 보내 주세요. (연출 사진)' },
+};
+export function SitePhoto({ name, caption }: { name: keyof typeof PHOTOS; caption?: string }) {
+  const p = PHOTOS[name];
+  return (
+    <figure className="cell photo page-figure">
+      <div className="page-figure-frame shutter">
+        <Image src={p.src} alt={p.alt} width={2000} height={1500} unoptimized loading="lazy" />
+      </div>
+      <figcaption>▲ {caption || p.caption}</figcaption>
+    </figure>
   );
 }

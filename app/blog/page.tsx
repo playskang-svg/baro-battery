@@ -25,7 +25,6 @@ export default function BlogPage() {
       <div className="wrap">
         <Crumb items={[{ label: '블로그' }]} />
         <PageIntro
-          eyebrow="BLOG"
           title="배터리콜 블로그"
           description="배터리 관리 팁부터 현장 이야기까지, 쉽고 유용한 정보를 전해드립니다."
         />

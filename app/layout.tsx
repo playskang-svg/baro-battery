@@ -3,9 +3,10 @@ import { Header, Footer } from '@/components/site/shared';
 import { siteConfig } from '@/lib/site-config';
 import Script from 'next/script';
 import { CtaTracker } from '@/components/site/cta';
+import { MotionRoot } from '@/components/site/home';
+import './fonts.css';
 import './globals.css';
-import './visual-refresh.css';
-import './footer.css';
+import './theme.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.origin),
@@ -27,14 +28,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-CH3SKP6WPH" strategy="afterInteractive" />
         <Script id="ga4-init" strategy="afterInteractive">{"window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CH3SKP6WPH');gtag('config','G-P73SDFB1F3');"}</Script>
         <Header />
         {children}
         <Footer />
         <CtaTracker />
+        <MotionRoot />
       </body>
     </html>
   );
