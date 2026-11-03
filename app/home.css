@@ -73,7 +73,7 @@
   position: absolute;
   inset: 0;
   background-image: var(--noise);
-  opacity: 0.065;
+  opacity: 0.02;
   mix-blend-mode: overlay;
   pointer-events: none;
 }
@@ -108,8 +108,8 @@
 .hb-scene {
   position: absolute;
   right: var(--g);
-  top: calc(var(--nav-h) + 12px);
-  width: 210px;
+  top: calc(var(--nav-h) + 16px);
+  width: 270px;
   transform-style: preserve-3d;
 }
 
@@ -119,17 +119,19 @@
   gap: 7px;
   padding: 6px 13px;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(255, 90, 31, 0.95), rgba(210, 63, 10, 0.95));
+  background: linear-gradient(135deg, #ff5a1f 0%, #d83f06 100%);
   color: #fff;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: -0.01em;
+  white-space: nowrap;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.28),
-    0 0 24px rgba(255, 90, 31, 0.6),
-    0 12px 24px -10px rgba(0, 0, 0, 0.7);
-  margin-bottom: 10px;
+    0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 4px 18px rgba(255, 90, 31, 0.55),
+    0 12px 24px -8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 22px;
   animation: hbPulseRibbon 2.6s ease-in-out infinite;
+  z-index: 5;
 }
 
 .hb-dot {
@@ -151,16 +153,19 @@
 
 .hb-battery {
   position: relative;
-  border-radius: 18px;
-  background: linear-gradient(155deg, #232838 0%, #141824 55%, #0d1018 100%);
+  border-radius: 20px;
+  background: linear-gradient(155deg, #181d28 0%, #0d111a 60%, #080a10 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.22),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
-    0 28px 55px -20px rgba(0, 0, 0, 0.85),
-    0 0 42px -12px rgba(255, 90, 31, 0.35);
-  padding: 14px 14px 14px;
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 24px 50px -15px rgba(0, 0, 0, 0.9),
+    0 0 36px -10px rgba(255, 90, 31, 0.4);
+  padding: 16px 14px 14px;
   animation: hbFloat 5.2s ease-in-out infinite;
   transform-origin: center center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @keyframes hbFloat {
@@ -168,7 +173,7 @@
     transform: translateY(0) rotate(-1.5deg) scale(1);
   }
   50% {
-    transform: translateY(-10px) rotate(1.5deg) scale(1.02);
+    transform: translateY(-8px) rotate(1.5deg) scale(1.015);
   }
 }
 
@@ -178,7 +183,7 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: 0 12px 8px;
-  margin-top: -22px;
+  margin-top: -24px;
 }
 
 .hb-handle {
@@ -237,50 +242,55 @@
   padding: 12px;
   border-radius: 13px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .hb-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
+  gap: 8px;
 }
 
 .hb-brand {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.76);
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
 }
 
 .hb-seal {
-  padding: 2px 7px;
+  padding: 2.5px 8px;
   border-radius: 999px;
-  background: rgba(74, 222, 128, 0.16);
-  box-shadow: inset 0 0 0 1px rgba(74, 222, 128, 0.45);
-  color: #86efac;
+  background: rgba(34, 197, 94, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(74, 222, 128, 0.6);
+  color: #4ade80;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .hb-meter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 8px 10px;
+  gap: 12px;
+  padding: 8px 12px;
   border-radius: 10px;
-  background: rgba(10, 12, 18, 0.72);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: #06080d;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), inset 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hb-volt strong {
   display: block;
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 900;
   letter-spacing: -0.02em;
-  color: #4ade80;
+  color: #22c55e;
+  text-shadow: 0 0 12px rgba(34, 197, 94, 0.65);
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
 }
@@ -289,8 +299,9 @@
   display: block;
   margin-top: 2px;
   font-size: 9.5px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.65);
+  font-weight: 700;
+  color: #e2e8f0;
+  white-space: nowrap;
 }
 
 .hb-bars {
@@ -325,26 +336,35 @@
   gap: 6px;
 }
 
-.hb-specs > div {
+.hb-spec-box {
   padding: 6px 8px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
 }
 
-.hb-specs span {
+.hb-spec-box span {
   display: block;
   font-size: 9.5px;
-  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
-.hb-specs b {
+.hb-spec-box b {
   display: block;
-  margin-top: 1px;
-  font-size: 10.5px;
-  font-weight: 700;
-  color: #fff;
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
   white-space: nowrap;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 .hb-badge {
@@ -411,14 +431,39 @@
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .hb-scene {
-    width: 168px;
+    width: 178px;
     right: 12px;
-    top: calc(var(--nav-h) + 8px);
+    top: calc(var(--nav-h) + 6px);
+  }
+  .hb-cert-ribbon {
+    margin-bottom: 24px;
+    padding: 5px 10px;
+    font-size: 11px;
   }
   .hb-specs {
-    display: none;
+    gap: 4px;
+  }
+  .hb-spec-box {
+    padding: 4px 6px;
+  }
+  .hb-spec-box span {
+    font-size: 8.5px;
+  }
+  .hb-spec-box b {
+    font-size: 9.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hb-cert-ribbon {
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 14px;
+    margin-bottom: 0;
+    font-size: 12.5px;
+    padding: 7px 15px;
   }
 }
 
@@ -430,13 +475,15 @@
   }
   .hb-scene {
     right: max(var(--g), calc((100% - 1200px) / 2 + 20px));
-    top: calc(var(--nav-h) + 46px);
+    top: calc(var(--nav-h) + 42px);
     width: 310px;
   }
   .hb-cert-ribbon {
     font-size: 13.5px;
     padding: 8px 16px;
-    margin-bottom: 16px;
+    right: calc(100% + 18px);
+    top: 16px;
+    margin-bottom: 0;
   }
   .hb-battery {
     padding: 18px 18px 18px;
@@ -448,7 +495,7 @@
   .hb-volt small {
     font-size: 11px;
   }
-  .hb-specs b {
+  .hb-spec-box b {
     font-size: 12px;
   }
   .hb-badge {

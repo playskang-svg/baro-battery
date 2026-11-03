@@ -224,14 +224,14 @@ export default function Home() {
 
               <div className="hb-body">
                 <div className="hb-head">
-                  <span className="hb-brand">BATTERYCALL · AGM</span>
-                  <span className="hb-seal">정품·정가 인증</span>
+                  <span className="hb-brand">BATTERYCALL · 12V AGM</span>
+                  <span className="hb-seal">신품 규격 인증</span>
                 </div>
 
                 <div className="hb-meter">
                   <div className="hb-volt">
                     <strong>12.8V</strong>
-                    <small>FULL CHARGE · 신품 정품</small>
+                    <small>FULL CHARGE · 신품 정상 전압</small>
                   </div>
                   <div className="hb-bars">
                     <i />
@@ -243,11 +243,11 @@ export default function Home() {
                 </div>
 
                 <div className="hb-specs">
-                  <div>
+                  <div className="hb-spec-box">
                     <span>정품 인증</span>
                     <b>100% 최신 생산 신품</b>
                   </div>
-                  <div>
+                  <div className="hb-spec-box">
                     <span>정가 안내</span>
                     <b>출장·장착비 포함 정가</b>
                   </div>

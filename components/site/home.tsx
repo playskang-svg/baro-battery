@@ -81,7 +81,6 @@ export function MotionRoot() {
           document.getElementById('form-card') || document.getElementById('sms-inquiry');
         if (formCard) {
           e.preventDefault();
-          e.stopPropagation();
           const vehicle = gotoLink.dataset.vehicle;
           const region = gotoLink.dataset.region;
           if (vehicle || region) {
@@ -111,7 +110,7 @@ export function MotionRoot() {
     menuBtn?.addEventListener('click', onMenuClick);
     navLinks?.addEventListener('click', onLinksClick);
     document.addEventListener('keydown', onDocKey);
-    document.addEventListener('click', onDocClick, true);
+    document.addEventListener('click', onDocClick);
 
     // 히어로 영상 재생
     const tryPlay = () => {
@@ -337,7 +336,7 @@ export function MotionRoot() {
       menuBtn?.removeEventListener('click', onMenuClick);
       navLinks?.removeEventListener('click', onLinksClick);
       document.removeEventListener('keydown', onDocKey);
-      document.removeEventListener('click', onDocClick, true);
+      document.removeEventListener('click', onDocClick);
       motionBtn?.removeEventListener('click', onMotionClick);
       if (hero && heroFloat) {
         hero.removeEventListener('pointermove', onHeroMove);

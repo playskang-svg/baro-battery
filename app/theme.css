@@ -129,7 +129,17 @@ ul, ol {
   list-style: none;
 }
 
-img, video, svg {
+img, video {
+  display: block;
+  max-width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+svg {
   display: block;
   max-width: 100%;
 }
