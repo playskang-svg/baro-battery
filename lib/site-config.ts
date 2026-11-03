@@ -14,3 +14,6 @@ export function contactHref(channel='inquiry',vehicle='',region=''){if(channel==
 
 // SMS opens a composer only; photos must be attached in the device messaging app.
 export function smsHref(body:string,userAgent='') { if(!siteConfig.phone)return ''; const separator=/iPhone|iPad|iPod/i.test(userAgent)?'&':'?'; return `sms:${siteConfig.phone}${separator}body=${encodeURIComponent(body)}`; }
+
+export function phoneHref() { return siteConfig.phone ? `tel:${siteConfig.phone}` : ''; }
+export function smsLinkHref() { return siteConfig.phone ? `sms:${siteConfig.phone}` : ''; }

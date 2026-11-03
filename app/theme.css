@@ -258,7 +258,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   display: block;
   position: relative;
   margin-top: 40px;
-  min-height: 60svh;
+  min-height: 220px;
   padding: 32px var(--margin);
   background: var(--accent);
   color: var(--accent-ink);
@@ -276,18 +276,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   background: inherit;
 }
 .call-band:hover, .call-band:focus-visible { background: var(--soot); color: #fff; outline: none; }
-.call-band .call-note { position: absolute; top: 36px; left: var(--margin); max-width: 30ch; font-size: var(--step-lead); line-height: 1.35; margin: 0; }
-.call-band .call-arrow { position: absolute; top: 32px; right: var(--margin); width: 48px; height: 48px; }
+.call-band .call-note { position: absolute; top: 28px; left: var(--margin); max-width: 42ch; font-size: var(--step-body); line-height: 1.45; margin: 0; }
+.call-band .call-arrow { position: absolute; top: 28px; right: var(--margin); width: 36px; height: 36px; }
 .call-band .call-word {
   position: absolute;
   left: var(--margin);
   right: var(--margin);
-  bottom: 12px;
+  bottom: 24px;
   margin: 0;
-  font-size: min(calc((100vw - 2 * var(--margin)) / 3.9), calc(60svh - 190px), 380px);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.05em;
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
   white-space: nowrap;
   text-align: center;
 }
@@ -305,18 +305,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .call-wrap::after { right: 15%; }
 
 /* ---------- 푸터: 블록으로 세운 마크 ---------- */
-.foot { background: var(--soot); color: #fff; padding: var(--section-pad) 0 36px; }
-.foot-mark { display: flex; gap: 4px; align-items: flex-end; height: 34svh; min-height: 220px; }
+.foot { background: var(--soot); color: #fff; padding: 48px 0 36px; }
+.foot-mark { display: flex; gap: 6px; align-items: flex-end; height: 96px; min-height: 80px; }
 .foot-block {
   flex: 1 1 0;
   display: grid;
   place-items: center;
-  border-radius: var(--radius);
+  border-radius: 14px;
   color: var(--soot);
-  font-size: min(12vw, 18svh);
-  font-weight: 700;
+  font-size: clamp(24px, 3.8vw, 38px);
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   overflow: hidden;
 }
 .foot-block:nth-child(1) { height: 100%; background: var(--accent); }
@@ -543,10 +543,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .faq-section { grid-template-columns: 1fr; gap: 32px; }
   .foot-links { grid-column: 1 / 13; grid-template-columns: 1fr 1fr; }
   .foot-contact { grid-column: 1 / 13; }
-  .call-band { min-height: 46svh; }
-  .call-band .call-note { font-size: var(--step-body); max-width: 26ch; }
-  .call-band .call-arrow { width: 32px; height: 32px; }
-  .call-band .call-word { bottom: 88px; font-size: min(calc((100vw - 2 * var(--margin)) / 3.9), calc(46svh - 220px)); }
+  .call-band { min-height: 180px; }
+  .call-band .call-note { font-size: var(--step-small); max-width: 32ch; top: 22px; }
+  .call-band .call-arrow { width: 28px; height: 28px; top: 22px; }
+  .call-band .call-word { bottom: 18px; font-size: clamp(28px, 6.5vw, 44px); }
 }
 @media (max-width: 639px) {
   .wrap { width: calc(100% - 2 * var(--margin)); }
@@ -555,8 +555,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .section-heading .text-link { margin-top: 20px; }
   .guide-grid, .guide-grid.two, .review-grid, .steps, .trust-grid, .vehicle-grid { grid-template-columns: 1fr; }
   .guide-card { padding: 26px 24px 22px; }
-  .foot-mark { height: 22svh; min-height: 150px; }
-  .foot-block { font-size: min(21vw, 16svh); border-radius: 18px; }
+  .foot-mark { height: 68px; min-height: 56px; }
+  .foot-block { font-size: clamp(18px, 5vw, 26px); border-radius: 10px; }
   .foot-bottom { flex-direction: column; align-items: flex-start; }
   .contact-dock .dock-label { display: none; }
   .contact-dock > a { flex: 1; justify-content: center; }
