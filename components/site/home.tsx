@@ -4,7 +4,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Link from '@/components/site/site-link';
-import { faqs, guides, operatingRegions, holdRegions, vehicles } from '@/lib/content';
+import { faqs, operatingRegions, holdRegions, vehicles } from '@/lib/content';
 
 export function MotionRoot() {
   const pathname = usePathname() || '/';
@@ -33,10 +33,12 @@ export function MotionRoot() {
     const chaptersEl = document.querySelector<HTMLElement>('.chapters');
     const stage = document.getElementById('stage');
     const laptopScrs = [...document.querySelectorAll<HTMLElement>('.laptop .scr')];
-    const phoneScrs = [...document.querySelectorAll<HTMLElement>('.phone .scr')];
+    const phoneScrs = [
+      ...document.querySelectorAll<HTMLElement>('.wing-mirror .scr, .phone .scr'),
+    ];
     const statsEl = document.querySelector<HTMLElement>('.stats');
     const laptop = document.querySelector<HTMLElement>('.laptop');
-    const phoneEl = document.querySelector<HTMLElement>('.phone');
+    const phoneEl = document.querySelector<HTMLElement>('.wing-mirror, .phone');
     const band = document.getElementById('band');
     const bandImg = document.getElementById('band-img');
     const ctImg = document.querySelector<HTMLElement>('.ct-media img');
@@ -49,7 +51,7 @@ export function MotionRoot() {
       if (!isHome) nav.classList.add('is-solid');
     }
 
-    // 모바일 메뉴 토글
+    // 모바일 메뉴 토글 및 폼 스크롤 이동
     const setMenu = (on: boolean) => {
       if (!nav || !menuBtn) return;
       nav.classList.toggle('is-open', on);
@@ -69,12 +71,47 @@ export function MotionRoot() {
       }
     };
     const onDocClick = (e: MouseEvent) => {
-      if (nav && !nav.contains(e.target as Node)) setMenu(false);
+      const target = e.target as HTMLElement | null;
+      if (nav && target && !nav.contains(target)) setMenu(false);
+      const gotoLink = target?.closest<HTMLAnchorElement>(
+        'a[data-goto-form], a[href="#form-card"], a[href="/#form-card"], a[href="#sms"]',
+      );
+      if (gotoLink) {
+        const formCard =
+          document.getElementById('form-card') || document.getElementById('sms-inquiry');
+        if (formCard) {
+          e.preventDefault();
+          e.stopPropagation();
+          const vehicle = gotoLink.dataset.vehicle;
+          const region = gotoLink.dataset.region;
+          if (vehicle || region) {
+            window.dispatchEvent(
+              new CustomEvent('batterycall:prefill', { detail: { vehicle, region } }),
+            );
+          }
+          formCard.scrollIntoView({
+            behavior: reduce ? 'auto' : 'smooth',
+            block: 'start',
+          });
+          formCard.classList.add('is-targeted');
+          window.setTimeout(() => formCard.classList.remove('is-targeted'), 1600);
+          window.setTimeout(() => {
+            const focusId =
+              vehicle === 'other'
+                ? 'inquiry-other-vehicle'
+                : vehicle
+                  ? 'inquiry-year'
+                  : 'inquiry-vehicle';
+            const input = document.getElementById(focusId) as HTMLElement | null;
+            input?.focus({ preventScroll: true });
+          }, 420);
+        }
+      }
     };
     menuBtn?.addEventListener('click', onMenuClick);
     navLinks?.addEventListener('click', onLinksClick);
     document.addEventListener('keydown', onDocKey);
-    document.addEventListener('click', onDocClick);
+    document.addEventListener('click', onDocClick, true);
 
     // 히어로 영상 재생
     const tryPlay = () => {
@@ -300,7 +337,7 @@ export function MotionRoot() {
       menuBtn?.removeEventListener('click', onMenuClick);
       navLinks?.removeEventListener('click', onLinksClick);
       document.removeEventListener('keydown', onDocKey);
-      document.removeEventListener('click', onDocClick);
+      document.removeEventListener('click', onDocClick, true);
       motionBtn?.removeEventListener('click', onMotionClick);
       if (hero && heroFloat) {
         hero.removeEventListener('pointermove', onHeroMove);
@@ -325,35 +362,32 @@ export function HideOnHome({ children }: { children: ReactNode }) {
 
 type ExplorerItem = {
   id: string;
-  cat: 'vehicle' | 'region' | 'guide';
+  cat: 'vehicle' | 'region';
   catLabel: string;
   badge: string;
   title: string;
   desc: string;
   href: string;
   urlText: string;
-  ctaHref: string;
   ctaLabel: string;
+  vehicleSlug?: string;
+  regionSlug?: string;
   img: string;
 };
 
 export function HomeExplorer() {
-  const [cat, setCat] = useState<'all' | 'vehicle' | 'region' | 'guide'>('all');
+  const [cat, setCat] = useState<'all' | 'vehicle' | 'region'>('all');
   const [query, setQuery] = useState('');
 
-  const reads = guides.filter((g) => g.status === 'published').slice(0, 6);
-  const readList = reads.length >= 3 ? reads : guides.slice(0, 3);
-  const imgs = [
-    '/images/batterycall_1.webp',
-    '/images/batterycall_2.webp',
-    '/images/batterycall_3.webp',
-    '/images/batterycall_4.webp',
-    '/media/terminal.webp',
+  const regionImgs = [
     '/media/tech.webp',
+    '/media/terminal.webp',
+    '/media/caller.webp',
+    '/media/warning.webp',
   ];
 
   const items: ExplorerItem[] = [
-    ...vehicles.map((v, i) => ({
+    ...vehicles.map((v) => ({
       id: `v-${v.slug}`,
       cat: 'vehicle' as const,
       catLabel: `차종별 안내 · ${v.type}`,
@@ -362,9 +396,9 @@ export function HomeExplorer() {
       desc: v.note,
       href: `/vehicles/${v.slug}`,
       urlText: `batterycall.kr/vehicles/${v.slug}`,
-      ctaHref: `/contact?vehicle=${v.slug}`,
       ctaLabel: '이 차종 문의',
-      img: imgs[i % imgs.length],
+      vehicleSlug: v.slug,
+      img: `/media/vehicles/${v.slug}.webp`,
     })),
     ...operatingRegions.map((r, i) => ({
       id: `r-${r.slug}`,
@@ -375,22 +409,9 @@ export function HomeExplorer() {
       desc: r.note,
       href: `/regions/${r.slug}`,
       urlText: `batterycall.kr/regions/${r.slug}`,
-      ctaHref: `/contact?region=${r.slug}`,
       ctaLabel: '이 지역 문의',
-      img: imgs[(i + 2) % imgs.length],
-    })),
-    ...readList.map((g, i) => ({
-      id: `g-${g.slug}`,
-      cat: 'guide' as const,
-      catLabel: `읽을거리 · ${g.tag}`,
-      badge: g.tag,
-      title: g.title,
-      desc: g.excerpt,
-      href: `/guides/${g.slug}`,
-      urlText: `batterycall.kr/guides/${g.slug}`,
-      ctaHref: `/guides/${g.slug}`,
-      ctaLabel: '글 읽기',
-      img: imgs[(i + 4) % imgs.length],
+      regionSlug: r.slug,
+      img: regionImgs[i % regionImgs.length],
     })),
   ];
 
@@ -407,7 +428,6 @@ export function HomeExplorer() {
     all: items.length,
     vehicle: vehicles.length,
     region: operatingRegions.length,
-    guide: readList.length,
   };
 
   return (
@@ -418,17 +438,17 @@ export function HomeExplorer() {
             <p className="eyebrow">
               <b>02</b>
               <span className="ln" />
-              <span>차종 · 지역 · 읽을거리 탐색</span>
+              <span>차종 · 지역 빠른 선택</span>
             </p>
             <h2 id="explore-title">
-              내 차종과 현재 위치,
+              내 차종과 현재 위치를 고르면
               <br />
-              궁금한 가이드를 바로 찾아보세요.
+              바로 문자로 접수됩니다.
             </h2>
           </div>
           <p className="lead">
-            차종별 배터리 확인 항목({vehicles.length}종), 운영 지역({operatingRegions.length}개 지역 운영),
-            그리고 교체 전 알아두면 좋은 읽을거리({readList.length}편)를 한곳에 모았습니다.
+            주요 차종별 배터리 확인 항목({vehicles.length}종)과 운영 지역({operatingRegions.length}개 지역 운영)을
+            골라 아래 체크 영역으로 바로 이동해 간편하게 문자를 보내세요.
           </p>
         </div>
 
@@ -442,8 +462,8 @@ export function HomeExplorer() {
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="차종·지역·키워드로 찾기 (예: 그랜저, 쏘렌토, 대구, 구미, 방전)"
-              aria-label="차종·지역·읽을거리 검색"
+              placeholder="차종·지역으로 찾기 (예: 그랜저, 아반떼, 쏘렌토, 대구, 구미)"
+              aria-label="차종·지역 검색"
             />
             {query ? (
               <button
@@ -473,7 +493,6 @@ export function HomeExplorer() {
               { key: 'all' as const, label: '전체', count: counts.all },
               { key: 'vehicle' as const, label: '차종별 안내', count: counts.vehicle },
               { key: 'region' as const, label: '지역별 안내', count: counts.region },
-              { key: 'guide' as const, label: '읽을거리', count: counts.guide },
             ].map((c) => (
               <button
                 key={c.key}
@@ -514,12 +533,6 @@ export function HomeExplorer() {
                     </span>
                   </span>
                 </span>
-                <span className="ph" aria-hidden="true">
-                  <span className="ph-in">
-                    <Image src={item.img} alt="" width={360} height={640} unoptimized />
-                    <span>{item.badge}</span>
-                  </span>
-                </span>
               </Link>
               <div className="card-body">
                 <span className="card-name">{item.catLabel}</span>
@@ -531,9 +544,15 @@ export function HomeExplorer() {
                   <Link className="lk" href={item.href}>
                     상세 안내 <span aria-hidden="true">↗</span>
                   </Link>
-                  <Link className="pill" href={item.ctaHref}>
+                  <a
+                    className="pill"
+                    href="#form-card"
+                    data-goto-form="true"
+                    data-vehicle={item.vehicleSlug}
+                    data-region={item.regionSlug}
+                  >
                     {item.ctaLabel}
-                  </Link>
+                  </a>
                 </div>
               </div>
             </article>
@@ -546,9 +565,14 @@ export function HomeExplorer() {
               </svg>
               <h3>찾으시는 차종이나 지역이 검색되지 않았어요</h3>
               <p>차종명을 직접 적어 보내 주시면 작업자가 규격과 출장 일정을 확인해 드립니다.</p>
-              <Link className="btn btn-primary" href="/contact?vehicle=other">
+              <a
+                className="btn btn-primary"
+                href="#form-card"
+                data-goto-form="true"
+                data-vehicle="other"
+              >
                 목록에 없는 차종·지역 직접 입력
-              </Link>
+              </a>
             </div>
           ) : (
             <aside className="card-cta is-wide" id="tpl-cta" style={{ gridColumn: 'span 2' }}>
@@ -559,12 +583,17 @@ export function HomeExplorer() {
                   차종명을 적어 보내 주시면 작업자가 규격을 확인합니다.{' '}
                   {holdRegions.map((r) => r.name).join('·')}은 파트너 준비 중입니다.
                 </p>
-                <Link className="btn btn-primary" href="/contact?vehicle=other">
+                <a
+                  className="btn btn-primary"
+                  href="#form-card"
+                  data-goto-form="true"
+                  data-vehicle="other"
+                >
                   <span>차종·지역 직접 입력하기</span>
                   <svg className="ic" viewBox="0 0 24 24" aria-hidden="true">
                     <use href="#i-arrow" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </aside>
           )}
@@ -572,7 +601,10 @@ export function HomeExplorer() {
 
         <p className="fine">
           {holdRegions.map((r) => r.name).join('·')}은 파트너 준비 중입니다. 목록에 없는 지역은{' '}
-          <Link href="/contact?region=other">지역을 직접 입력</Link>해 주세요.
+          <a href="#form-card" data-goto-form="true" data-vehicle="other">
+            지역을 직접 입력
+          </a>
+          해 주세요.
         </p>
       </div>
     </section>

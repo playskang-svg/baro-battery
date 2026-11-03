@@ -71,7 +71,6 @@ export function Header() {
 
 export function Footer() {
   const tel = phoneHref();
-  const sms = smsLinkHref();
   return (
     <>
       <footer className="foot">
@@ -124,15 +123,15 @@ export function Footer() {
                 전화
               </a>
             ) : null}
-            {sms ? (
-              <a className="btn btn-out" href={sms} data-track="dock" data-channel="sms">
-                문자
-              </a>
-            ) : (
-              <Link className="btn btn-primary" href="/contact">
-                문의 작성
-              </Link>
-            )}
+            <Link
+              className="btn btn-out"
+              href="/#form-card"
+              data-goto-form="true"
+              data-track="dock"
+              data-channel="sms"
+            >
+              문자
+            </Link>
           </div>
         </section>
       </HideOnHold>

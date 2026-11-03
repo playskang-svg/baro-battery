@@ -5,14 +5,12 @@ import { CallBand } from '@/components/site/shared';
 import { FaqCards, HomeExplorer, SymptomCalc } from '@/components/site/home';
 import {
   faqs,
-  guides,
-  holdRegions,
   operatingRegionLine,
   operatingRegions,
   serviceSteps,
   vehicles,
 } from '@/lib/content';
-import { phoneHref, siteConfig, smsLinkHref } from '@/lib/site-config';
+import { phoneHref, siteConfig } from '@/lib/site-config';
 import { pageMeta } from '@/lib/metadata';
 import './home.css';
 
@@ -69,7 +67,8 @@ const chaptersData = [
     ],
     ctaHref: '/vehicles',
     ctaLabel: '세단 차종별 안내 보기',
-    img: '/images/batterycall_1.webp',
+    img: '/media/vehicles/grandeur.webp',
+    mirrorImg: '/media/vehicles/k5.webp',
   },
   {
     no: '02',
@@ -83,7 +82,8 @@ const chaptersData = [
     ],
     ctaHref: '/vehicles/sorento',
     ctaLabel: 'SUV 배터리 가이드 보기',
-    img: '/images/batterycall_2.webp',
+    img: '/media/vehicles/sorento.webp',
+    mirrorImg: '/media/vehicles/sportage.webp',
   },
   {
     no: '03',
@@ -94,11 +94,12 @@ const chaptersData = [
     items: [
       { label: '제네시스 G80', href: '/vehicles/g80' },
       { label: 'BMW 5시리즈', href: '/vehicles/bmw-5' },
-      { label: '목록에 없는 차종', href: '/contact?vehicle=other' },
+      { label: '목록에 없는 차종', href: '/#form-card' },
     ],
     ctaHref: '/vehicles/bmw-5',
     ctaLabel: '제네시스·수입차 안내 보기',
-    img: '/media/terminal.webp',
+    img: '/media/vehicles/g80.webp',
+    mirrorImg: '/media/vehicles/bmw-5.webp',
   },
   {
     no: '04',
@@ -110,29 +111,33 @@ const chaptersData = [
     ctaHref: '/regions',
     ctaLabel: '지역별 출장 안내 보기',
     img: '/media/tech.webp',
+    mirrorImg: '/media/terminal.webp',
   },
 ];
 
 export default function Home() {
   const tel = phoneHref();
-  const sms = smsLinkHref();
-  const reads = guides.filter((g) => g.status === 'published').slice(0, 3);
-  const readList = reads.length >= 3 ? reads : guides.slice(0, 3);
+  const regionPhotos = [
+    '/media/tech.webp',
+    '/media/terminal.webp',
+    '/media/caller.webp',
+    '/media/warning.webp',
+  ];
 
   const marqueeItems = [
-    ...vehicles.map((v, i) => ({
+    ...vehicles.map((v) => ({
       tag: v.brand,
       title: `${v.brand} ${v.name}`,
       sub: v.note,
       href: `/vehicles/${v.slug}`,
-      img: `/images/batterycall_${(i % 4) + 1}.webp`,
+      img: `/media/vehicles/${v.slug}.webp`,
     })),
     ...operatingRegions.map((r, i) => ({
       tag: '운영 중',
       title: `${r.name} 출장 배터리`,
       sub: r.note,
       href: `/regions/${r.slug}`,
-      img: `/images/batterycall_${((i + 1) % 4) + 1}.webp`,
+      img: regionPhotos[i % regionPhotos.length],
     })),
   ];
 
@@ -199,23 +204,83 @@ export default function Home() {
         <div className="hero-mid" aria-hidden="true" />
 
         <div className="hero-float" id="hero-float" aria-hidden="true">
-          <div className="fo ph fo-ph1">
-            <div className="ph-in">
-              <Image src="/media/terminal.webp" alt="" width={400} height={700} unoptimized />
-              <span>1:1 정품 규격 확인</span>
+          <div className="hb-scene">
+            <div className="hb-cert-ribbon">
+              <span className="hb-dot" />
+              <span>정품 · 정가 인증업체</span>
             </div>
-          </div>
-          <div className="fo ph fo-ph2">
-            <div className="ph-in">
-              <Image src="/media/tech.webp" alt="" width={400} height={700} unoptimized />
-              <span>시동·충전전압 점검</span>
+
+            <div className="hb-battery">
+              <div className="hb-top">
+                <div className="hb-term hb-term-neg">
+                  <span>−</span>
+                </div>
+                <div className="hb-handle" />
+                <div className="hb-term hb-term-pos">
+                  <span>+</span>
+                  <i className="hb-spark" />
+                </div>
+              </div>
+
+              <div className="hb-body">
+                <div className="hb-head">
+                  <span className="hb-brand">BATTERYCALL · AGM</span>
+                  <span className="hb-seal">정품·정가 인증</span>
+                </div>
+
+                <div className="hb-meter">
+                  <div className="hb-volt">
+                    <strong>12.8V</strong>
+                    <small>FULL CHARGE · 신품 정품</small>
+                  </div>
+                  <div className="hb-bars">
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                  </div>
+                </div>
+
+                <div className="hb-specs">
+                  <div>
+                    <span>정품 인증</span>
+                    <b>100% 최신 생산 신품</b>
+                  </div>
+                  <div>
+                    <span>정가 안내</span>
+                    <b>출장·장착비 포함 정가</b>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="fo fo-chip">
-            <svg className="ic" viewBox="0 0 24 24">
-              <use href="#i-check" />
-            </svg>
-            <span>{operatingRegionLine} 출장 · 24시간 접수</span>
+
+            <div className="fo hb-badge hb-badge-1">
+              <svg className="ic" viewBox="0 0 24 24">
+                <use href="#i-check" />
+              </svg>
+              <div>
+                <b>100% 정품 신품 인증</b>
+                <span>차종별 1:1 규격 사전 확인</span>
+              </div>
+            </div>
+
+            <div className="fo hb-badge hb-badge-2">
+              <svg className="ic" viewBox="0 0 24 24">
+                <use href="#i-won" />
+              </svg>
+              <div>
+                <b>사전 확정 정가 인증업체</b>
+                <span>출동 전 총비용 투명 안내</span>
+              </div>
+            </div>
+
+            <div className="fo fo-chip">
+              <svg className="ic" viewBox="0 0 24 24">
+                <use href="#i-bolt" />
+              </svg>
+              <span>{operatingRegionLine} 출장 · 시동·전압 점검</span>
+            </div>
           </div>
         </div>
 
@@ -248,27 +313,31 @@ export default function Home() {
             </div>
 
             <div className="hero-cta" style={{ '--i': 3 } as React.CSSProperties}>
+              <a
+                className="btn btn-primary btn-glow"
+                href="#form-card"
+                data-goto-form="true"
+                data-track="hero"
+                data-channel="sms"
+              >
+                <span>간편문자보내기</span>
+                <svg className="ic" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg>
+              </a>
               {tel ? (
                 <a
-                  className="btn btn-primary"
+                  className="btn btn-glass"
                   href={tel}
                   data-track="hero"
                   data-channel="phone"
                 >
-                  <span>전화 상담</span>
                   <svg className="ic" viewBox="0 0 24 24" aria-hidden="true">
-                    <use href="#i-arrow" />
+                    <use href="#i-phone" />
                   </svg>
+                  <span>전화 상담</span>
                 </a>
               ) : null}
-              {sms ? (
-                <a className="btn btn-glass" href={sms} data-track="hero" data-channel="sms">
-                  문자 상담
-                </a>
-              ) : null}
-              <a className="btn btn-out" href="#sms">
-                문자 문구 만들기
-              </a>
             </div>
           </div>
 
@@ -408,15 +477,20 @@ export default function Home() {
                   </div>
                   <div className="laptop-base" />
                 </div>
-                <div className="phone">
-                  <div className="phone-glass">
-                    {chaptersData.map((ch, idx) => (
-                      <div key={ch.no} className={`scr scr-ui ${idx === 0 ? 'is-on' : ''}`}>
-                        <Image src={ch.img} alt="" width={400} height={700} unoptimized />
-                        <span className="scr-ui-badge">{ch.no}</span>
-                        <strong>{ch.name}</strong>
-                      </div>
-                    ))}
+                <div className="wing-mirror">
+                  <div className="wing-mirror-arm" aria-hidden="true" />
+                  <div className="wing-mirror-housing">
+                    <span className="wing-mirror-signal" aria-hidden="true" />
+                    <div className="wing-mirror-glass">
+                      {chaptersData.map((ch, idx) => (
+                        <div key={ch.no} className={`scr scr-ui ${idx === 0 ? 'is-on' : ''}`}>
+                          <Image src={ch.mirrorImg} alt="" width={640} height={420} unoptimized />
+                          <span className="wing-mirror-line" aria-hidden="true" />
+                          <span className="scr-ui-badge">{ch.no}</span>
+                          <strong>{ch.name}</strong>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -458,7 +532,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- 02 차종·지역·읽을거리 인터랙티브 탐색기 ---------- */}
+      {/* ---------- 02 차종·지역 인터랙티브 탐색기 ---------- */}
       <HomeExplorer />
 
       {/* ---------- 03 다크 곡선 밴드: 문자에서 시동까지 ---------- */}
@@ -507,9 +581,10 @@ export default function Home() {
                   <div className="plan-act">
                     <a
                       className={`btn ${idx === 1 ? 'btn-primary' : 'btn-out'}`}
-                      href="#sms"
+                      href="#form-card"
+                      data-goto-form="true"
                     >
-                      <span>{idx === 0 ? '문자 문구 작성하기' : idx === 1 ? '사전 확인 요청하기' : '출장 접수 바로가기'}</span>
+                      <span>{idx === 0 ? '지금 바로 문자 보내기' : idx === 1 ? '사전 확인 요청하기' : '출장 접수 바로가기'}</span>
                       <svg className="ic" viewBox="0 0 24 24" aria-hidden="true">
                         <use href="#i-arrow" />
                       </svg>
@@ -651,86 +726,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- 06 타이포그래피 인덱스 (차종·지역·읽을거리 전체 링크) ---------- */}
-      <section className="sec sites" id="index-sec" aria-label="차종·지역·읽을거리 전체 목록">
-        <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <p className="eyebrow">
-                <b>06</b>
-                <span className="ln" />
-                <span>전체 안내 바로가기</span>
-              </p>
-              <h2>차종별 · 지역별 · 읽을거리</h2>
-            </div>
-            <p className="lead">
-              원하시는 차종이나 운영 지역, 배터리 점검 가이드를 선택해 자세한 안내를 확인하세요.
-            </p>
-          </div>
-
-          <div className="idx">
-            <div className="idx-row">
-              <p className="idx-k">
-                차종별 안내 <span>{vehicles.length}종</span>
-              </p>
-              <div className="idx-links">
-                {vehicles.map((v) => (
-                  <Link key={v.slug} href={`/vehicles/${v.slug}`}>
-                    {v.brand} {v.name} <span className="arr" aria-hidden="true">↗</span>
-                  </Link>
-                ))}
-                <Link href="/contact?vehicle=other">
-                  목록에 없는 차종 직접 입력 <span className="arr" aria-hidden="true">↗</span>
-                </Link>
-              </div>
-            </div>
-
-            <div className="idx-row">
-              <p className="idx-k">
-                지역별 안내 <span>{operatingRegions.length}개 지역 운영</span>
-              </p>
-              <div className="idx-links">
-                {operatingRegions.map((r) => (
-                  <Link key={r.slug} href={`/regions/${r.slug}`}>
-                    {r.name} 출장 배터리 <span className="arr" aria-hidden="true">↗</span>
-                  </Link>
-                ))}
-                <Link href="/contact?region=other">
-                  다른 지역 직접 입력 <span className="arr" aria-hidden="true">↗</span>
-                </Link>
-              </div>
-            </div>
-
-            <div className="idx-row">
-              <p className="idx-k">
-                파트너 준비 지역 <span>{holdRegions.length}곳</span>
-              </p>
-              <div className="idx-links">
-                {holdRegions.map((r) => (
-                  <span key={r.slug} className="nolink">
-                    {r.name} <small>파트너 준비 중</small>
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="idx-row">
-              <p className="idx-k">
-                읽을거리 <span>{readList.length}편</span>
-              </p>
-              <div className="idx-links">
-                {readList.map((g) => (
-                  <Link key={g.slug} href={`/guides/${g.slug}`}>
-                    {g.title} <span className="arr" aria-hidden="true">↗</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- 07 자주 묻는 질문 (2단 아코디언) ---------- */}
+      {/* ---------- 06 자주 묻는 질문 (2단 아코디언) ---------- */}
       <section className="sec faq" id="faq" aria-label="자주 묻는 질문">
         <div className="wrap">
           <FaqCards title="자주 묻는 질문" />
@@ -745,13 +741,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- 08 다크 곡선 상담 섹션: 문자 한 통이면 됩니다 ---------- */}
+      {/* ---------- 07 다크 곡선 상담 섹션: 문자 한 통이면 됩니다 ---------- */}
       <section className="sec dark contact" id="sms" aria-labelledby="sms-title">
         <div className="wrap">
           <div className="sec-head">
             <div>
               <p className="eyebrow">
-                <b>08</b>
+                <b>07</b>
                 <span className="ln" />
                 <span>24시간 문자 · 전화 접수</span>
               </p>
