@@ -257,3 +257,4 @@ export function Battery3D() {
     </div>
   );
 }
+

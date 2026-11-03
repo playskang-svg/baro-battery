@@ -1,10 +1,9 @@
 import Link from '@/components/site/site-link';
-import Image from 'next/image';
 import { ArrowUpRight, MessageCircle, ClipboardList } from 'lucide-react';
 import { MobileMenu } from './interactive';
 import { FaqCards, HideOnHome } from './home';
 import { categories, serviceSteps, operatingRegionLine, isHoldRegion, type Guide } from '@/lib/content';
-import { contactHref, siteConfig } from '@/lib/site-config';
+import { contactHref, siteConfig, phoneHref, smsLinkHref } from '@/lib/site-config';
 import { DockContacts, HideOnHold } from './cta';
 
 export function Header() {

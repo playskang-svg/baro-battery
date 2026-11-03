@@ -121,7 +121,6 @@ export type Scene = { key: string; label: string; src: string; alt: string; capt
 
 export function Showcase({ scenes, title, text }: { scenes: Scene[]; title: string; text: string }) {
   const [active, setActive] = useState(0);
-  const scene = scenes[active];
   const tel = phoneHref();
   const sms = smsLinkHref();
   return (
