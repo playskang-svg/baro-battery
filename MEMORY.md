@@ -27,3 +27,7 @@
   - 중앙 `adbles-agents` `fleet/fleet.json` batterycall `pipeline.publish=false` (sync 시 되살아나지 않게).
   - agents-daily(수집·상태 갱신)·agents-linkfix(링크 점검·수정)는 계속 돎.
   - 재개: fleet.json `publish=true` → `node scripts/deploy-fleet.mjs sync --site batterycall`.
+- **2026-11-03 함대 자동화 전체 정지**: 사용자 지시("제대로 안 되니 전부 꺼"). 자동발행은 최근 14일 발행 0건·산출물 없음 상태였음.
+  - `agents-daily`(수집)·`agents-linkfix`(링크 점검·수정) 예약 실행도 제거. 3개 워크플로 모두 수동 실행만 남음.
+  - 중앙 fleet.json batterycall `pipeline` seo·publish·linkfix 전부 false.
+  - 배포(`deploy.yml`, main push 시)는 유지 — 파트너 발행 경로.

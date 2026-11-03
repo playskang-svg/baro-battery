@@ -8,8 +8,8 @@
 name: agents-linkfix (배터리콜)
 
 on:
-  schedule:
-    - cron: "40 22 * * *"
+  # 2026-11-03 함대 자동화 전체 정지(사용자 지시) — 예약 실행 제거, 수동 실행만 남김.
+  # 다시 켜려면 adbles-agents fleet/fleet.json 에서 batterycall pipeline 을 true 로 두고 sync.
   workflow_dispatch:
     inputs:
       scan_only:
