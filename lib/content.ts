@@ -1,3 +1,5 @@
+import { isRegionPublished } from './region-registry';
+
 export const categories = [
   {
     slug: 'vehicles',
@@ -111,7 +113,7 @@ export type Region = {
     faqs: { q: string; a: string }[];
   };
 };
-export const regions: Region[] = [
+const regionPages: Region[] = [
   {
     slug: 'daegu',
     name: '대구',
@@ -1487,6 +1489,10 @@ export interface RegionKeywordData {
   faqs: { q: string; a: string }[];
 }
 
+// 라우트·내부링크·사이트맵에 쓰이는 지역 목록: 보류(hold) 권역 + 레지스트리 published=true 지역만
+export const regions: Region[] = regionPages.filter(
+  (r) => r.hold || isRegionPublished(r.slug),
+);
 export const holdRegions = regions.filter((r) => r.hold);
 export const operatingRegions = regions.filter((r) => !r.hold);
 export const isHoldRegion = (slug?: string) =>

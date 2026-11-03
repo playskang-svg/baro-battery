@@ -17,8 +17,8 @@ import {
 } from 'lucide-react';
 import { MobileMenu, FAQ } from './interactive';
 import { categories, serviceSteps, type Guide } from '@/lib/content';
-import { contactHref, phoneHref, smsLinkHref, siteConfig } from '@/lib/site-config';
-import { CtaPair, HideOnHold } from './cta';
+import { contactHref, siteConfig } from '@/lib/site-config';
+import { CtaPair, DockContacts, HideOnHold } from './cta';
 import { isHoldRegion } from '@/lib/content';
 export function Header() {
   return (
@@ -86,18 +86,7 @@ export function Footer() {
               출장 배터리 교체<small>차종·연식 입력 후 문의 내용 작성</small>
             </span>
           </div>
-          {siteConfig.phone ? (
-            <>
-              <a href={phoneHref()} data-track="dock" data-channel="phone">
-                <Phone size={18} />
-                <span>전화 상담</span>
-              </a>
-              <a href={smsLinkHref()} data-track="dock" data-channel="sms">
-                <MessageCircle size={18} />
-                <span>문자 상담</span>
-              </a>
-            </>
-          ) : null}
+          <DockContacts />
           {siteConfig.kakaoUrl ? (
             <Link href={contactHref('kakao')}>
               <MessageCircle size={18} />

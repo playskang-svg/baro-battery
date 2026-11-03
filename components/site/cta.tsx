@@ -4,24 +4,53 @@ import { useEffect, type ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { Phone, MessageCircle } from 'lucide-react';
 import { isHoldRegion } from '@/lib/content';
-import { phoneHref, smsLinkHref } from '@/lib/site-config';
+import { regionContact } from '@/lib/region-registry';
 
-// 전화·문자 버튼을 같은 크기로 나란히 (전화가 앞). 번호는 site-config 단일 출처.
+// 현재 경로가 /regions/{slug}이면 그 지역의 slug (그 외 null)
+export function useRegionSlug() {
+  const pathname = usePathname() || '';
+  const m = pathname.match(/^\/regions\/([^/]+)/);
+  return m ? decodeURIComponent(m[1]) : null;
+}
+
+// 전화·문자 버튼을 같은 크기로 나란히 (전화가 앞). 번호는 지역 레지스트리(없으면 site-config 공통 번호).
+// GA4 위치 꼬리표(data-track)에는 지역 페이지일 때 지역 slug가 붙는다.
 export function CtaPair({ position, className = '' }: { position: string; className?: string }) {
-  const tel = phoneHref();
-  const sms = smsLinkHref();
-  if (!tel) return null;
+  const slug = useRegionSlug();
+  const c = regionContact(slug ?? undefined);
+  if (!c.tel) return null;
+  const track = slug && !position.endsWith(`_${slug}`) ? `${position}_${slug}` : position;
   return (
     <div className={`cta-pair ${className}`.trim()}>
-      <a href={tel} data-track={position} data-channel="phone">
+      <a href={c.tel} data-track={track} data-channel="phone">
         <Phone size={18} aria-hidden="true" />
         <span>전화 상담</span>
       </a>
-      <a href={sms} data-track={position} data-channel="sms">
+      <a href={c.smsHref} data-track={track} data-channel="sms">
         <MessageCircle size={18} aria-hidden="true" />
         <span>문자 상담</span>
       </a>
     </div>
+  );
+}
+
+// 하단 독의 전화·문자 버튼 (독 레이아웃상 두 링크가 독의 직접 자식이어야 함)
+export function DockContacts() {
+  const slug = useRegionSlug();
+  const c = regionContact(slug ?? undefined);
+  if (!c.tel) return null;
+  const track = slug ? `dock_${slug}` : 'dock';
+  return (
+    <>
+      <a href={c.tel} data-track={track} data-channel="phone">
+        <Phone size={18} />
+        <span>전화 상담</span>
+      </a>
+      <a href={c.smsHref} data-track={track} data-channel="sms">
+        <MessageCircle size={18} />
+        <span>문자 상담</span>
+      </a>
+    </>
   );
 }
 
