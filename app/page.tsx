@@ -15,52 +15,6 @@ const scenes = [
   { key: 'product', label: '제품', src: '/images/batterycall_4.webp', alt: '교체에 쓰는 자동차 배터리 제품의 윗면', caption: '차종 규격에 맞춘 제품을 씁니다.' },
 ];
 
-// 흩어진 조각 → 한 줄의 문자 → 정돈된 교체. 같은 모양(작은 배터리 블록) 144개로 그린다.
-function rand(seed: number) {
-  let s = seed;
-  return () => {
-    s = (s * 1664525 + 1013904223) % 4294967296;
-    return s / 4294967296;
-  };
-}
-function flowCells(vertical: boolean) {
-  const r = rand(20261103);
-  const cells: { x: number; y: number; c: string }[] = [];
-  const W = vertical ? 600 : 1800;
-  const H = vertical ? 1000 : 400;
-  const size = vertical ? 14 : 12;
-  for (let i = 0; i < 48; i++) {
-    const t = r();
-    const u = r();
-    cells.push(vertical ? { x: 20 + t * (W - 60), y: 20 + u * (H / 3 - 60), c: i % 2 ? '#8f8f8f' : '#5e5e5e' } : { x: 20 + t * (W / 3 - 60), y: 20 + u * (H - 60), c: i % 2 ? '#8f8f8f' : '#5e5e5e' });
-  }
-  for (let i = 0; i < 48; i++) {
-    const row = i % 3;
-    const col = Math.floor(i / 3);
-    cells.push(vertical ? { x: W / 2 - 24 + row * 18, y: H / 3 + 40 + col * 18, c: '#ffffff' } : { x: W / 3 + 60 + col * 18, y: H / 2 - 18 + row * 16, c: '#ffffff' });
-  }
-  for (let i = 0; i < 48; i++) {
-    const row = Math.floor(i / 8);
-    const col = i % 8;
-    cells.push(vertical ? { x: 40 + col * 68, y: (H * 2) / 3 + 40 + row * 46, c: '#dafa9c' } : { x: (W * 2) / 3 + 60 + col * 62, y: 40 + row * 56, c: '#dafa9c' });
-  }
-  return { cells, W, H, size };
-}
-function FlowDiagram({ vertical = false }: { vertical?: boolean }) {
-  const { cells, W, H, size } = flowCells(vertical);
-  return (
-    <svg className={`h-flow-svg${vertical ? ' phone' : ''}`} viewBox={`0 0 ${W} ${H}`} aria-hidden="true" focusable="false">
-      {cells.map((c, i) => (
-        <g key={i} transform={`translate(${c.x.toFixed(1)} ${c.y.toFixed(1)})`} fill={c.c}>
-          <rect x="0" y={size * 0.25} width={size} height={size * 0.75} rx={size * 0.14} />
-          <rect x={size * 0.12} y="0" width={size * 0.22} height={size * 0.3} rx={size * 0.06} />
-          <rect x={size * 0.66} y="0" width={size * 0.22} height={size * 0.3} rx={size * 0.06} />
-        </g>
-      ))}
-    </svg>
-  );
-}
-
 const proofTiles = [
   { big: '출장 전 차량 확인', small: '보내 주신 차종·연식·사진으로 먼저 확인합니다.' },
   { big: '총비용 사전 안내', small: '제품·출장·장착을 포함한 금액을 상담에서 알려 드립니다.' },
@@ -213,18 +167,17 @@ export default function Home() {
             <h2 id="flow-title">문자에서 시동까지</h2>
             <p>흩어진 걱정이 문자 한 줄로 모이고, 정돈된 교체로 끝납니다. 세 단계면 됩니다.</p>
           </div>
-          <div className="h-flow-body">
-            <FlowDiagram />
-            <FlowDiagram vertical />
-            <ol className="h-flow-cols" data-reveal>
-              {serviceSteps.map((s) => (
-                <li key={s.title}>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
+          <ol className="h-flow-steps" data-reveal>
+            {serviceSteps.map((s, idx) => (
+              <li key={s.title} className="h-flow-step-card">
+                <div className="h-flow-step-badge">
+                  <span>STEP 0{idx + 1}</span>
+                </div>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
