@@ -39,3 +39,11 @@ next-env.d.ts
 /work/
 
 *.tsbuildinfo
+
+# local design-check artifacts
+.taste-skill/
+.taste-skill-*.log
+.taste-lint.log
+.build.log
+.preview.log
+.npm-ci.log

@@ -31,3 +31,10 @@
   - `agents-daily`(수집)·`agents-linkfix`(링크 점검·수정) 예약 실행도 제거. 3개 워크플로 모두 수동 실행만 남음.
   - 중앙 fleet.json batterycall `pipeline` seo·publish·linkfix 전부 false.
   - 배포(`deploy.yml`, main push 시)는 유지 — 파트너 발행 경로.
+
+## 2026-11-03 디자인 업그레이드 (Claude, 강석기)
+- 방향: 배터리 블록(몸통+단자) 모티프 하나, 검정/흰색/라임(#dafa9c) 팔레트, Pretendard Variable 동적 서브셋 self-host(`app/fonts.css`, `public/fonts/pretendard/`). 기존 `public/fonts/pretendard.woff2`는 109바이트 오류 파일이라 삭제.
+- 홈 전면 교체: `app/page.tsx`, `app/home.css`, `components/site/home.tsx`(MotionRoot·HeroClip·Showcase·FaqCards·HideOnHome). 공용: `app/theme.css`(globals.css 뒤에 읽힘), `components/site/shared.tsx`(헤더·블록 푸터·CallBand·Steps·Trust·GuideCard). 삭제: visual-refresh.css, footer.css, home-experience.tsx, ui/accordion.tsx.
+- 서브페이지: 구조 유지, 눈썹 라벨(PageIntro/SectionHeading `eyebrow` prop 제거)·01/02 번호·얇은 선·테두리 박스·그라데이션 제거. 전화번호·hold 지역·GA4 data-track 로직은 그대로.
+- 미디어 `public/media/`: hero.mp4(Seedance 2.5, 8초 720p), hero-poster.webp, caller/terminal/warning/tech.webp(Nano Banana Pro). 원본은 `C:/Users/sgk76/ego/batterycall-media-20261103/out/`, 변환은 `node scripts/site-media.mjs <원본 폴더>`.
+- 로컬 확인: `npm run build` 뒤 `npx wrangler dev --config dist/server/wrangler.json --port 8787`. dist를 지우기 전에 wrangler dev를 끈다.

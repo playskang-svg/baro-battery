@@ -1,7 +1,7 @@
 import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
 import { guides, categories } from '@/lib/content';
-import { Crumb, BottomCTA, GuideCard } from '@/components/site/shared';
+import { Crumb, BottomCTA, GuideCard, SitePhoto } from '@/components/site/shared';
 import { ArrowUpRight, Check, BookOpen } from 'lucide-react';
 import { contactHref } from '@/lib/site-config';
 import { pageMeta } from '@/lib/metadata';
@@ -40,10 +40,6 @@ export default async function Page({
         />
         <div className="article-layout">
           <article className="article">
-            <span className="tag">
-              {g.tag}
-              <span>{published ? '발행 콘텐츠' : '콘텐츠 예시'}</span>
-            </span>
             <h1>{g.title}</h1>
             <p className="article-lead">{g.excerpt}</p>
             <div className="article-byline">
@@ -54,27 +50,26 @@ export default async function Page({
                   : '상세 포스팅 템플릿'}
               </span>
             </div>
+            <p className="article-tag">{g.tag} · {published ? '발행 콘텐츠' : '콘텐츠 예시'}</p>
             <div className="key-takeaway">
               <span>먼저 알아두세요</span>
               <p>{g.sections[0].body}</p>
             </div>
+            {g.sections.some((s) => s.image) ? null : <SitePhoto name="terminal" caption="배터리 교체 작업 장면 (연출 사진)" />}
             <div className="article-mobile-toc">
               <h2>이 글의 순서</h2>
               {g.sections.map((s, i) => (
                 <Link key={s.title} href={`#part-${i}`}>
-                  {i + 1}. {s.title}
+                  {i + 1}. {s.title.replace(/^\d+\.\s*/, '')}
                 </Link>
               ))}
             </div>
             {g.sections.map((s, i) => (
               <section
                 id={`part-${i}`}
-                className="article-section"
+                className="article-section" data-reveal
                 key={s.title}
               >
-                <span className="article-number">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
                 <h2>{s.title}</h2>
                 {s.highlights?.length ? (
                   <div className="section-highlights" aria-label="세대 요약 정보">
@@ -109,7 +104,7 @@ export default async function Page({
             ))}
             {g.sources?.length ? (
               <section
-                className="article-section"
+                className="article-section" data-reveal
                 aria-labelledby="sources-title"
               >
                 <h2 id="sources-title">확인한 공식 자료</h2>
@@ -164,11 +159,10 @@ export default async function Page({
           </article>
           <aside className="article-sidebar">
             <div className="toc">
-              <span className="eyebrow">IN THIS GUIDE</span>
               <h2>이 글의 순서</h2>
               {g.sections.map((s, i) => (
                 <Link key={s.title} href={`#part-${i}`}>
-                  <span>{String(i + 1).padStart(2, '0')}</span>
+                  <span className="bullet" aria-hidden="true" />
                   {s.title}
                 </Link>
               ))}

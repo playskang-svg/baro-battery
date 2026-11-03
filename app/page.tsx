@@ -1,109 +1,282 @@
-'use client';
-
-import Link from '@/components/site/site-link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import {
-  ArrowUpRight,
-  BatteryCharging,
-  BookOpen,
-  CarFront,
-  Check,
-  ChevronLeft,
-  ChevronRight,
-  CircleCheck,
-  MapPin,
-  Newspaper,
-  ReceiptText,
-  ShieldCheck,
-} from 'lucide-react';
-import { VehicleExplorer, RegionExplorer } from '@/components/site/interactive';
-import { InquiryJourney } from '@/components/site/home-experience';
-import {
-  BottomCTA,
-  FAQSection,
-  GuideCard,
-  ReviewSection,
-  SectionHeading,
-  Steps,
-  Trust,
-} from '@/components/site/shared';
-import { guides } from '@/lib/content';
+import Link from '@/components/site/site-link';
+import { ContactForm } from '@/components/site/interactive';
+import { CallBand } from '@/components/site/shared';
+import { FaqCards, HeroClip, Showcase } from '@/components/site/home';
+import { guides, operatingRegionLine, operatingRegions, holdRegions, serviceSteps, vehicles } from '@/lib/content';
+import { phoneHref, smsLinkHref } from '@/lib/site-config';
+import './home.css';
 
-const slides = [
-  { src: '/images/batterycall_1.webp', alt: '자동차 배터리 교체 작업 현장', title: '다시 출발할 준비', text: '배터리 점검부터 교체 안내까지' },
-  { src: '/images/batterycall_2.webp', alt: '배터리 교체 작업 장면', title: '빠르게 확인하고 시작', text: '차량 상태에 맞춘 배터리 상담' },
-  { src: '/images/batterycall_3.webp', alt: '엔진룸 배터리 점검', title: '차종에 맞게 정확하게', text: '차량 정보와 증상을 먼저 확인' },
-  { src: '/images/batterycall_4.webp', alt: '출장 배터리 교체 서비스 현장', title: '멈춘 일상에 다시 시동을', text: '내 차가 있는 곳에서 시작하세요' },
+// 현장 사진 네 장: 배터리콜이 직접 찍은 작업 사진
+const scenes = [
+  { key: 'arrive', label: '출동', src: '/images/batterycall_1.webp', alt: '출장 교체를 위해 도착한 배터리콜 작업 차량', caption: '작업 차량이 차가 선 자리로 갑니다.' },
+  { key: 'remove', label: '탈거', src: '/images/batterycall_2.webp', alt: '장갑을 낀 손으로 기존 배터리를 떼어 내는 장면', caption: '기존 배터리를 떼어 냅니다.' },
+  { key: 'swap', label: '교체', src: '/images/batterycall_3.webp', alt: '떼어 낸 배터리를 바닥에 내려놓고 새 배터리를 준비하는 장면', caption: '규격에 맞는 새 배터리로 바꿉니다.' },
+  { key: 'product', label: '제품', src: '/images/batterycall_4.webp', alt: '교체에 쓰는 자동차 배터리 제품의 윗면', caption: '차종 규격에 맞춘 제품을 씁니다.' },
 ];
 
-function HeroCarousel() {
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    if (paused) return;
-    const timer = window.setInterval(() => setActive((current) => (current + 1) % slides.length), 5000);
-    return () => window.clearInterval(timer);
-  }, [paused]);
-
-  const current = slides[active];
-
+// 흩어진 조각 → 한 줄의 문자 → 정돈된 교체. 같은 모양(작은 배터리 블록) 144개로 그린다.
+function rand(seed: number) {
+  let s = seed;
+  return () => {
+    s = (s * 1664525 + 1013904223) % 4294967296;
+    return s / 4294967296;
+  };
+}
+function flowCells(vertical: boolean) {
+  const r = rand(20261103);
+  const cells: { x: number; y: number; c: string }[] = [];
+  const W = vertical ? 600 : 1800;
+  const H = vertical ? 1000 : 400;
+  const size = vertical ? 14 : 12;
+  for (let i = 0; i < 48; i++) {
+    const t = r();
+    const u = r();
+    cells.push(vertical ? { x: 20 + t * (W - 60), y: 20 + u * (H / 3 - 60), c: i % 2 ? '#8f8f8f' : '#5e5e5e' } : { x: 20 + t * (W / 3 - 60), y: 20 + u * (H - 60), c: i % 2 ? '#8f8f8f' : '#5e5e5e' });
+  }
+  for (let i = 0; i < 48; i++) {
+    const row = i % 3;
+    const col = Math.floor(i / 3);
+    cells.push(vertical ? { x: W / 2 - 24 + row * 18, y: H / 3 + 40 + col * 18, c: '#ffffff' } : { x: W / 3 + 60 + col * 18, y: H / 2 - 18 + row * 16, c: '#ffffff' });
+  }
+  for (let i = 0; i < 48; i++) {
+    const row = Math.floor(i / 8);
+    const col = i % 8;
+    cells.push(vertical ? { x: 40 + col * 68, y: (H * 2) / 3 + 40 + row * 46, c: '#dafa9c' } : { x: (W * 2) / 3 + 60 + col * 62, y: 40 + row * 56, c: '#dafa9c' });
+  }
+  return { cells, W, H, size };
+}
+function FlowDiagram({ vertical = false }: { vertical?: boolean }) {
+  const { cells, W, H, size } = flowCells(vertical);
   return (
-    <div className="hero-visual hero-carousel" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocus={() => setPaused(true)} onBlur={() => setPaused(false)}>
-      <Image key={current.src} className="hero-carousel-image" unoptimized src={current.src} alt={current.alt} width={1536} height={1024} priority />
-      <div className="hero-carousel-shade" aria-hidden="true" />
-      <div className="hero-carousel-controls" aria-label="메인 이미지 슬라이드 제어">
-        <button type="button" aria-label="이전 이미지" onClick={() => setActive((current) => (current - 1 + slides.length) % slides.length)}><ChevronLeft size={18} /></button>
-        <div className="hero-carousel-dots">
-          {slides.map((slide, index) => <button key={slide.src} type="button" className={index === active ? 'is-active' : ''} onClick={() => setActive(index)} aria-label={`${index + 1}번 이미지 보기`} aria-current={index === active ? 'true' : undefined} />)}
-        </div>
-        <button type="button" aria-label="다음 이미지" onClick={() => setActive((current) => (current + 1) % slides.length)}><ChevronRight size={18} /></button>
-      </div>
-      <div className="image-label">
-        <BatteryCharging aria-hidden="true" />
-        <span>{current.title}<small>{current.text}</small></span>
-        <ArrowUpRight size={19} aria-hidden="true" />
-      </div>
-    </div>
+    <svg className={`h-flow-svg${vertical ? ' phone' : ''}`} viewBox={`0 0 ${W} ${H}`} aria-hidden="true" focusable="false">
+      {cells.map((c, i) => (
+        <g key={i} transform={`translate(${c.x.toFixed(1)} ${c.y.toFixed(1)})`} fill={c.c}>
+          <rect x="0" y={size * 0.25} width={size} height={size * 0.75} rx={size * 0.14} />
+          <rect x={size * 0.12} y="0" width={size * 0.22} height={size * 0.3} rx={size * 0.06} />
+          <rect x={size * 0.66} y="0" width={size * 0.22} height={size * 0.3} rx={size * 0.06} />
+        </g>
+      ))}
+    </svg>
   );
 }
 
-const shortcuts = [
-  { href: '/vehicles', icon: CarFront, title: '차종별 찾기', text: '내 차에 맞는 교체 정보' },
-  { href: '/regions', icon: MapPin, title: '지역별 찾기', text: '내 동네 출장 안내' },
-  { href: '/battery-info', icon: BookOpen, title: '배터리/차량 정보', text: '방전·차종·교체비용 포스팅' },
-  { href: '/service', icon: ReceiptText, title: '교체 안내 · 비용', text: '과정과 포함 항목 확인' },
-  { href: '/battery-info/blog', icon: Newspaper, title: '블로그', text: '관리 팁과 현장 이야기' },
+const proofTiles = [
+  { big: '출장 전 차량 확인', small: '보내 주신 차종·연식·사진으로 먼저 확인합니다.' },
+  { big: '총비용 사전 안내', small: '제품·출장·장착을 포함한 금액을 상담에서 알려 드립니다.' },
+  { big: '교체 후 시동 확인', small: '작업 뒤 시동 상태와 교체 내역을 함께 확인합니다.' },
+  { big: '24시간 접수', small: '상담과 접수는 24시간, 방문 시간은 접수 뒤 안내합니다.' },
+  { big: operatingRegionLine, small: '운영 지역. 수도권은 파트너 준비 중입니다.' },
 ];
 
 export default function Home() {
+  const tel = phoneHref();
+  const sms = smsLinkHref();
+  const reads = guides.filter((g) => g.status === 'published').slice(0, 3);
+  const readList = reads.length >= 3 ? reads : guides.slice(0, 3);
   return (
-    <main id="main" className="home-v2">
-      <section className="hero wrap">
-        <div className="hero-copy">
-          <span className="eyebrow">BATTERY CARE, WHERE YOU ARE</span>
-          <h1>출장 배터리 교체</h1>
-          <p className="hero-tagline">멈춘 일상에,<br />다시 <span>시동을.</span></p>
-          <p className="hero-description">갑작스러운 방전부터 미리 준비하는 교체까지.<br />차종과 현재 상황을 먼저 정리해 보세요.</p>
-          <div className="hero-actions"><Link className="btn lime" href="#quick-inquiry">상황 선택하고 시작하기 <ArrowUpRight size={20} /></Link><Link className="hero-text-link" href="/service">교체 과정 먼저 보기</Link></div>
-          <div className="hero-assurances" aria-label="서비스 이용 전 안내"><span><Check aria-hidden="true" />예약·결제 없이 정보부터 확인</span><span><Check aria-hidden="true" />차종·연식만으로 시작</span></div>
+    <main id="main">
+
+      <section className="h-hero" aria-labelledby="hero-title">
+        <div className="wrap">
+          <div className="h-hero-copy">
+            <h1 id="hero-title" className="lines">
+              <span className="line"><span data-line style={{ '--i': 0 } as React.CSSProperties}>출장 배터리 교체,</span></span>
+              <span className="line"><span data-line style={{ '--i': 1 } as React.CSSProperties}>차가 선 자리로.</span></span>
+            </h1>
+            <p className="h-hero-lead rise" style={{ '--i': 0 } as React.CSSProperties}>
+              시동이 안 걸리는 그 자리로 기사가 찾아가 새 배터리로 바꿔 드립니다. 차종과 연식만 알려 주세요.
+            </p>
+            <div className="h-hero-actions rise" style={{ '--i': 1 } as React.CSSProperties}>
+              {tel ? (
+                <a className="cta" href={tel} data-track="hero" data-channel="phone">
+                  전화 상담
+                </a>
+              ) : null}
+              {sms ? (
+                <a className="cta dark" href={sms} data-track="hero" data-channel="sms">
+                  문자 상담
+                </a>
+              ) : (
+                <a className="cta dark" href="#sms">
+                  문자 문구 만들기
+                </a>
+              )}
+            </div>
+            <p className="h-hero-facts rise" style={{ '--i': 2 } as React.CSSProperties}>
+              {operatingRegionLine} 출장 · 24시간 접수
+            </p>
+          </div>
         </div>
-        <HeroCarousel />
+        <div className="h-cell" aria-hidden="true">
+          <span className="h-cell-post" />
+          <span className="h-cell-post" />
+          <div className="h-cell-body">
+            <HeroClip src="/media/hero.mp4" poster="/media/hero-poster.webp" />
+            <span className="h-cell-note">연출 영상</span>
+          </div>
+        </div>
       </section>
-      <section className="wrap service-overview" aria-label="출장 교체 상담 안내">
-        <div className="overview-lead"><ShieldCheck aria-hidden="true" /><span><strong>복잡한 규격은 작업자와 확인해요.</strong><small>차량 정보와 증상을 먼저 남기면 됩니다.</small></span></div>
-        <div className="overview-item"><b>01</b><span>현재 상황<br /><strong>한 가지 선택</strong></span></div>
-        <div className="overview-item"><b>02</b><span>차종·연식<br /><strong>간단히 작성</strong></span></div>
-        <div className="overview-item"><b>03</b><span>문의 내용<br /><strong>직접 확인</strong></span></div>
+
+      <section id="sms" className="h-sms" aria-labelledby="sms-title">
+        <div className="wrap">
+          <div className="h-sms-copy" data-reveal>
+            <h2 id="sms-title">문자 한 통이면 됩니다</h2>
+            <p>차종과 연식을 고르고 증상을 체크하면 보낼 문자가 완성됩니다. 사진은 문자 앱에서 붙이면 됩니다.</p>
+            <ul className="h-sms-facts">
+              <li><span className="bullet" aria-hidden="true" />필수는 차종과 연식, 두 가지뿐입니다.</li>
+              <li><span className="bullet" aria-hidden="true" />작업자가 출장 전에 차량 정보와 사진을 확인합니다.</li>
+              <li><span className="bullet" aria-hidden="true" />제품·총비용·방문 일정은 확인 뒤 안내합니다.</li>
+            </ul>
+            <figure className="cell photo h-sms-photo">
+              <Image src="/media/caller.webp" alt="지하주차장에서 차 옆에 서서 문자를 보내는 운전자" width={1600} height={1200} unoptimized loading="lazy" />
+              <figcaption>▲ 차가 선 자리에서 차종과 연식을 문자로 보냅니다. (연출 사진)</figcaption>
+            </figure>
+          </div>
+          <div className="h-sms-form">
+            <ContactForm />
+          </div>
+        </div>
       </section>
-      <section id="quick-inquiry" className="wrap home-inquiry"><InquiryJourney /></section>
-      <nav className="wrap category-shortcuts" aria-label="주요 서비스 탐색">{shortcuts.map(({ href, icon: Icon, title, text }) => <Link href={href} key={href}><Icon aria-hidden="true" /><div><strong>{title}</strong><span>{text}</span></div><ArrowUpRight className="shortcut-arrow" aria-hidden="true" /></Link>)}</nav>
-      <section className="section wrap vehicle-section"><SectionHeading eyebrow="FIND YOUR CAR" title="차는 달라도, 시작은 간단하게." description="차종별 안내를 살펴보거나, 바로 차량 정보를 작성하세요." href="/vehicles" linkText="차종 전체 보기" /><VehicleExplorer /></section>
-      <section className="region-section"><div className="wrap region-layout"><div><span className="eyebrow">CLOSE TO YOU</span><h2>내가 있는 곳에서,<br />다음 출발을 준비해요.</h2><p>내 지역을 선택해 출장 안내를 확인하세요.<br />방문 가능 여부와 일정은 상담을 통해 확인합니다.</p><Link className="text-link" href="/regions">지역별 안내 모두 보기 <ArrowUpRight size={17} /></Link></div><RegionExplorer /></div></section>
-      <section className="section wrap confidence-section"><SectionHeading eyebrow="A CLEARER CHOICE" title="안심되는 교체의 기준." description="무엇을 준비하고, 무엇을 확인하는지 한눈에 보이도록 정리했습니다." /><Trust /><div className="service-heading"><h3><CircleCheck aria-hidden="true" />상담부터 교체까지, 이렇게 진행해요.</h3><Link className="text-link" href="/service">과정과 비용 보기 <ArrowUpRight size={16} /></Link></div><Steps /></section>
-      <section className="journal-section"><div className="wrap"><SectionHeading eyebrow="BATTERY JOURNAL" title="배터리, 알고 바꾸면 더 편해요." description="내 차의 증상부터 교체 비용까지, 필요한 정보만 차근차근 확인하세요." href="/battery-info" linkText="정보 더 보기" /><div className="guide-grid">{[guides[7], guides[8], guides[9]].map((guide, index) => <GuideCard key={guide.slug} guide={guide} featured={index === 0} />)}</div></div></section>
-      <ReviewSection /><FAQSection /><BottomCTA />
+
+      <section className="h-menu" aria-label="차종·지역·읽을거리">
+        <div className="wrap">
+          <div className="h-menu-cat" data-reveal>
+            <h2>차종별 안내</h2>
+            <span>{vehicles.length}종</span>
+          </div>
+          <ul className="h-menu-items" data-reveal>
+            {vehicles.map((v) => (
+              <li key={v.slug}>
+                <Link className="h-menu-item" href={`/vehicles/${v.slug}`}>
+                  <span className="bullet" aria-hidden="true" />
+                  <span>
+                    <h3>
+                      {v.brand} {v.name}
+                      <span>{v.type}</span>
+                    </h3>
+                    <p>{v.note}</p>
+                  </span>
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link className="h-menu-item" href="/contact?vehicle=other">
+                <span className="bullet" aria-hidden="true" />
+                <span>
+                  <h3>
+                    목록에 없는 차종<span>직접 입력</span>
+                  </h3>
+                  <p>차종명을 적어 보내 주시면 작업자가 규격을 확인합니다.</p>
+                </span>
+              </Link>
+            </li>
+          </ul>
+
+          <div className="h-menu-cat" data-reveal>
+            <h2>지역별 안내</h2>
+            <span>{operatingRegions.length}개 지역 운영</span>
+          </div>
+          <ul className="h-menu-items" data-reveal>
+            {operatingRegions.map((r) => (
+              <li key={r.slug}>
+                <Link className="h-menu-item" href={`/regions/${r.slug}`}>
+                  <span className="bullet" aria-hidden="true" />
+                  <span>
+                    <h3>
+                      {r.name}<span>운영 중</span>
+                    </h3>
+                    <p>{r.note}</p>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="h-menu-note">
+            {holdRegions.map((r) => r.name).join('·')}은 파트너 준비 중입니다. 목록에 없는 지역은 <Link href="/contact?region=other">지역을 직접 입력</Link>해 주세요.
+          </p>
+
+          <div className="h-menu-cat" data-reveal>
+            <h2>읽을거리</h2>
+            <span>{readList.length}편</span>
+          </div>
+          <ul className="h-menu-items" data-reveal>
+            {readList.map((g) => (
+              <li key={g.slug}>
+                <Link className="h-menu-item" href={`/guides/${g.slug}`}>
+                  <span className="bullet" aria-hidden="true" />
+                  <span>
+                    <h3>{g.title}</h3>
+                    <p>{g.excerpt}</p>
+                    <em>{g.tag}</em>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="h-flow" aria-labelledby="flow-title">
+        <div className="wrap">
+          <div className="h-flow-head" data-reveal>
+            <h2 id="flow-title">문자에서 시동까지</h2>
+            <p>흩어진 걱정이 문자 한 줄로 모이고, 정돈된 교체로 끝납니다. 세 단계면 됩니다.</p>
+          </div>
+          <div className="h-flow-body">
+            <FlowDiagram />
+            <FlowDiagram vertical />
+            <ol className="h-flow-cols" data-reveal>
+              {serviceSteps.map((s) => (
+                <li key={s.title}>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <Showcase scenes={scenes} title="차 옆에서 바로 교체합니다" text="기사가 공구와 새 배터리를 가지고 차가 선 자리로 갑니다. 기존 배터리를 떼고, 규격에 맞는 제품을 달고, 시동과 전압을 확인합니다." />
+
+      <section className="h-proof" aria-labelledby="proof-title">
+        <div className="wrap">
+          <ul className="h-proof-board" data-reveal>
+            <li className="h-proof-tile lead">
+              <h2 id="proof-title">믿고 맡기는 기준</h2>
+              <p>배터리콜이 모든 출장에서 지키는 다섯 가지입니다.</p>
+            </li>
+            {proofTiles.slice(0, 2).map((t) => (
+              <li key={t.big} className="h-proof-tile">
+                <span>{t.big}</span>
+                <small>{t.small}</small>
+              </li>
+            ))}
+            <li className="h-proof-tile pic">
+              <Image src="/images/batterycall_2.webp" alt="장갑을 낀 손으로 기존 배터리를 떼어 내는 작업 장면" width={1600} height={1200} unoptimized loading="lazy" />
+            </li>
+            {proofTiles.slice(2).map((t) => (
+              <li key={t.big} className="h-proof-tile">
+                <span>{t.big}</span>
+                <small>{t.small}</small>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="h-faq" aria-label="자주 묻는 질문">
+        <div className="wrap">
+          <FaqCards title="자주 묻는 질문" />
+          <div className="h-faq-more">
+            <Link className="text-link" href="/service">교체 과정과 비용 항목 보기</Link>
+            <Link className="text-link" href="/battery-info">배터리 정보 더 읽기</Link>
+          </div>
+        </div>
+      </section>
+
+      <CallBand position="home_band" />
     </main>
   );
 }

@@ -2,7 +2,7 @@ import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
 import { regions, guides, getRegionKeywordData, operatingRegionLine, operatingRegions } from '@/lib/content';
 import { CtaPair } from '@/components/site/cta';
-import { Crumb, PageIntro, BottomCTA, GuideCard, Steps } from '@/components/site/shared';
+import { Crumb, PageIntro, BottomCTA, GuideCard, Steps, SitePhoto } from '@/components/site/shared';
 import { MapPin, Clock, ShieldAlert, HelpCircle, CheckCircle2 } from 'lucide-react';
 import { pageMeta } from '@/lib/metadata';
 
@@ -60,7 +60,6 @@ export default async function Page({ params, searchParams }: PageProps) {
         />
 
         <PageIntro
-          eyebrow="AREA KEYWORD GUIDE"
           title={`${keyData.areaName} 출장 배터리 교체`}
           description={keyData.subheadline}
         />
@@ -87,7 +86,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         {/* pSEO 지역 키워드 전용 상세 섹션 */}
         <section className="region-pseo" aria-label={`${keyData.areaName} 키워드 특화 안내`}>
           <div className="region-pseo-main">
-            <span className="lead-tag">파트너 준비 중</span>
+            
             <h2>{keyData.headline}</h2>
             <p className="text-muted leading-relaxed">
               현재 운영 지역은 {operatingRegionLine}입니다. 수도권은 파트너 준비 중입니다.
@@ -113,7 +112,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 
             <div className="environment-checklist mt-4">
               <h4 className="font-bold text-sm text-ink mb-2">출장 전 {keyData.areaName} 현장 체크포인트</h4>
-              <ul className="space-y-1.5 text-xs text-sub">
+              <ul className="space-y-1.5 text-sm text-ink">
                 {keyData.environmentCheck.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <CheckCircle2 size={14} className="text-green-700 shrink-0 mt-0.5" />
@@ -124,16 +123,16 @@ export default async function Page({ params, searchParams }: PageProps) {
             </div>
 
             {/* 지역 FAQ */}
-            <div className="region-faq-section mt-8 pt-6 border-t border-gray-200">
+            <div className="region-faq-section mt-8">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                 <HelpCircle size={18} className="text-green-700" />
                 {keyData.areaName} 자주 묻는 질문
               </h3>
               <div className="space-y-4">
                 {keyData.faqs.map((faq, i) => (
-                  <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-200/80">
+                  <div key={i} className="p-4 bg-white rounded-xl">
                     <strong className="block text-sm text-ink mb-1.5">Q. {faq.q}</strong>
-                    <p className="text-xs text-sub leading-relaxed m-0">{faq.a}</p>
+                    <p className="text-sm text-ink leading-relaxed m-0">{faq.a}</p>
                   </div>
                 ))}
               </div>
@@ -142,7 +141,6 @@ export default async function Page({ params, searchParams }: PageProps) {
 
           <aside className="region-pseo-sidebar">
             <div className="region-cta-card">
-              <span className="eyebrow text-lime-300">NOTICE</span>
               <h3>
                 현재 운영 지역은<br />
                 {operatingRegionLine}입니다.
@@ -157,11 +155,11 @@ export default async function Page({ params, searchParams }: PageProps) {
               </Link>
             </div>
 
-            <div className="p-4 bg-white border border-gray-200 rounded-2xl text-xs text-sub leading-relaxed">
+            <div className="region-keywords p-4 rounded-2xl text-sm text-sub leading-relaxed">
               <strong className="block text-ink mb-1">관련 검색 키워드</strong>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {keyData.keywords.map((kw) => (
-                  <span key={kw} className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-[11px]">
+                  <span key={kw} className="px-2 py-1 bg-white rounded text-ink text-sm">
                     {kw}
                   </span>
                 ))}
@@ -195,13 +193,14 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
     <main id="main">
       <div className="wrap">
         <Crumb items={[{ label: '지역별', href: '/regions' }, { label: r.name }]} />
-        <PageIntro eyebrow="REGION GUIDE" title={`${r.name} 출장 배터리 교체`} description={p.summary} />
+        <PageIntro title={`${r.name} 출장 배터리 교체`} description={p.summary} />
+        <SitePhoto name="tech" />
 
-        <section className="region-pseo" aria-label={`${r.name} 안내`}>
+        <section className="region-pseo" aria-label={`${r.name} 안내`} data-reveal>
           <div className="region-pseo-main">
-            <span className="lead-tag">운영 지역</span>
+            
             <h2>{r.name} 주요 생활권</h2>
-            <ul className="space-y-1.5 text-sm text-sub mt-2">
+            <ul className="space-y-1.5 text-sm text-ink mt-2">
               {p.living.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <MapPin size={14} className="text-green-700 shrink-0 mt-1" />
@@ -229,7 +228,7 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
 
             <div className="environment-checklist mt-4">
               <h4 className="font-bold text-sm text-ink mb-2">출장 전 {r.name} 현장 체크포인트</h4>
-              <ul className="space-y-1.5 text-xs text-sub">
+              <ul className="space-y-1.5 text-sm text-ink">
                 {p.checks.map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <CheckCircle2 size={14} className="text-green-700 shrink-0 mt-0.5" />
@@ -239,16 +238,16 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
               </ul>
             </div>
 
-            <div className="region-faq-section mt-8 pt-6 border-t border-gray-200">
+            <div className="region-faq-section mt-8">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                 <HelpCircle size={18} className="text-green-700" />
                 {r.name} 자주 묻는 질문
               </h3>
               <div className="space-y-4">
                 {p.faqs.map((faq) => (
-                  <div key={faq.q} className="p-4 bg-gray-50 rounded-xl border border-gray-200/80">
+                  <div key={faq.q} className="p-4 bg-white rounded-xl">
                     <strong className="block text-sm text-ink mb-1.5">Q. {faq.q}</strong>
-                    <p className="text-xs text-sub leading-relaxed m-0">{faq.a}</p>
+                    <p className="text-sm text-ink leading-relaxed m-0">{faq.a}</p>
                   </div>
                 ))}
               </div>
@@ -257,7 +256,7 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
 
           <aside className="region-pseo-sidebar">
             <div className="region-cta-card">
-              <span className="eyebrow text-lime-300">CONTACT</span>
+              
               <h3>
                 {r.name}에서<br />
                 시동이 안 걸리시나요?
@@ -271,11 +270,11 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
                 문의 내용 작성하기
               </Link>
             </div>
-            <div className="p-4 bg-white border border-gray-200 rounded-2xl text-xs text-sub leading-relaxed">
+            <div className="region-keywords p-4 rounded-2xl text-sm text-sub leading-relaxed">
               <strong className="block text-ink mb-1">다른 운영 지역</strong>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {others.map((o) => (
-                  <Link key={o.slug} href={`/regions/${o.slug}`} className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-[11px]">
+                  <Link key={o.slug} href={`/regions/${o.slug}`} className="px-2 py-1 bg-white rounded text-ink text-sm">
                     {o.name}
                   </Link>
                 ))}

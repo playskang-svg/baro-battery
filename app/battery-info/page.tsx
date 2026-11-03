@@ -19,7 +19,6 @@ export default function Page() {
       <div className="wrap">
         <Crumb items={[{ label: '배터리/차량 정보' }]} />
         <PageIntro
-          eyebrow="BATTERY & VEHICLE JOURNAL"
           title="배터리/차량 정보"
           description="차량별 배터리부터 방전 대처와 교체비용까지, 필요한 포스팅만 골라보세요."
         />

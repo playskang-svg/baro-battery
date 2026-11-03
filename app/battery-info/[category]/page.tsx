@@ -58,7 +58,6 @@ export default async function PostCategoryPage({
           ]}
         />
         <PageIntro
-          eyebrow="POST CATEGORY"
           title={current.name}
           description={current.description}
         />

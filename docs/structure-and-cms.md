@@ -20,7 +20,7 @@
 
 ## 경로
 
-- / : 첫 화면, 빠른 탐색, 4개 카테고리, 차종 탭, 지역 탭, 신뢰 체크, 절차, 정보, 후기 예시, FAQ, 하단 CTA
+- / : 검정 첫 화면(제목·전화/문자 버튼·배터리 블록 안 Seedance 영상), 문자 문구 만들기(ContactForm), 차종·지역·읽을거리 목록, 흐름 띠(3단계), 현장 사진 4장 탭, 기준 타일, FAQ 카드, 전화하기 띠(CallBand). 홈 스타일은 app/home.css, 공용은 app/theme.css, 홈 전용 클라이언트 컴포넌트는 components/site/home.tsx
 - /vehicles : 제조사 필터 및 차종 검색
 - /vehicles/[slug] : 차종 허브, 상담 준비 정보, 관련 글
 - /regions : 지역별 탐색
