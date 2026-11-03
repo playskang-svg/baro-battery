@@ -59,9 +59,9 @@ export function Footer() {
           <div className="footer-identity">
             <strong>컨시어지블루 <span>(배터리콜)</span></strong>
             <div className="footer-contact">
-              <Link href={`tel:${siteConfig.phone}`} data-track="footer" data-channel="phone">
+              <Link href={`tel:${siteConfig.officePhone}`} data-track="footer" data-channel="phone">
                 <Phone aria-hidden="true" />
-                <span><small>대표 전화</small>{siteConfig.phone}</span>
+                <span><small>대표 전화</small>{siteConfig.officePhone}</span>
               </Link>
               <Link href="mailto:qoorocket@gmail.com">
                 <Mail aria-hidden="true" />

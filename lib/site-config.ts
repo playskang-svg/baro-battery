@@ -3,7 +3,10 @@ export const siteConfig = {
   name: '배터리콜',
   headline: '출장 배터리 교체',
   origin: 'https://batterycall.kr',
-  phone: '010-4684-8838',
+  // 전화·문자 CTA 번호: 대구권 파트너 착한정비(이승한). 파트너 교체 시 이 값만 변경
+  phone: '010-5393-4505',
+  // 푸터 대표전화(컨시어지블루). CTA 번호와 분리
+  officePhone: '010-4684-8838',
   kakaoUrl: '',
   isPreview: false,
 };
