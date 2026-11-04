@@ -38,12 +38,47 @@ export const categories = [
     eyebrow: 'BLOG',
   },
 ];
-export const vehicles = [
+export type VehicleBody =
+  | 'sedan'
+  | 'suv'
+  | 'minivan'
+  | 'compact'
+  | 'truck'
+  | 'trunk'
+  | 'hybrid';
+export type VehicleGeneration = {
+  label: string;
+  years?: string;
+  fuel?: string;
+  isg?: boolean;
+  battery: string;
+  note?: string;
+};
+export type Vehicle = {
+  slug: string;
+  brand: string;
+  name: string;
+  /** 화면에 표시하는 차급 (예: 준중형, 중형 SUV) */
+  vehicleClass: string;
+  note: string;
+  guide?: string;
+  body?: VehicleBody;
+  /** draft는 목록·라우트·사이트맵·홈·문의 선택 어디에도 노출하지 않는다 */
+  status: 'draft' | 'published';
+  publishedAt?: string;
+  generations?: VehicleGeneration[];
+  /** 내부용, 화면에 쓰지 않음 */
+  sources?: string[];
+};
+
+export const allVehicles: Vehicle[] = [
   {
     slug: 'grandeur',
     brand: '현대',
     name: '그랜저',
-    type: '세단',
+    vehicleClass: '준대형',
+    body: 'sedan',
+    status: 'published',
     note: '연식 · 엔진 · ISG 유무 확인',
     guide: 'grandeur-battery-check',
   },
@@ -51,7 +86,9 @@ export const vehicles = [
     slug: 'avante',
     brand: '현대',
     name: '아반떼',
-    type: '준중형',
+    vehicleClass: '준중형',
+    body: 'sedan',
+    status: 'published',
     note: '세대 · 장착 배터리 규격 확인',
     guide: 'avante-starting-check',
   },
@@ -59,7 +96,9 @@ export const vehicles = [
     slug: 'sorento',
     brand: '기아',
     name: '쏘렌토',
-    type: 'SUV',
+    vehicleClass: '중형 SUV',
+    body: 'suv',
+    status: 'published',
     note: '가솔린 · 디젤 · 하이브리드 구분',
     guide: 'sorento-battery-guide',
   },
@@ -67,7 +106,9 @@ export const vehicles = [
     slug: 'sportage',
     brand: '기아',
     name: '스포티지',
-    type: 'SUV',
+    vehicleClass: '준중형 SUV',
+    body: 'suv',
+    status: 'published',
     note: '연식 · 엔진 · 배터리 타입 확인',
     guide: 'sportage-battery-guide',
   },
@@ -75,7 +116,9 @@ export const vehicles = [
     slug: 'g80',
     brand: '제네시스',
     name: 'G80',
-    type: '세단',
+    vehicleClass: '대형',
+    body: 'sedan',
+    status: 'published',
     note: '장착 위치 · 배터리 종류 확인',
     guide: 'g80-battery-check',
   },
@@ -83,7 +126,9 @@ export const vehicles = [
     slug: 'bmw-5',
     brand: '수입차',
     name: 'BMW 5시리즈',
-    type: '세단',
+    vehicleClass: '중형',
+    body: 'sedan',
+    status: 'published',
     note: '차대 정보 · 배터리 종류 확인',
     guide: 'bmw-5-battery-check',
   },
@@ -91,11 +136,18 @@ export const vehicles = [
     slug: 'k5',
     brand: '기아',
     name: 'K5',
-    type: '세단',
+    vehicleClass: '중형',
+    body: 'sedan',
+    status: 'published',
     note: '세대 · 엔진 · ISG 유무 확인',
     guide: 'k5-battery-spec-check',
   },
 ];
+
+/** 공개(published) 차종만. 사이트 전체가 이 목록만 쓴다. */
+export const vehicles: Vehicle[] = allVehicles.filter(
+  (v) => v.status === 'published',
+);
 export type Region = {
   slug: string;
   name: string;

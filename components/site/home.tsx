@@ -389,7 +389,7 @@ export function HomeExplorer() {
     ...vehicles.map((v) => ({
       id: `v-${v.slug}`,
       cat: 'vehicle' as const,
-      catLabel: `차종별 안내 · ${v.type}`,
+      catLabel: `차종별 안내 · ${v.vehicleClass}`,
       badge: v.brand,
       title: `${v.brand} ${v.name}`,
       desc: v.note,
