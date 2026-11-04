@@ -206,11 +206,6 @@ export default function Home() {
 
         <div className="hero-float" id="hero-float" aria-hidden="true">
           <div className="hb-scene">
-            <div className="hb-cert-ribbon">
-              <span className="hb-dot" />
-              <span>정품 · 정가 인증업체</span>
-            </div>
-
             <div className="hb-battery">
               <div className="hb-top">
                 <div className="hb-term hb-term-neg">
@@ -219,68 +214,15 @@ export default function Home() {
                 <div className="hb-handle" />
                 <div className="hb-term hb-term-pos">
                   <span>+</span>
-                  <i className="hb-spark" />
                 </div>
               </div>
-
-              <div className="hb-body">
-                <div className="hb-head">
-                  <span className="hb-brand">BATTERYCALL · 12V AGM</span>
-                  <span className="hb-seal">신품 규격 인증</span>
-                </div>
-
-                <div className="hb-meter">
-                  <div className="hb-volt">
-                    <strong>12.8V</strong>
-                    <small>FULL CHARGE · 신품 정상 전압</small>
-                  </div>
-                  <div className="hb-bars">
-                    <i />
-                    <i />
-                    <i />
-                    <i />
-                    <i />
-                  </div>
-                </div>
-
-                <div className="hb-specs">
-                  <div className="hb-spec-box">
-                    <span>정품 인증</span>
-                    <b>100% 최신 생산 신품</b>
-                  </div>
-                  <div className="hb-spec-box">
-                    <span>정가 안내</span>
-                    <b>출장·장착비 포함 정가</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="fo hb-badge hb-badge-1">
-              <svg className="ic" viewBox="0 0 24 24">
-                <use href="#i-check" />
-              </svg>
-              <div>
-                <b>100% 정품 신품 인증</b>
-                <span>차종별 1:1 규격 사전 확인</span>
-              </div>
-            </div>
-
-            <div className="fo hb-badge hb-badge-2">
-              <svg className="ic" viewBox="0 0 24 24">
-                <use href="#i-won" />
-              </svg>
-              <div>
-                <b>사전 확정 정가 인증업체</b>
-                <span>출동 전 총비용 투명 안내</span>
-              </div>
-            </div>
-
-            <div className="fo fo-chip">
-              <svg className="ic" viewBox="0 0 24 24">
-                <use href="#i-bolt" />
-              </svg>
-              <span>{operatingRegionLine} 출장 · 시동·전압 점검</span>
+              {/* muted를 HTML에 확실히 넣어야 자동재생되므로 문자열로 넣는다 */}
+              <div
+                className="hb-screen"
+                dangerouslySetInnerHTML={{
+                  __html: '<video src="/media/diag.mp4" autoplay muted loop playsinline preload="metadata"></video>',
+                }}
+              />
             </div>
           </div>
         </div>
