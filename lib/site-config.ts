@@ -5,7 +5,7 @@ export const siteConfig = {
   origin: 'https://batterycall.kr',
   // 전화·문자 CTA 번호: 대구권 파트너 번호. 파트너 교체 시 이 값만 변경
   phone: '010-8844-4505',
-  // 푸터 대표전화(컨시어지블루). CTA 번호와 분리
+  // 푸터 대표전화. CTA 번호와 분리
   officePhone: '010-4684-8838',
   kakaoUrl: '',
   isPreview: false,

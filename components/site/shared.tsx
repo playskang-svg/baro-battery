@@ -102,7 +102,7 @@ export function Footer() {
           </div>
           <div className="foot-bottom">
             <p>
-              <b>상호</b> 컨시어지블루 (배터리콜) · <b>대표전화</b>{' '}
+              <b>상호</b> 배터리콜 · <b>대표전화</b>{' '}
               <a href={`tel:${siteConfig.officePhone}`} data-track="footer" data-channel="phone">
                 {siteConfig.officePhone}
               </a>{' '}
@@ -111,7 +111,7 @@ export function Footer() {
             <p>
               <b>운영시간</b> 24시간 상담·접수 운영 · <b>서비스 지역</b> {operatingRegionLine}
             </p>
-            <p>© 2026 컨시어지블루 (배터리콜). All rights reserved.</p>
+            <p>© 2026 배터리콜. All rights reserved.</p>
           </div>
         </div>
       </footer>
