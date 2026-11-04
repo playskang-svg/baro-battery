@@ -149,7 +149,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '준대형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'sedan',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-05',
   },
   {
     slug: 'santafe',
@@ -158,7 +159,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '중형 SUV',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'suv',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-05',
   },
   {
     slug: 'starex',
@@ -167,7 +169,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '승합',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'minivan',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-05',
   },
   {
     slug: 'sonata',
@@ -176,7 +179,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '중형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'sedan',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-05',
   },
   {
     slug: 'porter',
