@@ -12,6 +12,7 @@ import {
 } from '@/lib/content';
 import { phoneHref, siteConfig } from '@/lib/site-config';
 import { pageMeta } from '@/lib/metadata';
+import { vehiclePhoto } from '@/lib/vehicle-photo';
 import './home.css';
 
 export const metadata = pageMeta(
@@ -130,7 +131,7 @@ export default function Home() {
       title: `${v.brand} ${v.name}`,
       sub: v.note,
       href: `/vehicles/${v.slug}`,
-      img: `/media/vehicles/${v.slug}.webp`,
+      img: vehiclePhoto(v.slug),
     })),
     ...operatingRegions.map((r, i) => ({
       tag: '운영 중',

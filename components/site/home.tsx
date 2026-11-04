@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Link from '@/components/site/site-link';
 import { faqs, operatingRegions, holdRegions, vehicles } from '@/lib/content';
+import { vehiclePhoto } from '@/lib/vehicle-photo';
 
 export function MotionRoot() {
   const pathname = usePathname() || '/';
@@ -397,7 +398,7 @@ export function HomeExplorer() {
       urlText: `batterycall.kr/vehicles/${v.slug}`,
       ctaLabel: '이 차종 문의',
       vehicleSlug: v.slug,
-      img: `/media/vehicles/${v.slug}.webp`,
+      img: vehiclePhoto(v.slug),
     })),
     ...operatingRegions.map((r, i) => ({
       id: `r-${r.slug}`,
