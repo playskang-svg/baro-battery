@@ -51,7 +51,7 @@ export const vehicles = [
     slug: 'avante',
     brand: '현대',
     name: '아반떼',
-    type: '세단',
+    type: '준중형',
     note: '세대 · 장착 배터리 규격 확인',
     guide: 'avante-starting-check',
   },
