@@ -60,3 +60,14 @@ figcaption { display: none !important; }
 .spec-table thead th{font-size:12px;color:var(--sub);font-weight:600}
 .spec-table tbody th{font-weight:650;white-space:nowrap}
 .spec-table tbody th a{text-decoration:underline;text-underline-offset:3px}
+
+.vehicle-hub-head{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.vehicle-hub-figure{margin:0}
+.vehicle-hub-figure img{width:100%;height:auto;border-radius:14px;display:block}
+.vehicle-hub-figure figcaption{font-size:12px;color:var(--sub);margin-top:10px}
+.vehicle-hub-section{padding:32px 0 0}
+.vehicle-hub-facts{list-style:disc;padding-left:20px;line-height:2;font-size:16px}
+.vehicle-hub-item{padding:18px 0;border-bottom:1px solid var(--border)}
+.vehicle-hub-item h3{font-size:17px;font-weight:650;margin-bottom:8px}
+.vehicle-hub-item p{font-size:15px;line-height:1.85;color:var(--sub)}
+@media(max-width:760px){.vehicle-hub-head{grid-template-columns:1fr;gap:20px}}
