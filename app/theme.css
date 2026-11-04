@@ -289,39 +289,6 @@ button {
   color: #fff;
 }
 
-.btn-glow {
-  position: relative;
-  background: linear-gradient(135deg, #ff6b2b 0%, var(--accent-btn) 100%);
-  box-shadow:
-    0 0 0 1px rgba(255, 160, 120, 0.45),
-    0 0 28px 6px rgba(255, 90, 31, 0.58),
-    0 14px 34px -8px rgba(210, 63, 10, 0.85);
-  animation: btnGlowPulse 2.2s ease-in-out infinite;
-}
-
-.btn-glow:hover {
-  background: linear-gradient(135deg, #ff7a40 0%, #c43806 100%);
-  box-shadow:
-    0 0 0 1px rgba(255, 190, 155, 0.65),
-    0 0 38px 10px rgba(255, 90, 31, 0.75),
-    0 18px 40px -8px rgba(210, 63, 10, 0.95);
-}
-
-@keyframes btnGlowPulse {
-  0%, 100% {
-    box-shadow:
-      0 0 0 1px rgba(255, 160, 120, 0.42),
-      0 0 24px 4px rgba(255, 90, 31, 0.52),
-      0 14px 32px -8px rgba(210, 63, 10, 0.8);
-  }
-  50% {
-    box-shadow:
-      0 0 0 4px rgba(255, 90, 31, 0.25),
-      0 0 38px 11px rgba(255, 90, 31, 0.78),
-      0 16px 38px -6px rgba(255, 90, 31, 0.92);
-  }
-}
-
 .btn-glass {
   color: #fff;
   background: rgba(255, 255, 255, 0.09);

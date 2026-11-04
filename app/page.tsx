@@ -315,7 +315,7 @@ export default function Home() {
 
             <div className="hero-cta" style={{ '--i': 3 } as React.CSSProperties}>
               <a
-                className="btn btn-primary btn-glow"
+                className="btn btn-primary"
                 href="#form-card"
                 data-goto-form="true"
                 data-track="hero"
