@@ -53,3 +53,10 @@
 
 /* 사진 설명 캡션 완전 숨김 */
 figcaption { display: none !important; }
+
+.spec-table-scroll{overflow-x:auto}
+.spec-table{width:100%;border-collapse:collapse;font-size:14px}
+.spec-table th,.spec-table td{padding:12px 14px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+.spec-table thead th{font-size:12px;color:var(--sub);font-weight:600}
+.spec-table tbody th{font-weight:650;white-space:nowrap}
+.spec-table tbody th a{text-decoration:underline;text-underline-offset:3px}
