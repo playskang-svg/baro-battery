@@ -10,8 +10,16 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "준대형",
     "rows": [
       {
-        "label": "HG",
+        "label": "HG 가솔린·LPG (2011~2016, 2.4 2015~16년식 제외)",
         "battery": "GB80L"
+      },
+      {
+        "label": "HG 2.2 디젤 (2011~2016)",
+        "battery": "GB90L"
+      },
+      {
+        "label": "HG 하이브리드 (2013~2016)",
+        "battery": "GB57219"
       }
     ]
   },
@@ -22,8 +30,20 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "준대형",
     "rows": [
       {
-        "label": "가솔린·LPG",
+        "label": "1세대 가솔린·LPG (2009~2016)",
         "battery": "GB80L"
+      },
+      {
+        "label": "올뉴 K7 3.0·3.3 가솔린·디젤 (2016~2019)",
+        "battery": "AGM80"
+      },
+      {
+        "label": "올뉴 K7·프리미어 LPG",
+        "battery": "GB58014"
+      },
+      {
+        "label": "하이브리드",
+        "battery": "GB57219"
       }
     ]
   },
@@ -34,12 +54,44 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "중형 SUV",
     "rows": [
       {
-        "label": "일반",
+        "label": "싼타페 (2000~2005) 디젤",
         "battery": "GB90L"
       },
       {
-        "label": "DM 14년형(ISG)",
-        "battery": "AGM80L"
+        "label": "싼타페 (2000~2005) LPG",
+        "battery": "GB80L"
+      },
+      {
+        "label": "싼타페 CM·더스타일 (2006~2012) 디젤",
+        "battery": "GB90L"
+      },
+      {
+        "label": "더스타일 (2009~2012) LPG",
+        "battery": "GB80L"
+      },
+      {
+        "label": "DM 일반 디젤 (2012.4~2013)",
+        "battery": "GB90L"
+      },
+      {
+        "label": "DM 디젤 (2013~2015.6)",
+        "battery": "AGM80"
+      },
+      {
+        "label": "더프라임 (2015.6~2018.2) 디젤",
+        "battery": "AGM95"
+      },
+      {
+        "label": "더프라임 (2015.6~2018.2) 가솔린",
+        "battery": "AGM80"
+      },
+      {
+        "label": "TM (2018.2~2020.6) 디젤",
+        "battery": "AGM95"
+      },
+      {
+        "label": "TM (2018.2~2020.6) 가솔린",
+        "battery": "AGM80"
       }
     ]
   },
@@ -66,8 +118,20 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "중형",
     "rows": [
       {
-        "label": "가솔린·LPG",
+        "label": "1세대 가솔린·LPG (2010~2015)",
         "battery": "GB80L"
+      },
+      {
+        "label": "1세대 오토스탑 (2010~2015)",
+        "battery": "AGM70"
+      },
+      {
+        "label": "2세대 JF 가솔린·디젤 (2015~2018)",
+        "battery": "AGM80"
+      },
+      {
+        "label": "하이브리드",
+        "battery": "GB57219"
       }
     ]
   },
@@ -78,12 +142,12 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "중형",
     "rows": [
       {
-        "label": "YF 가솔린·LPG·T-GDI",
+        "label": "YF 가솔린·LPG (2010~2014)",
         "battery": "GB80L"
       },
       {
-        "label": "YF 디젤",
-        "battery": "GB90L"
+        "label": "YF 하이브리드 (2010~2014)",
+        "battery": "GB57219"
       }
     ]
   },
@@ -142,12 +206,8 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "준중형",
     "rows": [
       {
-        "label": "가솔린 I",
+        "label": "가솔린·쿱 (2012년~)",
         "battery": "GB56219"
-      },
-      {
-        "label": "가솔린 II",
-        "battery": "GB57220"
       }
     ]
   },
@@ -158,11 +218,15 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "미니밴",
     "rows": [
       {
-        "label": "올뉴(14~18년)",
+        "label": "올뉴 YP (2014~2018) 가솔린·LPG",
+        "battery": "GB80L"
+      },
+      {
+        "label": "올뉴 YP (2014~2018) 디젤",
         "battery": "GB90L"
       },
       {
-        "label": "구형·디젤",
+        "label": "그랜드 카니발 (2005~2010) 디젤",
         "battery": "GB100L"
       }
     ]
@@ -174,11 +238,15 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "준중형 SUV",
     "rows": [
       {
-        "label": "투싼",
+        "label": "투싼 JM 디젤 (2004~2009)",
         "battery": "GB90L"
       },
       {
-        "label": "iX",
+        "label": "투싼 ix 가솔린 (2010~2015)",
+        "battery": "GB80L"
+      },
+      {
+        "label": "투싼 ix 디젤 (2010~2015)",
         "battery": "GB90R"
       }
     ]
@@ -202,12 +270,12 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "경차",
     "rows": [
       {
-        "label": "스파크",
+        "label": "스파크·더넥스트 가솔린 (2011~2018)",
         "battery": "GB54459"
       },
       {
-        "label": "더넥스트(ISG)",
-        "battery": "AGM60L"
+        "label": "더뉴 스파크 ISG (2018~2019)",
+        "battery": "AGM60"
       }
     ]
   },
@@ -218,7 +286,11 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "중형 SUV",
     "rows": [
       {
-        "label": "R",
+        "label": "R 가솔린·LPG (2009~2012)",
+        "battery": "GB80L"
+      },
+      {
+        "label": "R 디젤 (2009~2014)",
         "battery": "GB90L"
       }
     ]
@@ -230,7 +302,7 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "준중형 SUV",
     "rows": [
       {
-        "label": "R",
+        "label": "R 디젤 (2010~2015)",
         "battery": "GB90R"
       }
     ]
@@ -242,7 +314,11 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "대형 SUV",
     "rows": [
       {
-        "label": "전 세대",
+        "label": "3.8 가솔린 (2007~2015)",
+        "battery": "GB80L"
+      },
+      {
+        "label": "디젤 (3.0 · 더 뉴 · 더 마스터)",
         "battery": "GB100L"
       }
     ]
@@ -254,7 +330,7 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "대형 SUV",
     "rows": [
       {
-        "label": "전 세대",
+        "label": "디젤 (2006~2015)",
         "battery": "GB100L"
       }
     ]
@@ -266,8 +342,28 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "중형",
     "rows": [
       {
-        "label": "2010년 이후",
-        "battery": "AGM80L"
+        "label": "SM5 (1998~2010)",
+        "battery": "GB80L"
+      },
+      {
+        "label": "L43·플래티넘 가솔린 (2010~2015)",
+        "battery": "GB57820"
+      },
+      {
+        "label": "L43·플래티넘 LPG (2010~2015)",
+        "battery": "GB58014"
+      },
+      {
+        "label": "플래티넘 디젤 (2012~2015)",
+        "battery": "AGM70"
+      },
+      {
+        "label": "노바 LPG (2015~2019)",
+        "battery": "GB57820"
+      },
+      {
+        "label": "노바 디젤 (2015~2019)",
+        "battery": "AGM70"
       }
     ]
   },
@@ -278,8 +374,16 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "준중형",
     "rows": [
       {
-        "label": "2010년 이후",
-        "battery": "AGM70L"
+        "label": "뉴제너레이션·CE (2005~2011)",
+        "battery": "GB80L"
+      },
+      {
+        "label": "뉴SM3 L38 가솔린 (2009~2014)",
+        "battery": "GB57820"
+      },
+      {
+        "label": "네오 디젤 (2014~2020)",
+        "battery": "AGM70"
       }
     ]
   },
@@ -290,8 +394,16 @@ export const specModels: SpecModel[] = [
     "vehicleClass": "준대형",
     "rows": [
       {
-        "label": "2011년 이후",
+        "label": "SM7·뉴아트 (2004~2011)",
+        "battery": "GB80L"
+      },
+      {
+        "label": "올뉴 L47·노바 가솔린 (2012년~)",
         "battery": "GB60044"
+      },
+      {
+        "label": "노바 LPG (2015년~)",
+        "battery": "GB57820"
       }
     ]
   },
