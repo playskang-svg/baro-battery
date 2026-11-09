@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Header, Footer } from '@/components/site/shared';
 import { siteConfig } from '@/lib/site-config';
+import { DEFAULT_OG_IMAGE } from '@/lib/metadata';
 import Script from 'next/script';
 import { CtaTracker } from '@/components/site/cta';
 import { MotionRoot } from '@/components/site/home';
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     siteName: '배터리콜',
     title: '출장 배터리 교체 | 배터리콜',
     description: '멈춘 일상에, 다시 시동을. 차종과 지역으로 찾는 배터리 출장교체.',
+    images: [{ url: DEFAULT_OG_IMAGE }],
   },
 };
 
