@@ -593,6 +593,9 @@ export type GuideSection = {
   paragraphs?: string[];
   image?: string;
   imageCaption?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   highlights?: GuideSectionHighlight[];
 };
 
@@ -1603,6 +1606,10 @@ export const guides: Guide[] = [
     relatedLinks: [
       { title: '차종별 배터리 교체 안내', url: '/vehicles' },
       { title: '배터리 정보 모아보기', url: '/battery-info' },
+      { title: '국산차 배터리 규격 조견표', url: '/battery-spec' },
+      { title: '그랜저 세대별 배터리 규격', url: '/vehicles/grandeur' },
+      { title: '쏘나타 세대별 배터리 규격', url: '/vehicles/sonata' },
+      { title: '싼타페 세대별 배터리 규격', url: '/vehicles/santafe' },
     ],
     sections: [
       {
@@ -1615,6 +1622,11 @@ export const guides: Guide[] = [
       },
       {
         title: '2. 규격이 맞나요? (크기와 단자 위치)',
+        image: '/images/field/field-label-02.webp',
+        imageCaption: '배터리 라벨에 규격과 용량이 표시된 모습입니다.',
+        imageAlt: '배터리 윗면 라벨에 규격과 용량 표기가 보이는 사진',
+        imageWidth: 1200,
+        imageHeight: 900,
         body: '배터리는 같은 용량이어도 상자 크기와 +,- 단자 위치가 다릅니다. 폭스바겐이나 BMW 같은 유럽차는 독일식(DIN) 규격을 쓰는 경우가 많습니다. 용량이 조금 더 큰 배터리는 쓸 수 있지만, 크기가 안 들어가면 소용없습니다. 지금 달린 배터리 라벨을 사진으로 찍어 두세요.',
       },
       {
@@ -1648,6 +1660,11 @@ export const guides: Guide[] = [
       },
       {
         title: '배터리콜 출장 교체는 이렇게 진행됩니다',
+        image: '/images/field/field-tester-01.webp',
+        imageCaption: '배터리 테스터의 집게를 단자에 물려 측정하는 모습입니다.',
+        imageAlt: '배터리 단자에 테스터 집게를 물려 측정하는 사진',
+        imageWidth: 1200,
+        imageHeight: 846,
         body: '위치와 차종을 확인하고 방문합니다.',
         paragraphs: [
           '1. 위치와 차종을 확인하고 방문합니다.',

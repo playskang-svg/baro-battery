@@ -3,6 +3,9 @@ import { Crumb, PageIntro, BottomCTA } from '@/components/site/shared';
 import { vehicles } from '@/lib/content';
 import { specModels } from '@/lib/spec-table';
 import { pageMeta } from '@/lib/metadata';
+import { contactHref } from '@/lib/site-config';
+import { specFieldPhoto } from '@/lib/field-photos';
+import { FieldPhotos } from '@/components/site/field-photos';
 
 export const metadata = pageMeta(
   '자동차 배터리 규격 조견표: 국산차 24차종 | 배터리콜',
@@ -44,7 +47,7 @@ export default function Page() {
                   <tbody>
                     {models.flatMap((m) =>
                       m.rows.map((r, i) => (
-                        <tr key={`${m.slug}-${i}`}>
+                        <tr key={`${m.slug}-${i}`} id={i === 0 ? m.slug : undefined}>
                           <th scope="row">
                             {i === 0 ? (
                               published.has(m.slug) ? (
@@ -65,6 +68,15 @@ export default function Page() {
             </section>
           );
         })}
+        <section className="section">
+          <FieldPhotos photos={[specFieldPhoto]} />
+          <div className="inline-note" style={{ marginTop: 16 }}>
+            표에서 찾기 어려우면 지금 달린 배터리 라벨 사진과 차종을{' '}
+            <Link href={contactHref('inquiry')}>문의로 보내 주세요</Link>. 고르는 기준은{' '}
+            <Link href="/guides/car-battery-choice-checklist">자동차 배터리 고르는 법</Link>에
+            정리했습니다.
+          </div>
+        </section>
       </div>
       <BottomCTA />
     </main>
