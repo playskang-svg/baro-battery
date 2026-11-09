@@ -1535,3 +1535,39 @@ html.has-bar .totop {
     width: 100%;
   }
 }
+
+/* 실제 현장 사진 슬롯 */
+.field-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  align-items: start;
+}
+.field-photos.single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 640px;
+}
+.field-photos figure {
+  margin: 0;
+}
+.field-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-s);
+}
+.field-photos figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--sub);
+}
+.spec-table tr[id] {
+  scroll-margin-top: 96px;
+}
+@media (max-width: 639px) {
+  .field-photos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

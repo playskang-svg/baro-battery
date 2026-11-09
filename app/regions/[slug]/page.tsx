@@ -1,6 +1,8 @@
 import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
-import { regions, guides, getRegionKeywordData, operatingRegionLine, operatingRegions } from '@/lib/content';
+import { regions, guides, vehicles, getRegionKeywordData, operatingRegionLine, operatingRegions } from '@/lib/content';
+import { regionFieldPhotos, regionHubSlugs } from '@/lib/field-photos';
+import { FieldPhotos } from '@/components/site/field-photos';
 import { CtaPair } from '@/components/site/cta';
 import { Crumb, PageIntro, BottomCTA, GuideCard, Steps } from '@/components/site/shared';
 import { MapPin, Clock, ShieldAlert, HelpCircle, CheckCircle2 } from 'lucide-react';
@@ -189,6 +191,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
   const p = r.profile!;
   const others = operatingRegions.filter((x) => x.slug !== r.slug);
+  const hubs = (regionHubSlugs[r.slug] ?? []).flatMap((slug) => vehicles.filter((v) => v.slug === slug));
   return (
     <main id="main">
       <div className="wrap">
@@ -237,6 +240,8 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
               </ul>
             </div>
 
+            <FieldPhotos photos={regionFieldPhotos[r.slug] ?? []} />
+
             <div className="region-faq-section mt-8">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                 <HelpCircle size={18} className="text-green-700" />
@@ -279,6 +284,21 @@ function OperatingRegion({ r }: { r: (typeof regions)[number] }) {
                 ))}
               </div>
             </div>
+            {hubs.length ? (
+              <div className="region-keywords p-4 rounded-2xl text-sm text-sub leading-relaxed">
+                <strong className="block text-ink mb-1">차종별 배터리 안내</strong>
+                <div className="flex flex-wrap gap-1.5 mt-2">
+                  {hubs.map((v) => (
+                    <Link key={v.slug} href={`/vehicles/${v.slug}`} className="px-2 py-1 bg-white rounded text-ink text-sm">
+                      {v.name} 배터리 규격 보기
+                    </Link>
+                  ))}
+                  <Link href="/battery-spec" className="px-2 py-1 bg-white rounded text-ink text-sm">
+                    전체 차종 규격 조견표
+                  </Link>
+                </div>
+              </div>
+            ) : null}
           </aside>
         </section>
 

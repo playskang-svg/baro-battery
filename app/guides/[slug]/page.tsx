@@ -1,6 +1,6 @@
 import Link from '@/components/site/site-link';
 import { notFound } from 'next/navigation';
-import { guides, categories } from '@/lib/content';
+import { guides, categories, vehicles } from '@/lib/content';
 import { Crumb, BottomCTA, GuideCard } from '@/components/site/shared';
 import { ArrowUpRight, Check, BookOpen } from 'lucide-react';
 import { contactHref } from '@/lib/site-config';
@@ -86,7 +86,9 @@ export default async function Page({
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={s.image}
-                      alt={s.title}
+                      alt={s.imageAlt || s.title}
+                      width={s.imageWidth}
+                      height={s.imageHeight}
                       loading="lazy"
                       className="article-img"
                     />
@@ -124,7 +126,7 @@ export default async function Page({
             {g.relatedLinks?.length ? (
               <section className="article-checklist">
                 <h2>함께 확인할 배터리 가이드</h2>
-                {g.relatedLinks.map((item) => (
+                {g.relatedLinks.filter((item) => !item.url.startsWith('/vehicles/') || vehicles.some((v) => `/vehicles/${v.slug}` === item.url)).map((item) => (
                   <p key={item.url}>
                     <Check size={18} />
                     <Link href={item.url}>{item.title}</Link>
