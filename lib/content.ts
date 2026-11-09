@@ -189,7 +189,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '소형 화물',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'truck',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-09',
   },
   {
     slug: 'bongo',
@@ -198,7 +199,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '소형 화물',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'truck',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-09',
   },
   {
     slug: 'k3',
@@ -207,7 +209,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '준중형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'sedan',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-09',
   },
   {
     slug: 'carnival',
@@ -216,7 +219,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '미니밴',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'minivan',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-09',
   },
   {
     slug: 'tucson',
@@ -225,7 +229,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '준중형 SUV',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'suv',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-09',
   },
   {
     slug: 'spark',
