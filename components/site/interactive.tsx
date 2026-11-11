@@ -9,7 +9,7 @@ import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {vehicles,regions} from '@/lib/content';
 import {siteConfig,smsHref} from '@/lib/site-config';
 export function MobileMenu(){const [open,setOpen]=useState(false);return <><Button aria-label={open?'메뉴 닫기':'메뉴 열기'} aria-expanded={open} aria-controls="mobile-nav" variant="ghost" className="mobile-menu-button" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</Button>{open?<nav id="mobile-nav" className="mobile-nav">{[['/vehicles','차종별 찾기'],['/regions','지역별 찾기'],['/battery-info','배터리/차량 정보'],['/service','출장교체 · 비용'],['/blog','블로그'],['/#form-card','문의 내용 작성하기']].map(([href,label])=><Link key={href} href={href} onClick={()=>setOpen(false)}>{label}<ArrowUpRight size={17}/></Link>)}</nav>:null}</>}
-const BRAND_ORDER=['현대','기아','제네시스','르노삼성','쉐보레','수입차'];
+const BRAND_ORDER=['현대','기아','제네시스','르노삼성','쉐보레','KG모빌리티','수입차'];
 const CLASS_CHIPS=[{label:'경차',test:(c:string)=>c==='경차'},{label:'준중형',test:(c:string)=>c.startsWith('준중형')},{label:'중형',test:(c:string)=>c.startsWith('중형')},{label:'준대형',test:(c:string)=>c==='준대형'},{label:'대형',test:(c:string)=>c==='대형'},{label:'SUV',test:(c:string)=>c.includes('SUV')},{label:'미니밴·승합',test:(c:string)=>c.includes('미니밴')||c.includes('승합')},{label:'소형 화물',test:(c:string)=>c.includes('화물')}];
 export function VehicleExplorer({full=false}:{full?:boolean}){
   const [query,setQuery]=useState('');
