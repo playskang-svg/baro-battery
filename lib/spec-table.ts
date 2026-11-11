@@ -200,6 +200,38 @@ export const specModels: SpecModel[] = [
     ]
   },
   {
+    "slug": "avante-ad",
+    "name": "아반떼 AD",
+    "brand": "현대",
+    "vehicleClass": "준중형",
+    "rows": [
+      {
+        "label": "가솔린·LPG (AD 2015~2018, 더 뉴 AD 2018~2020)",
+        "battery": "GB56219"
+      },
+      {
+        "label": "디젤 (AD 2015~2018, 더 뉴 AD 2018~)",
+        "battery": "AGM70"
+      }
+    ]
+  },
+  {
+    "slug": "avante-hd",
+    "name": "아반떼 HD",
+    "brand": "현대",
+    "vehicleClass": "준중형",
+    "rows": [
+      {
+        "label": "가솔린 (2006~2010)",
+        "battery": "GB60AL"
+      },
+      {
+        "label": "디젤 (2006~2010)",
+        "battery": "GB80L"
+      }
+    ]
+  },
+  {
     "slug": "k3",
     "name": "K3",
     "brand": "기아",
@@ -260,6 +292,22 @@ export const specModels: SpecModel[] = [
       {
         "label": "전 세대",
         "battery": "GB40AL"
+      }
+    ]
+  },
+  {
+    "slug": "ray",
+    "name": "레이",
+    "brand": "기아",
+    "vehicleClass": "경차",
+    "rows": [
+      {
+        "label": "가솔린 (2011년~)·LPG (2017년~)·터보 (2011~2017)",
+        "battery": "GB50L"
+      },
+      {
+        "label": "ISG(공회전 제한) 사양",
+        "battery": "AGM60DL"
       }
     ]
   },
