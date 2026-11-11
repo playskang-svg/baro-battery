@@ -257,7 +257,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '대형 SUV',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'suv',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-11',
   },
   {
     slug: 'veracruz',
@@ -266,7 +267,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '대형 SUV',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'suv',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-11',
   },
   {
     slug: 'sm3',
@@ -329,7 +331,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '준중형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'sedan',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-11',
   },
   {
     slug: 'avante-hd',
@@ -338,7 +341,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '준중형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'sedan',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-11',
   },
   {
     slug: 'ray',
@@ -347,7 +351,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '경차',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'compact',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-11',
   },
   {
     slug: 'casper',
