@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   },
   description: '출장 배터리 교체, 내 차가 있는 곳에서 시작하세요. 차종별·지역별 교체 정보, 배터리 가이드, 비용 안내와 간편 상담 준비.',
   alternates: { canonical: '/' },
+  verification: {
+    google: 'FYnrgdN5oLKexYdKdPrhdBWkY7V2SjG3ALcMnSMFpuE',
+    other: {
+      'naver-site-verification': '22831e65b4aebe9015420f11549e0eeb65f907b4',
+      'msvalidate.01': '86415BFFA0E8468FBD1D2BF2EEAB94C2',
+    },
+  },
   robots: { index: !siteConfig.isPreview, follow: !siteConfig.isPreview },
   openGraph: {
     type: 'website',
@@ -56,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </svg>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-CH3SKP6WPH" strategy="afterInteractive" />
         <Script id="ga4-init" strategy="afterInteractive">{"window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CH3SKP6WPH');gtag('config','G-P73SDFB1F3');"}</Script>
+        <Script id="clarity-init" strategy="afterInteractive">{"(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,\"clarity\",\"script\",\"zcdeox7zgr\");"}</Script>
         <Header />
         {children}
         <Footer />
