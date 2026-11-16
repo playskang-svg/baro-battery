@@ -13,6 +13,9 @@
     }
   ],
   "workers_dev": true,
+  "assets": {
+    "html_handling": "none"
+  },
   "observability": {
     "enabled": true
   }
