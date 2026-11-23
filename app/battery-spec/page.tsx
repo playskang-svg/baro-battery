@@ -8,12 +8,12 @@ import { specFieldPhoto } from '@/lib/field-photos';
 import { FieldPhotos } from '@/components/site/field-photos';
 
 export const metadata = pageMeta(
-  '자동차 배터리 규격 조견표: 국산차 27차종',
-  '그랜저·K7·싼타페·스타렉스·K5·쏘나타 등 국산 27차종의 배터리 규격 코드를 한눈에 정리했습니다. 실제 차량 라벨을 우선 확인하세요.',
+  '자동차 배터리 규격 조견표: 국산차 30차종',
+  '그랜저·K7·싼타페·스타렉스·K5·쏘나타 등 국산 30차종의 배터리 규격 코드를 한눈에 정리했습니다. 실제 차량 라벨을 우선 확인하세요.',
   '/battery-spec',
 );
 
-const BRANDS = ['현대', '기아', '제네시스', '르노삼성', '쉐보레'];
+const BRANDS = ['현대', '기아', '제네시스', '르노삼성', '쉐보레', 'KG모빌리티'];
 
 export default function Page() {
   const published = new Set(vehicles.map((v) => v.slug));
@@ -23,7 +23,7 @@ export default function Page() {
         <Crumb items={[{ label: '규격 조견표' }]} />
         <PageIntro
           title="자동차 배터리 규격 조견표"
-          description="국산차 27차종의 배터리 규격 코드를 브랜드별로 정리했습니다."
+          description="국산차 30차종의 배터리 규격 코드를 브랜드별로 정리했습니다."
         />
         <div className="inline-note">
           현장 기준이며 실제 차량 라벨을 우선 확인하세요. 델코·아트라스는 같은

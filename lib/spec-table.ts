@@ -494,5 +494,53 @@ export const specModels: SpecModel[] = [
         "battery": "AGM105L"
       }
     ]
+  },
+  {
+    "slug": "casper",
+    "name": "캐스퍼",
+    "brand": "현대",
+    "vehicleClass": "경차",
+    "rows": [
+      {
+        "label": "가솔린 1.0 (21년~)",
+        "battery": "BX44DL"
+      }
+    ]
+  },
+  {
+    "slug": "palisade",
+    "name": "팰리세이드",
+    "brand": "현대",
+    "vehicleClass": "대형 SUV",
+    "rows": [
+      {
+        "label": "가솔린 3.8 (18년~)",
+        "battery": "AGM80DL"
+      },
+      {
+        "label": "디젤 2.2 (19년~)",
+        "battery": "AGM80DL"
+      }
+    ]
+  },
+  {
+    "slug": "tivoli",
+    "name": "티볼리",
+    "brand": "KG모빌리티",
+    "vehicleClass": "소형 SUV",
+    "rows": [
+      {
+        "label": "가솔린 (에어·아머, 2016~2019)",
+        "battery": "GB56219"
+      },
+      {
+        "label": "디젤 (2015~2019)",
+        "battery": "GB80L"
+      },
+      {
+        "label": "스탑앤고(공회전 제한) 사양 (2019년~)",
+        "battery": "AGM70"
+      }
+    ]
   }
 ];

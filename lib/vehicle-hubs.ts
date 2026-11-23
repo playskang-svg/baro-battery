@@ -1958,7 +1958,7 @@ export const vehicleHubs: Record<string, VehicleHub> = {
     "imageCaption": "AI로 생성한 참고 이미지입니다. 실제 차량과 배터리 위치는 다를 수 있습니다.",
     "image": "/images/vehicles/casper.webp"
   },
-  "pelisade": {
+  "palisade": {
     "seo": {
       "title": "팰리세이드 출장 배터리 교체",
       "description": "팰리세이드 배터리 교체와 규격 확인. 팰리세이드는 가솔린 3.8과 디젤 2.2 모두 AGM80DL급으로 확인됩니다. ISG용 AGM을 쓰는 이유와 교체 후 배터리 센서 보정, 일반형으로 낮추면 안 되는 점을 안내합니다."
@@ -2024,7 +2024,7 @@ export const vehicleHubs: Record<string, VehicleHub> = {
     ],
     "imageAlt": "팰리세이드 외관 참고 이미지(AI 생성)",
     "imageCaption": "AI로 생성한 참고 이미지입니다. 실제 차량과 배터리 위치는 다를 수 있습니다.",
-    "image": "/images/vehicles/pelisade.webp"
+    "image": "/images/vehicles/palisade.webp"
   },
   "tivoli": {
     "seo": {
