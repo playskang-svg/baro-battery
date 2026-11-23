@@ -239,7 +239,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '경차',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'compact',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-23',
   },
   {
     slug: 'morning',
@@ -248,7 +249,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '경차',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'compact',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-23',
   },
   {
     slug: 'mohave',
@@ -295,7 +297,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '준대형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'trunk',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-23',
   },
   {
     slug: 'k9',
@@ -304,7 +307,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '대형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'trunk',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-23',
   },
   {
     slug: 'ioniq',
@@ -322,7 +326,8 @@ export const allVehicles: Vehicle[] = [
     vehicleClass: '대형',
     note: '세대 · 장착 배터리 규격 확인',
     body: 'trunk',
-    status: 'draft',
+    status: 'published',
+    publishedAt: '2026-11-23',
   },
   {
     slug: 'avante-ad',
